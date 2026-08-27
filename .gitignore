@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Datasets (see CLAUDE.md) - ~1.4 GB, fetched separately, never committed
+data/

@@ -5,6 +5,5 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "detoxify>=0.5.2",
     "jupyter>=1.1.1",
 ]
