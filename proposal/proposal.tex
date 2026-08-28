@@ -47,10 +47,12 @@ representation-learning objective, evaluated on how much event content it
 retains against how much publisher-specific information remains recoverable from
 its representations.
 
-Before writing this proposal we profiled every corpus we intend to use and
-reimplemented the evaluation metric the relevant literature reports. Three of the
-findings from that audit changed the design, and we state them here because they
-are the substance of our motivation rather than background detail.
+Before writing this proposal we profiled every corpus we intend to use,
+reimplemented the evaluation metric the relevant literature reports, and ran the
+core experiment once end to end. It works: the objective cuts publisher
+recoverability by $63\%$ at unchanged ROUGE, but leaves the framing-bias metric
+essentially untouched. That gap is what the project is now about. The findings
+below are the substance of our motivation, not background detail.
 
 \section{Motivation}
 
@@ -108,12 +110,11 @@ the publisher labels, we find that $92$ of the $99$ test outlets also occur in
 training. Any claim about publisher leakage measured on this split is a claim
 about outlets the model has already seen.
 
-\section{Preliminary Analysis}
+\section{Preliminary Results}
 
-We have already built the data pipeline and run the CPU-side measurements; the
-numbers quoted above come from it. Table~\ref{tab:corpora} summarises what each
-corpus can support, and Table~\ref{tab:probe} gives our preliminary probe
-results.
+The data pipeline, the metric, and a first end-to-end experiment are already
+built and run. Table~\ref{tab:corpora} summarises what each corpus can support;
+Table~\ref{tab:probe} is the result that motivates the rest of the project.
 
 \begin{table}[t]
 \centering\small
@@ -135,28 +136,55 @@ Only NeuS supplies them together, and it is the smallest of the four.}
 
 \begin{table}[t]
 \centering\small
-\setlength{\tabcolsep}{3.5pt}
+\setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lrrr@{}}
 \toprule
-\textbf{TF-IDF probe} & \textbf{Acc.} & \textbf{Base} & \textbf{Cls.} \\
+\textbf{Representation} & \textbf{Pub.} & \textbf{Stance} & \textbf{R-1} \\
 \midrule
-Publisher, random split  & 17.8 & 9.2  & 229 \\
-Stance, random split     & 40.2 & 37.3 & 3 \\
-Stance, outlet-disjoint  & 35.4 & 46.0 & 3 \\
+TF-IDF (lexical floor)      & 17.8 & 40.2 & --- \\
+BART, generation loss only  & 21.5 & 48.3 & 38.63 \\
+BART + event-aware triplet  & \textbf{7.9} & 38.6 & 38.72 \\
+\midrule
+majority baseline           & 9.2  & 37.3 & --- \\
 \bottomrule
 \end{tabular}
-\caption{Lexical probes on 9{,}282 NeuS articles; \textbf{Base} is the
-test-majority baseline throughout. Publisher is recoverable from word counts at
-roughly twice its baseline. Stance is barely recoverable even with outlets
-shared, and across held-out outlets it drops below the baseline entirely --- so
-what a lexical model learns here is outlet identity, not ideology.}
+\caption{Logistic probes on frozen encoder representations of 9{,}282 articles;
+publisher is a 229-way problem. Training for summarization makes the publisher
+\emph{more} recoverable than raw word counts. The triplet objective drives it
+below the majority baseline while ROUGE-1 is unchanged.}
 \label{tab:probe}
 \end{table}
 
-These are the lexical floor. The same probes on frozen encoder representations,
-before and after our objective, are the core measurement of the project: the
-question is whether the triplet term lowers publisher recoverability from the
-representation \emph{without} lowering ROUGE.
+\paragraph{Setup.} BART-base fine-tuned on the 2{,}452 NeuS training examples for
+five epochs at fp16 on a single RTX 2080 Ti, once with the generation loss alone
+and once with $\lambda=1.0$, $m=1.0$. Six minutes per run. Probes are logistic
+regressions on the pooled encoder state, evaluated on a held-out article split.
+
+\paragraph{Publisher identity is learned, then removed.} A TF-IDF probe recovers
+the outlet at $17.8\%$ over 229 classes against a $9.2\%$ majority baseline, so
+outlet identity is written into the words. Fine-tuning for summarization makes
+this \emph{worse}, not better: the baseline encoder reaches $21.5\%$. The
+summarization objective actively organises the representation around the
+publisher. Adding the triplet term drops it to $7.9\%$ --- below the majority
+baseline, i.e.\ effectively unrecoverable --- a $63\%$ relative reduction, with
+ROUGE-1 unchanged at $38.7$ versus $38.6$ and identical mean output length.
+
+This is not representation collapse: a collapsed encoder would put the triplet
+loss at the margin, $1.0$, and it converges to $0.047$.
+
+\paragraph{But neutrality does not follow.} The framing-bias metric barely moves
+--- $1.732 \rightarrow 1.701$ raw, $0.1774 \rightarrow 0.1751$ per calibrated
+token, on identical generation lengths, so this is a genuine non-effect rather
+than the length artifact described below. \textbf{Removing publisher information
+from the encoder does not by itself make the output more neutral.}
+Representation-level leakage and surface-level framing bias are separable, and
+the project's central question becomes what closes that gap.
+
+\paragraph{A caveat we will report.} Stance recoverability falls alongside
+publisher ($48.3 \rightarrow 38.6$). Because stance is an outlet-level property
+in this corpus, the objective cannot strip publisher identity while preserving
+ideology --- the inverse of what \citet{baly2020detect} achieve, and a real
+limitation of applying their technique in this direction.
 
 \section{Background and Related Work}
 
@@ -196,12 +224,21 @@ summarization, in which the positive shares an event with the anchor and the
 negative shares a \emph{publisher}. The shared publisher is the mechanism: it is
 the only configuration in which satisfying the margin requires the encoder to
 stop relying on outlet style. This addresses the first shortcoming --- that
-standard training leaves the encoder's organising principle unconstrained.
+standard training leaves the encoder's organising principle unconstrained ---
+and a first run already shows a $63\%$ relative cut in publisher recoverability
+at unchanged ROUGE.
 
 \item \textbf{A length-normalised framing-bias metric}, together with the
 evidence that the standard metric is a length proxy. We will report both, and
 show what conclusions change. This addresses the third shortcoming, and makes
 neutrality-by-deletion visible rather than rewarded.
+
+\item \textbf{Evidence that representation leakage and output framing bias are
+separable.} Our first experiment removes publisher information from the encoder
+without moving the framing-bias metric at all, on identical output lengths.
+Whether that gap can be closed --- and what it says about representation-level
+interventions for surface-level bias --- is the question the rest of the project
+answers.
 
 \item \textbf{A publisher-disjoint evaluation protocol} for this corpus: a
 stance-stratified split in which no outlet appears on two sides, plus a leakage
