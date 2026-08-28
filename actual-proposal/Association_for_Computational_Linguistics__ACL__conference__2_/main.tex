@@ -9,7 +9,7 @@
 %
 \documentclass[11pt]{article}
 
-% "preprint" = non-anonymous, with page numbers.
+% "preprint" = non-anonymous, with page numbers, no per-line numbering.
 % Use "final" for a non-anonymous version without page numbers,
 % or "review" for the anonymised, line-numbered version.
 \usepackage[preprint]{acl}
@@ -20,6 +20,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{graphicx}
 
@@ -30,8 +31,8 @@
 % roll numbers, team name, course, affiliation and the e-mail line.
 \setlength\titlebox{6.4cm}
 
-\title{Event-Aware Representation Learning for\\
-Neutral Multi-Source News Summarization}
+\title{Event-Anchored Representation Learning for\\
+Neutral News Generation}
 
 \author{
   \begin{tabular}{@{}cccc@{}}
@@ -64,27 +65,8 @@ evaluate whether these objectives improve neutrality, event retention, and
 robustness to framing variation.
 \end{abstract}
 
-\section{Project Idea}
-
-We propose a neutral multi-source news summarization system whose internal
-representation is explicitly organised around the \emph{event} being reported
-rather than the \emph{publisher} reporting it. Given several articles about the
-same story from outlets of differing political leaning, the model produces a
-single neutral summary; alongside the usual generation objective, its encoder is
-trained with a triplet loss that pulls together differently-framed reports of the
-same event and pushes apart same-publisher reports of different events.
-
-The deliverable is a summarization model with an event-aware
-representation-learning objective, evaluated on how much event content it
-retains against how much publisher-specific information remains recoverable from
-its representations.
-
-Before writing this proposal we profiled every corpus we intend to use and
-reimplemented the evaluation metric the relevant literature reports. Three of the
-findings from that audit changed the design, and we state them here because they
-are the substance of our motivation rather than background detail.
-
 \section{Motivation}
+
 
 News reports are not neutral observations of events. Different publishers may
 emphasize different facts, use different language, omit details, or frame the
@@ -101,324 +83,124 @@ as an authoritative account, multiple reports of the same occurrence can be
 viewed as complementary views whose common content may better reflect the
 information that should be preserved during neutralization.
 
-\section{Preliminary Analysis}
+\section{Related Work}
 
-We have already built the data pipeline and run the CPU-side measurements; the
-numbers quoted above come from it. Table~\ref{tab:corpora} summarises what each
-corpus can support, and Table~\ref{tab:probe} gives our preliminary probe
-results.
+\textbf{NeuS: Neutral Multi-News Summarization for Mitigating Framing Bias} \citep{lee2022neus} introduced neutral summary generation from multiple news articles with different political leanings, motivated by the role of framing bias in political polarization. NeuS-Title uses the observation that titles provide a useful signal for framing bias and learns to neutralize news content from the title to the article. This establishes the multi-source neutral summarization setting that we build upon.
+
+\textbf{Multi-document Summarization through Multi-document Event Relation Graph Reasoning in LLMs} \citep{lei2025multidoc} builds on the observation that events and event relations play an important role in media bias. It represents relationships within and across documents, including event coreference and event-level moral opinions, and incorporates this information into LLM-based summarization. The authors show improvements in both bias mitigation and content preservation. Our approach similarly treats event information as central to neutralization, but instead of explicitly constructing an event-relation graph, we use event identity to organize the model's latent representation.
+
+\textbf{Tracing Partisan Bias to its Emotional Fingerprints: A Computational Approach to Mitigation} \citep{liu2025emotional} proposes that partisan bias is not merely an abstract stance, but materialises as quantifiable ``emotional fingerprints'' in news text. The authors use the Valence-Arousal-Dominance (VAD) framework to trace partisan stances to their linguistic roots and identify the affective strategies underlying partisan framing. This provides a complementary view of bias to representation-level approaches, by treating emotional language as an observable manifestation of partisan framing. We therefore use VAD as one of our evaluation dimensions to examine whether generated articles retain the emotional characteristics associated with partisan source articles.
+
+\textbf{NeutraSum: A Language Model can help a Balanced Media Diet by Neutralizing News Summaries} \citep{neutrasum2025} addresses the observation that reports of the same event can differ substantially in language and focus depending on the political leaning of the outlet. It introduces two neutrality losses that adjust the semantic space of generated summaries by balancing their distances from polarized inputs and aligning them with expert-written summaries. Our approach similarly uses representation-level regularization, but uses cross-source event identity rather than direct neutrality constraints as the primary organizing signal.
+
+\textbf{We Can Detect Your Bias: Predicting the Political Ideology of News Articles} \citep{baly2020detect} studies whether political ideology can be predicted from news articles while preventing models from simply learning the identity of the source. The authors use both adversarial media adaptation and a specially designed triplet loss, with examples from different media used to encourage representations that capture ideology rather than source identity. We adapt this underlying idea to a different objective: rather than preserving ideology while removing publisher information, we aim to bring reports of the same event together while separating reports of different events from the same publisher.
+
+Finally, our exploratory JEPA-style extension is inspired by \textbf{Self-Supervised Learning From Images With a Joint-Embedding Predictive Architecture} \citep{assran2023ijepa}. I-JEPA learns by predicting the representation of one view from another rather than reconstructing the input itself. We propose to treat reports from different outlets covering the same event as such cross-source views, with the expectation that their shared representation will capture information about the underlying event while being less dependent on source-specific variation.
+
+\section{Contribution}
+
+Our work proposes to use event identity as a central supervisory signal for neutral news generation. We use relationships between different reports of the same event to shape encoder representations, with triplet objectives based on either publisher or ideological variation. Cross-report information is used during training, while the resulting model is intended to neutralize a single article at inference time.
+
+Our approach offers three complementary contributions:
+
+\begin{itemize}
+\item Representation learning: instead of explicitly constructing event-relation graphs or directly constraining representations toward political neutrality, we learn event-focused structure from cross-report relationships.
+\item Content-preserving evaluation: a summary may appear neutral simply by deleting disagreement or framed information. We therefore evaluate event-information retention separately from neutrality, explicitly measuring whether reduced bias comes at the cost of losing important content.
+\item JEPA-style prediction: we explore predicting the representation of one same-event report from another, allowing shared event information to emerge without explicitly defining publisher- or ideology-based contrasts.
+\end{itemize}
+
+\section{Methodology}
+
+\subsection{Event-Aware Triplet Learning}
+
+We plan to use triplet learning to encourage the encoder to organize article representations around the underlying event. The final encoder hidden states of each article will be pooled into an article-level embedding. Given an anchor \(a\), positive \(p\), and negative \(n\),
+
+$$ \mathcal{L}_{\text{triplet}} = \max\big(D(a,p)-D(a,n)+\alpha,\;0\big), $$
+
+where \(D(\cdot,\cdot)\) is Euclidean distance and \(\alpha\) is a margin.
+
+\subsection{Triplet Construction}
+
+We will test two variants: publisher-based and ideology-based triplets. In both cases, the positive shares the anchor event while the negative changes the event but preserves the selected contrasting factor. Figure~\ref{fig:triplets} illustrates both variants.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{triplets}
+\caption{The two triplet variants under consideration: (a) publisher-based, where the positive shares the event with the anchor and the negative shares the publisher; (b) ideology-based, where the positive shares the event and the negative shares the anchor's ideology label instead.}
+\label{fig:triplets}
+\end{figure}
+
+\subsection{Joint Objective and Architecture}
+
+The model will be jointly optimized using
+
+$$ \mathcal{L} = \mathcal{L}_{\text{LED}} + \lambda\mathcal{L}_{\text{triplet}}, $$
+
+where \(\mathcal{L}_{\text{LED}}\) is the neutral text generation loss.
+
+We plan to use LED-base-16384 \citep{beltagy2020longformer}, potentially scaling to LED-large. LED retains a BART-style encoder-decoder architecture while supporting substantially longer inputs through sparse attention. Encoder states will be pooled for triplet learning and passed to the decoder for neutral generation. At inference time, only a single article will be required.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{architecture}
+\caption{Model architecture: the shared encoder feeds both the decoder, under $\mathcal{L}_{\text{LED}}$, and a pooled triplet loss $\mathcal{L}_{\text{triplet}}$ over the encoder representations. The triplet loss has no gradient with respect to the decoder; it reaches the encoder only.}
+\label{fig:architecture}
+\end{figure}
+
+\subsection{Exploratory JEPA Pretraining}
+
+We also plan to explore JEPA-style cross-report prediction, where one same-event report is used to predict the latent representation of another. This requires only same-event pairs and may encourage the representation to retain information shared across reports.
+
+\subsection{Datasets}
 
 \begin{table}[t]
 \centering\small
-\setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}lccc@{}}
 \toprule
-\textbf{Corpus} & \textbf{Event} & \textbf{Pub.} & \textbf{Neutral} \\
+\textbf{Dataset} & \textbf{Event} & \textbf{Ideology} & \textbf{Publisher} \\
 \midrule
-NeuS (3{,}095 st.)    & yes & yes & yes \\
-AllSides (37{,}554)   & no  & yes & no  \\
-WCEP-10 (10{,}200)    & yes & no  & partial \\
-WNC (181k)            & no  & no  & partial \\
+NeuS / AllSides & \checkmark & \checkmark & \checkmark \\
+WCEP-10 & \checkmark & $\times$ & $\times$ \\
+Article-Bias-Prediction & $\times$ & \checkmark & \checkmark \\
 \bottomrule
 \end{tabular}
-\caption{Which labels each corpus carries: event grouping, publisher
-(\textbf{Pub.}) and a neutral target. Sizes are stories, articles, clusters and
-sentence pairs respectively. An event-aware triplet objective needs all three
-labels on one example; only NeuS supplies them together, and it is the smallest
-of the four.}
-\label{tab:corpora}
+\caption{Dataset sizes: NeuS / AllSides, 3{,}095 stories / 9{,}282 articles; WCEP-10, 10{,}200 event clusters; Article-Bias-Prediction, 37{,}554 articles / 491 outlets.}
+\label{tab:datasets}
 \end{table}
 
-\begin{table}[t]
-\centering\small
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-\textbf{TF-IDF probe} & \textbf{Acc.} & \textbf{Base} & \textbf{Cls.} \\
-\midrule
-Publisher, random split  & 17.8 & 9.2  & 229 \\
-Stance, random split     & 40.2 & 37.3 & 3 \\
-Stance, outlet-disjoint  & 35.4 & 46.0 & 3 \\
-\bottomrule
-\end{tabular}
-\caption{Lexical probes on 9{,}282 NeuS articles; \textbf{Base} is the
-test-majority baseline throughout and \textbf{Cls.} the number of classes.
-Publisher is recoverable from word counts at roughly twice its baseline. Stance
-is barely recoverable even with outlets shared, and across held-out outlets it
-drops below the baseline entirely, so what a lexical model learns here is
-outlet identity, not ideology.}
-\label{tab:probe}
-\end{table}
-
-These are the lexical floor. The same probes on frozen encoder representations,
-before and after our objective, are the core measurement of the project: the
-question is whether the triplet term lowers publisher recoverability from the
-representation \emph{without} lowering ROUGE.
-
-\section{Background and Related Work}
-
-\paragraph{NeuS} \citep{lee2022neus} introduces the task, the AllSides-derived
-corpus of left/centre/right article triples with human-written neutral
-``roundup'' summaries, and the framing-bias metric. It fine-tunes BART
-\citep{lewis2020bart} on the concatenated sources and reports that a multi-task
-auxiliary objective over the encoder helps, but the auxiliary task is
-classification, and nothing ties the representation to event identity.
-
-\paragraph{We Can Detect Your Bias} \citep{baly2020detect} predicts
-article-level political ideology and uses a triplet objective to strip publisher
-identity from a representation while preserving ideology. It also contributes the
-media-based split protocol, in which whole outlets are held out. We invert the
-objective: preserve \emph{event} identity while removing \emph{source}
-information.
-
-\paragraph{Multi-document event relation graphs} \citep{lei2025multidoc} target
-the same framing-bias mitigation goal on the same corpus by building an explicit
-event relation graph and reasoning over it with an LLM. Our approach is the
-representation-level counterpart: rather than externalising event structure into
-a graph, we constrain the encoder's latent space to be organised by event. We
-regard this as the closest prior work and will compare against it directly.
-
-\paragraph{I-JEPA} \citep{assran2023ijepa} predicts one view's latent
-representation from another rather than reconstructing raw content; this
-motivates our label-efficient pretraining extension, where the ``views'' are two
-outlets' reports of the same event.
-
-\paragraph{DiverseSumm} \citep{huang2024diversesumm} proposes QA-based
-evaluation of whether a multi-document summary retains information from its
-sources.
-
-\section{Contributions}
-
-\begin{enumerate}\itemsep2pt
-\item \textbf{An event-aware triplet objective} for multi-source neutral
-summarization, in which the positive shares an event with the anchor and the
-negative shares a \emph{publisher}. The shared publisher is the mechanism: it is
-the only configuration in which satisfying the margin requires the encoder to
-stop relying on outlet style. This addresses the first shortcoming: that
-standard training leaves the encoder's organising principle unconstrained.
-
-\item \textbf{A length-normalised framing-bias metric}, together with the
-evidence that the standard metric is a length proxy. We will report both, and
-show what conclusions change. This addresses the third shortcoming, and makes
-neutrality-by-deletion visible rather than rewarded.
-
-\item \textbf{A publisher-disjoint evaluation protocol} for this corpus: a
-stance-stratified split in which no outlet appears on two sides, plus a leakage
-probe measured on both the standard and the disjoint split. This addresses the
-fourth shortcoming: that the released split cannot ask the generalisation
-question.
-
-\item \textbf{A reproducible data pipeline.} The released NeuS split files have
-their publisher and stance labels stripped. We recover them at $100\%$ coverage
-by normalising headlines against the union of all three crawl files; the
-obvious single-file join silently misses $13\%$ of examples. We will release
-this alongside our code.
-\end{enumerate}
-
-\section{Proposed Methodology}
-
-\paragraph{Backbone.} A pretrained sequence-to-sequence model (BART-large). The
-$k$ articles for an event are concatenated into a single source sequence and
-decoded into a neutral summary under the usual token-level cross-entropy loss
-against the human-written roundup.
-
-\paragraph{Event-aware triplet objective.} For an anchor article $a$, we sample a
-positive $p$ (a different outlet's report of the same event) and a negative
-$n$ (the same outlet's report of a different event). Each is passed through the
-shared encoder and pooled at the EOS position to give $f(\cdot)$. The training
-signal is
-\begin{align*}
-\mathcal{L} = \mathcal{L}_{\text{gen}} + \lambda \cdot \max\big(&0,\;
-  \|f(a)-f(p)\| \\
-  &- \|f(a)-f(n)\| + m\big),
-\end{align*}
-with margin $m$ and weight $\lambda$ swept on the validation set. Because $a$ and
-$n$ always share a publisher, the only way to satisfy the margin consistently is
-to stop encoding publisher style and organise around the event instead.
-
-Structurally this attaches at the same point as NeuS's own auxiliary-task hook,
-which adds a weighted auxiliary loss over a pooled encoder state; we replace
-their binary classification head with the triplet term and reimplement on a
-current \texttt{transformers} stack rather than their pinned 2021 fork.
-
-\paragraph{Sampling and training details.} Triples are mined offline: for each of
-the 9{,}282 articles we draw two positives and two negatives, discarding anchors
-whose outlet appears in only one story, which yields 18{,}368 triples. The
-triplet term is fed as a second stream alongside the generation batch, mirroring
-the reference implementation's separate auxiliary-input path, so the two losses
-need not share a batch size. We start from the hyperparameters NeuS reports
-(learning rate $3\!\times\!10^{-5}$, effective batch 16, source length 512, target
-length 250) and sweep only $\lambda$ and $m$. Training is short: 2{,}452
-examples over five epochs is roughly 3{,}000 optimiser steps, under an hour of
-single-GPU time per configuration, which is what makes the ablation grid and the
-multi-seed reporting affordable.
-
-\paragraph{Extension: cross-source pretraining.} Following the JEPA principle, we
-pretrain by predicting one outlet's representation of an event from another
-outlet's representation of the same event, using unlabelled same-event pairs from
-WCEP-10, which needs neither publisher labels nor neutral targets, and so
-suits this objective exactly. The question is whether the decoder can then be
-fine-tuned on a fraction of the labelled summaries and still match a fully
-supervised model. This extension is contingent on compute and will be dropped
-before the core result if necessary.
-
-\section{Dataset}
-
-Our primary corpus is the NeuS release \citep{lee2022neus}: 3{,}095 AllSides
-stories, each pairing three articles (one left, one centre, one right) with a
-human-written neutral roundup, spanning 2016--2021 and 250 distinct outlets. It
-is the only corpus available to us that carries an event grouping, a publisher
-label and a neutral target on the same example. From it we derive 9{,}282
-publisher-labelled articles and 18{,}368 training triples; 153 of the 250 outlets
-appear in at least two distinct stories, which makes 9{,}188 of 9{,}285 article
-slots usable as a same-publisher negative.
-
-Two properties we flag honestly. First, AllSides publishes an \emph{excerpt} per
-outlet rather than the full article (a hard cap of 95 words, median 85), so
-a three-source input is $\approx$241 words and fits comfortably within BART's
-1{,}024-token window, but there is correspondingly little event content to
-retain. Second, at 2{,}452 training examples the corpus is small for fine-tuning
-BART-large; we will report mean and spread over at least three seeds rather than
-single runs.
-
-We use two further corpora in supporting roles. WCEP-10
-\citep{ghalandari2020wcep} provides 10{,}200 genuine multi-document event
-clusters of $\approx$9 articles each, far better event structure and scale
-than NeuS, but its preprocessing stripped the publisher labels and its 25-word
-targets were never written to be neutral, so we use it only for the pretraining
-extension. AllSides / Article-Bias-Prediction \citep{baly2020detect} supplies
-37{,}554 publisher-labelled articles for additional negatives and for its
-prebuilt media-based split. We note that its bias labels are outlet-level: only 7
-of its 491 sources ever carry more than one label, so ideology prediction and
-publisher prediction are near-identical tasks there, and we will not report them
-as independent axes.
+NeuS/AllSides will be the main supervised dataset, WCEP-10 will support JEPA pretraining, and Article-Bias-Prediction will provide additional negatives and unseen-publisher evaluation. Neutral generation targets will either come from a suitable neutral-reference dataset or be generated synthetically using LLM inference.
 
 \section{Evaluation Plan}
 
-\paragraph{Event retention: question--answer coverage.} We generate
-question--answer pairs from the source articles and measure how many remain
-answerable from the generated summary, following the QA-based faithfulness
-protocol of FEQA \citep{durmus2020feqa}. There are two ways to run this, and they
-trade off against each other. (i) On our own NeuS-derived evaluation set: this
-keeps the stance labels, and so is the only option that can ask whether coverage
-is \emph{balanced} across left, centre and right sources; that is, whether the
-model systematically drops facts that appear only in the right-leaning article.
-It is the more expensive option in time and compute. (ii) On DiverseSumm
-\citep{huang2024diversesumm}: purpose-built for this measurement, but its
-articles carry no ideology labels, so it cannot detect that failure mode, and
-running different evaluation axes on different corpora would make the comparison
-unfair. We therefore plan on (i) and treat DiverseSumm as a secondary sanity
-check.
+\paragraph{Ablations.} We use two models, one a control LED model without our triplet loss and another model trained with our triplet loss, and compare all metrics in both cases to verify causality in any significant results.
 
-\paragraph{Tonality.} We score generations with the NRC-VAD
-\citep{mohammad2018vad} valence--arousal--dominance lexicon, reporting both the
-framing-bias score as NeuS defines it and the length-normalised affect rate
-introduced above, so that a score lowered by generating less is distinguishable
-from one lowered by generating more neutrally.
+\paragraph{Information Retention:}
 
-\paragraph{Publisher leakage.} We train a publisher classifier on frozen
-representations and on output text, and run it over both the source articles and
-the generated summaries. We expect macro-F1 to fall, ideally to the random
-baseline. This is measured on both the standard split and our publisher-disjoint
-split.
+1. Question-Answer Coverage: We create question-answer pairs based on the original articles, and then evaluate whether the newly generated articles contain the answers to these questions.
 
-\paragraph{Summary quality and ablations.} We train two models (a control BART
-fine-tuned with the generation loss alone, and the same model with the triplet
-term added) and compare every metric above plus ROUGE across the two, so that
-any significant effect can be attributed to the objective rather than to the
-backbone or the data. The $\lambda$ and margin sweeps give the intermediate
-points between them.
+a. We do this on our own evaluation dataset using FeQA \citep{durmus2020feqa} (possibly expensive in time and compute).
 
-\section{Feasibility and Risks}
+b. We can evaluate our model on the existing DiverseSum dataset of news articles. However, we cannot analyze the model's bias in QA coverage across political articles of different ideologies (i.e., considering source left and right articles, it may ignore facts mentioned in a right article but not in a left article). To evaluate this, we need a dataset of articles labelled with their political ideologies. Also, it may be unfair to perform different evaluations on different datasets. Considering the lack of labeling for political ideologies, we cannot run certain other evaluations on DiverseSum.
+\paragraph{Tonality:} We use VAD (Valence, Arousal, Dominance) to analyze the tonality of the article.
+\paragraph{Publisher Leakage:} We use existing publisher classifiers for news articles and run them on the source articles and output articles. We expect the F1 metric to decrease, ideally to the same as a random baseline.
+\paragraph{Ideological Neutrality:} We use existing political ideology classifiers for news articles and expect them to report low confidence on all ideologies or high confidence on centrist ideology (depending on whether we take centrist as a proxy for neutral or not).
 
-The compute is modest: the full experimental grid (baseline, triplet sweep,
-ablations, and reruns on the disjoint split) is roughly 20--25 single-GPU
-hours at 16\,GB, which our cluster allocation covers comfortably. The data
-pipeline, the metric, and the probes are CPU-only and already run.
+\section{Impact and Future Work}
 
-Three risks we are managing explicitly. \textbf{Small data:} 2{,}452 training
-examples will produce noticeable seed variance, so every reported number will be
-a mean over at least three seeds with spread. \textbf{Weak event content:} the
-85-word source excerpts limit what an event-retention evaluation can claim, so we
-have demoted the QA check to a secondary measure rather than build the argument
-on it. \textbf{A null result is possible:} the triplet term may reduce publisher
-recoverability without improving summary neutrality, or may trade ROUGE for it.
-We regard that as a reportable outcome; combined with the metric critique it
-still constitutes a complete finding about what representation-level constraints
-can and cannot buy in this task.
+This work can help quantify how strongly publisher identity is encoded in news representations and whether reducing such information improves neutrality without sacrificing event content. It may also provide insight into how separable event, publisher, and ideological information are within the learned representation space. The neutralized outputs could potentially be used to create less source-dependent corpora for training or evaluating downstream NLP models. If JEPA-style cross-report learning proves effective, it could enable scalable pretraining on large collections of same-event articles without requiring publisher labels, ideology annotations, or neutral targets, while also demonstrating the usefulness of predictive joint-embedding objectives for NLP.
 
-\section{Future Work}
+\section{Limitations}
 
-Three directions fall outside the twelve weeks but follow directly from the
-design.
+\begin{itemize}
+\item Our model cannot identify complex problems such as flawed logic.
+\item There is no objective measure of neutrality, nor could we find relevant data that could be labeled as neutral to a significant extent.
+\item The political ideology classifiers we use are vulnerable to syntactic-level gaming (i.e., simply learning the writing style of different news outlets and using the fact that they are often biased towards the same ideologies).
+\item Our generated articles will very likely lose some information mentioned in one or more source articles. Hiding any significant information is itself a form of bias. While we do try to measure coverage, it would be difficult to achieve good coverage with such small models.
+\end{itemize}
 
-\paragraph{Shared/unique factorisation.} The triplet term treats publisher
-information as something to remove. A FactorCL-style decomposition
-\citep{liang2023factorcl} would instead split the representation into a
-component shared across all reports of an event and a component unique to each
-outlet, keeping both and generating only from the shared part. That is a
-strictly more informative object than a single scrubbed vector: the unique
-component is itself a measurement of how a given outlet frames a given story.
-We treat this as the natural successor to the present objective rather than a
-competing one.
+\section{Ethical considerations}
 
-\paragraph{Full articles rather than excerpts.} Our sharpest limitation is that
-AllSides publishes 85-word excerpts, which caps how much event content there is
-to retain and therefore how much an event-retention metric can say. Recrawling
-the source URLs for full text would remove that ceiling and let the QA
-evaluation carry real weight, at the cost of a crawl and the licensing questions
-that come with it.
-
-\paragraph{Beyond BART and beyond US media.} BART-large is the right backbone
-for a controlled study on 2{,}452 examples, but the objective is architecture
-agnostic and could attach to any encoder. Separately, AllSides' left/centre/right
-axis is a US-specific, outlet-level construct; whether an event-aware objective
-transfers to media ecosystems with different partisan structure is an open
-question our data cannot answer.
-
-\section{Broader Impact}
-
-\paragraph{Who defines neutral.} Our neutral targets are AllSides' human-written
-roundups, and our stance labels are outlet-level judgements from the same
-organisation. A model trained this way does not learn neutrality in the
-abstract; it learns one editorial organisation's operationalisation of it. We
-will state this framing explicitly wherever we report results rather than let
-``neutral'' stand unqualified.
-
-\paragraph{Neutrality by deletion is a harm, not just a metric artefact.} The
-failure mode our metric critique identifies is also the ethically serious one. A
-summariser that scores well by dropping whatever the sources disagree about
-presents contested reporting as settled and removes exactly the information a
-reader needs to judge the story. This is why we report the length-normalised
-rate alongside the raw score, and why we regard a system that lowers framing
-bias purely by saying less as having failed rather than succeeded.
-
-\paragraph{Dual use of the leakage probe.} The probe we use to show that
-publisher identity has been removed is, run the other way, a stylometric
-attribution tool for news text. We are building it on published outlets with
-public bylines, where attribution is not sensitive, but the same method applied
-to anonymous or pseudonymous writing is a deanonymisation technique. We note
-this because our contribution is partly the probe protocol itself.
-
-\paragraph{Automation bias.} A summary presented as neutral invites more trust
-than the same text presented as one outlet's account. Any deployment would need
-to surface its sources rather than replace them.
-
-\section{Conclusion}
-
-We propose to constrain a multi-source summarisation encoder to organise its
-latent space around events rather than publishers, using a triplet objective
-whose negative deliberately shares a publisher with the anchor. The premise is
-measured rather than assumed: on the NeuS corpus, publisher identity is
-lexically recoverable at roughly twice its baseline while stance does not
-transfer across held-out outlets at all. Our audit also found that the field's
-framing-bias metric is largely a length proxy and that the standard split shares
-almost all of its test outlets with training, so we contribute a
-length-normalised metric and a publisher-disjoint protocol alongside the
-objective. Whether the triplet term buys lower publisher recoverability without
-costing ROUGE is the question the project answers; a null result, read against
-the metric critique, is still a complete finding about what representation-level
-constraints can and cannot do for this task.
+The primary ethical concern of this work is that a system intended to generate politically neutral news summaries may itself introduce, preserve, or conceal political bias. In particular, removing publisher-specific information does not necessarily guarantee neutrality, and the model may omit information from one or more sources or generate unsupported information. Such outputs could influence readers' understanding of political events if used without human oversight. We therefore treat neutrality and information retention as separate evaluation objectives and explicitly report the limitations of the evaluation metrics and political ideology classifiers used. The system is intended as a research prototype for studying neutral multi-source summarization rather than as a replacement for journalistic judgment or as a source of authoritative political information.
 
 \section{Timeline}
 
@@ -428,28 +210,21 @@ constraints can and cannot do for this task.
 \toprule
 \textbf{Weeks} & \textbf{Milestone} \\
 \midrule
-1--2   & Data pipeline, splits, probe protocol \\
-       & \emph{(complete)} \\
-3--4   & NeuS baseline reproduced; metric \\
-       & analysis written up \\
-5--6   & Triplet objective implemented; \\
-       & $\lambda$/margin sweep started \\
-\midrule
-\multicolumn{2}{@{}l@{}}{\emph{Mid-submission: baseline + first triplet}} \\
-\multicolumn{2}{@{}l@{}}{\emph{result + metric analysis}} \\
-\midrule
-7      & Leakage probes on both splits \\
-8--9   & Ablations, seed variance, QA check \\
-10--11 & Cross-source pretraining extension \\
-       & (compute permitting) \\
-12     & Final report and code release \\
+1--2   & Data pipeline and evaluation setup \\
+3--4   & LED-base baseline \\
+5--6   & Triplet loss + initial results \\
+Mid-eval & Baseline results + first triplet \\
+       & result (if completed) \\
+7--8   & Probing and ablations \\
+9--10  & Full evaluation and generalization \\
+11--12 & Final experiments, analysis, and report \\
 \bottomrule
 \end{tabular}
-\caption{Planned schedule. Weeks 1--2 are already complete. The
-mid-submission checkpoint falls after week 6, by which point the baseline and a
-first triplet result exist.}
+\caption{Planned schedule.}
 \label{tab:timeline}
 \end{table}
+
+{\small\textit{Note: JEPA-style cross-report pretraining will be treated as an optional extension and explored only if time and compute permit.}}
 
 \bibliography{references}
 
