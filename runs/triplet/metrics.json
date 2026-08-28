@@ -1,0 +1,55 @@
+{
+  "config": {
+    "run_name": "triplet",
+    "model": "facebook/bart-base",
+    "data_dir": "/home2/raunak/ANLP-Project/data/framing-bias-metric-main/data/naacl2022_lrc_roundup_random_order_probe",
+    "triplet_weight": 1.0,
+    "triplet_margin": 1.0,
+    "epochs": 5,
+    "batch_size": 4,
+    "triplet_batch_size": 8,
+    "grad_accum": 4,
+    "lr": 3e-05,
+    "max_source": 512,
+    "max_target": 250,
+    "warmup": 100,
+    "seed": 42,
+    "num_beams": 4,
+    "precision": "fp16",
+    "out": "/home2/raunak/ANLP-Project/runs",
+    "limit_train": null
+  },
+  "history": [
+    {
+      "epoch": 0,
+      "lm_loss": 2.5260747385258386,
+      "triplet_loss": 0.4979289660251549,
+      "elapsed_s": 68.0
+    },
+    {
+      "epoch": 1,
+      "lm_loss": 2.2232828006075414,
+      "triplet_loss": 0.10888409954883146,
+      "elapsed_s": 134.9
+    },
+    {
+      "epoch": 2,
+      "lm_loss": 2.084305720947695,
+      "triplet_loss": 0.07736078619373564,
+      "elapsed_s": 202.0
+    },
+    {
+      "epoch": 3,
+      "lm_loss": 2.00156618807872,
+      "triplet_loss": 0.05264572509933646,
+      "elapsed_s": 269.0
+    },
+    {
+      "epoch": 4,
+      "lm_loss": 1.9434460551275903,
+      "triplet_loss": 0.047051286911303225,
+      "elapsed_s": 335.9
+    }
+  ],
+  "total_s": 421.7
+}

@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "n": 307,
+    "rouge1": 0.3863,
+    "rouge2": 0.1856,
+    "rougeL": 0.2918,
+    "gen_words": 43.7,
+    "framing_p_arousal": 1.732,
+    "framing_n_arousal": 0.953,
+    "p_arousal_per_vad_token": 0.1774,
+    "n_arousal_per_vad_token": 0.0976,
+    "calibrated_tokens": 19.0
+  },
+  "triplet": {
+    "n": 307,
+    "rouge1": 0.3872,
+    "rouge2": 0.1852,
+    "rougeL": 0.2916,
+    "gen_words": 43.7,
+    "framing_p_arousal": 1.701,
+    "framing_n_arousal": 0.961,
+    "p_arousal_per_vad_token": 0.1751,
+    "n_arousal_per_vad_token": 0.099,
+    "calibrated_tokens": 19.1
+  }
+}

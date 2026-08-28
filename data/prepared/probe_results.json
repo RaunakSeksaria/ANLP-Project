@@ -1,0 +1,146 @@
+{
+  "tfidf": [
+    {
+      "probe": "tfidf \u00b7 publisher \u00b7 random split",
+      "label": "publisher",
+      "note": "every test outlet was seen in training",
+      "n_train": 7425,
+      "n_test": 916,
+      "n_classes": 229,
+      "accuracy": 0.1779,
+      "macro_f1": 0.0288,
+      "train_majority": 0.0917,
+      "test_majority": 0.0917,
+      "chance": 0.0044
+    },
+    {
+      "probe": "tfidf \u00b7 stance \u00b7 random split",
+      "label": "stance",
+      "note": "",
+      "n_train": 7425,
+      "n_test": 929,
+      "n_classes": 3,
+      "accuracy": 0.4015,
+      "macro_f1": 0.4003,
+      "train_majority": 0.3036,
+      "test_majority": 0.3735,
+      "chance": 0.3333
+    },
+    {
+      "probe": "tfidf \u00b7 stance \u00b7 publisher-disjoint",
+      "label": "stance",
+      "note": "no outlet appears on both sides",
+      "n_train": 7661,
+      "n_test": 520,
+      "n_classes": 3,
+      "accuracy": 0.3538,
+      "macro_f1": 0.3327,
+      "train_majority": 0.0904,
+      "test_majority": 0.4596,
+      "chance": 0.3333
+    },
+    {
+      "probe": "tfidf \u00b7 publisher \u00b7 publisher-disjoint",
+      "label": "publisher",
+      "n_train": 7661,
+      "n_test": 520,
+      "note": "no shared classes -- skipped"
+    }
+  ],
+  "baseline": [
+    {
+      "probe": "baseline \u00b7 publisher \u00b7 random split",
+      "label": "publisher",
+      "note": "every test outlet was seen in training",
+      "n_train": 7425,
+      "n_test": 916,
+      "n_classes": 229,
+      "accuracy": 0.2151,
+      "macro_f1": 0.0931,
+      "train_majority": 0.0917,
+      "test_majority": 0.0917,
+      "chance": 0.0044
+    },
+    {
+      "probe": "baseline \u00b7 stance \u00b7 random split",
+      "label": "stance",
+      "note": "",
+      "n_train": 7425,
+      "n_test": 929,
+      "n_classes": 3,
+      "accuracy": 0.4833,
+      "macro_f1": 0.4826,
+      "train_majority": 0.3036,
+      "test_majority": 0.3735,
+      "chance": 0.3333
+    },
+    {
+      "probe": "baseline \u00b7 stance \u00b7 publisher-disjoint",
+      "label": "stance",
+      "note": "no outlet appears on both sides",
+      "n_train": 7661,
+      "n_test": 520,
+      "n_classes": 3,
+      "accuracy": 0.4096,
+      "macro_f1": 0.3673,
+      "train_majority": 0.0904,
+      "test_majority": 0.4596,
+      "chance": 0.3333
+    },
+    {
+      "probe": "baseline \u00b7 publisher \u00b7 publisher-disjoint",
+      "label": "publisher",
+      "n_train": 7661,
+      "n_test": 520,
+      "note": "no shared classes -- skipped"
+    }
+  ],
+  "triplet": [
+    {
+      "probe": "triplet \u00b7 publisher \u00b7 random split",
+      "label": "publisher",
+      "note": "every test outlet was seen in training",
+      "n_train": 7425,
+      "n_test": 916,
+      "n_classes": 229,
+      "accuracy": 0.0786,
+      "macro_f1": 0.0274,
+      "train_majority": 0.0917,
+      "test_majority": 0.0917,
+      "chance": 0.0044
+    },
+    {
+      "probe": "triplet \u00b7 stance \u00b7 random split",
+      "label": "stance",
+      "note": "",
+      "n_train": 7425,
+      "n_test": 929,
+      "n_classes": 3,
+      "accuracy": 0.3864,
+      "macro_f1": 0.3859,
+      "train_majority": 0.3036,
+      "test_majority": 0.3735,
+      "chance": 0.3333
+    },
+    {
+      "probe": "triplet \u00b7 stance \u00b7 publisher-disjoint",
+      "label": "stance",
+      "note": "no outlet appears on both sides",
+      "n_train": 7661,
+      "n_test": 520,
+      "n_classes": 3,
+      "accuracy": 0.35,
+      "macro_f1": 0.3196,
+      "train_majority": 0.0904,
+      "test_majority": 0.4596,
+      "chance": 0.3333
+    },
+    {
+      "probe": "triplet \u00b7 publisher \u00b7 publisher-disjoint",
+      "label": "publisher",
+      "n_train": 7661,
+      "n_test": 520,
+      "note": "no shared classes -- skipped"
+    }
+  ]
+}
