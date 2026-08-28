@@ -1,29 +1,85 @@
 # What needs Ada, and what does not
 
-## Quickstart (three commands)
+## Quickstart
 
-On the Ada **login** node, from the repo root:
+The hardware and plumbing facts below were established on a previous assignment
+that ran end to end on this cluster, and are not guesses.
+
+**From the laptop**, push the repo, then on Ada:
 
 ```bash
-bash scripts/ada_setup.sh          # venv, torch, transformers, prefetch BART, build data (~10 min)
+cd ~/ANLP-Project
+python3 scripts/prepare_data.py        # pure stdlib, safe on the login node
+mkdir -p logs runs
 
-source .venv-ada/bin/activate      # smoke test on CPU first -- catches bugs in 2 min,
-python scripts/train_neus.py --run-name smoke --epochs 1 --limit-train 8 \
-    --batch-size 2 --grad-accum 1 --precision fp32 --num-beams 1
+sbatch scripts/ada_sync.sh             # build venv + cache model (~30 min first time)
+squeue -u $USER                        # wait for it to finish
+tail -f logs/sync-*.out
 
-sbatch scripts/ada_run.sh          # both runs + probes + metrics (~2-3 h)
+sbatch scripts/ada_run.sh              # the whole experiment (~1-2 h on bart-base)
+tail -f logs/neus-*.out
 ```
 
-`scripts/ada_run.sh` does the whole experiment in one job: baseline (generation
-loss only), triplet (generation + event-aware loss), then the publisher-leakage
-probes on both plus the lexical floor, then ROUGE and framing bias on the
-generations. Check its `#SBATCH` lines against your own allocation before
-submitting -- partition and account names differ per Ada project.
+`prepare_data.py` is the one script that runs on the login node — it imports
+nothing outside the standard library. Everything else must run inside a job.
 
-Results land in `runs/{baseline,triplet}/`, `data/prepared/probe_results.json`
+### Five rules the login node enforces
+
+1. **The venv only imports on compute nodes.** The login node is CentOS 7 with
+   glibc 2.17 and no `CXXABI_1.3.9`; anything touching torch, numpy or
+   transformers dies there. Login node is for `sbatch`, `squeue`, `git` and file
+   transfer only.
+2. **`uv lock` / `uv sync` must run inside a job** — the head node's `ulimit -v`
+   kills the resolver with a bogus `memory allocation of ~700 KB failed`. That
+   is what `scripts/ada_sync.sh` is for; run jobs pass `--no-sync` and never
+   touch the resolver.
+3. **Never reuse a `.venv` built elsewhere.** Mismatched CUDA libraries surface
+   as `RuntimeError: CUDA unknown error` from `torch._C._cuda_init()` while
+   `nvidia-smi` succeeds. `rm -rf .venv && uv sync` is the only fix.
+4. **Never use `--mem`.** `MaxMemPerCPU` is 3000 MB, so `--mem=32G` with `-c 8`
+   is rejected outright. Always `--mem-per-cpu`.
+5. **A first sync takes ~30 min** (~3.5 GB of CUDA wheels onto NFS). Jobs that
+   run short cannot be extended — `scontrol update TimeLimit` is operator-only.
+
+### What the hardware forces
+
+`--constraint=2080ti` gives an **RTX 2080 Ti with 10.6 GiB usable**, and that
+drives two choices:
+
+- **bart-base, not bart-large.** BART-large is 6.0 GB of optimiser state before
+  activations; adding a triplet stream (three encoder passes per step, with
+  gradients) will not fit in 10.6 GiB. bart-base is 139 M parameters, ~2.2 GB of
+  optimiser state, and leaves comfortable headroom. Override with
+  `MODEL=facebook/bart-large sbatch scripts/ada_run.sh` once the pipeline is
+  proven, and expect to drop `--batch-size` and `--triplet-batch-size`.
+- **fp16, never bf16.** Turing (sm_75) has no bf16 unit. `train_neus.py`
+  defaults to `--precision auto`, which checks `torch.cuda.is_bf16_supported()`
+  and falls back to fp16, so this is handled — but do not hard-code bf16.
+
+`--constraint=2080ti` is also required for a second reason: feature-less nodes
+are GTX 1080 Ti (Pascal, sm_61), which current torch wheels no longer compile
+for. `gnode091` is excluded because it has 11 GB of host RAM rather than 128 GB.
+QOS `medium` caps you at 4 running jobs, 4 GPUs, 40 CPUs and 8 submitted.
+
+### torch must be cu128, not cu130
+
+`pyproject.toml` pins torch to the `pytorch-cu128` index. Ada's u22 nodes run a
+spread of drivers — 570, 580 and 595 all observed on nodes advertising the same
+`2080ti` feature — and cu130 wheels require driver >= 580, aborting with
+`The NVIDIA driver on your system is too old` on the 570 nodes. SLURM exposes no
+feature for driver version, so node selection cannot solve it; the build has to
+match the oldest driver in the pool. cu128 tops out at torch 2.11.0, which is
+why the dependency floor is `torch>=2.5`.
+
+**`uv.lock` regenerated on Ada is the authoritative copy** — make sure it comes
+back to the laptop repo, or the two diverge.
+
+### What comes out
+
+`runs/{baseline,triplet}/test_generations.txt`, `data/prepared/probe_results.json`
 and `runs/generation_metrics.json`. The comparison that matters is
-publisher-probe accuracy on the disjoint split, baseline vs triplet, at matched
-ROUGE.
+publisher-probe accuracy on the outlet-disjoint split, baseline vs triplet, at
+matched ROUGE.
 
 This machine has **no GPU** — 16 CPU cores, 15 GB RAM, 106 GB free disk. Every
 number below is derived from measured corpus sizes (`eda/REPORT.md`) and NeuS's
@@ -57,8 +113,10 @@ without it.
 
 - Memory: 406 M params → 1.5 GB weights + 1.5 GB grads + 3.0 GB Adam states =
   **6.0 GB optimiser state** in fp32, plus ~1–2 GB activations at batch 2 × 512.
-  Fits a 16 GB card comfortably; bf16 halves it. **Request ≥16 GB, prefer 24 GB+**
-  so the triplet variant can hold three encoder passes per step.
+  That does **not** fit Ada's 10.6 GiB RTX 2080 Ti once the triplet stream adds
+  three encoder passes per step. Use bart-base (139 M, ~2.2 GB optimiser state)
+  for the core experiments here; bart-large needs a larger card than this QOS
+  reaches, or aggressive gradient checkpointing at micro-batch 1.
 - Throughput: 1,226 micro-steps/epoch, 12,260 for the 10-epoch schedule.
   At 2–5 micro-it/s that is **40–100 min per run**; budget **1.5 GPU-hours**
   including per-epoch validation and test generation.
@@ -66,7 +124,8 @@ without it.
   2 ablations (generation-loss-only, publisher-shuffled control) + reruns on the
   media-disjoint split ≈ **10–15 runs**.
 
-> **Ask: 20–25 GPU-hours, single GPU, ≥16 GB.**
+> **Ask: 20–25 GPU-hours on the 2080 Ti at bart-base.** QOS `medium` allows 4
+> concurrent GPUs, so the sweep parallelises four ways.
 
 The triplet variant is ~2–3× the baseline per step, since anchor, positive and
 negative each need an encoder pass. Budget accordingly if the sweep grows.
@@ -90,10 +149,12 @@ the plan that needs real compute, because WCEP clusters are ~9 documents ×
 ~337 words ≈ 4,400 tokens. That exceeds BART's 1,024 window, so it requires a
 long-input model (LED / PRIMERA) and a different memory profile.
 
-- LED-base at 4,096 tokens: **≥24 GB**, realistically an A100-40 GB.
-- 8,158 clusters/epoch; at ~1.5 it/s a 3-epoch pass is ~4.5 h.
+- LED-base at 4,096 tokens needs well beyond 10.6 GiB. **This does not fit the
+  2080 Ti at all**, so the extension needs either a truncated context, a smaller
+  long-input model, or a card this account cannot currently reach.
 
-> **Ask: 15–20 GPU-hours on a 40 GB card — and only after the core result exists.**
+> **Verdict: out of scope on the hardware available.** Reframe the extension to
+> fit 10.6 GiB, or drop it. This is the item to cut first regardless.
 
 This is the item to cut first if allocation is tight. It is an extension, not the
 contribution.
@@ -105,8 +166,8 @@ over 307 test summaries.
 
 - Hosted API: no cluster time, but check whether the course permits external API
   calls and who pays.
-- Local 7–8 B instruct model: **1 GPU, 16–24 GB, ~2–3 GPU-hours** for the full
-  test split.
+- A local 7–8 B instruct model will not fit 10.6 GiB at usable precision, so on
+  this hardware the QA route is effectively API-only.
 
 > Decide the route before requesting the allocation — they have very different
 > asks. Note the caveat in `docs/eda-evaluation.md`: the source articles are
@@ -127,12 +188,9 @@ over 307 test summaries.
   export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
   ```
 
-- A SLURM script previously in this repo (removed in `174507b`, recoverable with
-  `git show 50e4bbe^:scripts/slurm_toxicity.sh`) used
-  `--account=research --qos=medium --partition=gpu --gres=gpu:1`. **Confirm those
-  are correct for your Ada allocation before relying on them** — they were
-  written for an earlier, abandoned experiment and were never run against this
-  project's account.
+- Storage note: `/home` is a 25 GB NFS quota. BART-base checkpoints are ~0.5 GB
+  and the CUDA venv alone is ~3.5 GB, so keep the HF cache and `runs/` inside the
+  project and prune between sweeps, or use `/scratch` (purged after 10 days).
 
 ## The environment decision
 
@@ -160,8 +218,7 @@ same weighted-sum plumbing, same `task_loss_ratio` hyperparameter.
 > not be bit-identical to the paper; state that in the report and cite the
 > published table for comparison.
 
-**Python 3.14 is not a problem — checked.** `uv pip install --dry-run torch`
-resolves to **torch 2.13.0** on this interpreter, so `requires-python = ">=3.14"`
-can stay as it is. Note that the resolution pulls the CUDA 13 `nvidia-*` wheels
-(~3 GB), so install once on the Ada login node into a project-local cache before
-any compute node needs them.
+**Python 3.14 is fine** — the cu128 index ships a cp314 wheel for torch 2.11.0,
+so `requires-python = ">=3.14"` stays. Note that a stock `uv sync` on modern
+hardware will *not* reproduce this lockfile, because of the cu128 pin above;
+that is worth a line in the README and a sentence in the final report.

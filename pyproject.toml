@@ -8,4 +8,19 @@ dependencies = [
     "jupyter>=1.1.1",
     "numpy>=2.5.2",
     "scikit-learn>=1.9.0",
+    "torch>=2.5",
+    "transformers>=4.40",
 ]
+
+# Ada's u22 compute nodes run a spread of NVIDIA drivers (570/580/595 all seen
+# on nodes advertising the same 2080ti feature) and SLURM exposes no feature for
+# driver version, so the build has to match the OLDEST driver in the pool.
+# cu130 wheels demand driver >= 580 and abort on the 570 nodes; cu128 tops out
+# at torch 2.11.0, which is why the floor above is >=2.5 rather than >=2.13.
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }

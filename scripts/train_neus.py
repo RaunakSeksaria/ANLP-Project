@@ -145,7 +145,9 @@ def main():
     ap.add_argument("--warmup", type=int, default=100)
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--num-beams", type=int, default=4)
-    ap.add_argument("--precision", choices=["bf16", "fp16", "fp32"], default="bf16")
+    ap.add_argument("--precision", choices=["auto", "bf16", "fp16", "fp32"], default="auto",
+                    help="auto picks bf16 where supported, else fp16 on GPU / fp32 on CPU. "
+                         "Ada's RTX 2080 Ti is Turing (sm_75) and has no bf16.")
     ap.add_argument("--out", default=str(ROOT / "runs"))
     ap.add_argument("--limit-train", type=int, default=None, help="smoke-test switch")
     args = ap.parse_args()
@@ -155,6 +157,11 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if args.precision == "auto":
+        if device.type != "cuda":
+            args.precision = "fp32"
+        else:
+            args.precision = "bf16" if torch.cuda.is_bf16_supported() else "fp16"
     autocast_dtype = {"bf16": torch.bfloat16, "fp16": torch.float16,
                       "fp32": None}[args.precision]
     if device.type == "cpu":
