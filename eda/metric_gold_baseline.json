@@ -1,0 +1,201 @@
+{
+  "length_confound": {
+    "correlations": {
+      "n_arousal vs n_vad_tokens": 0.5434790796559841,
+      "p+n arousal vs n_vad_tokens": 0.8810874550715527,
+      "p_arousal vs n_tokens": 0.7554914852145489,
+      "p_arousal vs n_vad_tokens": 0.819457009892186
+    },
+    "n_instances": 9285,
+    "per_stance": {
+      "center": {
+        "n": 3095,
+        "p_arousal_per_vad_token": 0.1763293991890904,
+        "p_arousal_raw": 2.91620549273021,
+        "sd_per_vad_token": 0.08097928456294927
+      },
+      "left": {
+        "n": 3095,
+        "p_arousal_per_vad_token": 0.1767156896772224,
+        "p_arousal_raw": 3.177897576736672,
+        "sd_per_vad_token": 0.08115257634224413
+      },
+      "right": {
+        "n": 3095,
+        "p_arousal_per_vad_token": 0.17924604553427087,
+        "p_arousal_raw": 3.079447819063005,
+        "sd_per_vad_token": 0.07897024346212304
+      }
+    }
+  },
+  "neus": {
+    "n_stories": 3095,
+    "rows": {
+      "concat L+C+R": {
+        "assertives": 1.0546042003231018,
+        "bias_lexicon": 14.304038772213246,
+        "factives": 0.189983844911147,
+        "hedges": 1.5612277867528273,
+        "implicatives": 0.5382875605815832,
+        "n_arousal": 4.299028432956391,
+        "n_arousal_per_vad_token": 0.09525151050913484,
+        "n_tokens": 83.97415185783522,
+        "n_vad_tokens": 45.133441033925685,
+        "p_arousal": 8.083261389337629,
+        "p_arousal_per_vad_token": 0.17909694461943734,
+        "report_verbs": 2.288529886914378,
+        "subj_strong": 5.464297253634895,
+        "subj_weak": 9.75767366720517,
+        "v_negative": 2.384402261712439,
+        "v_positive": 5.623928271405487,
+        "vad_coverage": 0.5374682570219315,
+        "valence": 25.806246526655883
+      },
+      "copy-centre baseline": {
+        "assertives": 0.39418416801292405,
+        "bias_lexicon": 5.346365105008077,
+        "factives": 0.05880452342487884,
+        "hedges": 0.5515347334410339,
+        "implicatives": 0.17350565428109854,
+        "n_arousal": 1.478127625201936,
+        "n_arousal_per_vad_token": 0.09041831370068765,
+        "n_tokens": 31.322455573505653,
+        "n_vad_tokens": 16.347657512116317,
+        "p_arousal": 2.9162054927302097,
+        "p_arousal_per_vad_token": 0.17838674994070675,
+        "report_verbs": 0.837156704361874,
+        "subj_strong": 1.7460420032310178,
+        "subj_weak": 3.3851373182552504,
+        "v_negative": 0.8253987075928916,
+        "v_positive": 2.0285961227786733,
+        "vad_coverage": 0.521914939706838,
+        "valence": 9.377026171243934
+      },
+      "gold center article": {
+        "assertives": 0.39418416801292405,
+        "bias_lexicon": 5.346365105008077,
+        "factives": 0.05880452342487884,
+        "hedges": 0.5515347334410339,
+        "implicatives": 0.17350565428109854,
+        "n_arousal": 1.478127625201936,
+        "n_arousal_per_vad_token": 0.09041831370068765,
+        "n_tokens": 31.322455573505653,
+        "n_vad_tokens": 16.347657512116317,
+        "p_arousal": 2.9162054927302097,
+        "p_arousal_per_vad_token": 0.17838674994070675,
+        "report_verbs": 0.837156704361874,
+        "subj_strong": 1.7460420032310178,
+        "subj_weak": 3.3851373182552504,
+        "v_negative": 0.8253987075928916,
+        "v_positive": 2.0285961227786733,
+        "vad_coverage": 0.521914939706838,
+        "valence": 9.377026171243934
+      },
+      "gold left article": {
+        "assertives": 0.3974151857835218,
+        "bias_lexicon": 5.68562197092084,
+        "factives": 0.07786752827140549,
+        "hedges": 0.6151857835218094,
+        "implicatives": 0.20516962843295639,
+        "n_arousal": 1.7081977382875615,
+        "n_arousal_per_vad_token": 0.09601147734495602,
+        "n_tokens": 33.98772213247173,
+        "n_vad_tokens": 17.791599353796446,
+        "p_arousal": 3.1778975767366653,
+        "p_arousal_per_vad_token": 0.17861786979024752,
+        "report_verbs": 0.8623586429725364,
+        "subj_strong": 2.1508885298869145,
+        "subj_weak": 3.818739903069467,
+        "v_negative": 0.942579321486269,
+        "v_positive": 2.2186762520193906,
+        "vad_coverage": 0.5234713666438512,
+        "valence": 10.171896607431334
+      },
+      "gold right article": {
+        "assertives": 0.41389337641357027,
+        "bias_lexicon": 5.583198707592892,
+        "factives": 0.07431340872374798,
+        "hedges": 0.5638126009693053,
+        "implicatives": 0.22132471728594508,
+        "n_arousal": 1.5842164781906265,
+        "n_arousal_per_vad_token": 0.0926573690874386,
+        "n_tokens": 32.989983844911144,
+        "n_vad_tokens": 17.097576736672053,
+        "p_arousal": 3.0794478190630037,
+        "p_arousal_per_vad_token": 0.1801101914318649,
+        "report_verbs": 0.8781906300484653,
+        "subj_strong": 2.0833602584814215,
+        "subj_weak": 3.582875605815832,
+        "v_negative": 0.8801382875605803,
+        "v_positive": 2.15534636510501,
+        "vad_coverage": 0.5182656898848234,
+        "valence": 9.823996445880427
+      },
+      "identity (roundup vs itself)": {
+        "assertives": 0.0,
+        "bias_lexicon": 0.0,
+        "factives": 0.0,
+        "hedges": 0.0,
+        "implicatives": 0.0,
+        "n_arousal": 0.0,
+        "n_arousal_per_vad_token": 0.0,
+        "n_tokens": 0.0,
+        "n_vad_tokens": 0.0,
+        "p_arousal": 0.0,
+        "p_arousal_per_vad_token": 0.0,
+        "report_verbs": 0.0,
+        "subj_strong": 0.0,
+        "subj_weak": 0.0,
+        "v_negative": 0.0,
+        "v_positive": 0.0,
+        "vad_coverage": 0.0,
+        "valence": 0.0
+      }
+    }
+  },
+  "wcep": {
+    "n_clusters": 1022,
+    "rows": {
+      "WCEP-10 test document": {
+        "assertives": 1.8932519212548689,
+        "bias_lexicon": 30.831245394252026,
+        "factives": 0.387409200968523,
+        "hedges": 2.93283503526687,
+        "implicatives": 1.2405516370144225,
+        "n_arousal": 10.134854511001139,
+        "n_arousal_per_vad_token": 0.1015358182477839,
+        "n_tokens": 187.25802716075376,
+        "n_vad_tokens": 99.81555953258238,
+        "p_arousal": 17.622707127065993,
+        "p_arousal_per_vad_token": 0.17655270590667269,
+        "report_verbs": 4.488788293504579,
+        "subj_strong": 10.451521212759237,
+        "subj_weak": 20.98284029897884,
+        "v_negative": 5.518994420465303,
+        "v_positive": 12.37718507211285,
+        "vad_coverage": 0.5330375474205684,
+        "valence": 56.76597041793902
+      },
+      "identity (summary vs itself)": {
+        "assertives": 0.0,
+        "bias_lexicon": 0.0,
+        "factives": 0.0,
+        "hedges": 0.0,
+        "implicatives": 0.0,
+        "n_arousal": 0.0,
+        "n_arousal_per_vad_token": 0.0,
+        "n_tokens": 0.0,
+        "n_vad_tokens": 0.0,
+        "p_arousal": 0.0,
+        "p_arousal_per_vad_token": 0.0,
+        "report_verbs": 0.0,
+        "subj_strong": 0.0,
+        "subj_weak": 0.0,
+        "v_negative": 0.0,
+        "v_positive": 0.0,
+        "vad_coverage": 0.0,
+        "valence": 0.0
+      }
+    }
+  }
+}
