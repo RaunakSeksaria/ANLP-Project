@@ -1,0 +1,36 @@
+{
+  "story_id": 2727,
+  "left": {
+    "article_id": "2727:left",
+    "story_id": 2727,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Syria Vows To Sign Paris Agreement, Leaving U.S. Alone In Climate Denial",
+    "body": "Syria took a break on Tuesday from its gruesome six-year civil war to announce plans to sign the Paris climate agreement, leaving the United States as the only country to reject the emissions-cutting deal.",
+    "roundup": "Syria announced that they will join the Paris Climate Accord, making the U.S. the only country in the world opposed to the deal.",
+    "date": "2017-11-07",
+    "topic": "Environment"
+  },
+  "center": {
+    "article_id": "2727:center",
+    "story_id": 2727,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Paris climate accord: Syria 'to sign up', isolating US",
+    "body": "The US is set to become isolated in its stance on the Paris climate agreement, after reports that Syria is preparing to join the deal.",
+    "roundup": "Syria announced that they will join the Paris Climate Accord, making the U.S. the only country in the world opposed to the deal.",
+    "date": "2017-11-07",
+    "topic": "Environment"
+  },
+  "right": {
+    "article_id": "2727:right",
+    "story_id": 2727,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Syria joins Paris climate deal, leaving US as the only country opposed",
+    "body": "Syria announced on Tuesday that it would be joining the Paris climate change agreement, leaving the United States as the only remaining country opposed to the deal after President Trump's June 1 decision to exit from the accord.",
+    "roundup": "Syria announced that they will join the Paris Climate Accord, making the U.S. the only country in the world opposed to the deal.",
+    "date": "2017-11-07",
+    "topic": "Environment"
+  }
+}

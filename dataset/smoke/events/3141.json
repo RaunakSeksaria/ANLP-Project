@@ -1,0 +1,36 @@
+{
+  "story_id": 3141,
+  "left": {
+    "article_id": "3141:left",
+    "story_id": 3141,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Trump And Putin To Hold Summit In Helsinki",
+    "body": "President Donald Trump and his Russian counterpart, Vladimir Putin, will meet July 16 in Helsinki in a one-on-one summit meeting, the White House announced Thursday. The meeting will be the first of its kind between the leaders.",
+    "roundup": "Russian President Vladimir Putin and U.S. President Donald Trump will hold a summit in Helsinki on July 16, the Kremlin and the White House announced Thursday.",
+    "date": "2018-06-28",
+    "topic": "National Security"
+  },
+  "center": {
+    "article_id": "3141:center",
+    "story_id": 3141,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Trump to Meet Russia’s Putin in Finland on July 16",
+    "body": "Summit will be the president’s first with the Russian leader, and the two will discuss national security and outlook for developing Russian-American relations",
+    "roundup": "Russian President Vladimir Putin and U.S. President Donald Trump will hold a summit in Helsinki on July 16, the Kremlin and the White House announced Thursday.",
+    "date": "2018-06-28",
+    "topic": "National Security"
+  },
+  "right": {
+    "article_id": "3141:right",
+    "story_id": 3141,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Putin, Trump to Have Summit in Helsinki on July 16",
+    "body": "Russian President Vladimir Putin and U.S. President Donald Trump will hold a summit in Helsinki on July 16, the Kremlin and the White House announced Thursday.",
+    "roundup": "Russian President Vladimir Putin and U.S. President Donald Trump will hold a summit in Helsinki on July 16, the Kremlin and the White House announced Thursday.",
+    "date": "2018-06-28",
+    "topic": "National Security"
+  }
+}

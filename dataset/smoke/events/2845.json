@@ -1,0 +1,36 @@
+{
+  "story_id": 2845,
+  "left": {
+    "article_id": "2845:left",
+    "story_id": 2845,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Trump’s new HHS office will protect health care workers who object to abortion",
+    "body": "The new “Conscience and Religious Freedom” division is being cheered by the religious right.",
+    "roundup": "The Trump administration announced the new Conscience and Religious Freedom Office which creates new protections for health care providers who have religious objections to certain procedures, such as abortion, transgender therapy, and assisted suicide.",
+    "date": "2018-01-19",
+    "topic": "Healthcare"
+  },
+  "center": {
+    "article_id": "2845:center",
+    "story_id": 2845,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump administration creates new religious, moral protections for health workers",
+    "body": "The Trump administration has created new protections for health workers who have religious and moral objections to certain procedures, such as abortion or assisted suicide.",
+    "roundup": "The Trump administration announced the new Conscience and Religious Freedom Office which creates new protections for health care providers who have religious objections to certain procedures, such as abortion, transgender therapy, and assisted suicide.",
+    "date": "2018-01-19",
+    "topic": "Healthcare"
+  },
+  "right": {
+    "article_id": "2845:right",
+    "story_id": 2845,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Trump Administration Creates Office To Protect Health Care Workers From Violating Religious Convictions",
+    "body": "The Department of Health and Human Services (DHHS) announced Thursday it created a new division in charge of protecting health care workers so they don’t have to provide services that go against their religious or moral convictions.",
+    "roundup": "The Trump administration announced the new Conscience and Religious Freedom Office which creates new protections for health care providers who have religious objections to certain procedures, such as abortion, transgender therapy, and assisted suicide.",
+    "date": "2018-01-19",
+    "topic": "Healthcare"
+  }
+}

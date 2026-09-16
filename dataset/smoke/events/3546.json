@@ -1,0 +1,36 @@
+{
+  "story_id": 3546,
+  "left": {
+    "article_id": "3546:left",
+    "story_id": 3546,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Trump Foundation shuts down amid lawsuit alleging a “shocking pattern of illegality”",
+    "body": "The New York attorney general is still pursuing a lawsuit against the president’s charitable organization.",
+    "roundup": "The Trump Foundation will close amid a lawsuit from New York Attorney General Barbara Underwood that alleges the charity engaged in a \"shocking pattern of illegality\" to further President Trump's personal and political interests.",
+    "date": "2018-12-18",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "3546:center",
+    "story_id": 3546,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Donald J. Trump Foundation agrees to dissolve in deal with New York attorney general",
+    "body": "President Donald Trump's charity will shut down and its remaining assets distributed to other nonprofit organizations as part of an agreement filed Tuesday by New York Attorney General",
+    "roundup": "The Trump Foundation will close amid a lawsuit from New York Attorney General Barbara Underwood that alleges the charity engaged in a \"shocking pattern of illegality\" to further President Trump's personal and political interests.",
+    "date": "2018-12-18",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "3546:right",
+    "story_id": 3546,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "Trump Charity Agrees to Dissolve Amid Lawsuit Alleging 'Pattern of Illegality'",
+    "body": "The Donald J. Trump foundation, the charity organization of President Trump, has agreed to dissolve under judicial supervision amidst a lawsuit from New York Attorney General Barbara",
+    "roundup": "The Trump Foundation will close amid a lawsuit from New York Attorney General Barbara Underwood that alleges the charity engaged in a \"shocking pattern of illegality\" to further President Trump's personal and political interests.",
+    "date": "2018-12-18",
+    "topic": "Politics"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2931,
+  "left": {
+    "article_id": "2931:left",
+    "story_id": 2931,
+    "stance": "left",
+    "publisher": "Daily Kos",
+    "title": "Trump says gun policy with 82 percent support has 'not much political support (to put it mildly).'",
+    "body": "Donald Trump is trying to defend his \"school safety\" plan, which doesn’t call for an age limit on assault weapon purchases (but does support arming teachers). Predictably, his claims about those age limits are all about deflecting and obfuscating (or, to be less polite, are full of crap).",
+    "roundup": "President Donald Trump said he would wait for the courts to rule before acting on raising the minimum age for some gun purchases, putting off one of the more contentious gun safety measures he had backed after the latest U.S. school shooting.",
+    "date": "2018-03-12",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "center": {
+    "article_id": "2931:center",
+    "story_id": 2931,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "White House Unveils Proposals to Reduce Gun Violence at Schools",
+    "body": "Plan would fund training for armed teachers in wake of Florida school shooting but omits President Trump’s call to raise age limit for buying guns",
+    "roundup": "President Donald Trump said he would wait for the courts to rule before acting on raising the minimum age for some gun purchases, putting off one of the more contentious gun safety measures he had backed after the latest U.S. school shooting.",
+    "date": "2018-03-12",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "right": {
+    "article_id": "2931:right",
+    "story_id": 2931,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump: Efforts to raise minimum age for buying long guns 'moving rapidly'",
+    "body": "Trump said Monday ”things are moving rapidly” when it comes to raising the minimum age for buying certain guns, but said he is letting the issue play out in the courts before taking action himself.",
+    "roundup": "President Donald Trump said he would wait for the courts to rule before acting on raising the minimum age for some gun purchases, putting off one of the more contentious gun safety measures he had backed after the latest U.S. school shooting.",
+    "date": "2018-03-12",
+    "topic": "Gun Control and Gun Rights"
+  }
+}

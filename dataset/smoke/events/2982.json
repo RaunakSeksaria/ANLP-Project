@@ -1,0 +1,36 @@
+{
+  "story_id": 2982,
+  "left": {
+    "article_id": "2982:left",
+    "story_id": 2982,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "U.S. officials confirm Israel hit Syria after suspected Ghouta chemical attack",
+    "body": "The strike came hours after a deadly suspected poison gas attack near Damascus.",
+    "roundup": "Russia and the Syrian military blamed Israel for a pre-dawn missile attack Monday on a major air base in central Syria, and the U.S. has confirmed that it was Israel. The airstrikes killed 14 people, including Iranians active in Syria.",
+    "date": "2018-04-09",
+    "topic": "Middle East"
+  },
+  "center": {
+    "article_id": "2982:center",
+    "story_id": 2982,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Russia Points Finger at Israel as Missiles Strike Base in Syria",
+    "body": "Missiles hit an air base in Syria early Monday in a strike that Russia blamed on Israel, an assault that comes on the heels of an alleged chemical-weapons attack on a Damascus suburb that killed dozens of civilians and spurred calls for international action.",
+    "roundup": "Russia and the Syrian military blamed Israel for a pre-dawn missile attack Monday on a major air base in central Syria, and the U.S. has confirmed that it was Israel. The airstrikes killed 14 people, including Iranians active in Syria.",
+    "date": "2018-04-09",
+    "topic": "Middle East"
+  },
+  "right": {
+    "article_id": "2982:right",
+    "story_id": 2982,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Russia says Israel was behind Syria airstrike; 14 reported dead",
+    "body": "Russia and the Syrian military blamed Israel for a pre-dawn missile attack Monday on a major air base in central Syria, saying Israeli fighter jets launched the missiles from Lebanon’s airspace. A war-monitoring group said the airstrikes killed 14 people, including Iranians active in Syria.",
+    "roundup": "Russia and the Syrian military blamed Israel for a pre-dawn missile attack Monday on a major air base in central Syria, and the U.S. has confirmed that it was Israel. The airstrikes killed 14 people, including Iranians active in Syria.",
+    "date": "2018-04-09",
+    "topic": "Middle East"
+  }
+}

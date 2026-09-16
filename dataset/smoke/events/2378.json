@@ -1,0 +1,36 @@
+{
+  "story_id": 2378,
+  "left": {
+    "article_id": "2378:left",
+    "story_id": 2378,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "The Trump White House is in deep legal trouble, according to Trump’s own standards",
+    "body": "President Trump on Friday urged his former top adviser, Michael Flynn, to seek an immunity deal from Congress, after news broke late Thursday that Flynn was seeking such a deal. Trump said Flynn should cut a deal because the entire thing is “a witch hunt” that ostensibly won't lead anywhere.",
+    "roundup": "President Trump on Friday urged his former top adviser, Michael Flynn, to seek an immunity deal from Congress, after news broke late Thursday that Flynn was seeking such a deal.",
+    "date": "2017-03-31",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2378:center",
+    "story_id": 2378,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Trump: Flynn should get immunity from possible prosecution if he talks",
+    "body": "President Trump encouraged former aide Michael Flynn to seek immunity from prosecution on Friday and again denounced the various investigations into contacts between Trump campaign associates and Russians who sought to influence last year's election.",
+    "roundup": "President Trump on Friday urged his former top adviser, Michael Flynn, to seek an immunity deal from Congress, after news broke late Thursday that Flynn was seeking such a deal.",
+    "date": "2017-03-31",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2378:right",
+    "story_id": 2378,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump backs Flynn, says ex-adviser should seek immunity amid 'witch hunt'",
+    "body": "President Trump said Friday that his former national security adviser is right to seek immunity in exchange for answering questions on Russia, tweeting that Mike Flynn is caught up in a “witch hunt” of “historic proportion.”",
+    "roundup": "President Trump on Friday urged his former top adviser, Michael Flynn, to seek an immunity deal from Congress, after news broke late Thursday that Flynn was seeking such a deal.",
+    "date": "2017-03-31",
+    "topic": "White House"
+  }
+}

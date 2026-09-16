@@ -1,0 +1,36 @@
+{
+  "story_id": 2178,
+  "left": {
+    "article_id": "2178:left",
+    "story_id": 2178,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Post-ABC Tracking Poll: Trump 46, Clinton 45, as Democratic enthusiasm dips",
+    "body": "Hillary Clinton and Donald Trump are all but tied in the latest Washington Post-ABC News Tracking Poll, which finds Clinton backers slipping behind in enthusiasm even as the Democrat has an edge in early voting.",
+    "roundup": "Republican presidential nominee Donald Trump now leads Hillary Clinton by one point, according to the latest ABC News/Washington Post national tracking poll.",
+    "date": "2016-11-01",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2178:center",
+    "story_id": 2178,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Poll shows Trump made up 13 points in under 2 weeks — now he likes polls again",
+    "body": "Donald Trump now leads Hillary Clinton for the first time since May, according to the ABC News/Washington Post daily tracking poll.",
+    "roundup": "Republican presidential nominee Donald Trump now leads Hillary Clinton by one point, according to the latest ABC News/Washington Post national tracking poll.",
+    "date": "2016-11-01",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2178:right",
+    "story_id": 2178,
+    "stance": "right",
+    "publisher": "Breitbart News",
+    "title": "ABC News/Washington Post Tracking Poll: Donald Trump Leading Hillary Clinton",
+    "body": "Republican presidential nominee Donald Trump now leads Hillary Clinton by one point, according to the latest ABC News/Washington Post national tracking poll.",
+    "roundup": "Republican presidential nominee Donald Trump now leads Hillary Clinton by one point, according to the latest ABC News/Washington Post national tracking poll.",
+    "date": "2016-11-01",
+    "topic": "Elections"
+  }
+}

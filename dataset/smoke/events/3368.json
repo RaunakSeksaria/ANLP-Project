@@ -1,0 +1,36 @@
+{
+  "story_id": 3368,
+  "left": {
+    "article_id": "3368:left",
+    "story_id": 3368,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "Senate votes 51-49 to move Kavanaugh's nomination to a final vote",
+    "body": "The Senate just voted to advance Brett Kavanaugh's Supreme Court nomination in a critical test of support. A final confirmation vote is expected Saturday. Republican Sens. Jeff Flake and Susan Collins supported the motion, as did Democratic Sen. Joe Manchin, who had been undecided. GOP Sen. Lisa Murkowski voted no.",
+    "roundup": "The US Senate Voted 51 to 49 to advance Brett Kavanaugh's nomination to the Supreme Court. A final confirmation vote is expected late Saturday afternoon.",
+    "date": "2018-10-05",
+    "topic": "Supreme Court"
+  },
+  "center": {
+    "article_id": "3368:center",
+    "story_id": 3368,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Kavanaugh advances in key Senate vote",
+    "body": "Brett Kavanaugh cleared a key hurdle on Friday as Senate Republican aim to confirm him to the Supreme Court this weekend.",
+    "roundup": "The US Senate Voted 51 to 49 to advance Brett Kavanaugh's nomination to the Supreme Court. A final confirmation vote is expected late Saturday afternoon.",
+    "date": "2018-10-05",
+    "topic": "Supreme Court"
+  },
+  "right": {
+    "article_id": "3368:right",
+    "story_id": 3368,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "Murkowski Votes 'NO' on Cloture, But the 'Yeas' Have It",
+    "body": "By a razor thin margin, 51-49, the Senate has voted to move forward with the confirmation process for Supreme Court nominee Brett Kavanaugh.",
+    "roundup": "The US Senate Voted 51 to 49 to advance Brett Kavanaugh's nomination to the Supreme Court. A final confirmation vote is expected late Saturday afternoon.",
+    "date": "2018-10-05",
+    "topic": "Supreme Court"
+  }
+}

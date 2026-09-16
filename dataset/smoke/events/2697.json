@@ -1,0 +1,36 @@
+{
+  "story_id": 2697,
+  "left": {
+    "article_id": "2697:left",
+    "story_id": 2697,
+    "stance": "left",
+    "publisher": "Time Magazine",
+    "title": "All 5 Former U.S. Presidents Team Up to Raise $31 Million for Hurricane Victims",
+    "body": "All five of the former living U.S. presidents made a rare appearance together in the name of hurricane relief Saturday night. They were even joined by current President Donald Trump — sort of.",
+    "roundup": "All five former living U.S. presidents teamed up to raise $31 million for hurricane victims, appearing on stage together at a concert on Saturday evening. President Trump also made remarks via video.",
+    "date": "2017-10-22",
+    "topic": "Disaster"
+  },
+  "center": {
+    "article_id": "2697:center",
+    "story_id": 2697,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Campaign from former presidents raises $31M for disaster relief",
+    "body": "A fundraising campaign launched by all five living former U.S. presidents has raised $31 million in donations for disaster relief so far, after a series of hurricanes tore through different parts of the country.",
+    "roundup": "All five former living U.S. presidents teamed up to raise $31 million for hurricane victims, appearing on stage together at a concert on Saturday evening. President Trump also made remarks via video.",
+    "date": "2017-10-22",
+    "topic": "Disaster"
+  },
+  "right": {
+    "article_id": "2697:right",
+    "story_id": 2697,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Five ex-presidents and Trump champion unity, volunteerism at hurricane relief concert",
+    "body": "All five living former presidents took the stage together at Saturday evening's hurricane relief charity concert in Texas, displaying a sense of unity and speaking of the importance of volunteerism and community in the face of natural disasters.",
+    "roundup": "All five former living U.S. presidents teamed up to raise $31 million for hurricane victims, appearing on stage together at a concert on Saturday evening. President Trump also made remarks via video.",
+    "date": "2017-10-22",
+    "topic": "Disaster"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2929,
+  "left": {
+    "article_id": "2929:left",
+    "story_id": 2929,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "NRA sued to block Florida’s new gun law hours after it was passed",
+    "body": "The group is arguing that young women really need their guns.",
+    "roundup": "On Friday, the National Rifle Association filed a lawsuit against the state of Florida in response to the state's newly passed gun law. The NRA is arguing against the law's provision to raise the minimum age of rifle purchase from 18 to 21, among other things.",
+    "date": "2018-03-10",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "center": {
+    "article_id": "2929:center",
+    "story_id": 2929,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Florida shooting: NRA sues as Florida enacts gun-control law",
+    "body": "The National Rifle Association (NRA) is suing Florida after it passed a gun control law in the wake of a school shooting that left 17 people dead.",
+    "roundup": "On Friday, the National Rifle Association filed a lawsuit against the state of Florida in response to the state's newly passed gun law. The NRA is arguing against the law's provision to raise the minimum age of rifle purchase from 18 to 21, among other things.",
+    "date": "2018-03-10",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "right": {
+    "article_id": "2929:right",
+    "story_id": 2929,
+    "stance": "right",
+    "publisher": "TheBlaze.com",
+    "title": "NRA sues against new gun law in response to Florida mass murder – here’s why",
+    "body": "The National Rifle Association filed a lawsuit Friday against a law narrowly passed through the Florida legislature and signed by Republican Governor Rick Scott in response to the horrific Parkland massacre.",
+    "roundup": "On Friday, the National Rifle Association filed a lawsuit against the state of Florida in response to the state's newly passed gun law. The NRA is arguing against the law's provision to raise the minimum age of rifle purchase from 18 to 21, among other things.",
+    "date": "2018-03-10",
+    "topic": "Gun Control and Gun Rights"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2390,
+  "left": {
+    "article_id": "2390:left",
+    "story_id": 2390,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "ISIS Claims 2 Deadly Explosions at Egyptian Coptic Churches on Palm Sunday",
+    "body": "Two explosions at Coptic churches in Egypt on Palm Sunday left at least 40 people dead and injured dozens of others as a day of worship in the besieged Christian community turned to destruction and carnage.",
+    "roundup": "ISIS has claimed responsibility for deadly attacks on two Egyptian churches on Palm Sunday.",
+    "date": "2017-04-09",
+    "topic": "Terrorism"
+  },
+  "center": {
+    "article_id": "2390:center",
+    "story_id": 2390,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Egypt's Coptic churches hit by deadly blasts on Palm Sunday",
+    "body": "In Alexandria, an explosion outside St Mark's Coptic church killed 13 people. Pope Tawadros II, head of the Coptic Church, had been attending Mass inside and was unhurt, state media reported.",
+    "roundup": "ISIS has claimed responsibility for deadly attacks on two Egyptian churches on Palm Sunday.",
+    "date": "2017-04-09",
+    "topic": "Terrorism"
+  },
+  "right": {
+    "article_id": "2390:right",
+    "story_id": 2390,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Palm Sunday attacks: ISIS says it carried out bombings at churches in Egypt that killed at least 37",
+    "body": "The ISIS terror group has claimed responsibility for two separate Palm Sunday bombing attacks at Coptic Christian churches in Egypt that have killed 37 people and injured more than 100.",
+    "roundup": "ISIS has claimed responsibility for deadly attacks on two Egyptian churches on Palm Sunday.",
+    "date": "2017-04-09",
+    "topic": "Terrorism"
+  }
+}

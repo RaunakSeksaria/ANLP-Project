@@ -1,0 +1,36 @@
+{
+  "story_id": 3304,
+  "left": {
+    "article_id": "3304:left",
+    "story_id": 3304,
+    "stance": "left",
+    "publisher": "CBS News",
+    "title": "Leslie Moonves departs as chief of CBS, financial package to be withheld pending investigation",
+    "body": "CBS Corporation announced on Sunday that chairman and CEO Leslie Moonves is departing the company, effective immediately. Moonves' exit comes hours after The New Yorker published accounts from six women with allegations of sexual assault or misconduct, following allegations by six other women in July.",
+    "roundup": "CBS CEO Leslie Moonves is stepping down after allegations of sexual misconduct from 12 women.",
+    "date": "2018-09-10",
+    "topic": "Sexual Misconduct"
+  },
+  "center": {
+    "article_id": "3304:center",
+    "story_id": 3304,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "CBS Chief Leslie Moonves Steps Down Amid Sexual Misconduct Allegations",
+    "body": "CBS Corporation Chairman and Chief Executive Leslie Moonves is stepping down amid accusations that he sexually harassed and assaulted numerous women over his career, the company said, a stunning downfall for one of the entertainment industry’s most powerful figures.",
+    "roundup": "CBS CEO Leslie Moonves is stepping down after allegations of sexual misconduct from 12 women.",
+    "date": "2018-09-10",
+    "topic": "Sexual Misconduct"
+  },
+  "right": {
+    "article_id": "3304:right",
+    "story_id": 3304,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "CBS Shakeup: Moonves Out, Lawsuit Settled, New Board Members Named",
+    "body": "CBS Corp CEO Leslie Moonves resigned from the company, the company said on Sunday, amid fresh allegations of sexual assault and harassment.",
+    "roundup": "CBS CEO Leslie Moonves is stepping down after allegations of sexual misconduct from 12 women.",
+    "date": "2018-09-10",
+    "topic": "Sexual Misconduct"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3177,
+  "left": {
+    "article_id": "3177:left",
+    "story_id": 3177,
+    "stance": "left",
+    "publisher": "Mother Jones",
+    "title": "Famously Litigious Trump Advised Theresa May to Sue EU Over Brexit",
+    "body": "President Donald Trump seems to have spent much of his first official visit to the UK mansplaining to the country’s prime minister, Theresa May.",
+    "roundup": "British Prime Minister Theresa May said that President Trump advised her to sue the European Union over Brexit, revealing the secret suggestion that she had previously said was \"too brutal.\"",
+    "date": "2018-07-15",
+    "topic": "Europe"
+  },
+  "center": {
+    "article_id": "3177:center",
+    "story_id": 3177,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Theresa May Says Trump Advised Her to Sue the EU",
+    "body": "U.K. Prime Minister Theresa May on Sunday revealed the secret advice she received from President Donald Trump on how to handle Brexit talks: He suggested the U.K. sue the European Union.",
+    "roundup": "British Prime Minister Theresa May said that President Trump advised her to sue the European Union over Brexit, revealing the secret suggestion that she had previously said was \"too brutal.\"",
+    "date": "2018-07-15",
+    "topic": "Europe"
+  },
+  "right": {
+    "article_id": "3177:right",
+    "story_id": 3177,
+    "stance": "right",
+    "publisher": "Breitbart News",
+    "title": "May Says Trump Told Her to SUE the EU, President Says It’s Still Not Too Late to Get ‘Brutal’ with Brussels",
+    "body": "Prime Minister Theresa May has revealed that President Donald Trump’s “brutal” advice on dealing with the EU was that she should sue the bloc instead of making concessions to it.",
+    "roundup": "British Prime Minister Theresa May said that President Trump advised her to sue the European Union over Brexit, revealing the secret suggestion that she had previously said was \"too brutal.\"",
+    "date": "2018-07-15",
+    "topic": "Europe"
+  }
+}

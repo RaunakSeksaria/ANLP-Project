@@ -1,0 +1,36 @@
+{
+  "story_id": 4682,
+  "left": {
+    "article_id": "4682:left",
+    "story_id": 4682,
+    "stance": "left",
+    "publisher": "The Guardian",
+    "title": "Fauci says US might not see 'second wave' of Covid-19 cases",
+    "body": "Leading US public health expert and White House coronavirus taskforce member Dr Anthony Fauci has said the US may not see a “second wave” of cases of Covid-19. According to researchers at Johns Hopkins University in Maryland, the US has recorded more than 2m cases of Covid-19 and nearly 115,000 deaths.",
+    "roundup": "As some states soften lockdown restrictions and see upticks in the number of coronavirus cases, many are concerned about a potential 'second wave' of the virus this fall. However, Anthony Fauci said Friday that the increase in cases did not necessarily indicate a 'second wave,' and that a spike in the fall could be avoided if people continue to social distance and wear masks in public. Coverage from all sides of the political spectrum reported on Fauci's remarks. Coverage from the right also connected coronavirus 'second wave' concern to last week's stock market dip, as well as White House economic advisor Larry Kudlow's repeated denial of the 'second wave.'",
+    "date": "2020-06-15",
+    "topic": "Coronavirus"
+  },
+  "center": {
+    "article_id": "4682:center",
+    "story_id": 4682,
+    "stance": "center",
+    "publisher": "Forbes",
+    "title": "Here Are All The States Where Coronavirus Cases Are Spiking",
+    "body": "Some states are seeing a dramatic surge in new coronavirus infections even as reopening measures continue across the country, raising tough questions about whether those reopening efforts were premature and how officials will balance maintaining public safety with preventing more economic damage.",
+    "roundup": "As some states soften lockdown restrictions and see upticks in the number of coronavirus cases, many are concerned about a potential 'second wave' of the virus this fall. However, Anthony Fauci said Friday that the increase in cases did not necessarily indicate a 'second wave,' and that a spike in the fall could be avoided if people continue to social distance and wear masks in public. Coverage from all sides of the political spectrum reported on Fauci's remarks. Coverage from the right also connected coronavirus 'second wave' concern to last week's stock market dip, as well as White House economic advisor Larry Kudlow's repeated denial of the 'second wave.'",
+    "date": "2020-06-15",
+    "topic": "Coronavirus"
+  },
+  "right": {
+    "article_id": "4682:right",
+    "story_id": 4682,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Kudlow: 'There Is No Second Spike' of Virus",
+    "body": "White House economic adviser Larry Kudlow said there is not a \"second wave\" of coronavirus cases spreading across the country, despite the stock market taking a plunge Thursday. During a Friday appearance on Fox’s “Fox and Friends,” Kudlow said there is not a “second spike” in positive virus cases. He said he is \"not the health expert,” but he spoke with leading coronavirus health experts who assured him that \"there is no emergency, there is no second wave.”",
+    "roundup": "As some states soften lockdown restrictions and see upticks in the number of coronavirus cases, many are concerned about a potential 'second wave' of the virus this fall. However, Anthony Fauci said Friday that the increase in cases did not necessarily indicate a 'second wave,' and that a spike in the fall could be avoided if people continue to social distance and wear masks in public. Coverage from all sides of the political spectrum reported on Fauci's remarks. Coverage from the right also connected coronavirus 'second wave' concern to last week's stock market dip, as well as White House economic advisor Larry Kudlow's repeated denial of the 'second wave.'",
+    "date": "2020-06-15",
+    "topic": "Coronavirus"
+  }
+}

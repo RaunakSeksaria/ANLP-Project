@@ -1,0 +1,36 @@
+{
+  "story_id": 2666,
+  "left": {
+    "article_id": "2666:left",
+    "story_id": 2666,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "The House just passed a 20-week abortion ban. Opponents say it's “basically relying on junk science.”",
+    "body": "The bill is based on claims about fetal pain that aren’t supported by research.",
+    "roundup": "The House passed a bill on Tuesday making it a crime to have an abortion after 20 weeks of pregnancy. If it passes in the Senate, those who perform or attempt an abortion would serve up to five years in prison.",
+    "date": "2017-10-04",
+    "topic": "Abortion"
+  },
+  "center": {
+    "article_id": "2666:center",
+    "story_id": 2666,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "GOP passes bill criminalizing abortion after 20 weeks",
+    "body": "The House passed a bill Tuesday that would ban abortions after 20 weeks.",
+    "roundup": "The House passed a bill on Tuesday making it a crime to have an abortion after 20 weeks of pregnancy. If it passes in the Senate, those who perform or attempt an abortion would serve up to five years in prison.",
+    "date": "2017-10-04",
+    "topic": "Abortion"
+  },
+  "right": {
+    "article_id": "2666:right",
+    "story_id": 2666,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "20-week Abortion ban clears House, faces uphill Senate fight",
+    "body": "For the third time in five years, the Republican-led House has passed legislation that would prohibit most late-term abortions when the fetus can feel pain.",
+    "roundup": "The House passed a bill on Tuesday making it a crime to have an abortion after 20 weeks of pregnancy. If it passes in the Senate, those who perform or attempt an abortion would serve up to five years in prison.",
+    "date": "2017-10-04",
+    "topic": "Abortion"
+  }
+}

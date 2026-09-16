@@ -1,0 +1,36 @@
+{
+  "story_id": 2219,
+  "left": {
+    "article_id": "2219:left",
+    "story_id": 2219,
+    "stance": "left",
+    "publisher": "Los Angeles Times",
+    "title": "Trump names billionaire investor Wilbur Ross as Commerce secretary",
+    "body": "President-elect Donald Trump has chosen billionaire financier Wilbur Ross, known as the king of bankruptcy for his investments in distressed properties, to serve as Commerce secretary.",
+    "roundup": "President-elect Donald Trump names billionaire investor Wilbur Ross, a free-trade opponent with experience in corporate restructuring, to the position of secretary of commerce.",
+    "date": "2016-11-30",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "2219:center",
+    "story_id": 2219,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "Trump Taps Billionaire Investor Wilbur Ross For Commerce Secretary",
+    "body": "President-elect Donald Trump has chosen Wilbur Ross Jr., a billionaire investor and turnaround specialist, as his commerce secretary.",
+    "roundup": "President-elect Donald Trump names billionaire investor Wilbur Ross, a free-trade opponent with experience in corporate restructuring, to the position of secretary of commerce.",
+    "date": "2016-11-30",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "2219:right",
+    "story_id": 2219,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Report: Wilbur Ross has accepted commerce secretary position",
+    "body": "Billionaire investor Wilbur Ross has accepted President-elect Trump's offer to serve as commerce secretary in the incoming administration, according to multiple reports Tuesday evening.",
+    "roundup": "President-elect Donald Trump names billionaire investor Wilbur Ross, a free-trade opponent with experience in corporate restructuring, to the position of secretary of commerce.",
+    "date": "2016-11-30",
+    "topic": "Politics"
+  }
+}

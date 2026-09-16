@@ -1,0 +1,36 @@
+{
+  "story_id": 3644,
+  "left": {
+    "article_id": "3644:left",
+    "story_id": 3644,
+    "stance": "left",
+    "publisher": "The New Yorker",
+    "title": "Wisconsin’s Foxconn Debacle Keeps Getting Worse",
+    "body": "The 20-million square foot campus was praised by President Donald Trump as proof of his ability to revive American manufacturing.",
+    "roundup": "The electronics giant Foxconn announced they will not build a factory in Wisconsin, which President Trump had said would bring a score of manufacturing jobs to the midwest.",
+    "date": "2019-01-30",
+    "topic": "Business"
+  },
+  "center": {
+    "article_id": "3644:center",
+    "story_id": 3644,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "Foxconn reconsiders plan for Wisconsin manufacturing hub",
+    "body": "Electronics giant Foxconn reversed course and announced Wednesday that the massive Wisconsin operation that was supposed to bring a bounty of blue-collar manufacturing jobs back to the",
+    "roundup": "The electronics giant Foxconn announced they will not build a factory in Wisconsin, which President Trump had said would bring a score of manufacturing jobs to the midwest.",
+    "date": "2019-01-30",
+    "topic": "Business"
+  },
+  "right": {
+    "article_id": "3644:right",
+    "story_id": 3644,
+    "stance": "right",
+    "publisher": "Reason",
+    "title": "Foxconn Is 'Not Building a Factory' in Wisconsin Despite Billions in Taxpayer Subsidies",
+    "body": "Foxconn is reconsidering its plans to build a manufacturing facility that was supposed to create 13,000 blue collar jobs.",
+    "roundup": "The electronics giant Foxconn announced they will not build a factory in Wisconsin, which President Trump had said would bring a score of manufacturing jobs to the midwest.",
+    "date": "2019-01-30",
+    "topic": "Business"
+  }
+}

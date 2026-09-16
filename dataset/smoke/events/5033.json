@@ -1,0 +1,36 @@
+{
+  "story_id": 5033,
+  "left": {
+    "article_id": "5033:left",
+    "story_id": 5033,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Trump returns to public campaigning, falsely claiming that the virus that infected him is ‘disappearing’",
+    "body": "President Trump held his first public event since contracting the novel coronavirus, gathering a crowd of hundreds of supporters at the White House on Saturday despite providing no evidence that he was no longer infectious. It marked the beginning of what aides have described as a triumphant return to campaigning for reelection after his hospitalization — and a sign that the virus that rocked Trump’s campaign and infected much of the West Wing has not changed his combative and defiant approach to governing.",
+    "roundup": "President Donald Trump returned to the campaign trail by holding an event at the White House Saturday, just over a week since he tested positive for the virus. Trump spoke from a balcony to several hundred supporters, saying he was \"feeling great.\" On Saturday evening, White House physician Dr. Sean Conley said Trump was no longer considered a transmission risk to others, but didn’t say whether Trump has tested negative for the virus yet. Conley said diagnostic tests show there is “no longer evidence of actively replicating virus.”  Coverage from right-rated outlets tended to focus on Conley's memo saying that Trump was not contagious. Some coverage from left-rated outlets framed Conley's statement as false; other voices from the left speculate that the Saturday White House event may cause another virus outbreak.",
+    "date": "2020-10-11",
+    "topic": "Coronavirus"
+  },
+  "center": {
+    "article_id": "5033:center",
+    "story_id": 5033,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Doctor Says Trump Isn’t Transmission Risk After President Holds Public Event",
+    "body": "President Trump gave his first public remarks since contracting Covid-19 more than a week earlier, speaking to hundreds of pro-police activists Saturday on the White House lawn. The president—who didn’t wear a mask—emerged from the White House on Saturday pumping his fists, to cheers of “USA” from the audience. “I’m feeling great,” he said. In taped videos and brief appearances earlier in the week, the president had at times appeared short of breath, but sounded better in his nearly 20-minute speech Saturday. In a memo Saturday evening, Dr. Sean Conley,",
+    "roundup": "President Donald Trump returned to the campaign trail by holding an event at the White House Saturday, just over a week since he tested positive for the virus. Trump spoke from a balcony to several hundred supporters, saying he was \"feeling great.\" On Saturday evening, White House physician Dr. Sean Conley said Trump was no longer considered a transmission risk to others, but didn’t say whether Trump has tested negative for the virus yet. Conley said diagnostic tests show there is “no longer evidence of actively replicating virus.”  Coverage from right-rated outlets tended to focus on Conley's memo saying that Trump was not contagious. Some coverage from left-rated outlets framed Conley's statement as false; other voices from the left speculate that the Saturday White House event may cause another virus outbreak.",
+    "date": "2020-10-11",
+    "topic": "Coronavirus"
+  },
+  "right": {
+    "article_id": "5033:right",
+    "story_id": 5033,
+    "stance": "right",
+    "publisher": "New York Post (News)",
+    "title": "Trump no longer at risk of spreading COVID-19, doctor says",
+    "body": "President Trump is no longer contagious, according to his doctor. “This evening I am happy to report that in addition to the President meeting the CDC criteria for the safe discontinuation of isolation, this morning’s COVID PCR sample demonstrates, by currently recognized standards, he is no longer considered a transmission risk to others,” his physician, Sean Conley, wrote in a memo released by the White House Saturday night. The memo comes 10 days after Trump first experienced symptoms of his COVID-19 diagnosis and as the president readies to return to",
+    "roundup": "President Donald Trump returned to the campaign trail by holding an event at the White House Saturday, just over a week since he tested positive for the virus. Trump spoke from a balcony to several hundred supporters, saying he was \"feeling great.\" On Saturday evening, White House physician Dr. Sean Conley said Trump was no longer considered a transmission risk to others, but didn’t say whether Trump has tested negative for the virus yet. Conley said diagnostic tests show there is “no longer evidence of actively replicating virus.”  Coverage from right-rated outlets tended to focus on Conley's memo saying that Trump was not contagious. Some coverage from left-rated outlets framed Conley's statement as false; other voices from the left speculate that the Saturday White House event may cause another virus outbreak.",
+    "date": "2020-10-11",
+    "topic": "Coronavirus"
+  }
+}

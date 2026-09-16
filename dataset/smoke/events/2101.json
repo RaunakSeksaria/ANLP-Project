@@ -1,0 +1,36 @@
+{
+  "story_id": 2101,
+  "left": {
+    "article_id": "2101:left",
+    "story_id": 2101,
+    "stance": "left",
+    "publisher": "Guest Writer - Left",
+    "title": "OPINION: Donald Trump’s high-risk, low-reward trip to Mexico is sort of baffling",
+    "body": "It is barely worth pointing out that Donald Trump's surprise visit to Mexico on Wednesday won't do President Enrique Peña Nieto much good. Peña Nieto is deeply unpopular in his home country, with a quarterly survey from the newspaper Reforma putting his favorability at 23 percent — a figure so low that it makes Trump himself, at 35 percent, seems positively embraced.",
+    "roundup": "This surprise trip takes place just ours before Trump's immigration speech. Will Mexico welcome him with open arms?",
+    "date": "2016-08-31",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2101:center",
+    "story_id": 2101,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Despite the last-minute meeting, Mexico likely won't forget Trump's insults",
+    "body": "It's hard to foresee what could come of the meeting between Mexico's head of state and the GOP presidential nominee. Peña Nieto has compared Trump to dictators Adolf Hitler and Benito Mussolini. He told CNN he couldn't — and wouldn't — pay for the wall Trump so often promises to have built.",
+    "roundup": "This surprise trip takes place just ours before Trump's immigration speech. Will Mexico welcome him with open arms?",
+    "date": "2016-08-31",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2101:right",
+    "story_id": 2101,
+    "stance": "right",
+    "publisher": "TheBlaze.com",
+    "title": "Trump to Make Surprise Visit to Mexico Hours Before Immigration Speech",
+    "body": "Republican presidential nominee Donald Trump will make a surprise trip to Mexico on Wednesday to meet with the country’s president hours before delivering a highly-anticipated speech on immigration.",
+    "roundup": "This surprise trip takes place just ours before Trump's immigration speech. Will Mexico welcome him with open arms?",
+    "date": "2016-08-31",
+    "topic": "Elections"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3573,
+  "left": {
+    "article_id": "3573:left",
+    "story_id": 3573,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Trump retreats from public view as government shutdown continues over border wall fight",
+    "body": "The president has relied on his Twitter account to blame Democrats for the closure and cast illegal immigration as a threat to the country.",
+    "roundup": "The government shutdown continues into its second week as President Trump threatens to close the southern border if Congress does not approve funding for a wall.",
+    "date": "2018-12-29",
+    "topic": "Federal Budget"
+  },
+  "center": {
+    "article_id": "3573:center",
+    "story_id": 3573,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Government shutdown: White House aide predicts long standoff as Trump talks border closure",
+    "body": "The partial federal government shutdown entered its second week Saturday with no apparent movement toward a resolution.",
+    "roundup": "The government shutdown continues into its second week as President Trump threatens to close the southern border if Congress does not approve funding for a wall.",
+    "date": "2018-12-29",
+    "topic": "Federal Budget"
+  },
+  "right": {
+    "article_id": "3573:right",
+    "story_id": 3573,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Shutdown Day 7: Trump threatens to close border without wall funding",
+    "body": "President Trump on Friday threatened to close the southern border if Democrats do not relent in the standoff over border wall funding, which has resulted in a partial government shutdown that has lasted a week.",
+    "roundup": "The government shutdown continues into its second week as President Trump threatens to close the southern border if Congress does not approve funding for a wall.",
+    "date": "2018-12-29",
+    "topic": "Federal Budget"
+  }
+}

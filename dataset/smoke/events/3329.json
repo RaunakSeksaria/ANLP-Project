@@ -1,0 +1,36 @@
+{
+  "story_id": 3329,
+  "left": {
+    "article_id": "3329:left",
+    "story_id": 3329,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Dark Money Groups Will Have To Disclose Their Donors In Time For The Midterms",
+    "body": "A court order invalidating a rule that kept some election spending secret is going into effect.",
+    "roundup": "The Supreme Court on Tuesday ruled that all groups spending more than $250 on independent expenditures will have to disclose the names of political donors who gave more than $200, barring individuals who fund aggressive election ad campaigns from staying anonymous.",
+    "date": "2018-09-19",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "3329:center",
+    "story_id": 3329,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "Supreme Court Orders Disclosure For Dark Money, As New Report Unveils Some Donors",
+    "body": "The Supreme Court on Tuesday insisted that many donations to predominantly conservative political nonprofit groups — what's often called dark money — be disclosed, seven weeks ahead of the 2018 midterm elections.",
+    "roundup": "The Supreme Court on Tuesday ruled that all groups spending more than $250 on independent expenditures will have to disclose the names of political donors who gave more than $200, barring individuals who fund aggressive election ad campaigns from staying anonymous.",
+    "date": "2018-09-19",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "3329:right",
+    "story_id": 3329,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Supreme Court rejects conservative group's request not to reveal donors",
+    "body": "The U.S. Supreme Court has turned down a request from a conservative organization to halt a lower court ruling that requires the group to disclose the names of its donors.",
+    "roundup": "The Supreme Court on Tuesday ruled that all groups spending more than $250 on independent expenditures will have to disclose the names of political donors who gave more than $200, barring individuals who fund aggressive election ad campaigns from staying anonymous.",
+    "date": "2018-09-19",
+    "topic": "Elections"
+  }
+}

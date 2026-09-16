@@ -1,0 +1,36 @@
+{
+  "story_id": 3501,
+  "left": {
+    "article_id": "3501:left",
+    "story_id": 3501,
+    "stance": "left",
+    "publisher": "ABC News (Online)",
+    "title": "Trump calls Cohen a 'liar,' says he did 'nothing wrong' in pursuing project in Moscow during 2016 campaign",
+    "body": "President Donald Trump called his former personal attorney Michael Cohen a \"weak person\" shortly after news broke earlier Thursday morning that Cohen pleaded guilty to making false",
+    "roundup": "President Trump's former lawyer Michael Cohen pleaded guilty on Thursday to lying to Congress about efforts to build a Trump Tower in Moscow during the 2016 presidential campaign.",
+    "date": "2018-11-29",
+    "topic": "Russia"
+  },
+  "center": {
+    "article_id": "3501:center",
+    "story_id": 3501,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Michael Cohen in court: Trump ex-lawyer admits lying to Congress",
+    "body": "US President Donald Trump's former lawyer Michael Cohen has pleaded guilty to lying to Congress in relation to the Russia inquiry.",
+    "roundup": "President Trump's former lawyer Michael Cohen pleaded guilty on Thursday to lying to Congress about efforts to build a Trump Tower in Moscow during the 2016 presidential campaign.",
+    "date": "2018-11-29",
+    "topic": "Russia"
+  },
+  "right": {
+    "article_id": "3501:right",
+    "story_id": 3501,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Michael Cohen strikes plea deal with Mueller for lying about Russian contacts",
+    "body": "President Trump’s former personal attorney Michael Cohen pleaded guilty Thursday to lying to Congress about a Russian real estate deal sought by then-candidate Mr. Trump in 2016.",
+    "roundup": "President Trump's former lawyer Michael Cohen pleaded guilty on Thursday to lying to Congress about efforts to build a Trump Tower in Moscow during the 2016 presidential campaign.",
+    "date": "2018-11-29",
+    "topic": "Russia"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3720,
+  "left": {
+    "article_id": "3720:left",
+    "story_id": 3720,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "Congress Has a Breaking Point. This Week, Trump Might Have Found It.",
+    "body": "Time and again — when President Trump stood by Saudi Arabia after the killing of a Virginia-based journalist, when it looked as if he might intervene in the special counsel’s Russia investigation and when he threatened to declare a national emergency to pay for his border wall — lawmakers on Capitol Hill warned him not to push them too far.",
+    "roundup": "The Senate voted to block President Trump's national emergency declaration for border wall funding, with 12 Republicans joining all Democrats in rejecting the measure.",
+    "date": "2019-03-14",
+    "topic": "US Senate"
+  },
+  "center": {
+    "article_id": "3720:center",
+    "story_id": 3720,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Senate Passes Resolution to Block Trump’s Border Emergency",
+    "body": "A dozen Senate Republicans joined Democrats on Thursday to reject President Trump’s emergency declaration at the southern border, rebuking the president on his signature policy issue after he pushed to use funds that weren’t appropriated by Congress.",
+    "roundup": "The Senate voted to block President Trump's national emergency declaration for border wall funding, with 12 Republicans joining all Democrats in rejecting the measure.",
+    "date": "2019-03-14",
+    "topic": "US Senate"
+  },
+  "right": {
+    "article_id": "3720:right",
+    "story_id": 3720,
+    "stance": "right",
+    "publisher": "National Review",
+    "title": "Emergency-Declaration Rebuke Splits Senate GOP",
+    "body": "Twelve Republican senators joined Democrats Thursday to pass a resolution terminating the national emergency declared by President Trump last month. On Thursday afternoon, twelve Republican senators — nearly a fifth of the GOP caucus — joined Senate Democrats to pass a resolution terminating the national emergency declared by President Trump last month in an effort to unilaterally appropriate funds for construction of his long-promised border wall. The 59–41 vote was a rare bipartisan rebuke of Trump, who will now issue the first veto of his presidency in order to preserve",
+    "roundup": "The Senate voted to block President Trump's national emergency declaration for border wall funding, with 12 Republicans joining all Democrats in rejecting the measure.",
+    "date": "2019-03-14",
+    "topic": "US Senate"
+  }
+}

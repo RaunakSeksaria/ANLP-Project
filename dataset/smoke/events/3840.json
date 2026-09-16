@@ -1,0 +1,36 @@
+{
+  "story_id": 3840,
+  "left": {
+    "article_id": "3840:left",
+    "story_id": 3840,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Mexico’s president says he wants to avoid a clash with Trump",
+    "body": "President Andrés Manuel López Obrador said Friday that he would defend the interests of Mexicans but wanted to avoid a clash with Washington, after the Trump administration announced it would slap punitive tariffs on its southern neighbor unless it did more to stop irregular migration. “There is no need for confrontation,” the leftist president said at his daily morning news conference. Mexico is heavily dependent on trade and this year has surged to become the No. 1 trading partner of the United States, eclipsing Canada and China. The Mexican peso",
+    "roundup": "Mexican President Andres Manuel Lopez Obrador criticized Trump's plan to place a 5% tariff on Mexican imports in order to pressure Mexico to crack down on the surge of migrants to the US.",
+    "date": "2019-05-31",
+    "topic": "Mexico"
+  },
+  "center": {
+    "article_id": "3840:center",
+    "story_id": 3840,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Mexico president tells Donald Trump: 'America First is a fallacy' in response to tariff threat",
+    "body": "The president of Mexico says he wants to avoid a confrontation with the United States, but had harsh words about President Donald Trump's plan to impose tariffs on Mexican goods to pressure the nation to stem the flow of Central American migrants. \"America First is a fallacy,” President Andrés Manuel López Obrador, often referred to as AMLO, said in a public letter released late Thursday. López Obrador also announced he was sending his foreign minister to Washington, D.C., on Friday to negotiate with U.S. officials ahead of a June 10",
+    "roundup": "Mexican President Andres Manuel Lopez Obrador criticized Trump's plan to place a 5% tariff on Mexican imports in order to pressure Mexico to crack down on the surge of migrants to the US.",
+    "date": "2019-05-31",
+    "topic": "Mexico"
+  },
+  "right": {
+    "article_id": "3840:right",
+    "story_id": 3840,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Mexico Hits Trump Tariff Threat: Can't Solve Social Issues 'With Coercive Measures'",
+    "body": "In a surprise announcement that could derail a major trade deal, President Donald Trump says he is placing a 5% tariff on all Mexican imports, effective June 10, to pressure the country to do more to crack down on the surge of Central American migrants trying to cross the U.S. border. Trump said the percentage will gradually increase — up to 25% — \"until the Illegal Immigration problem is remedied.\" Mexican President Andrés Manuel López Obrador quickly fired back in a letter to Trump saying that \"social problems are not",
+    "roundup": "Mexican President Andres Manuel Lopez Obrador criticized Trump's plan to place a 5% tariff on Mexican imports in order to pressure Mexico to crack down on the surge of migrants to the US.",
+    "date": "2019-05-31",
+    "topic": "Mexico"
+  }
+}

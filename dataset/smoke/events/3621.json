@@ -1,0 +1,36 @@
+{
+  "story_id": 3621,
+  "left": {
+    "article_id": "3621:left",
+    "story_id": 3621,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Why Gillette’s toxic masculinity ad is annoying both sexists and feminists",
+    "body": "The Procter & Gamble-owned razor company used its Super Bowl ad to weigh in on #MeToo.",
+    "roundup": "A new Gillette ad that takes on \"toxic masculinity\" and encourages men to abstain from bullying and sexual harassment has stirred a great deal of controversy across partisan lines. Some have accused the campaign of unfairly characterizing all men as boorish or have taken issue with the company capitalizing on a social justice movement. Others praised the ad's message as positive and disputed the idea that it is \"anti-male.\"",
+    "date": "2019-01-17",
+    "topic": "Culture"
+  },
+  "center": {
+    "article_id": "3621:center",
+    "story_id": 3621,
+    "stance": "center",
+    "publisher": "AllSides",
+    "title": "Is Gillette’s New Ad Biased Against Men, or Championing Needed Social Change?",
+    "body": "Here’s a rundown of both sides of the Gillette razor ad debate. Some are decrying the advertisement as being biased against men, while others are applauding the company’s efforts to affect social change.",
+    "roundup": "A new Gillette ad that takes on \"toxic masculinity\" and encourages men to abstain from bullying and sexual harassment has stirred a great deal of controversy across partisan lines. Some have accused the campaign of unfairly characterizing all men as boorish or have taken issue with the company capitalizing on a social justice movement. Others praised the ad's message as positive and disputed the idea that it is \"anti-male.\"",
+    "date": "2019-01-17",
+    "topic": "Culture"
+  },
+  "right": {
+    "article_id": "3621:right",
+    "story_id": 3621,
+    "stance": "right",
+    "publisher": "National Review",
+    "title": "Procter & Gamble’s Toxic Sanctimony",
+    "body": "A new ad for Gillette razors parrots crude leftist stereotypes of men.",
+    "roundup": "A new Gillette ad that takes on \"toxic masculinity\" and encourages men to abstain from bullying and sexual harassment has stirred a great deal of controversy across partisan lines. Some have accused the campaign of unfairly characterizing all men as boorish or have taken issue with the company capitalizing on a social justice movement. Others praised the ad's message as positive and disputed the idea that it is \"anti-male.\"",
+    "date": "2019-01-17",
+    "topic": "Culture"
+  }
+}

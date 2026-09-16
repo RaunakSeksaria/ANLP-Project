@@ -1,0 +1,36 @@
+{
+  "story_id": 2802,
+  "left": {
+    "article_id": "2802:left",
+    "story_id": 2802,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "The world just delivered a stinging rebuke to Trump over Jerusalem",
+    "body": "Trump said he’d cut aid to countries who criticized the US at the UN. They did it anyway.",
+    "roundup": "The United Nations voted 128-9 against President Trump's decision to recognize Jerusalem as the capital of Israel despite his threat to cut aid to countries that expressed disapproval. Ambassador Nikki Haley said on Tuesday that she would be \"taking names\" of those who spoke out against the decision.",
+    "date": "2017-12-21",
+    "topic": "Foreign Policy"
+  },
+  "center": {
+    "article_id": "2802:center",
+    "story_id": 2802,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "U.N. General Assembly repudiates Trump on Jerusalem decision despite his threat of U.S. aid cutoff",
+    "body": "The United Nations General Assembly voted overwhelmingly Thursday to repudiate President Trump’s controversial declaration recognizing Jerusalem as the capital of Israel. Trump threatened to withhold aid in retaliation for a vote condemning his position.",
+    "roundup": "The United Nations voted 128-9 against President Trump's decision to recognize Jerusalem as the capital of Israel despite his threat to cut aid to countries that expressed disapproval. Ambassador Nikki Haley said on Tuesday that she would be \"taking names\" of those who spoke out against the decision.",
+    "date": "2017-12-21",
+    "topic": "Foreign Policy"
+  },
+  "right": {
+    "article_id": "2802:right",
+    "story_id": 2802,
+    "stance": "right",
+    "publisher": "National Review",
+    "title": "Nikki Haley Powerfully Reminds the U.N. General Assembly of U.S. Strength",
+    "body": "Nikki Haley, United States ambassador to the United Nations, addressed the U.N. General Assembly this morning, taking its members to task for considering a vote to condemn the United States’ decision to move its embassy in Israel to Jerusalem. Here are some key excerpts from her powerful remarks, which focused on how the U.S. contributes far more to the U.N. and to international stability than any other nation.",
+    "roundup": "The United Nations voted 128-9 against President Trump's decision to recognize Jerusalem as the capital of Israel despite his threat to cut aid to countries that expressed disapproval. Ambassador Nikki Haley said on Tuesday that she would be \"taking names\" of those who spoke out against the decision.",
+    "date": "2017-12-21",
+    "topic": "Foreign Policy"
+  }
+}

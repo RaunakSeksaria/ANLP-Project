@@ -1,0 +1,36 @@
+{
+  "story_id": 3635,
+  "left": {
+    "article_id": "3635:left",
+    "story_id": 3635,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "Ex-Trump adviser Roger Stone arrested as part of Mueller probe",
+    "body": "Roger Stone, a former adviser to President Donald Trump, was indicted by a federal grand jury as part of special counsel Robert Mueller's probe and arrested Friday on charges of obstruction, giving false statements and witness tampering.",
+    "roundup": "Former Trump political adviser Roger Stone has been indicted on charges of making false statements, obstruction and witness tampering.",
+    "date": "2019-01-25",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "3635:center",
+    "story_id": 3635,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Trump Adviser Stone Charged as Part of Mueller Investigation",
+    "body": "Roger Stone was arrested on charges of lying to Congress, obstructing an official proceeding and trying to persuade a witness to lie.",
+    "roundup": "Former Trump political adviser Roger Stone has been indicted on charges of making false statements, obstruction and witness tampering.",
+    "date": "2019-01-25",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "3635:right",
+    "story_id": 3635,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Roger Stone indicted on several charges as part of Mueller’s Russia collusion probe",
+    "body": "Roger Stone, the colorful former longtime political adviser to President Trump, has been indicted on charges of obstruction, making false statements and witness tampering as part of Special Counsel Robert Mueller's wide-ranging Russia collusion probe.",
+    "roundup": "Former Trump political adviser Roger Stone has been indicted on charges of making false statements, obstruction and witness tampering.",
+    "date": "2019-01-25",
+    "topic": "Politics"
+  }
+}

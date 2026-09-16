@@ -1,0 +1,36 @@
+{
+  "story_id": 3021,
+  "left": {
+    "article_id": "3021:left",
+    "story_id": 3021,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Mueller raised possibility of presidential subpoena in meeting with Trump’s legal team",
+    "body": "In a tense meeting in early March with special counsel Robert S. Mueller III, President Trump’s lawyers insisted he had no obligation to talk with federal investigators probing Russia’s interference in the 2016 presidential campaign.",
+    "roundup": "Special counsel Robert Mueller warned President Donald Trump’s lawyers that he had the power to issue a subpoena if the White House refused a request for a sit-down interview with the president.",
+    "date": "2018-05-02",
+    "topic": "National Security"
+  },
+  "center": {
+    "article_id": "3021:center",
+    "story_id": 3021,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Mueller raised possibility of Trump subpoena: former Trump lawyer",
+    "body": "Special Counsel Robert Mueller, in a meeting with U.S. President Donald Trump’s lawyers in March, raised the possibility of issuing a subpoena for Trump if he declines to talk to investigators in the Russia probe, a former lawyer for the president said on Tuesday.",
+    "roundup": "Special counsel Robert Mueller warned President Donald Trump’s lawyers that he had the power to issue a subpoena if the White House refused a request for a sit-down interview with the president.",
+    "date": "2018-05-02",
+    "topic": "National Security"
+  },
+  "right": {
+    "article_id": "3021:right",
+    "story_id": 3021,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump rips Mueller probe for 'setup & trap' after subpoena warning revealed",
+    "body": "President Trump decried the latest tactics in the special counsel’s Russia probe as a “setup & trap” after it emerged that Robert Mueller suggested to Trump's legal team that he could subpoena the president to appear before a grand jury if he refuses an interview with investigators.",
+    "roundup": "Special counsel Robert Mueller warned President Donald Trump’s lawyers that he had the power to issue a subpoena if the White House refused a request for a sit-down interview with the president.",
+    "date": "2018-05-02",
+    "topic": "National Security"
+  }
+}

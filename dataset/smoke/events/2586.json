@@ -1,0 +1,36 @@
+{
+  "story_id": 2586,
+  "left": {
+    "article_id": "2586:left",
+    "story_id": 2586,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "OPINION: Mr. Trump Makes a Spectacle of Himself",
+    "body": "Here is one thing we are reminded of over and over about President Trump: The man simply cannot help himself — especially when cornered. Given one more chance to forcefully condemn the neo-Nazis and white supremacists whose rally in Charlottesville, Va., ended in violence and a counterprotester’s death, Mr. Trump angrily insisted, as he had suggested on Saturday, that both sides were equally to blame — a false equivalency that not just his critics but also an increasing number of his supporters have urged him to abandon.",
+    "roundup": "Trump laid blame on the “alt-left” as well as white supremacists and neo-Nazis for the unrest that erupted in Charlottesville, Virginia over the weekend.",
+    "date": "2017-08-16",
+    "topic": "Violence in America"
+  },
+  "center": {
+    "article_id": "2586:center",
+    "story_id": 2586,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump reignites race firestorm",
+    "body": "President Trump supercharged a firestorm over race and violence on Tuesday with a news conference in the lobby of his Manhattan skyscraper that was controversial and chaotic even by his unusual standards.",
+    "roundup": "Trump laid blame on the “alt-left” as well as white supremacists and neo-Nazis for the unrest that erupted in Charlottesville, Virginia over the weekend.",
+    "date": "2017-08-16",
+    "topic": "Violence in America"
+  },
+  "right": {
+    "article_id": "2586:right",
+    "story_id": 2586,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump's 'both sides' comments spark new tensions with Hill Republicans",
+    "body": "President Trump's renewed claim that \"both sides\" share blame for the deadly violence at last weekend's Virginia rally organized by white supremacists has stoked new tensions with congressional Republicans.",
+    "roundup": "Trump laid blame on the “alt-left” as well as white supremacists and neo-Nazis for the unrest that erupted in Charlottesville, Virginia over the weekend.",
+    "date": "2017-08-16",
+    "topic": "Violence in America"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 5578,
+  "left": {
+    "article_id": "5578:left",
+    "story_id": 5578,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Congress has officially passed a $900 billion Covid-19 relief package",
+    "body": "Days before the holidays, Congress has passed a $900 billion bill to extend unemployment insurance, pay out additional stimulus checks to Americans and provide more loans for small businesses. The Democratic-controlled House of Representatives passed the relief bill Monday night on a vote of 359-53, just hours after the final legislative text was released to members. A few hours later, the Republican-controlled US Senate did the same with a vote of 92-6. “It is a good bipartisan bill,” Speaker Nancy Pelosi said on the House floor Monday morning, mentioning provisions",
+    "roundup": "On Monday night, Congress passed a nearly $900 billion coronavirus relief bill that seeks to bolster a struggling economy and strengthen the nation's pandemic response. The bill now heads to the White House, where President Trump is expected to sign it into law.",
+    "date": "2020-12-22",
+    "topic": "Economic Policy"
+  },
+  "center": {
+    "article_id": "5578:center",
+    "story_id": 5578,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Congress Passes Covid-19 Relief, Spending Package With Overwhelming Support",
+    "body": "Congress overwhelmingly approved $900 billion of relief for households and businesses battered by the coronavirus pandemic, passing an emergency measure aimed at buoying the country through a difficult winter and into a new year. The bill now heads to the White House, where President Trump is expected to sign it into law. The Senate voted 92-6 late Monday to approve both the infusion of coronavirus aid, together with a $1.4 trillion spending bill that will fund the government through September. Initially, the Senate’s presiding officer said the vote was 91-7,",
+    "roundup": "On Monday night, Congress passed a nearly $900 billion coronavirus relief bill that seeks to bolster a struggling economy and strengthen the nation's pandemic response. The bill now heads to the White House, where President Trump is expected to sign it into law.",
+    "date": "2020-12-22",
+    "topic": "Economic Policy"
+  },
+  "right": {
+    "article_id": "5578:right",
+    "story_id": 5578,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "House, Senate pass COVID-19 relief bill, which now heads to Trump's desk",
+    "body": "Democrats and Republicans linked arms Monday and rushed to pass a new round of coronavirus relief, saying they were delivering a measure of hope to families grimly confronting the holidays and new year amid a new round of shutdowns. The bill, which also included full funding for all other government operations in 2021, cleared both chambers with strong bipartisan support late Monday night. It now needs to be signed into law by President Trump. The package passed with less than 20 minutes to spare before the midnight deadline, but Congress",
+    "roundup": "On Monday night, Congress passed a nearly $900 billion coronavirus relief bill that seeks to bolster a struggling economy and strengthen the nation's pandemic response. The bill now heads to the White House, where President Trump is expected to sign it into law.",
+    "date": "2020-12-22",
+    "topic": "Economic Policy"
+  }
+}

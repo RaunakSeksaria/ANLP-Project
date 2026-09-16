@@ -1,0 +1,36 @@
+{
+  "story_id": 3690,
+  "left": {
+    "article_id": "3690:left",
+    "story_id": 3690,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "White House press corps evicted from hotel ahead of North Korea summit",
+    "body": "The forced move was highly unusual because the White House had approved of and supported the use of the space by media who cover the president.",
+    "roundup": "The White House Press Corps has been booted from the Hanoi hotel where Kim Jong Un is staying due to objections by Kim's security staff.",
+    "date": "2019-02-26",
+    "topic": "Asia"
+  },
+  "center": {
+    "article_id": "3690:center",
+    "story_id": 3690,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Story spiked: Kim's Hanoi hotel masterstroke undone as White House press evicted",
+    "body": "It had been dubbed a brilliant move in a grand game of diplomatic chess: North Korean leader Kim Jong Un had booked the same hotel being used by the White House press corps during his meeting with U.S. President Donald Trump in Vietnam this week.",
+    "roundup": "The White House Press Corps has been booted from the Hanoi hotel where Kim Jong Un is staying due to objections by Kim's security staff.",
+    "date": "2019-02-26",
+    "topic": "Asia"
+  },
+  "right": {
+    "article_id": "3690:right",
+    "story_id": 3690,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Media evicted from Vietnam hotel ahead of Trump-Kim summit",
+    "body": "Members of the media were told to leave a hotel in Hanoi on Tuesday before the arrival of North Korean leader Kim Jong Un.",
+    "roundup": "The White House Press Corps has been booted from the Hanoi hotel where Kim Jong Un is staying due to objections by Kim's security staff.",
+    "date": "2019-02-26",
+    "topic": "Asia"
+  }
+}

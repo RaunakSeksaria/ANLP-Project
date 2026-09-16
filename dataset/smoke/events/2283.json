@@ -1,0 +1,36 @@
+{
+  "story_id": 2283,
+  "left": {
+    "article_id": "2283:left",
+    "story_id": 2283,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Chelsea Manning’s commutation is part of a historic year in reducing prison sentences",
+    "body": "A quiet but significant Obama criminal justice accomplishment: using the pardon power to get people out of prison sooner.",
+    "roundup": "US President Barack Obama has commuted Chelsea Manning's sentence for leaking documents to Wikileaks in 2010. The 29-year-old transgender US Army private, born Bradley Manning, will be freed on 17 May instead of her scheduled 2045 release.",
+    "date": "2017-01-18",
+    "topic": "General News"
+  },
+  "center": {
+    "article_id": "2283:center",
+    "story_id": 2283,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Obama should pardon Snowden as well as Manning",
+    "body": "President Obama’s brave and principled decision to commute Chelsea Manning’s remaining 35-year prison sentence highlights the equally strong need to pardon whistleblower Edward Snowden. Offering a pardon for Snowden on the eve of Trump’s inauguration would not only be equally brave and principled, it would restore the value of truth and ethics at a time when these essential elements of democracy are more necessary, and more precarious, than ever before.",
+    "roundup": "US President Barack Obama has commuted Chelsea Manning's sentence for leaking documents to Wikileaks in 2010. The 29-year-old transgender US Army private, born Bradley Manning, will be freed on 17 May instead of her scheduled 2045 release.",
+    "date": "2017-01-18",
+    "topic": "General News"
+  },
+  "right": {
+    "article_id": "2283:right",
+    "story_id": 2283,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Top Congressional Republicans condemn Chelsea Manning decision",
+    "body": "Top Congressional Republicans condemned Tuesday the decision by President Barack Obama to commute former Army intelligence analyst Chelsea Manning’s 35-year prison sentence for leaking classified documents.",
+    "roundup": "US President Barack Obama has commuted Chelsea Manning's sentence for leaking documents to Wikileaks in 2010. The 29-year-old transgender US Army private, born Bradley Manning, will be freed on 17 May instead of her scheduled 2045 release.",
+    "date": "2017-01-18",
+    "topic": "General News"
+  }
+}

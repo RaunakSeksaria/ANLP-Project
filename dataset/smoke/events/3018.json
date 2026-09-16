@@ -1,0 +1,36 @@
+{
+  "story_id": 3018,
+  "left": {
+    "article_id": "3018:left",
+    "story_id": 3018,
+    "stance": "left",
+    "publisher": "The Economist",
+    "title": "Marco Rubio offers his Trump-crazed party a glint of hope",
+    "body": "The episode that encapsulated the Republican establishment’s capitulation to Donald Trump had been planned as a repudiation of him. It was when Senator Marco Rubio, in a bid to salvage his sinking candidacy in the 2016 Republican primaries, suggested that Mr Trump had a small penis. Formerly known as a high-minded conservative, Mr Rubio also mocked the Republican front-runner’s hair and “orange” skin. “Donald Trump likes to sue people,” he told a crowd in Virginia, ahead of the round of primaries that more or less sealed Mr Trump’s capture of",
+    "roundup": "Sen. Marco Rubio expressed skepticism over the GOP's recent tax overhaul, telling The Economist that \"there’s no evidence whatsoever that the money’s been massively poured back into the American worker.” Proponents of the corporate tax cuts argue that businesses will reinvest in their employees, while detractors say that the trickle-down approach fails to produce results.",
+    "date": "2018-04-30",
+    "topic": "Taxes"
+  },
+  "center": {
+    "article_id": "3018:center",
+    "story_id": 3018,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Senator Rubio says U.S. workers get little benefit from tax reform: report",
+    "body": "Republican U.S. Senator Marco Rubio, in a move that may undercut his party’s message about their recent tax overhaul ahead of the 2018 midterm elections, told the Economist magazine there is “no evidence whatsoever” the law significantly helped American workers.",
+    "roundup": "Sen. Marco Rubio expressed skepticism over the GOP's recent tax overhaul, telling The Economist that \"there’s no evidence whatsoever that the money’s been massively poured back into the American worker.” Proponents of the corporate tax cuts argue that businesses will reinvest in their employees, while detractors say that the trickle-down approach fails to produce results.",
+    "date": "2018-04-30",
+    "topic": "Taxes"
+  },
+  "right": {
+    "article_id": "3018:right",
+    "story_id": 3018,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Marco Rubio veers way off message on GOP tax cuts",
+    "body": "Sen. Marco Rubio went off message about the GOP tax overhaul in an interview posted Monday, suggesting that the corporate tax cuts have not benefited workers.",
+    "roundup": "Sen. Marco Rubio expressed skepticism over the GOP's recent tax overhaul, telling The Economist that \"there’s no evidence whatsoever that the money’s been massively poured back into the American worker.” Proponents of the corporate tax cuts argue that businesses will reinvest in their employees, while detractors say that the trickle-down approach fails to produce results.",
+    "date": "2018-04-30",
+    "topic": "Taxes"
+  }
+}

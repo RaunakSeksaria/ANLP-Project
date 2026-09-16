@@ -1,0 +1,36 @@
+{
+  "story_id": 1983,
+  "left": {
+    "article_id": "1983:left",
+    "story_id": 1983,
+    "stance": "left",
+    "publisher": "The Atlantic",
+    "title": "May's Jobs Report: Very Disappointing",
+    "body": "The May jobs report is out, and it is a huge miss. On Friday morning, the Labor Department reported that the U.S. economy added just 38,000 jobs, while the unemployment rate dropped to 4.7 percent.",
+    "roundup": "Economists expected the US to add a modest 158,000 jobs last month. It added only 38,000, putting an end to a rate hike discussion.",
+    "date": "2016-06-03",
+    "topic": "Economy and Jobs"
+  },
+  "center": {
+    "article_id": "1983:center",
+    "story_id": 1983,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "\"Horrible\" Job Growth Ends Talk of Rate Hike",
+    "body": "Bye bye June rate hike. That was the billboard-sized headline from Wall Street trading desks after the U.S. job-creation machine hit the wall in May. The government said 38,000 jobs were created in May, way, way, way  below the roughly 160,000 new positions Wall Street economists had been expecting.",
+    "roundup": "Economists expected the US to add a modest 158,000 jobs last month. It added only 38,000, putting an end to a rate hike discussion.",
+    "date": "2016-06-03",
+    "topic": "Economy and Jobs"
+  },
+  "right": {
+    "article_id": "1983:right",
+    "story_id": 1983,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "US Economy Creates Fewest Number of Jobs in More Than 5 Years",
+    "body": "The U.S. economy created the fewest number of jobs in more than five years in May, hurt by a strike by Verizon workers and a fall in goods producing employment, pointing to labor market weakness that could make it difficult for the Federal Reserve to raise interest rates.",
+    "roundup": "Economists expected the US to add a modest 158,000 jobs last month. It added only 38,000, putting an end to a rate hike discussion.",
+    "date": "2016-06-03",
+    "topic": "Economy and Jobs"
+  }
+}

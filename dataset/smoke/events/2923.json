@@ -1,0 +1,36 @@
+{
+  "story_id": 2923,
+  "left": {
+    "article_id": "2923:left",
+    "story_id": 2923,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "An Important Voice for Free Trade Proponents Goes Silent",
+    "body": "Gary D. Cohn is a Democrat, but his resignation as director of the White House National Economic Council on Tuesday actually underscored the fundamental divide between President Trump and his fellow Republicans as the president seeks to raise barriers to foreign trade.",
+    "roundup": "Donald Trump's top economic adviser Gary Cohn is resigning. There has been speculation that Mr Cohn, a supporter of free trade, was angered by Mr Trump's plans to impose tariffs on aluminium and steel imports.",
+    "date": "2018-03-07",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2923:center",
+    "story_id": 2923,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "U.S. Stocks Fall as Gary Cohn’s Exit Adds to Trade Concerns",
+    "body": "U.S. stocks opened lower Wednesday after economic adviser Gary Cohn’s resignation from the White House raised new concerns about the impact of U.S. steel and aluminum tariffs on global growth.",
+    "roundup": "Donald Trump's top economic adviser Gary Cohn is resigning. There has been speculation that Mr Cohn, a supporter of free trade, was angered by Mr Trump's plans to impose tariffs on aluminium and steel imports.",
+    "date": "2018-03-07",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2923:right",
+    "story_id": 2923,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Gary Cohn resigning as Trump’s top economic adviser",
+    "body": "President Trump’s top economic adviser resigned Tuesday, joining a growing list of departures from a White House some describe as wracked by chaos and low morale.",
+    "roundup": "Donald Trump's top economic adviser Gary Cohn is resigning. There has been speculation that Mr Cohn, a supporter of free trade, was angered by Mr Trump's plans to impose tariffs on aluminium and steel imports.",
+    "date": "2018-03-07",
+    "topic": "White House"
+  }
+}

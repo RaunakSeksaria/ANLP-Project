@@ -1,0 +1,36 @@
+{
+  "story_id": 3503,
+  "left": {
+    "article_id": "3503:left",
+    "story_id": 3503,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Republicans Sink Trump Judicial Nominee Hostile To Black Voters’ Rights",
+    "body": "Sens. Tim Scott and Jeff Flake joined Democrats in rejecting Thomas Farr to be a lifetime federal judge.",
+    "roundup": "Republican Sen. Tim Scott announced he would oppose judicial nominee Thomas Farr amid allegations that he worked to suppress black voters in North Carolina, effectively derailing his confirmation.",
+    "date": "2018-11-29",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "3503:center",
+    "story_id": 3503,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "Trump Judicial Nominee Set To Fail Amid Voter Suppression Charges",
+    "body": "The controversial judicial nomination of Thomas Farr has been derailed in the Senate. South Carolina Sen. Tim Scott — the lone African-American Republican in the Senate — sealed Farr's fate",
+    "roundup": "Republican Sen. Tim Scott announced he would oppose judicial nominee Thomas Farr amid allegations that he worked to suppress black voters in North Carolina, effectively derailing his confirmation.",
+    "date": "2018-11-29",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "3503:right",
+    "story_id": 3503,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Sen. Tim Scott announces opposition to judicial nominee Thomas Farr, effectively dooming confirmation",
+    "body": "South Carolina Republican Sen. Tim Scott announced Thursday he will oppose embattled judicial nominee Thomas Farr, in an apparent reversal from his position Wednesday that seemingly",
+    "roundup": "Republican Sen. Tim Scott announced he would oppose judicial nominee Thomas Farr amid allegations that he worked to suppress black voters in North Carolina, effectively derailing his confirmation.",
+    "date": "2018-11-29",
+    "topic": "Politics"
+  }
+}

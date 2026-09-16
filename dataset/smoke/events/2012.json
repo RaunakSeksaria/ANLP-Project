@@ -1,0 +1,36 @@
+{
+  "story_id": 2012,
+  "left": {
+    "article_id": "2012:left",
+    "story_id": 2012,
+    "stance": "left",
+    "publisher": "Salon",
+    "title": "Applaud the Democrats - They've Earned It",
+    "body": "A relatively small group of House Democrats, including legendary congressman John Lewis, staged a sit-in on the House floor on Wednesday in order to coerce the Republican leadership to hold what will ultimately be a failed vote on new gun control measures. That’s not to understate the importance of what the Democrats attempted, but if they really wanted to out-flank the Republican blockade, they could’ve simply sued the GOP leadership, which is both the favorite tactic of the Republican presidential nominee and precisely what the congressional Republicans have often done",
+    "roundup": "The Democratic sit-in did not force a vote on gun control measures, but it will continue after the recess. Should we applaud the action, or call it obstructionalist?",
+    "date": "2016-06-23",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "center": {
+    "article_id": "2012:center",
+    "story_id": 2012,
+    "stance": "center",
+    "publisher": "Christian Science Monitor",
+    "title": "Democrats sit in: Treading a line between leadership, grandstanding",
+    "body": "A polarized Congress is pushing lawmakers of both parties toward more obstructionist means of wielding power. How Americans view them often depends on where they stand.",
+    "roundup": "The Democratic sit-in did not force a vote on gun control measures, but it will continue after the recess. Should we applaud the action, or call it obstructionalist?",
+    "date": "2016-06-23",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "right": {
+    "article_id": "2012:right",
+    "story_id": 2012,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Ryan sends lawmakers home after Dem sit-in fails to force gun control vote",
+    "body": "House Speaker Paul Ryan sent lawmakers packing for the holiday break early Thursday morning after a raucous, hours-long sit-in waged by congressional Democrats failed to force a vote on gun control measures.",
+    "roundup": "The Democratic sit-in did not force a vote on gun control measures, but it will continue after the recess. Should we applaud the action, or call it obstructionalist?",
+    "date": "2016-06-23",
+    "topic": "Gun Control and Gun Rights"
+  }
+}

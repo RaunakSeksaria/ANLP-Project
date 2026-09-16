@@ -1,0 +1,36 @@
+{
+  "story_id": 2657,
+  "left": {
+    "article_id": "2657:left",
+    "story_id": 2657,
+    "stance": "left",
+    "publisher": "Los Angeles Times",
+    "title": "Tax breaks aimed at small businesses may favor a sliver of wealthy owners",
+    "body": "When Republicans rolled out their tax reform proposal this week, President Trump highlighted a provision aimed at the vast majority of small and family-held enterprises.",
+    "roundup": "A look at President Trump's tax reform plan - who are the winners and losers? Are there ideas in the tax plan that Democrats can support?",
+    "date": "2017-09-29",
+    "topic": "Taxes"
+  },
+  "center": {
+    "article_id": "2657:center",
+    "story_id": 2657,
+    "stance": "center",
+    "publisher": "The Week - News",
+    "title": "4 ideas in the GOP tax plan that Democrats should support",
+    "body": "As difficult as bipartisan cooperation is these days, it would still behoove the Democrats to identify which Republican tax ideas might improve the economy and negotiate from there. So here are four things Trump's new tax proposal actually gets at least sort of right.",
+    "roundup": "A look at President Trump's tax reform plan - who are the winners and losers? Are there ideas in the tax plan that Democrats can support?",
+    "date": "2017-09-29",
+    "topic": "Taxes"
+  },
+  "right": {
+    "article_id": "2657:right",
+    "story_id": 2657,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump's tax reform plan: Who are the winners and losers?",
+    "body": "President Donald Trump and congressional Republicans unveiled Wednesday their plan for a massive tax overhaul. The plan, meant to be a framework for Congress to negotiate into legislation, still has missing parts. But read on for a look at who wins and loses under the proposal as it stands now.",
+    "roundup": "A look at President Trump's tax reform plan - who are the winners and losers? Are there ideas in the tax plan that Democrats can support?",
+    "date": "2017-09-29",
+    "topic": "Taxes"
+  }
+}

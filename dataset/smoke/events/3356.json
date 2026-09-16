@@ -1,0 +1,36 @@
+{
+  "story_id": 3356,
+  "left": {
+    "article_id": "3356:left",
+    "story_id": 3356,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "FBI has reached out to Kavanaugh accuser Deborah Ramirez",
+    "body": "The FBI has reached out to Deborah Ramirez, who has accused Brett Kavanaugh of inappropriate sexual behavior when they were in college, in its background investigation of the Supreme Court nominee, her lawyer has confirmed to CNN.",
+    "roundup": "The FBI has contacted Deborah Ramirez, who has accused Brett Kavanaugh of sexual misconduct. The accusations were said to have occurred when Kavanaugh was a Yale student.",
+    "date": "2018-09-30",
+    "topic": "FBI"
+  },
+  "center": {
+    "article_id": "3356:center",
+    "story_id": 3356,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "FBI has contacted Deborah Ramirez about sexual assault allegations by Brett Kavanaugh",
+    "body": "The second woman who came forward with sexual assault allegations against Supreme Court nominee Brett Kavanaugh has been contacted by the FBI, her attorney told USA TODAY.",
+    "roundup": "The FBI has contacted Deborah Ramirez, who has accused Brett Kavanaugh of sexual misconduct. The accusations were said to have occurred when Kavanaugh was a Yale student.",
+    "date": "2018-09-30",
+    "topic": "FBI"
+  },
+  "right": {
+    "article_id": "3356:right",
+    "story_id": 3356,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "FBI contacts 2nd Kavanaugh accuser; Trump says extra scrutiny may be 'blessing in disguise'",
+    "body": "The FBI has reached out to a second woman who has accused Supreme Court nominee Brett Kavanaugh of sexual assault -- a day after President Trump ordered the bureau to conduct a new background investigation.",
+    "roundup": "The FBI has contacted Deborah Ramirez, who has accused Brett Kavanaugh of sexual misconduct. The accusations were said to have occurred when Kavanaugh was a Yale student.",
+    "date": "2018-09-30",
+    "topic": "FBI"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2669,
+  "left": {
+    "article_id": "2669:left",
+    "story_id": 2669,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Employment Falls In September After Hurricanes Harvey And Irma Undercut Economic Activity",
+    "body": "U.S. employment fell in September for the first time in seven years as Hurricanes Harvey and Irma left displaced workers temporarily unemployed and delayed hiring, the latest indication that the storms undercut economic activity in the third quarter.",
+    "roundup": "The U.S. lost 33,000 jobs in September after Hurricanes Harvey and Irma hit Texas, Florida and other Southeastern states. The unemployment rate fell to 4.2 percent from 4.4 percent.",
+    "date": "2017-10-06",
+    "topic": "Economy and Jobs"
+  },
+  "center": {
+    "article_id": "2669:center",
+    "story_id": 2669,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Hurricane-Battered U.S. Shed 33,000 Jobs in September",
+    "body": "Unemployment rate fell to 4.2%; labor market shed jobs for first time in seven years",
+    "roundup": "The U.S. lost 33,000 jobs in September after Hurricanes Harvey and Irma hit Texas, Florida and other Southeastern states. The unemployment rate fell to 4.2 percent from 4.4 percent.",
+    "date": "2017-10-06",
+    "topic": "Economy and Jobs"
+  },
+  "right": {
+    "article_id": "2669:right",
+    "story_id": 2669,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "U.S. hiring falls 33,000 after hurricanes slam Texas, Florida",
+    "body": "The U.S. lost 33,000 jobs in September after Hurricanes Harvey and Irma hit Texas, Florida and other Southeastern states. It was the first decline in nearly seven years. The unemployment rate fell to 4.2 percent from 4.4 percent, the Labor Department said Friday, the lowest level since February 2001.",
+    "roundup": "The U.S. lost 33,000 jobs in September after Hurricanes Harvey and Irma hit Texas, Florida and other Southeastern states. The unemployment rate fell to 4.2 percent from 4.4 percent.",
+    "date": "2017-10-06",
+    "topic": "Economy and Jobs"
+  }
+}

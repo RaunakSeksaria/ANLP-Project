@@ -1,0 +1,36 @@
+{
+  "story_id": 3721,
+  "left": {
+    "article_id": "3721:left",
+    "story_id": 3721,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "49 killed in terrorist attack at mosques in Christchurch, New Zealand",
+    "body": "Forty-nine people are dead and scores more are injured after a heavily armed gunman clad in military-style gear opened fire during prayers at a mosque in the center of Christchurch, New Zealand, on Friday. A second mosque was also targeted in what Prime Minister Jacinda Ardern called a well-planned “terrorist attack,” making for “one of New Zealand’s darkest days.” Portions of the ghastly attack were broadcast live on social media by a man who police confirmed had also released a manifesto railing against Muslims and immigrants. The 74-page document states",
+    "roundup": "Shootings at two mosques in Christchurch, New Zealand have left 49 dead.",
+    "date": "2019-03-15",
+    "topic": "Terrorism"
+  },
+  "center": {
+    "article_id": "3721:center",
+    "story_id": 3721,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Christchurch shootings: 49 dead in New Zealand mosque attacks",
+    "body": "Forty-nine people have been killed and at least 20 wounded in shootings at two mosques in Christchurch, New Zealand. Prime Minister Jacinda Ardern described the incident as a terrorist attack and one of New Zealand's \"darkest days\". A man in his late twenties was charged with murder and will appear in court on Saturday morning, police confirmed. Two other men and one woman were detained nearby and firearms and explosive devices recovered, Police Commissioner Mike Bush said. He said one of those detained was later released, while officers were working",
+    "roundup": "Shootings at two mosques in Christchurch, New Zealand have left 49 dead.",
+    "date": "2019-03-15",
+    "topic": "Terrorism"
+  },
+  "right": {
+    "article_id": "3721:right",
+    "story_id": 3721,
+    "stance": "right",
+    "publisher": "CBN",
+    "title": "'One of New Zealand's Darkest Days': 49 Muslims Massacred at Mosques by Anti-Immigrant Attackers",
+    "body": "New Zealanders are trying to come to grips with the worst massacre in their nation outside of wartime in more than 200 years. At least 49 people were killed in attacks against two mosques, and dozens of others were wounded. The attackers struck during Friday prayers when the mosques were full of worshippers. Witnesses saw a man dressed in black enter a mosque in central Christchurch at about 1:45 p.m, then heard dozens of shots. As people fled the mosque, witnesses reported seeing \"dead people everywhere.\" Three men and",
+    "roundup": "Shootings at two mosques in Christchurch, New Zealand have left 49 dead.",
+    "date": "2019-03-15",
+    "topic": "Terrorism"
+  }
+}

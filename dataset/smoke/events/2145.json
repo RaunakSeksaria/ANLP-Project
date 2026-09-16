@@ -1,0 +1,36 @@
+{
+  "story_id": 2145,
+  "left": {
+    "article_id": "2145:left",
+    "story_id": 2145,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Fact-checking the vice-presidential debate between Kaine and Pence",
+    "body": "Democratic vice-presidential nominee Sen. Tim Kaine of Virginia and his challenger, Republican and Indiana Gov. Mike Pence debated Oct. 4 at Longwood University in Farmville, Va. Here is a roundup of 25 suspicious or interesting claims that were made. As is our practice, we do not award Pinocchios when we do a roundup of facts in debates.",
+    "roundup": "Here’s a roundup of suspicious and interesting claims.",
+    "date": "2016-10-05",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2145:center",
+    "story_id": 2145,
+    "stance": "center",
+    "publisher": "FactCheck.org",
+    "title": "FactChecking the VP Debate",
+    "body": "Vice presidential candidates Mike Pence and Tim Kaine got their one chance to debate, and it was a fact-checking bonanza.",
+    "roundup": "Here’s a roundup of suspicious and interesting claims.",
+    "date": "2016-10-05",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2145:right",
+    "story_id": 2145,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "FACT CHECK: Claims in the VP debate",
+    "body": "Not all the claims in the vice presidential debate stand up to scrutiny. A look at some of them and how they compare with the facts:",
+    "roundup": "Here’s a roundup of suspicious and interesting claims.",
+    "date": "2016-10-05",
+    "topic": "Elections"
+  }
+}

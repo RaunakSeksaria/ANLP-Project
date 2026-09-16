@@ -1,0 +1,36 @@
+{
+  "story_id": 3133,
+  "left": {
+    "article_id": "3133:left",
+    "story_id": 3133,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Harley-Davidson is a loser in Trump’s trade war",
+    "body": "Harley-Davidson is shifting production of its European-bound motorcycles overseas because of tariffs.",
+    "roundup": "Harley Davidson will move production of motorcycles sold in Europe from U.S. facilities to factories overseas in order to offset retaliatory EU tariffs on American exports.",
+    "date": "2018-06-25",
+    "topic": "Trade"
+  },
+  "center": {
+    "article_id": "3133:center",
+    "story_id": 3133,
+    "stance": "center",
+    "publisher": "Chicago Tribune",
+    "title": "EU tariffs force Harley-Davidson to shift some production overseas",
+    "body": "Production of Harley-Davidson motorcycles sold in Europe will move from U.S. factories to facilities overseas, the Milwaukee-based company announced Monday, a consequence of the retaliatory tariffs the EU is imposing on American exports in an escalating trade war with the Trump administration.",
+    "roundup": "Harley Davidson will move production of motorcycles sold in Europe from U.S. facilities to factories overseas in order to offset retaliatory EU tariffs on American exports.",
+    "date": "2018-06-25",
+    "topic": "Trade"
+  },
+  "right": {
+    "article_id": "3133:right",
+    "story_id": 3133,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Trump Calls out Harley-Davidson for Moving Production Overseas Due to Tariffs",
+    "body": "President Donald Trump called out Harley-Davidson for moving some of its production overseas due to tariffs placed on the U.S. by European countries.",
+    "roundup": "Harley Davidson will move production of motorcycles sold in Europe from U.S. facilities to factories overseas in order to offset retaliatory EU tariffs on American exports.",
+    "date": "2018-06-25",
+    "topic": "Trade"
+  }
+}

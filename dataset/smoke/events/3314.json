@@ -1,0 +1,36 @@
+{
+  "story_id": 3314,
+  "left": {
+    "article_id": "3314:left",
+    "story_id": 3314,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Why Susan Collins claims she’s being bribed over her Kavanaugh vote",
+    "body": "A Crowdpac crowdfunding campaign to encourage Collins to vote against Kavanaugh has the senator and others sounding the alarm.",
+    "roundup": "A crowdfunding website is threatening Senator Susan Collins (R-ME) by pledging to donate at least $1.1 million to her opponent if she votes for Brett Kavanaugh.",
+    "date": "2018-09-13",
+    "topic": "Supreme Court"
+  },
+  "center": {
+    "article_id": "3314:center",
+    "story_id": 3314,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "'Vulgar' calls, threats and 'bribery': Kavanaugh pressure mounts for Sen. Collins",
+    "body": "Emotions are high as Brett Kavanaugh's Supreme Court confirmation vote approaches, and Maine Republican Sen. Susan Collins has found herself at the center of a fevered effort to block President Donald Trump's second nominee to the high court.",
+    "roundup": "A crowdfunding website is threatening Senator Susan Collins (R-ME) by pledging to donate at least $1.1 million to her opponent if she votes for Brett Kavanaugh.",
+    "date": "2018-09-13",
+    "topic": "Supreme Court"
+  },
+  "right": {
+    "article_id": "3314:right",
+    "story_id": 3314,
+    "stance": "right",
+    "publisher": "Wall Street Journal (Opinion)",
+    "title": "OPINION: You Can’t Bribe Susan Collins",
+    "body": "A crowdfunding campaign threatens the Senator on Kavanaugh.",
+    "roundup": "A crowdfunding website is threatening Senator Susan Collins (R-ME) by pledging to donate at least $1.1 million to her opponent if she votes for Brett Kavanaugh.",
+    "date": "2018-09-13",
+    "topic": "Supreme Court"
+  }
+}

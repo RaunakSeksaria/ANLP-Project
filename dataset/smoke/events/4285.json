@@ -1,0 +1,36 @@
+{
+  "story_id": 4285,
+  "left": {
+    "article_id": "4285:left",
+    "story_id": 4285,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "The Senate has approved the USMCA, bringing Trump’s trade deal one step closer to reality",
+    "body": "A bipartisan majority in the Senate approved the United States-Mexico-Canada Agreement (USMCA) on Thursday, clearing the way for President Donald Trump’s signature. The Senate voted 89 to 10 for USMCA, an updated version of the North American Free Trade Agreement, or NAFTA. The House of Representatives backed the bill last year, voting 385 to 41, also with overwhelming bipartisan support, after Democratic leaders succeeded in winning changes on labor, environment, enforcement, and pharmaceutical provisions. Those tweaks secured the backing of US labor, offering Democrats a pathway to supporting the agreement .",
+    "roundup": "President Donald Trump's signature trade deal with Mexico and Canada (USMCA) passed through the Senate Thursday, and now awaits the president's signature. The agreement, Trump's renegotiation of the North American Free Trade Agreement (NAFTA), passed 89-10 with overwhelming bipartisan support. Mexico has ratified USMCA, while Canada's government has yet to approve the deal.",
+    "date": "2020-01-16",
+    "topic": "Trade"
+  },
+  "center": {
+    "article_id": "4285:center",
+    "story_id": 4285,
+    "stance": "center",
+    "publisher": "The Week - News",
+    "title": "Senate passes USMCA trade deal",
+    "body": "The Senate on Thursday approved the U.S.-Mexico-Canada Agreement trade deal, passing the bill on for final signature by President Trump, reports NBC News. The USMCA replaces the North American Free Trade Agreement, the trade pact the three nations have adhered to since 1994. The new deal was passed in an 89-10 vote. Trump, who has pushed for the USMCA, is expected to sign the deal, leaving only Canada to approve the agreement before it takes effect.",
+    "roundup": "President Donald Trump's signature trade deal with Mexico and Canada (USMCA) passed through the Senate Thursday, and now awaits the president's signature. The agreement, Trump's renegotiation of the North American Free Trade Agreement (NAFTA), passed 89-10 with overwhelming bipartisan support. Mexico has ratified USMCA, while Canada's government has yet to approve the deal.",
+    "date": "2020-01-16",
+    "topic": "Trade"
+  },
+  "right": {
+    "article_id": "4285:right",
+    "story_id": 4285,
+    "stance": "right",
+    "publisher": "MarketWatch",
+    "title": "USMCA heads to Trump’s desk for signature after Senate approves pact",
+    "body": "The U.S. Senate on Thursday overwhelmingly approved the U.S.-Mexico-Canada Agreement, sending the pact to President Donald Trump for signature just a day after he inked a high-profile trade deal with China. Approved just as the chamber is preparing for Trump’s impeachment trial, senators voted 89 to 10 to pass the deal, which replaces the North American Free Trade Agreement. Trump has repeatedly slammed NAFTA, blaming the 26-year-old pact for sending American jobs abroad, and had threatened to pull the U.S. out of that three-way agreement absent any changes.",
+    "roundup": "President Donald Trump's signature trade deal with Mexico and Canada (USMCA) passed through the Senate Thursday, and now awaits the president's signature. The agreement, Trump's renegotiation of the North American Free Trade Agreement (NAFTA), passed 89-10 with overwhelming bipartisan support. Mexico has ratified USMCA, while Canada's government has yet to approve the deal.",
+    "date": "2020-01-16",
+    "topic": "Trade"
+  }
+}

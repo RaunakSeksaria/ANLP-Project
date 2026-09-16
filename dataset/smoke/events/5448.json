@@ -1,0 +1,36 @@
+{
+  "story_id": 5448,
+  "left": {
+    "article_id": "5448:left",
+    "story_id": 5448,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "GameStop frenzy leaves behind a mess for Wall Street regulators",
+    "body": "Long before an army of small investors buying shares of GameStop shocked Wall Street, regulators saw the need for a clearer, real-time view of the trillions of dollars that sloshed through the markets each day. In May 2010, a trader in London using an algorithm to manipulate a futures market helped trigger a chain reaction that wiped 9 percent off the Dow Jones industrial average in minutes. The market quickly recovered. But that “flash crash” underscored regulators’ urgent need for a tool that would allow them to pinpoint who was",
+    "roundup": "Wall Street was shaken up last week when small investors flocked to video game retailer GameStop trying to prop it up after hedge funds bet against it. GameStop’s share price surged, closing at $325 per share on Friday; however, trading platform restrictions caused GameStop stock to fall, closing at $90 on Tuesday. Robinhood, a popular trading platform, faces 30 lawsuits after allegations that the company breached its contract when it restricted trading of certain stocks; after the surge, Wall Street faces questions about regulation, and whether the social media-driven surge is equal to illegal market manipulation. The U.S. Securities and Exchange Commission (SEC) is reportedly searching through social media and message boards for evidence of illegal activity. The Senate Banking Committee announced it will hold its own hearing, but no date has been set yet. GameStop's stock drop and Robinhood's lawsuits were reported on by outlets across the political spectrum. Outlets on all sides also analyzed the impact that the social media-driven surge will potentially have on new regulations to prevent market manipulation.",
+    "date": "2021-02-03",
+    "topic": "Business"
+  },
+  "center": {
+    "article_id": "5448:center",
+    "story_id": 5448,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "GameStop’s stupefying stock rise doesn’t hide its reality",
+    "body": "Behind GameStop’s stock surge is the grim reality of its prospects: The video game retailer is floundering even as the industry around it is booming. GameStop has been swept up in a battle between big-moneyed hedge funds betting against it and small investors trying to prop it up. That has caused GameStop’s share price to soar despite the shaky financials underneath. Flailing companies like AMC Entertainment and American Airlines have likewise enjoyed a stock surge, but GameStop has been the primary battleground between the Davids and the Goliaths. Shares rocketed",
+    "roundup": "Wall Street was shaken up last week when small investors flocked to video game retailer GameStop trying to prop it up after hedge funds bet against it. GameStop’s share price surged, closing at $325 per share on Friday; however, trading platform restrictions caused GameStop stock to fall, closing at $90 on Tuesday. Robinhood, a popular trading platform, faces 30 lawsuits after allegations that the company breached its contract when it restricted trading of certain stocks; after the surge, Wall Street faces questions about regulation, and whether the social media-driven surge is equal to illegal market manipulation. The U.S. Securities and Exchange Commission (SEC) is reportedly searching through social media and message boards for evidence of illegal activity. The Senate Banking Committee announced it will hold its own hearing, but no date has been set yet. GameStop's stock drop and Robinhood's lawsuits were reported on by outlets across the political spectrum. Outlets on all sides also analyzed the impact that the social media-driven surge will potentially have on new regulations to prevent market manipulation.",
+    "date": "2021-02-03",
+    "topic": "Business"
+  },
+  "right": {
+    "article_id": "5448:right",
+    "story_id": 5448,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Robinhood Faces 30 Lawsuits Across Several States After Restricting Trading",
+    "body": "Investment app Robinhood is facing 30 lawsuits after restricting the trading of certain stocks, court records show, according to the Wall Street Journal. Investors have filed lawsuits in federal courts across several states, including New Jersey, Florida, California, Texas, the Wall Street Journal reported Wednesday. The complaints allege that the company breached its contract when it restricted the trade of some stocks on its app. Reddit users on r/WallStreetBets drove up the price of Gamestop over 600% after discovering that the stock had been heavily shorted by hedge funds, meaning",
+    "roundup": "Wall Street was shaken up last week when small investors flocked to video game retailer GameStop trying to prop it up after hedge funds bet against it. GameStop’s share price surged, closing at $325 per share on Friday; however, trading platform restrictions caused GameStop stock to fall, closing at $90 on Tuesday. Robinhood, a popular trading platform, faces 30 lawsuits after allegations that the company breached its contract when it restricted trading of certain stocks; after the surge, Wall Street faces questions about regulation, and whether the social media-driven surge is equal to illegal market manipulation. The U.S. Securities and Exchange Commission (SEC) is reportedly searching through social media and message boards for evidence of illegal activity. The Senate Banking Committee announced it will hold its own hearing, but no date has been set yet. GameStop's stock drop and Robinhood's lawsuits were reported on by outlets across the political spectrum. Outlets on all sides also analyzed the impact that the social media-driven surge will potentially have on new regulations to prevent market manipulation.",
+    "date": "2021-02-03",
+    "topic": "Business"
+  }
+}

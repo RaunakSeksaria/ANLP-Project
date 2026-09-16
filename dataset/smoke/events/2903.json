@@ -1,0 +1,36 @@
+{
+  "story_id": 2903,
+  "left": {
+    "article_id": "2903:left",
+    "story_id": 2903,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Florida House Debates Porn, But Refuses To Discuss Assault Weapons",
+    "body": "“The Florida House of Representatives literally decided that porn is a greater risk to Floridians than assault weapons.”",
+    "roundup": "The Florida House of Representatives on Tuesday approved a bill that declares pornography a public health risk. The move drew some criticism from the media after the legislature declined to debate a ban on assault weapons hours prior.",
+    "date": "2018-02-21",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "2903:center",
+    "story_id": 2903,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Florida House declares porn a public health risk shortly after denying assault rifle ban",
+    "body": "Florida lawmakers on Tuesday passed a resolution declaring pornography a public health risk, less than an hour after they rejected a motion to consider a bill that would ban assault rifles.",
+    "roundup": "The Florida House of Representatives on Tuesday approved a bill that declares pornography a public health risk. The move drew some criticism from the media after the legislature declined to debate a ban on assault weapons hours prior.",
+    "date": "2018-02-21",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "2903:right",
+    "story_id": 2903,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Florida House declares pornography a public health risk",
+    "body": "Florida lawmakers on Tuesday declared pornography a health risk, and called for more research on its effects.",
+    "roundup": "The Florida House of Representatives on Tuesday approved a bill that declares pornography a public health risk. The move drew some criticism from the media after the legislature declined to debate a ban on assault weapons hours prior.",
+    "date": "2018-02-21",
+    "topic": "Politics"
+  }
+}

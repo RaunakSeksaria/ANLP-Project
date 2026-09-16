@@ -1,0 +1,36 @@
+{
+  "story_id": 3627,
+  "left": {
+    "article_id": "3627:left",
+    "story_id": 3627,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "New Video Complicates Uproar Over Incident Between Student And Native American Man",
+    "body": "The student in the video said he’s received death threats after the confrontation, and attempted to clarify that he was trying to help defuse the situation.",
+    "roundup": "A video showing a Kentucky student confronting a Native American man draws controversy, as a fuller video complicates the uproar.",
+    "date": "2019-01-21",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "3627:center",
+    "story_id": 3627,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Fuller video casts new light on Covington Catholic students' encounter with Native American elder",
+    "body": "The furor over the behavior of a group of Catholic school students from Kentucky toward a Native American elder during weekend protests in Washington, D.C., took a turn Sunday with the emergence of a new video.",
+    "roundup": "A video showing a Kentucky student confronting a Native American man draws controversy, as a fuller video complicates the uproar.",
+    "date": "2019-01-21",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "3627:right",
+    "story_id": 3627,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Kentucky student seen in viral confrontation with Native American speaks out",
+    "body": "The Kentucky high school student seen in a viral video standing-face-to-face with a Native American protester at a Washington rally spoke out for the first time Sunday evening, claiming in a statement that he and his classmates were taunted by a group of African-American protesters and saying that he and his family had received death threats.",
+    "roundup": "A video showing a Kentucky student confronting a Native American man draws controversy, as a fuller video complicates the uproar.",
+    "date": "2019-01-21",
+    "topic": "Politics"
+  }
+}

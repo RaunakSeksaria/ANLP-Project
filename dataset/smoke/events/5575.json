@@ -1,0 +1,36 @@
+{
+  "story_id": 5575,
+  "left": {
+    "article_id": "5575:left",
+    "story_id": 5575,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "Trump blasts Covid relief bill just passed by Congress, demands changes",
+    "body": "In surprising comments, President Donald Trump shredded a just-passed Covid-19 relief package Tuesday night, saying the legislation includes measures that have nothing to do with the pandemic and that it is too stingy with payments to average Americans. \"I am asking Congress to amend this bill and increase the ridiculously low $600 (direct payment) to $2,000 or $4,000 for a couple,\" Trump said in a video posted to Twitter of him speaking from the White House. \"I'm also asking Congress to immediately get rid of the wasteful and unnecessary items",
+    "roundup": "President Donald Trump criticized the COVID-19 coronavirus relief bill Tuesday, saying it should be amended to increase the amount in the stimulus checks from $600 to $2,000 (or $4,000 per couple). Failure to either pass another stopgap bill or override a possible Trump veto of the legislation could result in a partial government shutdown.",
+    "date": "2020-12-23",
+    "topic": "Economic Policy"
+  },
+  "center": {
+    "article_id": "5575:center",
+    "story_id": 5575,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Donald Trump demands bigger stimulus checks in $900 billion COVID-19 relief package passed by Congress",
+    "body": "In an unexpected video posted to Twitter on Tuesday night, President Donald Trump denounced a sweeping COVID-19 relief package he was expected to sign, calling it a \"disgrace\" and urging congressional leaders to make several changes to the bill including increasing direct payments for Americans. \"It's called the COVID relief bill, but it has almost nothing to do with COVID,\" he said in a video posted just moments after he issued a raft of pardons for several allies. \"I’m asking Congress to amend this bill and increase the ridiculously low",
+    "roundup": "President Donald Trump criticized the COVID-19 coronavirus relief bill Tuesday, saying it should be amended to increase the amount in the stimulus checks from $600 to $2,000 (or $4,000 per couple). Failure to either pass another stopgap bill or override a possible Trump veto of the legislation could result in a partial government shutdown.",
+    "date": "2020-12-23",
+    "topic": "Economic Policy"
+  },
+  "right": {
+    "article_id": "5575:right",
+    "story_id": 5575,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump puts GOP on its heels with 11th-hour stimulus demands, throws wrench into Georgia Senate race",
+    "body": "President Trump in a video posted to Twitter on Tuesday night demanded that lawmakers amend the coronavirus stimulus package they passed Monday to include $2,000 checks for individuals instead of $600 checks -- while also insisting that \"wasteful and unnecessary\" items be cut from the year-end spending package that was attached to the pandemic aid. The president, meanwhile, doubled down on his baseless claims that he won the presidential election in a \"magnificent landslide\" and attacked the two most powerful Republicans in the U.S. Senate because they've acknowledged that President-elect",
+    "roundup": "President Donald Trump criticized the COVID-19 coronavirus relief bill Tuesday, saying it should be amended to increase the amount in the stimulus checks from $600 to $2,000 (or $4,000 per couple). Failure to either pass another stopgap bill or override a possible Trump veto of the legislation could result in a partial government shutdown.",
+    "date": "2020-12-23",
+    "topic": "Economic Policy"
+  }
+}

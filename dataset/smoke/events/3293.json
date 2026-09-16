@@ -1,0 +1,36 @@
+{
+  "story_id": 3293,
+  "left": {
+    "article_id": "3293:left",
+    "story_id": 3293,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Bob Woodward’s new book reveals a ‘nervous breakdown’ of Trump’s presidency",
+    "body": "John Dowd was convinced that President Trump would commit perjury if he talked to special counsel Robert S. Mueller III. So, on Jan. 27, the president’s then-personal attorney staged a practice session to try to make his point.",
+    "roundup": "Veteran journalist Bob Woodward's new book \"Fear\" alleges the White House is dealing with an \"administrative coup d'etat\", including claims that Defense Secretary Jim Mattis ignored President Trump's request to assassinate Syrian President Bashar al-Assad and that Chief of Staff John Kelly called Trump \"unhinged\" and an \"idiot\". White House Press Secretary Sarah Sanders criticized the veracity of the book, saying it is \"nothing more than fabricated stories, many by former disgruntled employees, told to make the President look bad.\"",
+    "date": "2018-09-04",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "3293:center",
+    "story_id": 3293,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "New book by Woodward says Trump wanted Syrian leader killed",
+    "body": "President Donald Trump wanted to have Syrian President Bashar al-Assad assassinated last year but his defense secretary ignored the request, according to a new book that depicts top Trump aides",
+    "roundup": "Veteran journalist Bob Woodward's new book \"Fear\" alleges the White House is dealing with an \"administrative coup d'etat\", including claims that Defense Secretary Jim Mattis ignored President Trump's request to assassinate Syrian President Bashar al-Assad and that Chief of Staff John Kelly called Trump \"unhinged\" and an \"idiot\". White House Press Secretary Sarah Sanders criticized the veracity of the book, saying it is \"nothing more than fabricated stories, many by former disgruntled employees, told to make the President look bad.\"",
+    "date": "2018-09-04",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "3293:right",
+    "story_id": 3293,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "White House fires back at Woodward book detailing infighting, insults, 'administrative coup d'etat'",
+    "body": "The White House hit back Tuesday after excerpts were released from a forthcoming book by veteran reporter Bob Woodward detailing a White House beset by infighting and facing an \"administrative coup d'etat\" in the ranks.",
+    "roundup": "Veteran journalist Bob Woodward's new book \"Fear\" alleges the White House is dealing with an \"administrative coup d'etat\", including claims that Defense Secretary Jim Mattis ignored President Trump's request to assassinate Syrian President Bashar al-Assad and that Chief of Staff John Kelly called Trump \"unhinged\" and an \"idiot\". White House Press Secretary Sarah Sanders criticized the veracity of the book, saying it is \"nothing more than fabricated stories, many by former disgruntled employees, told to make the President look bad.\"",
+    "date": "2018-09-04",
+    "topic": "White House"
+  }
+}

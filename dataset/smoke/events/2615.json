@@ -1,0 +1,36 @@
+{
+  "story_id": 2615,
+  "left": {
+    "article_id": "2615:left",
+    "story_id": 2615,
+    "stance": "left",
+    "publisher": "The Guardian",
+    "title": "Trump to end Daca 'Dreamers' program with six-month delay – reports",
+    "body": "Donald Trump has decided to scrap a program giving work permits to people who came to the United States illegally as children but will give Congress up to six months to find a legislative alternative, according to reports.",
+    "roundup": "President Trump will announce on Tuesday that he is ending a controversial program that protects nearly 800,000 young undocumented immigrants from deportation, media reports indicated late Sunday.",
+    "date": "2017-09-04",
+    "topic": "Immigration"
+  },
+  "center": {
+    "article_id": "2615:center",
+    "story_id": 2615,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Reports: Trump to end DACA, give Congress six months to act",
+    "body": "After months of uncertainty, President Trump will announce on Tuesday that he is ending a controversial program that protects nearly 800,000 young undocumented immigrants from deportation, media reports indicated late Sunday.",
+    "roundup": "President Trump will announce on Tuesday that he is ending a controversial program that protects nearly 800,000 young undocumented immigrants from deportation, media reports indicated late Sunday.",
+    "date": "2017-09-04",
+    "topic": "Immigration"
+  },
+  "right": {
+    "article_id": "2615:right",
+    "story_id": 2615,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "Reports Say DACA Is Over, But There's A Six-Month Enforcement Delay",
+    "body": "Well, it’s been discussed. It’s been debated. And now the Trump White House supposedly has a final decision: The Deferred Action for Childhood Arrivals program that originated under the Obama administration is over. There will be a six-month enforcement delay, however.",
+    "roundup": "President Trump will announce on Tuesday that he is ending a controversial program that protects nearly 800,000 young undocumented immigrants from deportation, media reports indicated late Sunday.",
+    "date": "2017-09-04",
+    "topic": "Immigration"
+  }
+}

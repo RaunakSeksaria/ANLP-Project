@@ -1,0 +1,36 @@
+{
+  "story_id": 2690,
+  "left": {
+    "article_id": "2690:left",
+    "story_id": 2690,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Second judge rules against latest travel ban, saying Trump’s own words show it was aimed at Muslims",
+    "body": "A federal judge in Maryland early Wednesday issued a second halt on the latest version of President Trump’s travel ban, asserting that the president’s own comments on the campaign trail and on Twitter convinced him that the directive was akin to an unconstitutional Muslim ban.",
+    "roundup": "A federal judge in Maryland delivered a second blow to President Trump's latest travel ban late Tuesday, arguing that the president's own words make clear that his focus is not on national security but on instituting a ban against Muslims.",
+    "date": "2017-10-18",
+    "topic": "Immigration"
+  },
+  "center": {
+    "article_id": "2690:center",
+    "story_id": 2690,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Federal judge in Maryland rules Trump's new travel ban violates law against discrimination",
+    "body": "A federal judge in Maryland delivered a second blow to President Trump's latest travel ban late Tuesday, arguing that the president's own words make clear that his focus is not on national security but on instituting a ban against Muslims.",
+    "roundup": "A federal judge in Maryland delivered a second blow to President Trump's latest travel ban late Tuesday, arguing that the president's own words make clear that his focus is not on national security but on instituting a ban against Muslims.",
+    "date": "2017-10-18",
+    "topic": "Immigration"
+  },
+  "right": {
+    "article_id": "2690:right",
+    "story_id": 2690,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Second judge issues halt to Trump’s travel ban, rules on ‘extreme vetting’",
+    "body": "A federal judge in Maryland added a new legal blockade to President Trump’s travel ban early Wednesday, ruling that the White House’s third attempt at “extreme vetting” is still poisoned by the president’s campaign-season “religious animus” toward Muslims.",
+    "roundup": "A federal judge in Maryland delivered a second blow to President Trump's latest travel ban late Tuesday, arguing that the president's own words make clear that his focus is not on national security but on instituting a ban against Muslims.",
+    "date": "2017-10-18",
+    "topic": "Immigration"
+  }
+}

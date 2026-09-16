@@ -1,0 +1,36 @@
+{
+  "story_id": 2680,
+  "left": {
+    "article_id": "2680:left",
+    "story_id": 2680,
+    "stance": "left",
+    "publisher": "Newsweek",
+    "title": "Rush Limbaugh Suggests Trump Is Acting like a Dictator and Is Making Him 'Nervous'",
+    "body": "Donald Trump’s comments about the NFL are starting to make Rush Limbaugh feel nervous, the conservative radio host said on his show Wednesday.",
+    "roundup": "Rush Limbaugh, the highly conservative talk show host and Trump supporter, is speaking out against the president's handling of the NFL protests. \"I am very uncomfortable with the president of the United States being able to dictate the behavior and power of anybody,\" he said.",
+    "date": "2017-10-12",
+    "topic": "Sports"
+  },
+  "center": {
+    "article_id": "2680:center",
+    "story_id": 2680,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Limbaugh breaks with Trump: He shouldn't be allowed to tell NFL players not to kneel",
+    "body": "Conservative talk show host Rush Limbaugh on Wednesday voiced concerns about President Trump's comments on NFL players taking a knee during the national anthem to protest racial injustice, saying Trump should not have the power to dictate who can kneel during the anthem.",
+    "roundup": "Rush Limbaugh, the highly conservative talk show host and Trump supporter, is speaking out against the president's handling of the NFL protests. \"I am very uncomfortable with the president of the United States being able to dictate the behavior and power of anybody,\" he said.",
+    "date": "2017-10-12",
+    "topic": "Sports"
+  },
+  "right": {
+    "article_id": "2680:right",
+    "story_id": 2680,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Rush Limbaugh ‘Very Uncomfortable’ About Trump’s Power Over NFL",
+    "body": "Conservative radio host Rush Limbaugh said Wednesday that he is starting to get “nervous” that President Donald Trump is able to dictate what NFL players can and cannot do, and said orders like that should come directly from league owners.",
+    "roundup": "Rush Limbaugh, the highly conservative talk show host and Trump supporter, is speaking out against the president's handling of the NFL protests. \"I am very uncomfortable with the president of the United States being able to dictate the behavior and power of anybody,\" he said.",
+    "date": "2017-10-12",
+    "topic": "Sports"
+  }
+}

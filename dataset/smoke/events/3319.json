@@ -1,0 +1,36 @@
+{
+  "story_id": 3319,
+  "left": {
+    "article_id": "3319:left",
+    "story_id": 3319,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Hurricane Florence catastrophic flooding, rescues, and deaths: what we know",
+    "body": "As of Saturday afternoon, more than 35 inches of rain had fallen in Surf City on the North Carolina coast. That’s an enormous amount of water to fall in two days. And more is on the way.",
+    "roundup": "Hurricane Florence has claimed eight lives (with some media outlets reporting seven), caused massive flooding and left 900,000 homes without power.",
+    "date": "2018-09-15",
+    "topic": "Disaster"
+  },
+  "center": {
+    "article_id": "3319:center",
+    "story_id": 3319,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "'Uninvited brute' Florence leaves 8 dead, nearly 1 million without power",
+    "body": "A weakened Florence slowed to a crawl over South Carolina on Saturday as it began a slow trek to the west but continued to batter the region with storms surges and heavy flooding from as much as 15 more inches of rain.",
+    "roundup": "Hurricane Florence has claimed eight lives (with some media outlets reporting seven), caused massive flooding and left 900,000 homes without power.",
+    "date": "2018-09-15",
+    "topic": "Disaster"
+  },
+  "right": {
+    "article_id": "3319:right",
+    "story_id": 3319,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Slow-moving Tropical Storm Florence claims at least 7 lives in Carolinas as rainfall continues",
+    "body": "Officials in South Carolina confirmed the state’s first fatality from the still dangerous Tropical Storm Florence, bringing the storm’s total death toll to at least seven so far.",
+    "roundup": "Hurricane Florence has claimed eight lives (with some media outlets reporting seven), caused massive flooding and left 900,000 homes without power.",
+    "date": "2018-09-15",
+    "topic": "Disaster"
+  }
+}

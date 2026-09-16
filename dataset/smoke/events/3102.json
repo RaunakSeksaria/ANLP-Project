@@ -1,0 +1,36 @@
+{
+  "story_id": 3102,
+  "left": {
+    "article_id": "3102:left",
+    "story_id": 3102,
+    "stance": "left",
+    "publisher": "Los Angeles Times",
+    "title": "Trump brings chaos to G7 with trade threats and praise for Russia – and then backs out of joint agreement",
+    "body": "President Trump alienated the United States’ closest allies at the Group of Seven summit in Canada with his aggressive trade declarations and surprising suggestion that Russia be readmitted to the exclusive club of major economic powers — and then, after departing early, went on Twitter to blow up the agreement forged at the meeting.",
+    "roundup": "President Trump on Saturday pulled out of the G7 summit agreement hours after the White House announced they would sign it. Trump tweeted that Canadian Prime Minister Justin Trudeau had been \"meek and mild\" during meetings and was \"dishonest\" in the final press conference, in which Mr. Trudeau said that Canada will institute retaliatory tariffs and “will not be pushed around” by the U.S.",
+    "date": "2018-06-10",
+    "topic": "World"
+  },
+  "center": {
+    "article_id": "3102:center",
+    "story_id": 3102,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Trump Says U.S. Won’t Endorse G-7 Communiqué, Threatens Auto Tariffs",
+    "body": "President Donald Trump said Saturday the U.S. wouldn’t endorse the final communiqué of the Group of Seven industrial nations summit and threatened to impose auto tariffs in a statement on Twitter in which he insulted the Canadian prime minister.",
+    "roundup": "President Trump on Saturday pulled out of the G7 summit agreement hours after the White House announced they would sign it. Trump tweeted that Canadian Prime Minister Justin Trudeau had been \"meek and mild\" during meetings and was \"dishonest\" in the final press conference, in which Mr. Trudeau said that Canada will institute retaliatory tariffs and “will not be pushed around” by the U.S.",
+    "date": "2018-06-10",
+    "topic": "World"
+  },
+  "right": {
+    "article_id": "3102:right",
+    "story_id": 3102,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Trump backs out of G-7 agreement, lashes out at 'meek and mild' Justin Trudeau for 'dishonest' press conference",
+    "body": "President Trump lashed out at Canadian Prime Minister Justin Trudeau for being “dishonest” and “weak” and informed U.S. officials not to affirm the communique signed by the other G-7 members.",
+    "roundup": "President Trump on Saturday pulled out of the G7 summit agreement hours after the White House announced they would sign it. Trump tweeted that Canadian Prime Minister Justin Trudeau had been \"meek and mild\" during meetings and was \"dishonest\" in the final press conference, in which Mr. Trudeau said that Canada will institute retaliatory tariffs and “will not be pushed around” by the U.S.",
+    "date": "2018-06-10",
+    "topic": "World"
+  }
+}

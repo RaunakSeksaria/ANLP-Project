@@ -1,0 +1,36 @@
+{
+  "story_id": 3555,
+  "left": {
+    "article_id": "3555:left",
+    "story_id": 3555,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Mattis resigns after clash with Trump over troop withdrawal from Syria and Afghanistan",
+    "body": "Defense Secretary James Mattis, the last of a team President Trump dubbed “my generals,” will step down early next year amid deepening rifts with the White House on crucial foreign policy matters, marking the departure of an original Trump Cabinet member and creating a leadership void at the Pentagon at a critical time for the president at home and abroad.",
+    "roundup": "Defense Secretary James Mattis will be stepping down at the end of February, citing differences with President Trump.",
+    "date": "2018-12-21",
+    "topic": NaN
+  },
+  "center": {
+    "article_id": "3555:center",
+    "story_id": 3555,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "James Mattis to Depart as Defense Chief Over Troop Withdrawals from Syria, Afghanistan",
+    "body": "In letter to Trump, Marine veteran said president had right to a secretary ‘whose views are better aligned with yours’.",
+    "roundup": "Defense Secretary James Mattis will be stepping down at the end of February, citing differences with President Trump.",
+    "date": "2018-12-21",
+    "topic": NaN
+  },
+  "right": {
+    "article_id": "3555:right",
+    "story_id": 3555,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "James Mattis quitting as defense secretary, cites differences with Trump",
+    "body": "Defense Secretary James Mattis, the last of a team President Trump dubbed “my generals,” will step down early next year amid deepening rifts with the White House on crucial foreign policy matters, marking the departure of an original Trump Cabinet member and creating a leadership void at the Pentagon at a critical time for the president at home and abroad.",
+    "roundup": "Defense Secretary James Mattis will be stepping down at the end of February, citing differences with President Trump.",
+    "date": "2018-12-21",
+    "topic": NaN
+  }
+}

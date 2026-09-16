@@ -1,0 +1,36 @@
+{
+  "story_id": 4002,
+  "left": {
+    "article_id": "4002:left",
+    "story_id": 4002,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "White House officials eyeing payroll tax cut in effort to reverse weakening economy",
+    "body": "Several senior White House officials have begun discussing whether to push for a temporary payroll tax cut as a way to arrest an economic slowdown, three people familiar with the discussions said, revealing growing concerns about the economy among President Trump’s top economic aides. The talks are still in their early stages and have included a range of other tax breaks. The officials also have not decided whether to formally push Congress to approve any of these measures, these people said, speaking on the condition of anonymity because they were",
+    "roundup": "Sources are saying that the White House is considering a temporary payroll tax cut to help boost the economy, but the White House is denying it.",
+    "date": "2019-08-20",
+    "topic": "Business"
+  },
+  "center": {
+    "article_id": "4002:center",
+    "story_id": 4002,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "White House denies exploring payroll tax cut to offset worsening economy",
+    "body": "The White House is denying that it's considering a temporary payroll tax cut to help boost the economy after The Washington Post reported that several senior administration officials have been discussing the idea. A White House official said in a statement that \"cutting payroll taxes is not something under consideration at this time.\" Senate Finance Committee Chairman Chuck Grassley (R-Iowa) has not discussed a possible payroll tax cut with the administration, according to a spokesman for the senator. \"At this point, recession seems more of a political wish by",
+    "roundup": "Sources are saying that the White House is considering a temporary payroll tax cut to help boost the economy, but the White House is denying it.",
+    "date": "2019-08-20",
+    "topic": "Business"
+  },
+  "right": {
+    "article_id": "4002:right",
+    "story_id": 4002,
+    "stance": "right",
+    "publisher": "New York Post (News)",
+    "title": "Team Trump eyes payroll tax cut to spur economy: report",
+    "body": "Team Trump is considering a temporary payroll tax cut to stimulate the economy and avoid a slowdown — or even a recession, a new report said Monday. The plans reveal the administration’s top economic aides’ growing concerns about a possible slowdown as the 2020 election nears — despite President Trump’s glowing reviews of the US economy, The Washington Post reported. A White House spokesperson denied a payroll tax cut is under consideration “at this time.” The Washington Post reported that talks were still in their early stages, and officials have",
+    "roundup": "Sources are saying that the White House is considering a temporary payroll tax cut to help boost the economy, but the White House is denying it.",
+    "date": "2019-08-20",
+    "topic": "Business"
+  }
+}

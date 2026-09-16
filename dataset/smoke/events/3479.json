@@ -1,0 +1,36 @@
+{
+  "story_id": 3479,
+  "left": {
+    "article_id": "3479:left",
+    "story_id": 3479,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "The CIA’s big finding on Jamal Khashoggi’s death pits a disbelieving Trump against his intelligence community — again",
+    "body": "A new CIA report says Saudi Crown Prince Mohammed bin Salman personally ordered the killing of Jamal Khashoggi. Trump still doesn't want to believe it.",
+    "roundup": "The CIA has blamed the death of journalist Jamal Khashoggi on Saudi Crown Prince Mohammed bin Salman. Saudi Arabia has called the claim false and stated that bin Salman knew nothing about the killing.",
+    "date": "2018-11-17",
+    "topic": "CIA"
+  },
+  "center": {
+    "article_id": "3479:center",
+    "story_id": 3479,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Jamal Khashoggi: CIA 'blames Saudi prince for murder'",
+    "body": "The CIA believes that Saudi Crown Prince Mohammed bin Salman ordered the murder of journalist Jamal Khashoggi, according to US media reports.",
+    "roundup": "The CIA has blamed the death of journalist Jamal Khashoggi on Saudi Crown Prince Mohammed bin Salman. Saudi Arabia has called the claim false and stated that bin Salman knew nothing about the killing.",
+    "date": "2018-11-17",
+    "topic": "CIA"
+  },
+  "right": {
+    "article_id": "3479:right",
+    "story_id": 3479,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "CIA determines Khashoggi’s death was ordered by Saudi Crown Prince Mohammed bin Salman: report",
+    "body": "The death of Jamal Khashoggi, the writer and activist who was killed in the Saudi Consulate in Turkey last month, came at the directive of Saudi Crown Prince Mohammed bin Salman (MBS), the CIA has determined according to a report out Friday.",
+    "roundup": "The CIA has blamed the death of journalist Jamal Khashoggi on Saudi Crown Prince Mohammed bin Salman. Saudi Arabia has called the claim false and stated that bin Salman knew nothing about the killing.",
+    "date": "2018-11-17",
+    "topic": "CIA"
+  }
+}

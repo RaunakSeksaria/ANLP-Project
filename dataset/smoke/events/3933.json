@@ -1,0 +1,36 @@
+{
+  "story_id": 3933,
+  "left": {
+    "article_id": "3933:left",
+    "story_id": 3933,
+    "stance": "left",
+    "publisher": "CBS News",
+    "title": "Trump administration moves to end protections for Central American asylum seekers",
+    "body": "The Trump administration on Monday moved to end asylum protections for most Central American migrants in a major escalation of the president's battle to tamp down the number of people crossing the U.S.-Mexico border. According to a new rule published in the Federal Register, asylum seekers who pass through another country first will be ineligible for asylum at the U.S. southern border. The rule, expected to go into effect on Tuesday, also applies to children who have crossed the border alone. The new rule will affect asylum seekers coming through",
+    "roundup": "President Donald Trump's administration is seeking to reduce the number of Central Americans eligible for asylum through new restrictions. Some on the left are calling the move the latest in a series of Trump's cruel efforts to keep out immigrants; others on the right say the United States developing a more structured asylum process is good for everyone.",
+    "date": "2019-07-15",
+    "topic": "Immigration"
+  },
+  "center": {
+    "article_id": "3933:center",
+    "story_id": 3933,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Trump administration sets 'new bar' for immigrants seeking asylum",
+    "body": "Immigrants seeking asylum in the United States from Mexico must now also first seek protection from a so-called third party country, the Trump administration said on Monday. The Departments of Homeland Security and Justice, in a joint statement, said the new interim rule would set a “new bar” for immigrants trying to enter across the southern U.S. border “by placing further restrictions or limitations on eligibility for aliens who seek asylum in the United States.”",
+    "roundup": "President Donald Trump's administration is seeking to reduce the number of Central Americans eligible for asylum through new restrictions. Some on the left are calling the move the latest in a series of Trump's cruel efforts to keep out immigrants; others on the right say the United States developing a more structured asylum process is good for everyone.",
+    "date": "2019-07-15",
+    "topic": "Immigration"
+  },
+  "right": {
+    "article_id": "3933:right",
+    "story_id": 3933,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Trump Ending Asylum Protections for Central Americans",
+    "body": "The Trump administration on Monday moved to end asylum protections for most Central American migrants in a major escalation of the president's battle to tamp down the number of people crossing the U.S.-Mexico border. According to a new rule published in the Federal Register , asylum seekers who pass through another country first will be ineligible for asylum at the U.S. southern border. The rule, expected to go into effect on Tuesday, also applies to children who have crossed the border alone. There are some exceptions: If someone has been",
+    "roundup": "President Donald Trump's administration is seeking to reduce the number of Central Americans eligible for asylum through new restrictions. Some on the left are calling the move the latest in a series of Trump's cruel efforts to keep out immigrants; others on the right say the United States developing a more structured asylum process is good for everyone.",
+    "date": "2019-07-15",
+    "topic": "Immigration"
+  }
+}

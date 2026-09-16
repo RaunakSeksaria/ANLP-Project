@@ -1,0 +1,36 @@
+{
+  "story_id": 2359,
+  "left": {
+    "article_id": "2359:left",
+    "story_id": 2359,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Trump bid to smooth relations with Germany's Angela Merkel complicated by policy, personal differences",
+    "body": "The White House summit Friday aimed at easing friction between President Trump and German Chancellor Angela Merkel was undermined by the visible lack of warmth between the two leaders and sharp differences on immigration and trade.",
+    "roundup": "The German Chancellor Angela Merkel met with President Trump yesterday. Trump claims the meeting went well, while the media focused on the \"awkwardness\" between them.",
+    "date": "2017-03-18",
+    "topic": "Foreign Policy"
+  },
+  "center": {
+    "article_id": "2359:center",
+    "story_id": 2359,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Trump States Strong Support for NATO at Meeting With German Chancellor Merkel",
+    "body": "President Donald Trump expressed strong support for the North Atlantic Treaty Organization and said he’s “not an isolationist” after meeting Friday with German Chancellor Angela Merkel for the first time since taking office.",
+    "roundup": "The German Chancellor Angela Merkel met with President Trump yesterday. Trump claims the meeting went well, while the media focused on the \"awkwardness\" between them.",
+    "date": "2017-03-18",
+    "topic": "Foreign Policy"
+  },
+  "right": {
+    "article_id": "2359:right",
+    "story_id": 2359,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Trump Slams 'Fake News' Coverage After 'Great' Meeting With Merkel",
+    "body": "After hosting German Chancellor Angela Merkel at the White House on Friday, President Donald Trump took to Twitter Saturday morning to debunk the unfavorable press coverage the visit received.",
+    "roundup": "The German Chancellor Angela Merkel met with President Trump yesterday. Trump claims the meeting went well, while the media focused on the \"awkwardness\" between them.",
+    "date": "2017-03-18",
+    "topic": "Foreign Policy"
+  }
+}

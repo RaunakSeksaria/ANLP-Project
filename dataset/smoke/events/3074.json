@@ -1,0 +1,36 @@
+{
+  "story_id": 3074,
+  "left": {
+    "article_id": "3074:left",
+    "story_id": 3074,
+    "stance": "left",
+    "publisher": "Newsweek",
+    "title": "Conservatives Threaten Netflix Boycott Over Obama Deal: 'I Will Read the Bible Instead'",
+    "body": "Some conservatives are threatening to boycott Netflix after the streaming giant announced Monday it signed former President Barack Obama and former First Lady Michelle Obama to a multi-year development deal.",
+    "roundup": "After Netflix announced on Monday that it would partner with former President Barack Obama and former First Lady Michelle Obama to create content for the streaming site, some have expressed concern over the media giant's political leanings, although Mr. Obama says he plans to promote stories that help bridge the political divide.",
+    "date": "2018-05-25",
+    "topic": "Arts and Entertainment"
+  },
+  "center": {
+    "article_id": "3074:center",
+    "story_id": 3074,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Obama plans to use Netflix deal to stop political divisiveness",
+    "body": "Former President Obama said Wednesday he plans to use his new production deal with Netflix to combat political divisiveness.",
+    "roundup": "After Netflix announced on Monday that it would partner with former President Barack Obama and former First Lady Michelle Obama to create content for the streaming site, some have expressed concern over the media giant's political leanings, although Mr. Obama says he plans to promote stories that help bridge the political divide.",
+    "date": "2018-05-25",
+    "topic": "Arts and Entertainment"
+  },
+  "right": {
+    "article_id": "3074:right",
+    "story_id": 3074,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Netflix's politics under fresh scrutiny after exclusive deal with Obamas to produce content",
+    "body": "Netflix solidified its reputation as a liberal entertainment powerhouse with the announcement Monday that former President Barack Obama and former first lady Michelle Obama have signed on to produce a raft of new programming for the content conduit under their Higher Ground Productions shingle, and some conservative consumers aren't happy about it.",
+    "roundup": "After Netflix announced on Monday that it would partner with former President Barack Obama and former First Lady Michelle Obama to create content for the streaming site, some have expressed concern over the media giant's political leanings, although Mr. Obama says he plans to promote stories that help bridge the political divide.",
+    "date": "2018-05-25",
+    "topic": "Arts and Entertainment"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3116,
+  "left": {
+    "article_id": "3116:left",
+    "story_id": 3116,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "White House, in reversal, embraces Dreamer legislation",
+    "body": "The president’s comments came hours after he seemed to disavow a compromise immigration bill.",
+    "roundup": "The White House said Friday evening that President Trump will support the GOP leadership's upcoming immigration bill as well as a more enforcement-heavy conservative immigration bill. This announcement came after some confusion earlier in the day about whether the president would support the bill. The bill includes policies that President Trump has expressed as vital such as a pathway to citizenship for DACA recipients and an end to \"chain migration.\"",
+    "date": "2018-06-16",
+    "topic": "Immigration"
+  },
+  "center": {
+    "article_id": "3116:center",
+    "story_id": 3116,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "White House walks back Trump's rejection of immigration compromise",
+    "body": "President Trump in fact supports both of the House GOP immigration bills expected to receive votes next week and misspoke earlier Friday when he said that he would oppose a compromise measure between centrists and conservatives, a White House official told The Hill.",
+    "roundup": "The White House said Friday evening that President Trump will support the GOP leadership's upcoming immigration bill as well as a more enforcement-heavy conservative immigration bill. This announcement came after some confusion earlier in the day about whether the president would support the bill. The bill includes policies that President Trump has expressed as vital such as a pathway to citizenship for DACA recipients and an end to \"chain migration.\"",
+    "date": "2018-06-16",
+    "topic": "Immigration"
+  },
+  "right": {
+    "article_id": "3116:right",
+    "story_id": 3116,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "White House reverses Trump, says he will sign GOP leaders' immigration bill",
+    "body": "The White House said Friday evening that President Trump misunderstood the question when he blasted Republican leaders’ immigration bill, and insisted he really does support the compromise plan that just hours earlier he said he “wouldn’t sign.”",
+    "roundup": "The White House said Friday evening that President Trump will support the GOP leadership's upcoming immigration bill as well as a more enforcement-heavy conservative immigration bill. This announcement came after some confusion earlier in the day about whether the president would support the bill. The bill includes policies that President Trump has expressed as vital such as a pathway to citizenship for DACA recipients and an end to \"chain migration.\"",
+    "date": "2018-06-16",
+    "topic": "Immigration"
+  }
+}

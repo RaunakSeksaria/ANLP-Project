@@ -1,0 +1,36 @@
+{
+  "story_id": 3606,
+  "left": {
+    "article_id": "3606:left",
+    "story_id": 3606,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "Ruth Bader Ginsburg shows 'no evidence of remaining disease,' Supreme Court says",
+    "body": "Justice Ruth Bader Ginsburg's recovery from surgery is \"on track\" but she will miss oral arguments next week, the Supreme Court announced Friday. Ginsburg is still recuperating from surgery to",
+    "roundup": "Supreme Court Justice Ruth Bader Ginsburg will miss proceedings next week, but she shows no remaining signs of cancer and her recovery is \"on track.\"",
+    "date": "2019-01-11",
+    "topic": "Supreme Court"
+  },
+  "center": {
+    "article_id": "3606:center",
+    "story_id": 3606,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Justice Ruth Bader Ginsburg to Miss Another Week of Proceedings",
+    "body": "Supreme Court says recovery from cancer treatment remains on track",
+    "roundup": "Supreme Court Justice Ruth Bader Ginsburg will miss proceedings next week, but she shows no remaining signs of cancer and her recovery is \"on track.\"",
+    "date": "2019-01-11",
+    "topic": "Supreme Court"
+  },
+  "right": {
+    "article_id": "3606:right",
+    "story_id": 3606,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Ginsburg to miss next week's Supreme Court sessions, but recovery 'on track'",
+    "body": "Supreme Court Justice Ruth Bader Ginsburg will miss next week’s court sessions and work from home, but her recovery from early-stage lung cancer surgery remains \"on track\" and no further",
+    "roundup": "Supreme Court Justice Ruth Bader Ginsburg will miss proceedings next week, but she shows no remaining signs of cancer and her recovery is \"on track.\"",
+    "date": "2019-01-11",
+    "topic": "Supreme Court"
+  }
+}

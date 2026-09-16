@@ -1,0 +1,36 @@
+{
+  "story_id": 2475,
+  "left": {
+    "article_id": "2475:left",
+    "story_id": 2475,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "Calling Comey a Liar, Trump Says He Will Testify Under Oath",
+    "body": "President Trump on Friday accused James B. Comey, the fired F.B.I. director, of lying under oath to Congress, saying he would gladly provide sworn testimony disputing Mr. Comey’s charge that the president forced him out because of his handling of the investigation into the Trump campaign’s possible collusion with Russia.",
+    "roundup": "In a news conference on Friday, President Donald Trump stated that he would be willing to testify under oath following former FBI Director James Comey's Thursday testimony.",
+    "date": "2017-06-10",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2475:center",
+    "story_id": 2475,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Trump: Willing to Testify Under Oath That He Didn’t Ask Comey to Ease Flynn Probe",
+    "body": "President Donald Trump on Friday disputed his former Federal Bureau of Investigation director’s statements about their conversation regarding the agency’s probe of former National Security Adviser Mike Flynn, laying the groundwork for a potential legal clash that could have far-reaching consequences.",
+    "roundup": "In a news conference on Friday, President Donald Trump stated that he would be willing to testify under oath following former FBI Director James Comey's Thursday testimony.",
+    "date": "2017-06-10",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2475:right",
+    "story_id": 2475,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "President Trump: I'm 100 Percent Willing To Testify Under Oath About Russia",
+    "body": "Speaking during a joint press conference with Romanian President Klaus Lohannis in the Rose Garden Friday at the White House, President Donald Trump said he is \"100 percent\" willing to testify under oath about the Russia probe. He also said he is happy to speak with Special Counsel Robert Mueller about the facts of the case.",
+    "roundup": "In a news conference on Friday, President Donald Trump stated that he would be willing to testify under oath following former FBI Director James Comey's Thursday testimony.",
+    "date": "2017-06-10",
+    "topic": "White House"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3338,
+  "left": {
+    "article_id": "3338:left",
+    "story_id": 3338,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "The Kavanaugh nomination just got even more complicated",
+    "body": "Democrats are demanding an immediate halt to Brett Kavanaugh's nomination process after his increasingly troubled hopes of reaching the Supreme Court were hit by a new allegation of sexual misconduct as a young man.",
+    "roundup": "A second woman has come out with allegations about Supreme Court nominee Brett Kavanaugh, as Democrats call for an immediate halt to the nomination process.",
+    "date": "2018-09-24",
+    "topic": "Supreme Court"
+  },
+  "center": {
+    "article_id": "3338:center",
+    "story_id": 3338,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "What we know about Deborah Ramirez, the second woman to accuse Kavanaugh of sexual assault",
+    "body": "A second woman came forward Sunday to accuse Supreme Court nominee Brett Kavanaugh of a decades-old sexual assault, the same day his first accuser, Christine Blasey Ford, committed to testifying about her own allegations before the Senate Judiciary Committee on Thursday.",
+    "roundup": "A second woman has come out with allegations about Supreme Court nominee Brett Kavanaugh, as Democrats call for an immediate halt to the nomination process.",
+    "date": "2018-09-24",
+    "topic": "Supreme Court"
+  },
+  "right": {
+    "article_id": "3338:right",
+    "story_id": 3338,
+    "stance": "right",
+    "publisher": "CBN",
+    "title": "Second Accuser Targets Kavanaugh, No Eyewitnesses, 'Best Friend' Never Heard About It",
+    "body": "With the confirmation of Supreme Court nominee Brett Kavanaugh hanging in the balance due to a sexual assault allegation, a second accuser has come out with allegations against the president's nominee.",
+    "roundup": "A second woman has come out with allegations about Supreme Court nominee Brett Kavanaugh, as Democrats call for an immediate halt to the nomination process.",
+    "date": "2018-09-24",
+    "topic": "Supreme Court"
+  }
+}

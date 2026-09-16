@@ -1,0 +1,36 @@
+{
+  "story_id": 5525,
+  "left": {
+    "article_id": "5525:left",
+    "story_id": 5525,
+    "stance": "left",
+    "publisher": "BuzzFeed News",
+    "title": "Amazon Is Booting Parler Off Of Its Web Hosting Service",
+    "body": "Amazon notified Parler that it would be cutting off the social network favored by conservatives and extremists from its cloud hosting service Amazon Web Services, according to an email obtained by BuzzFeed News. The suspension, which will go into effect on Sunday just before midnight, means that Parler will be unable to operate and will go offline unless it can find another hosting service. People on Parler used the social network to stoke fear, spread hate, and coordinate the insurrection at the Capitol building on Wednesday. The app has recently",
+    "roundup": "Amazon removed Parler, a Twitter-like social media app popular among conservatives, from its cloud hosting service Sunday, joining Google and Apple in banning the app from their services this weekend. While Google and Apple's bans allowed people who had already downloaded the app to continue using it, Amazon's decision to remove Parler from its hosting service takes the app completely offline until the company \"can find a new hosting service.\" Parler CEO John Matze called the move \"a coordinated attack by the tech giants to kill the competition in the marketplace.\" Matze said Parler could be unavailable for up to a week while its servers are \"rebuilt from scratch.\" Coverage from the left tended to frame Parler as an app people use to spread \"hate\" and coordinate events like Wednesday's Capitol protest. Some right-rated outlets highlighted Matze's statement, and framed the ban as unjust anti-conservative censorship and an attempt by Big Tech to control the marketplace.",
+    "date": "2021-01-10",
+    "topic": "Free Speech"
+  },
+  "center": {
+    "article_id": "5525:center",
+    "story_id": 5525,
+    "stance": "center",
+    "publisher": "CNBC",
+    "title": "Amazon to drop Parler from its web hosting service, citing violent posts",
+    "body": "Amazon has pulled the plug on Parler, a social media app popular with Trump supporters, in the wake of the deadly U.S. Capitol riot earlier this week. Amazon’s cloud-computing unit, Amazon Web Services (AWS), informed Parler on Saturday that it will no longer provide cloud services to the company beginning on Sunday at 11:59 p.m. PT, according to an email obtained by CNBC. AWS provides cloud services to Parler that host its website, which means that if Parler can’t locate a new cloud provider by Sunday night, the site will",
+    "roundup": "Amazon removed Parler, a Twitter-like social media app popular among conservatives, from its cloud hosting service Sunday, joining Google and Apple in banning the app from their services this weekend. While Google and Apple's bans allowed people who had already downloaded the app to continue using it, Amazon's decision to remove Parler from its hosting service takes the app completely offline until the company \"can find a new hosting service.\" Parler CEO John Matze called the move \"a coordinated attack by the tech giants to kill the competition in the marketplace.\" Matze said Parler could be unavailable for up to a week while its servers are \"rebuilt from scratch.\" Coverage from the left tended to frame Parler as an app people use to spread \"hate\" and coordinate events like Wednesday's Capitol protest. Some right-rated outlets highlighted Matze's statement, and framed the ban as unjust anti-conservative censorship and an attempt by Big Tech to control the marketplace.",
+    "date": "2021-01-10",
+    "topic": "Free Speech"
+  },
+  "right": {
+    "article_id": "5525:right",
+    "story_id": 5525,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Parler CEO: Tech Companies Coordinated Plan to Close Us Down",
+    "body": "The silencing of conservative speech on social media has spiraled into a \"coordinated effort\" by big tech to close down Parler, according to the social media platform's CEO John Matze. \"This was a coordinated attack by the tech giants to kill the competition in the marketplace,\" Matze's statement read. \"We were too successful too fast. \"You can expect the war on competition and free speech to continue, but don't count us out. #speakfreely.\" Matze's statement comes as Amazon is removing the platform from its webservers, which might take the conservative",
+    "roundup": "Amazon removed Parler, a Twitter-like social media app popular among conservatives, from its cloud hosting service Sunday, joining Google and Apple in banning the app from their services this weekend. While Google and Apple's bans allowed people who had already downloaded the app to continue using it, Amazon's decision to remove Parler from its hosting service takes the app completely offline until the company \"can find a new hosting service.\" Parler CEO John Matze called the move \"a coordinated attack by the tech giants to kill the competition in the marketplace.\" Matze said Parler could be unavailable for up to a week while its servers are \"rebuilt from scratch.\" Coverage from the left tended to frame Parler as an app people use to spread \"hate\" and coordinate events like Wednesday's Capitol protest. Some right-rated outlets highlighted Matze's statement, and framed the ban as unjust anti-conservative censorship and an attempt by Big Tech to control the marketplace.",
+    "date": "2021-01-10",
+    "topic": "Free Speech"
+  }
+}

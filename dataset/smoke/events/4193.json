@@ -1,0 +1,36 @@
+{
+  "story_id": 4193,
+  "left": {
+    "article_id": "4193:left",
+    "story_id": 4193,
+    "stance": "left",
+    "publisher": "MSNBC",
+    "title": "Pensacola employee describes scene outside naval base after mass shooting",
+    "body": "Jeff Bergosh, a facilities manager at Pensacola Naval Base, described the scene outside the base as \"chaos\" as authorities responded to reports of a mass shooting and employees arrived for work.",
+    "roundup": "A shooting at the Naval Air Station in Pensacola, Florida left four people dead Friday morning. The alleged shooter is reportedly an aviation student from Saudi Arabia; authorities are investigating whether the shooting was terror-related. Some right-rated voices tied the accused shooter's reported nationality to purportedly weak immigration regulations and vetting. Some sources from the left, including the MSNBC article linked, have referred to the incident as a 'mass shooting.'",
+    "date": "2019-12-06",
+    "topic": "Violence in America"
+  },
+  "center": {
+    "article_id": "4193:center",
+    "story_id": 4193,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "Official: Pensacola shooter Saudi Arabian aviation student",
+    "body": "PENSACOLA, Fla. (AP) — A U.S. official has identified the shooter at the Naval Air Station in Pensacola as a Saudi Arabian aviation student. Authorities are investigating if the shooting was terrorism-related. The shooting was the second at a U.S. Navy base this week. Escambia County Sheriff David Morgan says 11 people were shot in Friday’s attack, four of whom died, including the shooter. Base commander Capt. Timothy Kinsella Jr. says the base will remain closed until further notice.",
+    "roundup": "A shooting at the Naval Air Station in Pensacola, Florida left four people dead Friday morning. The alleged shooter is reportedly an aviation student from Saudi Arabia; authorities are investigating whether the shooting was terror-related. Some right-rated voices tied the accused shooter's reported nationality to purportedly weak immigration regulations and vetting. Some sources from the left, including the MSNBC article linked, have referred to the incident as a 'mass shooting.'",
+    "date": "2019-12-06",
+    "topic": "Violence in America"
+  },
+  "right": {
+    "article_id": "4193:right",
+    "story_id": 4193,
+    "stance": "right",
+    "publisher": "New York Post (News)",
+    "title": "Pensacola shooter identified as Saudi national in US for aviation training",
+    "body": "The man who opened fire Friday — killing at least three people — at the Pensacola naval base is a foreign national who was in the country for training, according to new reports. The gunman was identified as a Saudi aviation student, the Associated Press reported. Sources described him to NBC News as a foreign national.",
+    "roundup": "A shooting at the Naval Air Station in Pensacola, Florida left four people dead Friday morning. The alleged shooter is reportedly an aviation student from Saudi Arabia; authorities are investigating whether the shooting was terror-related. Some right-rated voices tied the accused shooter's reported nationality to purportedly weak immigration regulations and vetting. Some sources from the left, including the MSNBC article linked, have referred to the incident as a 'mass shooting.'",
+    "date": "2019-12-06",
+    "topic": "Violence in America"
+  }
+}

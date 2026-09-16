@@ -1,0 +1,36 @@
+{
+  "story_id": 3381,
+  "left": {
+    "article_id": "3381:left",
+    "story_id": 3381,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "Trump files op-ed bashing Democrats on Medicare for all",
+    "body": "President Donald Trump knocked Democrats in incendiary terms ahead of the midterm elections with an op-ed decrying a proposal to establish a single-payer health care system.",
+    "roundup": "President Trump criticizes Democrats for proposing \"Medicare For All\" in a USA Today Op-ed.",
+    "date": "2018-10-10",
+    "topic": "Healthcare"
+  },
+  "center": {
+    "article_id": "3381:center",
+    "story_id": 3381,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump rips Dems’ embrace of Medicare for all: ‘The centrist Democratic Party is dead’",
+    "body": "President Trump on Wednesday attacked Democrats over their embrace of \"Medicare for all,\" writing in an op-ed for USA Today that the plan would threaten seniors and likening the single-payer plan to radical socialism.",
+    "roundup": "President Trump criticizes Democrats for proposing \"Medicare For All\" in a USA Today Op-ed.",
+    "date": "2018-10-10",
+    "topic": "Healthcare"
+  },
+  "right": {
+    "article_id": "3381:right",
+    "story_id": 3381,
+    "stance": "right",
+    "publisher": "Donald Trump",
+    "title": "Donald Trump: Democrats 'Medicare for All' plan will demolish promises to seniors",
+    "body": "The Democrats want to outlaw private health care plans, taking away freedom to choose plans while letting anyone cross our border. We must win this.",
+    "roundup": "President Trump criticizes Democrats for proposing \"Medicare For All\" in a USA Today Op-ed.",
+    "date": "2018-10-10",
+    "topic": "Healthcare"
+  }
+}

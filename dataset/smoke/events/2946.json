@@ -1,0 +1,36 @@
+{
+  "story_id": 2946,
+  "left": {
+    "article_id": "2946:left",
+    "story_id": 2946,
+    "stance": "left",
+    "publisher": "Mother Jones",
+    "title": "The Supreme Court Is Now Republicans’ Only Hope of Restoring Pennsylvania’s Gerrymander",
+    "body": "A federal court threw out a Republican challenge to Pennsylvania’s new electoral map on Monday, dealing a blow to GOP efforts to get rid of congressional districts that are friendlier to Democrats. Now all eyes are on the US Supreme Court, the only court that could halt Pennsylvania from holding its 2018 midterm elections under the new map.",
+    "roundup": "A panel of federal judges in Pennsylvania rejected a request to block the state's new congressional district map, which was redrawn after the PA Supreme Court ruled the old map was gerrymandered to unfairly benefit the GOP.",
+    "date": "2018-03-19",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2946:center",
+    "story_id": 2946,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Judges refuse GOP request to block new Pa. district boundaries",
+    "body": "A panel of federal judges in Pennsylvania refused on Monday to block the state Supreme Court's new congressional map from going into effect, dealing a blow to Republicans who had sought to block it.",
+    "roundup": "A panel of federal judges in Pennsylvania rejected a request to block the state's new congressional district map, which was redrawn after the PA Supreme Court ruled the old map was gerrymandered to unfairly benefit the GOP.",
+    "date": "2018-03-19",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2946:right",
+    "story_id": 2946,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Federal court rejects lawsuit from Pennsylvania GOP challenging court-drawn congressional map",
+    "body": "A federal district court has rejected a lawsuit filed by eight Pennsylvania Republican lawmakers that sought to block a new congressional map drawn by the Pennsylvania Supreme Court.",
+    "roundup": "A panel of federal judges in Pennsylvania rejected a request to block the state's new congressional district map, which was redrawn after the PA Supreme Court ruled the old map was gerrymandered to unfairly benefit the GOP.",
+    "date": "2018-03-19",
+    "topic": "Elections"
+  }
+}

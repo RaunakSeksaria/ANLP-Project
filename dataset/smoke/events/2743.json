@@ -1,0 +1,36 @@
+{
+  "story_id": 2743,
+  "left": {
+    "article_id": "2743:left",
+    "story_id": 2743,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "The House is voting on its tax bill Thursday. Here’s what is in it.",
+    "body": "The big day is finally here for President Trump and GOP House Speaker Paul D. Ryan (Wis.). On Thursday, the House is set to vote on the tax bill, the central piece of the Republican plan to boost the U.S. economy. No Democrats are expected to vote for the bill, meaning Ryan can only lose 22 GOP votes.",
+    "roundup": "The House of Representatives is set to vote on the tax bill today. GOP House members are confident they have 218 votes to pass the bill.",
+    "date": "2017-11-16",
+    "topic": "US House"
+  },
+  "center": {
+    "article_id": "2743:center",
+    "story_id": 2743,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "House GOP set for big tax win",
+    "body": "House Republicans are poised Thursday to pass a sweeping tax-reform package that, if enacted, would deliver the first major legislative victory of the Trump era.",
+    "roundup": "The House of Representatives is set to vote on the tax bill today. GOP House members are confident they have 218 votes to pass the bill.",
+    "date": "2017-11-16",
+    "topic": "US House"
+  },
+  "right": {
+    "article_id": "2743:right",
+    "story_id": 2743,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Tax bill vote looms in House, with little drama: 'It's eerie'",
+    "body": "“It’s almost like a mirage,” said one senior House Republican aide. “We were just waiting for people to throw sand in the gears.”",
+    "roundup": "The House of Representatives is set to vote on the tax bill today. GOP House members are confident they have 218 votes to pass the bill.",
+    "date": "2017-11-16",
+    "topic": "US House"
+  }
+}

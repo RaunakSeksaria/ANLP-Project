@@ -1,0 +1,36 @@
+{
+  "story_id": 3143,
+  "left": {
+    "article_id": "3143:left",
+    "story_id": 3143,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "Gunman was 'continually shooting people' as he walked inside Capital Gazette newsroom",
+    "body": "Reporters and editors at the Capital Gazette quickly turned their heads around when the glass doors leading to the newsroom suddenly shattered. Within minutes, it \"was like a war zone.\"",
+    "roundup": "A man with a shotgun and a beef against his local newspaper stalked into the offices of the Annapolis Capital Gazette on Thursday and opened fire on the newsroom, killing five people and wounding two others, in what appears to have been a targeted attack.",
+    "date": "2018-06-29",
+    "topic": "Violence in America"
+  },
+  "center": {
+    "article_id": "3143:center",
+    "story_id": 3143,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Police chief on deadly Maryland newspaper shooting: 'This was a targeted attack'",
+    "body": "The deadly shooting at a newsroom in Annapolis, Md., on Thursday was a \"targeted attack,\" authorities said.",
+    "roundup": "A man with a shotgun and a beef against his local newspaper stalked into the offices of the Annapolis Capital Gazette on Thursday and opened fire on the newsroom, killing five people and wounding two others, in what appears to have been a targeted attack.",
+    "date": "2018-06-29",
+    "topic": "Violence in America"
+  },
+  "right": {
+    "article_id": "3143:right",
+    "story_id": 3143,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "At least 5 killed in 'targeted attack' on Capital Gazette newspaper in Annapolis",
+    "body": "A man with a shotgun and a beef against his local newspaper stalked into the offices of the Annapolis Capital Gazette on Thursday and opened fire on the newsroom, killing five people and wounding two others, police said.",
+    "roundup": "A man with a shotgun and a beef against his local newspaper stalked into the offices of the Annapolis Capital Gazette on Thursday and opened fire on the newsroom, killing five people and wounding two others, in what appears to have been a targeted attack.",
+    "date": "2018-06-29",
+    "topic": "Violence in America"
+  }
+}

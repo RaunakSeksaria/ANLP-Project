@@ -1,0 +1,36 @@
+{
+  "story_id": 3471,
+  "left": {
+    "article_id": "3471:left",
+    "story_id": 3471,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "British Prime Minister Battles To Save Brexit Deal As Ministers Quit",
+    "body": "Just over 12 hours after Theresa May announced that the cabinet had agreed to the terms of a draft Brexit agreement, the Brexit minister resigned.",
+    "roundup": "British Prime Minister Theresa May is fighting to save a Brexit deal after four of her cabinet members resign.",
+    "date": "2018-11-15",
+    "topic": "Great Britain"
+  },
+  "center": {
+    "article_id": "3471:center",
+    "story_id": 3471,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "UK's Brexit Deal in Jeopardy as Senior Ministers Resign",
+    "body": "UK Prime Minister Theresa May was fighting to save her Brexit deal just hours after it was sealed, after a series of ministers resigned amid deepening political turmoil over the terms of her plan to exit from the European Union.",
+    "roundup": "British Prime Minister Theresa May is fighting to save a Brexit deal after four of her cabinet members resign.",
+    "date": "2018-11-15",
+    "topic": "Great Britain"
+  },
+  "right": {
+    "article_id": "3471:right",
+    "story_id": 3471,
+    "stance": "right",
+    "publisher": "HotAir",
+    "title": "Disaster: Brexit Minister, Three Others Resign From May’s Cabinet Over Draft Agreement",
+    "body": "Just a day after declaring her cabinet united behind her in pursuing a new Brexit plan, UK prime minister Theresa May stands on the brink of political oblivion. Four of her cabinet ministers resigned today, including Brexit secretary Dominic Raab, setting up a very difficult vote in Parliament over the plan:",
+    "roundup": "British Prime Minister Theresa May is fighting to save a Brexit deal after four of her cabinet members resign.",
+    "date": "2018-11-15",
+    "topic": "Great Britain"
+  }
+}

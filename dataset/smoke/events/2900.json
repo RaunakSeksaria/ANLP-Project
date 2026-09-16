@@ -1,0 +1,36 @@
+{
+  "story_id": 2900,
+  "left": {
+    "article_id": "2900:left",
+    "story_id": 2900,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Florida students chanting ‘We want change’ walk out of schools to protest gun violence",
+    "body": "Students and staff at a South Florida high school walked out of class Tuesday to protest gun violence and marched to Marjory Stoneman Douglas High School in Parkland, Fla., where 17 students and staff members were killed by a gunman using a semiautomatic rifle.",
+    "roundup": "A group of students from a Florida high school marched several miles to the site of the recent mass shooting in Parkland, where 17 people were shot and killed.",
+    "date": "2018-02-20",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "center": {
+    "article_id": "2900:center",
+    "story_id": 2900,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Florida students stage walkout, march toward site of deadly mass shooting",
+    "body": "Hundreds of students from a Florida high school just miles from the site of a deadly mass shooting last week staged a walkout on Tuesday.",
+    "roundup": "A group of students from a Florida high school marched several miles to the site of the recent mass shooting in Parkland, where 17 people were shot and killed.",
+    "date": "2018-02-20",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "right": {
+    "article_id": "2900:right",
+    "story_id": 2900,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Florida students walk out of classes, embark on 10-mile walk to site of last week's school shooting",
+    "body": "Approximately 20 students from West Boca Raton High School, Fla., staged a walk-out during school Tuesday and have embarked on a 10-mile walk to Marjory Stoneman Douglas High School, the site of the Feb. 14 massacre.",
+    "roundup": "A group of students from a Florida high school marched several miles to the site of the recent mass shooting in Parkland, where 17 people were shot and killed.",
+    "date": "2018-02-20",
+    "topic": "Gun Control and Gun Rights"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3052,
+  "left": {
+    "article_id": "3052:left",
+    "story_id": 3052,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Russia favored Trump in 2016, Senate panel says, breaking with House GOP",
+    "body": "The Senate Intelligence Committee has determined that the intelligence community was correct in assessing that Russia meddled in the 2016 U.S. election with the aim of helping then-candidate Donald Trump, contradicting findings House Republicans reached last month.",
+    "roundup": "The Senate Intelligence Committee has concluded that Russia interfered in the 2016 election in order to help then-candidate Donald Trump, concurring with the 2017 intelligence community report but diverging from House Republican findings.",
+    "date": "2018-05-16",
+    "topic": "Russia"
+  },
+  "center": {
+    "article_id": "3052:center",
+    "story_id": 3052,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Key U.S. senators: 'no doubt' Russia sought to interfere in U.S. election",
+    "body": "The leaders of the U.S. Senate Intelligence Committee said on Wednesday they agreed with intelligence agencies’ assessment that Moscow sought to interfere with the 2016 U.S. election to boost Donald Trump’s prospects of becoming president.",
+    "roundup": "The Senate Intelligence Committee has concluded that Russia interfered in the 2016 election in order to help then-candidate Donald Trump, concurring with the 2017 intelligence community report but diverging from House Republican findings.",
+    "date": "2018-05-16",
+    "topic": "Russia"
+  },
+  "right": {
+    "article_id": "3052:right",
+    "story_id": 3052,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Senate panel backs intel report on Russian meddling, after interviewing Obama officials",
+    "body": "Senate Intelligence Committee leaders on Wednesday backed the 2017 intelligence community report that formally accused Russia of trying to interfere in the U.S. presidential election to boost then-candidate Donald Trump.",
+    "roundup": "The Senate Intelligence Committee has concluded that Russia interfered in the 2016 election in order to help then-candidate Donald Trump, concurring with the 2017 intelligence community report but diverging from House Republican findings.",
+    "date": "2018-05-16",
+    "topic": "Russia"
+  }
+}

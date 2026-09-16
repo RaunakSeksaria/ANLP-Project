@@ -1,0 +1,36 @@
+{
+  "story_id": 2896,
+  "left": {
+    "article_id": "2896:left",
+    "story_id": 2896,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "What Mueller’s new Russia indictments mean — and don’t mean",
+    "body": "They’re plucking the low-hanging fruit of Russian interference.",
+    "roundup": "On Friday,13 Russian people and three Russian companies were indicted on various charges. Robert Mueller's indictment accuses them of conspiring to interfere with “US political and electoral processes, including the presidential election of 2016.” Across the political spectrum, publications have tried to interpret what these indictments mean for the future of the investigation as well as President Trump.",
+    "date": "2018-02-17",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2896:center",
+    "story_id": 2896,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Five key takeaways from the Russian indictments",
+    "body": "New indictments of 13 Russians who allegedly meddled in the 2016 election set the political world abuzz on Friday.",
+    "roundup": "On Friday,13 Russian people and three Russian companies were indicted on various charges. Robert Mueller's indictment accuses them of conspiring to interfere with “US political and electoral processes, including the presidential election of 2016.” Across the political spectrum, publications have tried to interpret what these indictments mean for the future of the investigation as well as President Trump.",
+    "date": "2018-02-17",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2896:right",
+    "story_id": 2896,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Latest Mueller indictment complicates Russian collusion narrative",
+    "body": "A 37-page indictment special counsel Robert Mueller issued on Friday against more than a dozen Russians has complicated the political narratives surrounding allegations of collusion between the Kremlin and President Trump's campaign.",
+    "roundup": "On Friday,13 Russian people and three Russian companies were indicted on various charges. Robert Mueller's indictment accuses them of conspiring to interfere with “US political and electoral processes, including the presidential election of 2016.” Across the political spectrum, publications have tried to interpret what these indictments mean for the future of the investigation as well as President Trump.",
+    "date": "2018-02-17",
+    "topic": "Elections"
+  }
+}

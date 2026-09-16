@@ -1,0 +1,36 @@
+{
+  "story_id": 2757,
+  "left": {
+    "article_id": "2757:left",
+    "story_id": 2757,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "Dueling Appointments Lead to Clash at Consumer Protection Bureau",
+    "body": "President Trump on Friday named his budget director as the acting director of the Consumer Financial Protection Bureau, moving to take control of the agency hours after its departing leader had taken steps to install his own choice for acting chief.",
+    "roundup": "Outgoing director of the Consumer Financial Protection Bureau (CFPB) Richard Cordray announced that he would appoint his chief of staff, Leandra English, to deputy director on Friday. Later that day, President Trump announced that he was appointing Office of Management and Budget Director Mick Mulvaney as acting director of the bureau. There is little precedent for these conflicting appointments as each side now argues their case for why they should get to appoint the deputy director.",
+    "date": "2017-11-25",
+    "topic": "Banking and Finance"
+  },
+  "center": {
+    "article_id": "2757:center",
+    "story_id": 2757,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Rival appointments set up showdown to lead agency",
+    "body": "President Trump on Friday announced that he is appointing Office of Management and Budget Director Mick Mulvaney as acting director of the Consumer Finance Protection Bureau (CFPB), setting up a potential fight over the agency's future.",
+    "roundup": "Outgoing director of the Consumer Financial Protection Bureau (CFPB) Richard Cordray announced that he would appoint his chief of staff, Leandra English, to deputy director on Friday. Later that day, President Trump announced that he was appointing Office of Management and Budget Director Mick Mulvaney as acting director of the bureau. There is little precedent for these conflicting appointments as each side now argues their case for why they should get to appoint the deputy director.",
+    "date": "2017-11-25",
+    "topic": "Banking and Finance"
+  },
+  "right": {
+    "article_id": "2757:right",
+    "story_id": 2757,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "White House confident Mick Mulvaney trumps outgoing director's pick to head CFPB",
+    "body": "The White House insisted Saturday that President Trump has the authority to appoint a successor to temporarily oversee the Consumer Financial Protection Bureau, rather than a former acting director.",
+    "roundup": "Outgoing director of the Consumer Financial Protection Bureau (CFPB) Richard Cordray announced that he would appoint his chief of staff, Leandra English, to deputy director on Friday. Later that day, President Trump announced that he was appointing Office of Management and Budget Director Mick Mulvaney as acting director of the bureau. There is little precedent for these conflicting appointments as each side now argues their case for why they should get to appoint the deputy director.",
+    "date": "2017-11-25",
+    "topic": "Banking and Finance"
+  }
+}

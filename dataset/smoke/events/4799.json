@@ -1,0 +1,36 @@
+{
+  "story_id": 4799,
+  "left": {
+    "article_id": "4799:left",
+    "story_id": 4799,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "National security adviser Robert O'Brien tests positive for Covid-19",
+    "body": "Robert O’Brien, President Donald Trump’s national security adviser, has tested positive for Covid-19, making him the highest profile Trump official to get the virus, an administration official confirmed. It’s unclear how O’Brien was exposed to the coronavirus or how much in-person contact he’s had recently with Trump. Anyone who is near the president is tested regularly for the disease. According to a White House statement, O’Brien “has mild symptoms and has been self-isolating and working from a secure location off site. There is no risk of exposure to the president",
+    "roundup": "National Security Advisor Robert O'Brien has tested positive for the COVID-19 coronavirus. O'Brien reportedly contracted the virus while attending a family event. People around President Trump reportedly continue to undergo regular COVID-19 testing",
+    "date": "2020-07-27",
+    "topic": "Coronavirus"
+  },
+  "center": {
+    "article_id": "4799:center",
+    "story_id": 4799,
+    "stance": "center",
+    "publisher": "CNBC",
+    "title": "Trump national security advisor Robert O’Brien tests positive for coronavirus",
+    "body": "President Donald Trump’s national security advisor Robert O’Brien has tested positive for the coronavirus. O’Brien has “mild symptoms and has been self-isolating and working from a secure location off site,” the White House said in a statement Monday. “There is no risk of exposure to the President or the Vice President. The work of the National Security Council continues uninterrupted,” the White House said. O’Brien, 54, is among the highest-ranking members in Trump’s orbit reported to have come down with the coronavirus. But other administration officials have previously been diagnosed",
+    "roundup": "National Security Advisor Robert O'Brien has tested positive for the COVID-19 coronavirus. O'Brien reportedly contracted the virus while attending a family event. People around President Trump reportedly continue to undergo regular COVID-19 testing",
+    "date": "2020-07-27",
+    "topic": "Coronavirus"
+  },
+  "right": {
+    "article_id": "4799:right",
+    "story_id": 4799,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "National security adviser Robert O'Brien tests positive for coronavirus",
+    "body": "National security adviser Robert O'Brien has tested positive for the coronavirus. O’Brien \"tested positive for COVID-19. He has mild symptoms and has been self-isolating and working from a secure location off site. There is no risk of exposure to the President or the Vice President. The work of the National Security Council continues uninterrupted,” the White House said in a statement on Monday. The White House official contracted the virus while attending a family event, sources told Bloomberg News. O'Brien recently returned from Europe, where he and his top deputy",
+    "roundup": "National Security Advisor Robert O'Brien has tested positive for the COVID-19 coronavirus. O'Brien reportedly contracted the virus while attending a family event. People around President Trump reportedly continue to undergo regular COVID-19 testing",
+    "date": "2020-07-27",
+    "topic": "Coronavirus"
+  }
+}

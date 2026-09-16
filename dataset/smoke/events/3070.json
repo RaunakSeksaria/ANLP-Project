@@ -1,0 +1,36 @@
+{
+  "story_id": 3070,
+  "left": {
+    "article_id": "3070:left",
+    "story_id": 3070,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Trump violated the Constitution when he blocked his critics on Twitter, a federal judge rules",
+    "body": "President Trump's decision to block his Twitter followers for their political views is a violation of the First Amendment, a federal judge ruled Wednesday, saying that Trump's effort to silence his critics is not permissible under the U.S. Constitution because the digital space in which he engages with constituents is a public forum.",
+    "roundup": "A federal judge ruled that President Trump may not block critics on Twitter, finding that doing so violates the First Amendment.",
+    "date": "2018-05-23",
+    "topic": "Free Speech"
+  },
+  "center": {
+    "article_id": "3070:center",
+    "story_id": 3070,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Judge Rules Trump May Not Block Critics on Twitter",
+    "body": "President Donald Trump may not block critics from reading his Twitter feed, a federal judge ruled on Wednesday, finding that doing so violates their right to free speech.",
+    "roundup": "A federal judge ruled that President Trump may not block critics on Twitter, finding that doing so violates the First Amendment.",
+    "date": "2018-05-23",
+    "topic": "Free Speech"
+  },
+  "right": {
+    "article_id": "3070:right",
+    "story_id": 3070,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump can't block Twitter users over their political views, NY federal judge says",
+    "body": "A New York federal judge has ruled that President Donald Trump cannot block Twitter users for their political views after the President was sued in July 2017 by a free-speech group saying the president's actions violated the First Amendment.",
+    "roundup": "A federal judge ruled that President Trump may not block critics on Twitter, finding that doing so violates the First Amendment.",
+    "date": "2018-05-23",
+    "topic": "Free Speech"
+  }
+}

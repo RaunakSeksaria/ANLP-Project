@@ -1,0 +1,36 @@
+{
+  "story_id": 2769,
+  "left": {
+    "article_id": "2769:left",
+    "story_id": 2769,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "‘I never asked Comey to stop investigating Flynn’: Trump issues series of tweets criticizing the FBI",
+    "body": "President Trump issued a fresh denial Sunday that he asked former FBI director James B. Comey to halt an investigation into the conduct of his dismissed national security adviser Michael Flynn.",
+    "roundup": "In an early morning tweet, President Trump said that he \"never asked Comey to stop investigating Flynn.\" This is counter to Comey's testimony before Congress in which he claimed that Trump pressured him during an Oval Office meeting to stop investigating Flynn. This tweet came after the president tweeted on Saturday that he fired Flynn \"because he lied to the Vice President and the FBI.\"",
+    "date": "2017-12-03",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2769:center",
+    "story_id": 2769,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump: ‘I never asked Comey to stop investigating Flynn’",
+    "body": "President Trump in an early morning tweet on Sunday said he never asked former FBI Director James Comey to stop investigating former national security adviser Michael Flynn, saying \"fake news\" outlets are \"covering another Comey lie.\"",
+    "roundup": "In an early morning tweet, President Trump said that he \"never asked Comey to stop investigating Flynn.\" This is counter to Comey's testimony before Congress in which he claimed that Trump pressured him during an Oval Office meeting to stop investigating Flynn. This tweet came after the president tweeted on Saturday that he fired Flynn \"because he lied to the Vice President and the FBI.\"",
+    "date": "2017-12-03",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2769:right",
+    "story_id": 2769,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump denies asking ex-FBI Director Comey to drop Flynn investigation",
+    "body": "President Trump on Sunday denied asking former FBI Director James Comey to drop his investigation into Michael Flynn during a February meeting after the ex-national security adviser was dismissed from his position.",
+    "roundup": "In an early morning tweet, President Trump said that he \"never asked Comey to stop investigating Flynn.\" This is counter to Comey's testimony before Congress in which he claimed that Trump pressured him during an Oval Office meeting to stop investigating Flynn. This tweet came after the president tweeted on Saturday that he fired Flynn \"because he lied to the Vice President and the FBI.\"",
+    "date": "2017-12-03",
+    "topic": "White House"
+  }
+}

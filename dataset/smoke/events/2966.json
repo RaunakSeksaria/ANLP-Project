@@ -1,0 +1,36 @@
+{
+  "story_id": 2966,
+  "left": {
+    "article_id": "2966:left",
+    "story_id": 2966,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Trump is reportedly telling aides he wants US troops out of Syria",
+    "body": "That goes against what the administration has been signaling for months.",
+    "roundup": "On Friday, there were reports that President Donald Trump was telling advisers that he wants to bring US fighters in Syria back home. It was also reported that the president is freezing funds for recovery efforts in the country, signalling pullback.",
+    "date": "2018-03-31",
+    "topic": "Middle East"
+  },
+  "center": {
+    "article_id": "2966:center",
+    "story_id": 2966,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Trump Freezes Funds for Syrian Recovery, Signaling Pullback",
+    "body": "Order to State Department to hold off on spending jibes with president’s call for an early exit.",
+    "roundup": "On Friday, there were reports that President Donald Trump was telling advisers that he wants to bring US fighters in Syria back home. It was also reported that the president is freezing funds for recovery efforts in the country, signalling pullback.",
+    "date": "2018-03-31",
+    "topic": "Middle East"
+  },
+  "right": {
+    "article_id": "2966:right",
+    "story_id": 2966,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "On Syria, Trump should be wary of Obama's 2011 mistake in Iraq",
+    "body": "Preparing to withdraw U.S. ground forces from Syria, President Trump should pay attention to what happened after former President Barack Obama's hasty 2011 withdrawal from Iraq. Because Obama's withdrawal led to the increasing influence of Iran over Iraqi politics and thus invited Shia sectarian policies targeting Sunnis. In turn, these policies helped foster the rise of ISIS and led to Obama being forced to return forces to Iraq.",
+    "roundup": "On Friday, there were reports that President Donald Trump was telling advisers that he wants to bring US fighters in Syria back home. It was also reported that the president is freezing funds for recovery efforts in the country, signalling pullback.",
+    "date": "2018-03-31",
+    "topic": "Middle East"
+  }
+}

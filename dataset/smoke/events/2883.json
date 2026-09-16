@@ -1,0 +1,36 @@
+{
+  "story_id": 2883,
+  "left": {
+    "article_id": "2883:left",
+    "story_id": 2883,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "After temporary shutdown, Congress passes two-year spending deal",
+    "body": "After a temporary lapse in government funding that lasted through the night, Congress passed a pricey two-year spending deal early Friday that will also fund the government for an additional six weeks.",
+    "roundup": "President Donald Trump has signed a budget bill approved by Congress to re-open the government after it was briefly closed overnight. The bill will boost spending by about $300 billion over the next two years.",
+    "date": "2018-02-09",
+    "topic": "US Congress"
+  },
+  "center": {
+    "article_id": "2883:center",
+    "story_id": 2883,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Shutdown averted as Trump signs budget bill",
+    "body": "President Donald Trump has signed a sweeping budget bill approved by Congress to re-open the government after it was briefly closed overnight.",
+    "roundup": "President Donald Trump has signed a budget bill approved by Congress to re-open the government after it was briefly closed overnight. The bill will boost spending by about $300 billion over the next two years.",
+    "date": "2018-02-09",
+    "topic": "US Congress"
+  },
+  "right": {
+    "article_id": "2883:right",
+    "story_id": 2883,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "House, Senate pass massive budget increase; vote to end gov’t shutdown",
+    "body": "The House approved a stopgap bill early Friday to keep the government open and to boost spending by about $300 billion over the next two years, acting swiftly after the Senate voted hours earlier to ensure that the government shutdown that began at midnight would be short-lived.",
+    "roundup": "President Donald Trump has signed a budget bill approved by Congress to re-open the government after it was briefly closed overnight. The bill will boost spending by about $300 billion over the next two years.",
+    "date": "2018-02-09",
+    "topic": "US Congress"
+  }
+}

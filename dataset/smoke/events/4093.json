@@ -1,0 +1,36 @@
+{
+  "story_id": 4093,
+  "left": {
+    "article_id": "4093:left",
+    "story_id": 4093,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "U.S. Withdrawal From Syria Gathers Speed, Amid Accusations of Betrayal",
+    "body": "QAMISHLI, Syria — A long convoy of United States troops crossed into Iraq from Syria early Monday, accelerating a withdrawal of American forces from northern Syria that set the stage for the Turkish invasion of Kurdish-controlled land.",
+    "roundup": "Monday, people in the Syrian city of Qamishli threw objects and yelled insults at U.S. military personnel as they began their relocation to Iraq. President Donald Trump withdrew troops from northern Syria two weeks ago, which Turkey followed with an invasion and attack on formerly-U.S.-backed Kurdish forces. Many reporting outlets are connecting the troop withdrawal to a possible re-emergence of ISIS activity in the region.",
+    "date": "2019-10-21",
+    "topic": "Middle East"
+  },
+  "center": {
+    "article_id": "4093:center",
+    "story_id": 4093,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "U.S. Troops Withdrawing From Syria Draw Scorn",
+    "body": "SHEIKHAN, Iraq—Civilians in Kurdish areas hurled rotten fruit and insults at a convoy of U.S. military vehicles that crossed from northern Syria into Iraq early Monday, marking a dramatic drawdown to an American presence in Syria to combat Islamic State.",
+    "roundup": "Monday, people in the Syrian city of Qamishli threw objects and yelled insults at U.S. military personnel as they began their relocation to Iraq. President Donald Trump withdrew troops from northern Syria two weeks ago, which Turkey followed with an invasion and attack on formerly-U.S.-backed Kurdish forces. Many reporting outlets are connecting the troop withdrawal to a possible re-emergence of ISIS activity in the region.",
+    "date": "2019-10-21",
+    "topic": "Middle East"
+  },
+  "right": {
+    "article_id": "4093:right",
+    "story_id": 4093,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "WATCH: Rotten fruit, rocks thrown at US troops as they pull out of Syria",
+    "body": "A video has surfaced showing residents of a Syrian town near the border of Turkey throwing rotten fruits and rocks at U.S. troops during their withdrawal. The video, posted by Kurdish agency Hawar News, shows a people throwing the objects at a vehicle that appears to be a Mine-Resistant Ambush Protected Oshkosh M-ATV. The events unfolded in the town of Qamishli.",
+    "roundup": "Monday, people in the Syrian city of Qamishli threw objects and yelled insults at U.S. military personnel as they began their relocation to Iraq. President Donald Trump withdrew troops from northern Syria two weeks ago, which Turkey followed with an invasion and attack on formerly-U.S.-backed Kurdish forces. Many reporting outlets are connecting the troop withdrawal to a possible re-emergence of ISIS activity in the region.",
+    "date": "2019-10-21",
+    "topic": "Middle East"
+  }
+}

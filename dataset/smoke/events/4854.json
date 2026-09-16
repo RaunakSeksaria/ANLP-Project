@@ -1,0 +1,36 @@
+{
+  "story_id": 4854,
+  "left": {
+    "article_id": "4854:left",
+    "story_id": 4854,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Jobless claims dip below 1 million for first time in more than four months",
+    "body": "About 960,000 workers filed for unemployment insurance last week, which marks the first time that initial claims dipped below one million since mid-March, when the coronavirus pandemic first took hold and economic lockdowns forced workers home. The weekly claims figure for the week ending Aug. 8 dropped fell below the 1.18 million claims from last week, but remains well above historic highs. The pre-pandemic record for initial weekly claims was 695,000, from 1982, another recession.",
+    "roundup": "New filings for unemployment benefits in the U.S. numbered about 963,000 last week, falling below a million weekly claims for the first time since lockdowns began in March. In total, jobless claims topped one million for 21 weeks, with unemployment benefits accounting for about 5% of national income. Continuing unemployment claims dropped to 15.5 million. Some coverage from all sides, especially right-rated outlets, framed the drop in claims as indicative of a quickening recovery, pointing to a rallying stock market. Some coverage from left-rated outlets focused on the fact that the number of claims is still high by historical standards, and cautioned that many job losses could be permanent.",
+    "date": "2020-08-13",
+    "topic": "Economy and Jobs"
+  },
+  "center": {
+    "article_id": "4854:center",
+    "story_id": 4854,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "US jobless claims fall below 1 million but remain high",
+    "body": "The number of laid-off workers applying for unemployment aid fell below 1 million last week for the first time since the pandemic intensified five months ago yet still remains at a high level. The viral pandemic keeps forcing layoffs just as the expiration of a $600-a-week federal jobless benefit has deepened the hardships for many. The Labor Department said applications fell to 963,000, the second straight drop, from 1.2 million the previous week. The decline suggests that layoffs are slowing, though last week’s figure still exceeds the pre-pandemic record of",
+    "roundup": "New filings for unemployment benefits in the U.S. numbered about 963,000 last week, falling below a million weekly claims for the first time since lockdowns began in March. In total, jobless claims topped one million for 21 weeks, with unemployment benefits accounting for about 5% of national income. Continuing unemployment claims dropped to 15.5 million. Some coverage from all sides, especially right-rated outlets, framed the drop in claims as indicative of a quickening recovery, pointing to a rallying stock market. Some coverage from left-rated outlets focused on the fact that the number of claims is still high by historical standards, and cautioned that many job losses could be permanent.",
+    "date": "2020-08-13",
+    "topic": "Economy and Jobs"
+  },
+  "right": {
+    "article_id": "4854:right",
+    "story_id": 4854,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Weekly Jobless Claims Fall Below 1 Million for First Time in Pandemic",
+    "body": "The number of Americans seeking unemployment benefits dropped below one million last week for the first time since the start of the COVID-19 pandemic in the United States, likely as the expiration of a $600 weekly jobless supplement discouraged some from filing claims. Initial claims for state unemployment benefits totaled a seasonally adjusted 963,000 for the week ended Aug. 8, compared to 1.191 million in the prior week, the Labor Department said on Thursday. That was the lowest level since mid-March when authorities started shutting down non-essential business to slow",
+    "roundup": "New filings for unemployment benefits in the U.S. numbered about 963,000 last week, falling below a million weekly claims for the first time since lockdowns began in March. In total, jobless claims topped one million for 21 weeks, with unemployment benefits accounting for about 5% of national income. Continuing unemployment claims dropped to 15.5 million. Some coverage from all sides, especially right-rated outlets, framed the drop in claims as indicative of a quickening recovery, pointing to a rallying stock market. Some coverage from left-rated outlets focused on the fact that the number of claims is still high by historical standards, and cautioned that many job losses could be permanent.",
+    "date": "2020-08-13",
+    "topic": "Economy and Jobs"
+  }
+}

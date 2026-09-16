@@ -1,0 +1,36 @@
+{
+  "story_id": 3349,
+  "left": {
+    "article_id": "3349:left",
+    "story_id": 3349,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "Kavanaugh Hearing: Christine Blasey Ford’s Testimony Grips Nation as G.O.P. Shrugs It Off",
+    "body": "Christine Blasey Ford’s testimony has ended.The Senate Judiciary Committee will reconvene to hear Judge Brett M. Kavanaugh.",
+    "roundup": "Christine Blasey Ford has finished testifying about her allegations of sexual assault against Supreme Court nominee Brett Kavanaugh, with Democrats widely praising her and Republicans expressing caution ahead of Kavanaugh's planned testimony this afternoon.",
+    "date": "2018-09-27",
+    "topic": "Supreme Court"
+  },
+  "center": {
+    "article_id": "3349:center",
+    "story_id": 3349,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Christine Blasey Ford's testimony draws praise from Democrats, while Republicans remain mostly quiet on Capitol Hill",
+    "body": "Christine Blasey Ford's gripping testimony Thursday seemed to spellbind every corner of the U.S. Capitol Thursday, with lawmakers and aides, protesters and supporters, reporters and spectators glued to the nearest screen to",
+    "roundup": "Christine Blasey Ford has finished testifying about her allegations of sexual assault against Supreme Court nominee Brett Kavanaugh, with Democrats widely praising her and Republicans expressing caution ahead of Kavanaugh's planned testimony this afternoon.",
+    "date": "2018-09-27",
+    "topic": "Supreme Court"
+  },
+  "right": {
+    "article_id": "3349:right",
+    "story_id": 3349,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "'Riveting' Ford testimony has GOP reserving judgment on Kavanaugh nomination",
+    "body": "Many Republicans Thursday reacted with silence after the first round of questioning of Christine Blasey Ford, who began testifying that Supreme Court nominee Brett Kavanaugh attempted to sexually assault her at a party when the two were in high school.",
+    "roundup": "Christine Blasey Ford has finished testifying about her allegations of sexual assault against Supreme Court nominee Brett Kavanaugh, with Democrats widely praising her and Republicans expressing caution ahead of Kavanaugh's planned testimony this afternoon.",
+    "date": "2018-09-27",
+    "topic": "Supreme Court"
+  }
+}

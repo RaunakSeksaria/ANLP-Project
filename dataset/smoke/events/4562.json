@@ -1,0 +1,36 @@
+{
+  "story_id": 4562,
+  "left": {
+    "article_id": "4562:left",
+    "story_id": 4562,
+    "stance": "left",
+    "publisher": "Raw Story",
+    "title": "Homeland Security claims China didn’t reveal COVID-19 crisis to stockpile masks — it still doesn’t explain Trump’s inaction",
+    "body": "The Department of Homeland Security released a report saying that China intentionally delayed telling the World Health Organization about the coronavirus because they wanted to stockpile masks and ventilators. The report was first released to the Associated Press, but Politico’s Betsy Woodruff Swan noted that there was just “moderate confidence” in the claim.",
+    "roundup": "A Department of Homeland Security report concluded that China hid the extreme nature of the COVID-19 coronavirus pandemic in order to build a domestic medical supply stockpile. Some reports concentrated on the fact that the report described itself as having been compiled in \"moderate confidence.\" Many right-rated outlets also focused on potential tariffs and other trade measures the U.S. could impose as a potential \"punishment\" for China. Some left-rated voices argued that the DHS report still doesn't explain President Trump's purported failure to act quickly in response to the outbreak.",
+    "date": "2020-05-04",
+    "topic": "China"
+  },
+  "center": {
+    "article_id": "4562:center",
+    "story_id": 4562,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "DHS report: China hid virus’ severity to hoard supplies",
+    "body": "WASHINGTON (AP) — U.S. officials believe China covered up the extent of the coronavirus outbreak — and how contagious the disease is — to stock up on medical supplies needed to respond to it, intelligence documents show. Chinese leaders “intentionally concealed the severity” of the pandemic from the world in early January, according to a four-page Department of Homeland Security intelligence report dated May 1 and obtained by The Associated Press. The revelation comes as the Trump administration has intensified its criticism of China, with Secretary of State Mike Pompeo",
+    "roundup": "A Department of Homeland Security report concluded that China hid the extreme nature of the COVID-19 coronavirus pandemic in order to build a domestic medical supply stockpile. Some reports concentrated on the fact that the report described itself as having been compiled in \"moderate confidence.\" Many right-rated outlets also focused on potential tariffs and other trade measures the U.S. could impose as a potential \"punishment\" for China. Some left-rated voices argued that the DHS report still doesn't explain President Trump's purported failure to act quickly in response to the outbreak.",
+    "date": "2020-05-04",
+    "topic": "China"
+  },
+  "right": {
+    "article_id": "4562:right",
+    "story_id": 4562,
+    "stance": "right",
+    "publisher": "National Review",
+    "title": "China Concealed Severity of Virus to Hoard Supplies, DHS Report Concludes",
+    "body": "China hid the scope of the country’s coronavirus outbreak as well as information on how contagious the illness is in order to have time to stock up on medical supplies, according to an intelligence report from the Department of Homeland Security. The Chinese government “intentionally concealed the severity” of the outbreak in January and neglected for weeks to inform the World Health Organization that the virus was contagious, the four-page May 1 document marked “for official use only” states.",
+    "roundup": "A Department of Homeland Security report concluded that China hid the extreme nature of the COVID-19 coronavirus pandemic in order to build a domestic medical supply stockpile. Some reports concentrated on the fact that the report described itself as having been compiled in \"moderate confidence.\" Many right-rated outlets also focused on potential tariffs and other trade measures the U.S. could impose as a potential \"punishment\" for China. Some left-rated voices argued that the DHS report still doesn't explain President Trump's purported failure to act quickly in response to the outbreak.",
+    "date": "2020-05-04",
+    "topic": "China"
+  }
+}

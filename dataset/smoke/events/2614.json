@@ -1,0 +1,36 @@
+{
+  "story_id": 2614,
+  "left": {
+    "article_id": "2614:left",
+    "story_id": 2614,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "In latest test, North Korea detonates its most powerful nuclear device yet",
+    "body": "North Korea sharply raised the stakes Sunday in its standoff with the rest of the world, detonating a powerful nuclear device that it claimed was a hydrogen bomb that could be attached to a missile capable of reaching the mainland United States.",
+    "roundup": "Early today, North Korea tested what they claim to be a hydrogen bomb, a powerful nuclear weapon. This is not their first nuclear test, but the device was much more powerful than the last one they tested. This test comes amid a time of high tensions among North Korea and the rest of the world as  North Korea has run several missile tests in the last few months.",
+    "date": "2017-09-03",
+    "topic": "North Korea"
+  },
+  "center": {
+    "article_id": "2614:center",
+    "story_id": 2614,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "North Korea nuclear test: Trump condemns 'hostile' move",
+    "body": "The US has joined condemnation of North Korea after it tested what it says is a more advanced nuclear weapon.",
+    "roundup": "Early today, North Korea tested what they claim to be a hydrogen bomb, a powerful nuclear weapon. This is not their first nuclear test, but the device was much more powerful than the last one they tested. This test comes amid a time of high tensions among North Korea and the rest of the world as  North Korea has run several missile tests in the last few months.",
+    "date": "2017-09-03",
+    "topic": "North Korea"
+  },
+  "right": {
+    "article_id": "2614:right",
+    "story_id": 2614,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump calls North Korea 'dangerous' and 'great threat' after overnight nuclear test",
+    "body": "President Trump on Sunday responded to North Korea’s nuclear test, calling it “very hostile and dangerous” to the United States.",
+    "roundup": "Early today, North Korea tested what they claim to be a hydrogen bomb, a powerful nuclear weapon. This is not their first nuclear test, but the device was much more powerful than the last one they tested. This test comes amid a time of high tensions among North Korea and the rest of the world as  North Korea has run several missile tests in the last few months.",
+    "date": "2017-09-03",
+    "topic": "North Korea"
+  }
+}

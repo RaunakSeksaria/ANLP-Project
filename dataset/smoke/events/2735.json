@@ -1,0 +1,36 @@
+{
+  "story_id": 2735,
+  "left": {
+    "article_id": "2735:left",
+    "story_id": 2735,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Trump chooses Putin's word over the US intelligence community — again",
+    "body": "“I really believe that when he tells me that, he means it.”",
+    "roundup": "President Trump said that he believes Vladimir Putin's claims that he did not meddle in the 2016 election, adding that Putin is \"very insulted\" by the claims. \"Every time he sees me, he said: 'I didn't do that.' And I believe, I really believe that when he tells me that he means it,\" Trump stated.",
+    "date": "2017-11-11",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2735:center",
+    "story_id": 2735,
+    "stance": "center",
+    "publisher": "Chicago Tribune",
+    "title": "Trump: I 'really believe' Putin when he says he did not meddle in 2016 election",
+    "body": "President Donald Trump said Russia's Vladimir Putin once again vehemently denied interfering in the 2016 U.S. elections during their discussions on the sidelines of an economic summit Saturday.",
+    "roundup": "President Trump said that he believes Vladimir Putin's claims that he did not meddle in the 2016 election, adding that Putin is \"very insulted\" by the claims. \"Every time he sees me, he said: 'I didn't do that.' And I believe, I really believe that when he tells me that he means it,\" Trump stated.",
+    "date": "2017-11-11",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2735:right",
+    "story_id": 2735,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Trump says Putin 'very insulted' by Russian meddling talk, says he believes Putin's denials",
+    "body": "President Trump said he believes Russian President Vladimir Putin is \"very insulted\" over the question of whether Russia interfered in the 2016 U.S. presidential election.",
+    "roundup": "President Trump said that he believes Vladimir Putin's claims that he did not meddle in the 2016 election, adding that Putin is \"very insulted\" by the claims. \"Every time he sees me, he said: 'I didn't do that.' And I believe, I really believe that when he tells me that he means it,\" Trump stated.",
+    "date": "2017-11-11",
+    "topic": "Elections"
+  }
+}

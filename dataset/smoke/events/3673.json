@@ -1,0 +1,36 @@
+{
+  "story_id": 3673,
+  "left": {
+    "article_id": "3673:left",
+    "story_id": 3673,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Supreme Court takes up Trump administration’s plan to ask about citizenship in census",
+    "body": "The Supreme Court added a politically explosive case to its low-profile docket Friday, agreeing to decide by the end of June whether the Trump administration can add a question",
+    "roundup": "The Supreme Court announced they will decide if the Trump administration can ask about citizenship status on the 2020 census.",
+    "date": "2019-02-15",
+    "topic": "Supreme Court"
+  },
+  "center": {
+    "article_id": "3673:center",
+    "story_id": 3673,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Supreme Court Agrees to Decide Legality of Census Citizenship Question",
+    "body": "The 10-year questionnaire to U.S. residents is used to allocate government funding and reshape the number of congressional seats",
+    "roundup": "The Supreme Court announced they will decide if the Trump administration can ask about citizenship status on the 2020 census.",
+    "date": "2019-02-15",
+    "topic": "Supreme Court"
+  },
+  "right": {
+    "article_id": "3673:right",
+    "story_id": 3673,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Supreme Court to decide whether citizenship question can be included in 2020 census",
+    "body": "The Supreme Court will decide whether the 2020 census can include a question about citizenship, ensuring a quick review of a lower court ruling that blocked the Trump administration",
+    "roundup": "The Supreme Court announced they will decide if the Trump administration can ask about citizenship status on the 2020 census.",
+    "date": "2019-02-15",
+    "topic": "Supreme Court"
+  }
+}

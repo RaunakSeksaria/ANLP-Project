@@ -1,0 +1,36 @@
+{
+  "story_id": 2577,
+  "left": {
+    "article_id": "2577:left",
+    "story_id": 2577,
+    "stance": "left",
+    "publisher": "Bustle",
+    "title": "Anne Frank Center Blasts Trump's RAISE Act As An \"Ethnic Purity Test\"",
+    "body": "Flanked by Republican Sens. Tom Cotton and David Perdue, President Trump unveiled the RAISE Act on Wednesday, an immigration bill that aims to drastically limit legal immigration. Soon after the press conference, the Anne Frank Center slammed Trump's RAISE Act in a fierce statement likening it to an \"ethnic purity test that harkens [sic] to the darkest chapters of world history.\"",
+    "roundup": "The Anne Frank Center for Mutual Respect has implied through a series of tweets over the last few days that there are \"“alarming parallels” between the present and Nazi Germany. They have also criticized President Trump's immigration policies and employed the hashtag #NoBanNoWallNoRaids. These criticisms have been especially prevalent after Trump recently unveiled the RAISE Act.",
+    "date": "2017-08-10",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2577:center",
+    "story_id": 2577,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Anne Frank Center notes 'alarming parallels' between Trump, pre-Holocaust Germany",
+    "body": "The Anne Frank Center, a frequent critic of President Trump, suggested in a tweet Wednesday that there has been an escalation in “alarming parallels” between the present and Nazi Germany.",
+    "roundup": "The Anne Frank Center for Mutual Respect has implied through a series of tweets over the last few days that there are \"“alarming parallels” between the present and Nazi Germany. They have also criticized President Trump's immigration policies and employed the hashtag #NoBanNoWallNoRaids. These criticisms have been especially prevalent after Trump recently unveiled the RAISE Act.",
+    "date": "2017-08-10",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2577:right",
+    "story_id": 2577,
+    "stance": "right",
+    "publisher": "Washington Free Beacon",
+    "title": "Anne Frank Center Compares Trump to Hitler",
+    "body": "The left-leaning organization frequently criticizes the Trump administration",
+    "roundup": "The Anne Frank Center for Mutual Respect has implied through a series of tweets over the last few days that there are \"“alarming parallels” between the present and Nazi Germany. They have also criticized President Trump's immigration policies and employed the hashtag #NoBanNoWallNoRaids. These criticisms have been especially prevalent after Trump recently unveiled the RAISE Act.",
+    "date": "2017-08-10",
+    "topic": "White House"
+  }
+}

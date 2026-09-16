@@ -1,0 +1,36 @@
+{
+  "story_id": 2958,
+  "left": {
+    "article_id": "2958:left",
+    "story_id": 2958,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "McConnell backs bill to ease up on hemp cultivation",
+    "body": "Mitch McConnell will introduce legislation to allow states to regulate their own hemp industries, a move that could be a boon to the Senate majority leader should he pursue reelection in 2020.",
+    "roundup": "Republican Sen. Mitch McConnell announced he will introduce a bill to legalize hemp as an agricultural commodity, removing it from the federal list of controlled substances.",
+    "date": "2018-03-26",
+    "topic": "Agriculture"
+  },
+  "center": {
+    "article_id": "2958:center",
+    "story_id": 2958,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "McConnell bill would legalize hemp as agricultural product",
+    "body": "Senate Majority Leader Mitch McConnell (R-Ky.) announced a new bill on Monday that would legalize hemp as an agricultural product.",
+    "roundup": "Republican Sen. Mitch McConnell announced he will introduce a bill to legalize hemp as an agricultural commodity, removing it from the federal list of controlled substances.",
+    "date": "2018-03-26",
+    "topic": "Agriculture"
+  },
+  "right": {
+    "article_id": "2958:right",
+    "story_id": 2958,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Mitch McConnell will introduce a bill to greenlight hemp production",
+    "body": "Sen. Mitch McConnell, the Republican majority leader from Kentucky, is promoting new legislation to legalize hemp and remove it from the list of controlled substances.",
+    "roundup": "Republican Sen. Mitch McConnell announced he will introduce a bill to legalize hemp as an agricultural commodity, removing it from the federal list of controlled substances.",
+    "date": "2018-03-26",
+    "topic": "Agriculture"
+  }
+}

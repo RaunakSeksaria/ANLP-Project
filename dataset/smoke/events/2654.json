@@ -1,0 +1,36 @@
+{
+  "story_id": 2654,
+  "left": {
+    "article_id": "2654:left",
+    "story_id": 2654,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Roy Moore’s victory and Bob Corker’s retirement are fresh indicators of a Senate that’s coming apart",
+    "body": "Roy Moore’s victory in Alabama and Bob Corker’s retirement in Tennessee on Tuesday sent shock waves across the Capitol and shivers down the spines of institutionalists in both parties. The dual developments are fueling concerns about the long-term health of the world’s greatest deliberative body and heightening fears that the center may not hold in American politics.",
+    "roundup": "It was a loss for the Washington establishment: Former state Supreme Court justice Roy Moore decisively defeated Sen. Luther Strange in Alabama's  Republican Senate primary runoff.",
+    "date": "2017-09-27",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2654:center",
+    "story_id": 2654,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Roy Moore's Alabama win is just the start: GOP establishment beware",
+    "body": "It was a devastating loss for the Washington establishment: Former state Supreme Court justice Roy Moore decisively defeated Sen. Luther Strange in Alabama's  Republican Senate primary runoff.",
+    "roundup": "It was a loss for the Washington establishment: Former state Supreme Court justice Roy Moore decisively defeated Sen. Luther Strange in Alabama's  Republican Senate primary runoff.",
+    "date": "2017-09-27",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2654:right",
+    "story_id": 2654,
+    "stance": "right",
+    "publisher": "Breitbart News",
+    "title": "Donald Trump: Roy Moore Will Help Make America Great Again",
+    "body": "President Donald Trump confirmed that he spoke with Roy Moore in the wake of his Senate primary victory in Alabama on Tuesday.",
+    "roundup": "It was a loss for the Washington establishment: Former state Supreme Court justice Roy Moore decisively defeated Sen. Luther Strange in Alabama's  Republican Senate primary runoff.",
+    "date": "2017-09-27",
+    "topic": "Elections"
+  }
+}

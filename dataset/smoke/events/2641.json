@@ -1,0 +1,36 @@
+{
+  "story_id": 2641,
+  "left": {
+    "article_id": "2641:left",
+    "story_id": 2641,
+    "stance": "left",
+    "publisher": "The Guardian",
+    "title": "Trump to UN: confront North Korea and Iran or risk being 'bystanders in history'",
+    "body": "Donald Trump will use his first address to the UN general assembly on Tuesday to call for international action to confront North Korea and Iran, which he will portray as twin threats to global security, the White House said.",
+    "roundup": "US President Donald Trump is expected to call for more international pressure on North Korea over its nuclear weapons program when he addresses the United Nations General Assembly later.",
+    "date": "2017-09-19",
+    "topic": "National Security"
+  },
+  "center": {
+    "article_id": "2641:center",
+    "story_id": 2641,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Donald Trump to call for more pressure on N Korea in first UN speech",
+    "body": "US President Donald Trump is expected to call for more international pressure on North Korea over its nuclear weapons programme when he addresses the United Nations General Assembly later.",
+    "roundup": "US President Donald Trump is expected to call for more international pressure on North Korea over its nuclear weapons program when he addresses the United Nations General Assembly later.",
+    "date": "2017-09-19",
+    "topic": "National Security"
+  },
+  "right": {
+    "article_id": "2641:right",
+    "story_id": 2641,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Trump to rail against North Korea at U.N., seek united front against nuclear and missile programs",
+    "body": "President Trump will turn up the heat on North Korea and call out countries that coddle the rogue regime Tuesday in his first address to the United Nations General Assembly, said a senior White House official who recognized that the threat of war loomed over the speech.",
+    "roundup": "US President Donald Trump is expected to call for more international pressure on North Korea over its nuclear weapons program when he addresses the United Nations General Assembly later.",
+    "date": "2017-09-19",
+    "topic": "National Security"
+  }
+}

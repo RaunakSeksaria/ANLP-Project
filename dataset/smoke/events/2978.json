@@ -1,0 +1,36 @@
+{
+  "story_id": 2978,
+  "left": {
+    "article_id": "2978:left",
+    "story_id": 2978,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "US imposes sanctions against Russian oligarchs and government officials",
+    "body": "The Trump administration is unleashing additional sanctions against seven Russian oligarchs with ties to President Vladimir Putin along with 12 companies they own or control.",
+    "roundup": "The Trump administration is unleashing additional sanctions against seven Russian oligarchs with ties to President Vladimir Putin along with 12 companies they own or control.",
+    "date": "2018-04-06",
+    "topic": "National Security"
+  },
+  "center": {
+    "article_id": "2978:center",
+    "story_id": 2978,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump administration to sanction Russian oligarchs",
+    "body": "The Trump administration announced Friday it will sanction seven Russian oligarchs and a dozen companies they own and control, its most aggressive effort yet to curb the activities of influential Russian business elites.",
+    "roundup": "The Trump administration is unleashing additional sanctions against seven Russian oligarchs with ties to President Vladimir Putin along with 12 companies they own or control.",
+    "date": "2018-04-06",
+    "topic": "National Security"
+  },
+  "right": {
+    "article_id": "2978:right",
+    "story_id": 2978,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Trump hits Putin where it hurts: New sanctions target Russian oligarchs, energy companies",
+    "body": "The Trump administration Friday slapped sanctions on Russian senior officials, oligarchs and the companies they own, going after those closest to Vladimir Putin to punish Moscow’s sinister activities around the world.",
+    "roundup": "The Trump administration is unleashing additional sanctions against seven Russian oligarchs with ties to President Vladimir Putin along with 12 companies they own or control.",
+    "date": "2018-04-06",
+    "topic": "National Security"
+  }
+}

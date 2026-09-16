@@ -1,0 +1,36 @@
+{
+  "story_id": 4991,
+  "left": {
+    "article_id": "4991:left",
+    "story_id": 4991,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "Long-Concealed Records Show Trump's Chronic Losses And Years of Tax Avoidance",
+    "body": "The Times obtained Donald Trump’s tax information extending over more than two decades, revealing struggling properties, vast write-offs, an audit battle and hundreds of millions in debt coming due. Donald J. Trump paid $750 in federal income taxes the year he won the presidency. In his first year in the White House, he paid another $750. He had paid no income taxes at all in 10 of the previous 15 years — largely because he reported losing much more money than he made. As the president wages a re-election campaign",
+    "roundup": "President Trump has denied a report that said he paid just $750 in federal income tax in 2016 and 2017, saying that he will release more information once the IRS has completed their audit of his records. The report, which was published by The New York Times on Sunday, says that this amount was claimed because Trump's business empire has reported losing more money than it made.",
+    "date": "2020-09-28",
+    "topic": "Taxes"
+  },
+  "center": {
+    "article_id": "4991:center",
+    "story_id": 4991,
+    "stance": "center",
+    "publisher": "Forbes",
+    "title": "The Ordinary Taxpayer’s Guide To The Extraordinary Story Of Trump’s Tax Returns",
+    "body": "I haven’t seen President Trump’s tax returns. I’m going to start there. No matter how many times I’ve been asked today to offer my “take” on the returns, I can’t give a more honest answer than, “I haven’t seen the returns.” I have, however, read the very detailed article from the New York Times NYT +0.2%, which can be found here. I’m not inclined to summarize it for you - you can read it on your own - and I’m not going to do an op-ed on the piece. If",
+    "roundup": "President Trump has denied a report that said he paid just $750 in federal income tax in 2016 and 2017, saying that he will release more information once the IRS has completed their audit of his records. The report, which was published by The New York Times on Sunday, says that this amount was claimed because Trump's business empire has reported losing more money than it made.",
+    "date": "2020-09-28",
+    "topic": "Taxes"
+  },
+  "right": {
+    "article_id": "4991:right",
+    "story_id": 4991,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "'Fake news': Trump denies New York Times report on his tax returns",
+    "body": "President Trump denied a report that said he paid just $750 in federal income taxes in 2016 and his first year in office. The New York Times published a report on Trump's financial information, which he has long kept out of public view, about half an hour before the president held a news conference in the White House on Sunday. The report also comes two days before the first presidential debate against Joe Biden and 37 days ahead of the Nov. 3 election. Asked to respond to the New York",
+    "roundup": "President Trump has denied a report that said he paid just $750 in federal income tax in 2016 and 2017, saying that he will release more information once the IRS has completed their audit of his records. The report, which was published by The New York Times on Sunday, says that this amount was claimed because Trump's business empire has reported losing more money than it made.",
+    "date": "2020-09-28",
+    "topic": "Taxes"
+  }
+}

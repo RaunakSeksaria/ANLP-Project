@@ -1,0 +1,36 @@
+{
+  "story_id": 2231,
+  "left": {
+    "article_id": "2231:left",
+    "story_id": 2231,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Trump’s unpredictable style unnerves corporate America",
+    "body": "The turbulence began Tuesday morning with one of President-elect Donald Trump’s signature tweets of wrath: a public jab at Boeing alleging that the cost of building Air Force One had spiraled out of control.",
+    "roundup": "Trump’s approach is a marked shift from prior presidents, who usually dealt with the private sector on an industry level and in the broadest terms. His bargaining style, including his opaque personal financial dealings and his sudden shots at certain companies, has helped unnerve a corporate America that traditionally craves stability.",
+    "date": "2016-12-07",
+    "topic": NaN
+  },
+  "center": {
+    "article_id": "2231:center",
+    "story_id": 2231,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump puts new bull's-eye on business",
+    "body": "President-elect Donald Trump is finding a novel way to push his populist economic agenda: take on American businesses directly.",
+    "roundup": "Trump’s approach is a marked shift from prior presidents, who usually dealt with the private sector on an industry level and in the broadest terms. His bargaining style, including his opaque personal financial dealings and his sudden shots at certain companies, has helped unnerve a corporate America that traditionally craves stability.",
+    "date": "2016-12-07",
+    "topic": NaN
+  },
+  "right": {
+    "article_id": "2231:right",
+    "story_id": 2231,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Trump rattles U.S. businesses with Twitter threats, hard-bargaining style",
+    "body": "Donald Trump promised to make better deals as president, and wasted no time brokering what he said Tuesday would be a $50 billion investment in the U.S. by a Japanese telecom company, but his hard-bargaining style also is rattling some American businesses.",
+    "roundup": "Trump’s approach is a marked shift from prior presidents, who usually dealt with the private sector on an industry level and in the broadest terms. His bargaining style, including his opaque personal financial dealings and his sudden shots at certain companies, has helped unnerve a corporate America that traditionally craves stability.",
+    "date": "2016-12-07",
+    "topic": NaN
+  }
+}

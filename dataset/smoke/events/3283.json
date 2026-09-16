@@ -1,0 +1,36 @@
+{
+  "story_id": 3283,
+  "left": {
+    "article_id": "3283:left",
+    "story_id": 3283,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Trump’s continued indolent response to Hurricane Maria is our worst fears about him come true",
+    "body": "Almost 3,000 dead and he says, “We did a fantastic job.”",
+    "roundup": "Puerto Rico's death toll from Hurricane Maria was raised on Tuesday from 64 to almost 3,000, with President Trump responding that his administration \"did a fantastic job\" and \"put a lot of money and a lot of effort\" into helping the disaster-stricken island.",
+    "date": "2018-08-30",
+    "topic": "Disaster"
+  },
+  "center": {
+    "article_id": "3283:center",
+    "story_id": 3283,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Puerto Rico's death toll from Hurricane Maria raised to nearly 3,000",
+    "body": "Puerto Rico’s official death toll from Hurricane Maria, the most powerful storm to hit the Caribbean island in almost a century, was raised on Tuesday from 64, a number widely discounted as far too low, to nearly 3,000, based on a study ordered by the governor of the U.S. territory.",
+    "roundup": "Puerto Rico's death toll from Hurricane Maria was raised on Tuesday from 64 to almost 3,000, with President Trump responding that his administration \"did a fantastic job\" and \"put a lot of money and a lot of effort\" into helping the disaster-stricken island.",
+    "date": "2018-08-30",
+    "topic": "Disaster"
+  },
+  "right": {
+    "article_id": "3283:right",
+    "story_id": 3283,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Trump stands by disaster response in Puerto Rico: 'We did a fantastic job'",
+    "body": "President Trump on Wednesday stood the administration’s response to Hurricane Maria last year in Puerto Rico, despite a new study raising the death toll to 2,975.",
+    "roundup": "Puerto Rico's death toll from Hurricane Maria was raised on Tuesday from 64 to almost 3,000, with President Trump responding that his administration \"did a fantastic job\" and \"put a lot of money and a lot of effort\" into helping the disaster-stricken island.",
+    "date": "2018-08-30",
+    "topic": "Disaster"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3789,
+  "left": {
+    "article_id": "3789:left",
+    "story_id": 3789,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "Democrats grill Barr amid reports of Mueller's frustration",
+    "body": "The attorney general appears before Congress amid reports that the special counsel told him his four-page summary of the investigation caused confusion. WASHINGTON — Attorney General William Barr testified before Congress on Wednesday for the first time since the release of a redacted version of special counsel Robert Mueller’s report of his nearly two-year investigation into Russian election meddling and possible obstruction by President Donald Trump. The hearing before the Senate Judiciary Committee began with heated questions from Democrats, who grilled Barr over reports that Mueller wrote a letter to",
+    "roundup": "Attorney General William Barr appears before the Senate Judiciary Committee today amid reports that special counsel Robert Mueller was frustrated with Barr's letter to Congress.",
+    "date": "2019-05-01",
+    "topic": "US Senate"
+  },
+  "center": {
+    "article_id": "3789:center",
+    "story_id": 3789,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Attorney General Barr defends clearing Trump on obstruction of justice",
+    "body": "Attorney General William Barr on Wednesday defended his handling of special counsel Robert Mueller’s report at a tense Senate hearing, explaining in detail his contacts with Mueller, who had objected to his description of the report's findings on obstruction. In sworn testimony before the Senate Judiciary Committee, Barr said he wanted to release the report’s bottom-line conclusions as quickly as possible because the public was in a “high state of agitation” over the results of Mueller’s investigation into Russian election interference and potential coordination between President Trump’s campaign and Moscow .",
+    "roundup": "Attorney General William Barr appears before the Senate Judiciary Committee today amid reports that special counsel Robert Mueller was frustrated with Barr's letter to Congress.",
+    "date": "2019-05-01",
+    "topic": "US Senate"
+  },
+  "right": {
+    "article_id": "3789:right",
+    "story_id": 3789,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Barr hearing: AG reveals tensions with Mueller team over Russia report conclusion, no-obstruction punt",
+    "body": "Attorney General William Barr, in highly anticipated Senate testimony Wednesday, revealed tensions between the Justice Department and Robert Mueller’s team over the special counsel’s final report on the Russia investigation, pointedly saying he was surprised Mueller didn’t come to a conclusion over whether President Trump obstructed justice. “We did not understand exactly why the special counsel was not reaching a decision,” Barr told the Senate Judiciary Committee. Barr later released his own letter saying he determined, from Mueller’s investigation, that obstruction charges against Trump were not warranted -- a decision",
+    "roundup": "Attorney General William Barr appears before the Senate Judiciary Committee today amid reports that special counsel Robert Mueller was frustrated with Barr's letter to Congress.",
+    "date": "2019-05-01",
+    "topic": "US Senate"
+  }
+}

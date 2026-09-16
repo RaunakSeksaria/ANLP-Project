@@ -1,0 +1,36 @@
+{
+  "story_id": 3278,
+  "left": {
+    "article_id": "3278:left",
+    "story_id": 3278,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "Trump offers trade aid to farmers, but some question its fairness",
+    "body": "The Trump administration on Monday detailed how it will dole out $6.3 billion in aid to assist farmers stung by retaliatory tariffs — and it’s already sparking backlash from some sectors where industry leaders say growers won’t get their fair share.",
+    "roundup": "The Trump administration on Monday announced that it would spend approximately $6 billion in aid to farmers who have been negatively impacted by recent trade disputes.",
+    "date": "2018-08-28",
+    "topic": "Agriculture"
+  },
+  "center": {
+    "article_id": "3278:center",
+    "story_id": 3278,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "U.S. to Pay Farmers $4.7 Billion to Offset Trade-Conflict Losses",
+    "body": "The Trump administration pledged to pay farmers $4.7 billion to offset losses from trade disputes with foreign buyers of U.S. agricultural products.",
+    "roundup": "The Trump administration on Monday announced that it would spend approximately $6 billion in aid to farmers who have been negatively impacted by recent trade disputes.",
+    "date": "2018-08-28",
+    "topic": "Agriculture"
+  },
+  "right": {
+    "article_id": "3278:right",
+    "story_id": 3278,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "USDA announces $6 billion bailout for farmers caught in trade war",
+    "body": "The Department of Agriculture announced Monday that it will distribute nearly $6 billion to U.S. farmers as a bailout to offset the losses the industry has incurred as a result of President Trump’s trade negotiations.",
+    "roundup": "The Trump administration on Monday announced that it would spend approximately $6 billion in aid to farmers who have been negatively impacted by recent trade disputes.",
+    "date": "2018-08-28",
+    "topic": "Agriculture"
+  }
+}

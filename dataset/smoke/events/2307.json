@@ -1,0 +1,36 @@
+{
+  "story_id": 2307,
+  "left": {
+    "article_id": "2307:left",
+    "story_id": 2307,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Bill O’Reilly Calls Vladimir Putin A ‘Killer’, Donald Trump Says Americans Are Just As Bad",
+    "body": "President Donald Trump doubled down on his support for Russian President Vladimir Putin in a Fox News interview to be aired ahead of the Super Bowl on Sunday. Speaking to Bill O’Reilly, Trump shrugged off the anchor’s characterization of Putin as a “killer,” noting that Americans are just as bad.",
+    "roundup": "Donald Trump, in an interview with Bill O'Reilly, drew parallels between Russia and the US.",
+    "date": "2017-02-05",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2307:center",
+    "story_id": 2307,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Donald Trump Appears to Draw Parallels Between U.S., Vladimir Putin’s Russia",
+    "body": "President Donald Trump appeared to draw an equivalence between Russian President Vladimir Putin and the behavior of the U.S. when he responded to a remark about Mr. Putin being a “killer” by saying: “We got a lot of killers—what, you think our country’s so innocent?”",
+    "roundup": "Donald Trump, in an interview with Bill O'Reilly, drew parallels between Russia and the US.",
+    "date": "2017-02-05",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2307:right",
+    "story_id": 2307,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Trump on 'Killer' Putin, 'You Think Our Country Is Innocent?'",
+    "body": "President Donald Trump said he had respect for Russian President Vladimir Putin and asked whether the United States is innocent in an interview with Fox News' Bill O’Reilly set to air ahead of the Super Bowl on Sunday.",
+    "roundup": "Donald Trump, in an interview with Bill O'Reilly, drew parallels between Russia and the US.",
+    "date": "2017-02-05",
+    "topic": "White House"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3637,
+  "left": {
+    "article_id": "3637:left",
+    "story_id": 3637,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "‘Complete, total surrender’: Why Trump waved the white flag",
+    "body": "The sudden erosion of support from Senate Republicans ultimately forced Trump’s hand.",
+    "roundup": "President Trump announced a short-term bill to end the shutdown, but says border wall talks will still continue.",
+    "date": "2019-01-26",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "3637:center",
+    "story_id": 3637,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Trump backs down to end painful shutdown temporarily",
+    "body": "President Donald Trump has yielded to political pressure to end the longest US government shutdown in history.",
+    "roundup": "President Trump announced a short-term bill to end the shutdown, but says border wall talks will still continue.",
+    "date": "2019-01-26",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "3637:right",
+    "story_id": 3637,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Trump says 'we'll do the emergency' if border talks fail",
+    "body": "President Trump repeated his vow Friday to declare a national emergency on the southern border if Democrats refuse to grant his request for border wall funding over the next three weeks.",
+    "roundup": "President Trump announced a short-term bill to end the shutdown, but says border wall talks will still continue.",
+    "date": "2019-01-26",
+    "topic": "Politics"
+  }
+}

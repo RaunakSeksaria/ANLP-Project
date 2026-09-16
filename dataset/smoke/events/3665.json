@@ -1,0 +1,36 @@
+{
+  "story_id": 3665,
+  "left": {
+    "article_id": "3665:left",
+    "story_id": 3665,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "With Shutdown Looming, Border Deal Is Reached ‘in Principle’",
+    "body": "House and Senate negotiators on Monday night agreed in principle to provide $1.375 billion for fencing and other physical barriers at the Mexican border, part of a broader agreement that would stave off another partial government shutdown without funding President Trump’s wall.",
+    "roundup": "House and Senate negotiators say they have reached an agreement in principle to avert another government shutdown.",
+    "date": "2019-02-12",
+    "topic": "US Congress"
+  },
+  "center": {
+    "article_id": "3665:center",
+    "story_id": 3665,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Lawmakers reach agreement 'in principle' to avert shutdown",
+    "body": "Lawmakers said on Monday night that they had reached an agreement \"in principle\" to avoid a second partial government shutdown set to begin on Saturday.",
+    "roundup": "House and Senate negotiators say they have reached an agreement in principle to avert another government shutdown.",
+    "date": "2019-02-12",
+    "topic": "US Congress"
+  },
+  "right": {
+    "article_id": "3665:right",
+    "story_id": 3665,
+    "stance": "right",
+    "publisher": "CBN",
+    "title": "Deal or No Deal? Lawmakers Say They've Reached Border Battle Compromise, but Will Trump Agree?",
+    "body": "Congressional leaders say they have a deal to fund border security and avoid another government shutdown. Both sides are claiming victory, but there are still hurdles to overcome. The agreement first has to pass the House and Senate.",
+    "roundup": "House and Senate negotiators say they have reached an agreement in principle to avert another government shutdown.",
+    "date": "2019-02-12",
+    "topic": "US Congress"
+  }
+}

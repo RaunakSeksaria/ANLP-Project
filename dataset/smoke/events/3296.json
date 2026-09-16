@@ -1,0 +1,36 @@
+{
+  "story_id": 3296,
+  "left": {
+    "article_id": "3296:left",
+    "story_id": 3296,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "I Am Part of the Resistance Inside the Trump Administration",
+    "body": "I work for the president but like-minded colleagues and I have vowed to thwart parts of his agenda and his worst inclinations.",
+    "roundup": "A senior official in the Trump administration wrote an anonymous op-ed published in The New York Times on Wednesday, saying they are working to \"thwart\" parts of the president's agenda as well as his \"worst inclinations.\"",
+    "date": "2018-09-05",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "3296:center",
+    "story_id": 3296,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Senior administration official blasts Trump in anonymous NYT op-ed",
+    "body": "A person identified as a senior administration official blasted President Trump in an anonymous op-ed published by The New York Times on Wednesday, saying they were working to “thwart” President Trump’s “worst inclinations.”",
+    "roundup": "A senior official in the Trump administration wrote an anonymous op-ed published in The New York Times on Wednesday, saying they are working to \"thwart\" parts of the president's agenda as well as his \"worst inclinations.\"",
+    "date": "2018-09-05",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "3296:right",
+    "story_id": 3296,
+    "stance": "right",
+    "publisher": "National Review",
+    "title": "Anonymous Official in NYT Op-Ed: I’m Working to Control Trump’s ‘Worst Inclinations’",
+    "body": "In an unsigned op-ed published in the New York Times Wednesday, a high-ranking administration official described working with other members of the so-called “steady state” to rein in the president’s “worst inclinations.”",
+    "roundup": "A senior official in the Trump administration wrote an anonymous op-ed published in The New York Times on Wednesday, saying they are working to \"thwart\" parts of the president's agenda as well as his \"worst inclinations.\"",
+    "date": "2018-09-05",
+    "topic": "White House"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2906,
+  "left": {
+    "article_id": "2906:left",
+    "story_id": 2906,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Companies are cutting ties with the NRA after the Parkland mass shooting",
+    "body": "Enterprise, the First National Bank of Omaha, Symantec, and Simplisafe have ended partnerships with the organization.",
+    "roundup": "After the school shooting in Parkland, Florida, many NRA-affiliated companies have faced public pressure via the #BoycottNRA social media campaign to cut ties with the association. Some companies have announced that they will be ending their NRA affiliations and services. These companies include Symantec, First National Bank of Omaha, and Enterprise Holdings, among others.",
+    "date": "2018-02-23",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "center": {
+    "article_id": "2906:center",
+    "story_id": 2906,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "NRA-affiliated businesses shed ties after Parkland, Florida school shooting",
+    "body": "Several businesses with ties to the National Rifle Association are breaking up with the group amid mounting pressure from gun-control proponents following the Parkland, Fla. school shooting.",
+    "roundup": "After the school shooting in Parkland, Florida, many NRA-affiliated companies have faced public pressure via the #BoycottNRA social media campaign to cut ties with the association. Some companies have announced that they will be ending their NRA affiliations and services. These companies include Symantec, First National Bank of Omaha, and Enterprise Holdings, among others.",
+    "date": "2018-02-23",
+    "topic": "Gun Control and Gun Rights"
+  },
+  "right": {
+    "article_id": "2906:right",
+    "story_id": 2906,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "US companies pull back from NRA after Florida shooting",
+    "body": "Some U.S. companies that offered discount programs and other services to the National Rifle Association are ending them as the powerful lobbying group fights efforts to restrict firearm sales following a deadly school shooting in Florida.",
+    "roundup": "After the school shooting in Parkland, Florida, many NRA-affiliated companies have faced public pressure via the #BoycottNRA social media campaign to cut ties with the association. Some companies have announced that they will be ending their NRA affiliations and services. These companies include Symantec, First National Bank of Omaha, and Enterprise Holdings, among others.",
+    "date": "2018-02-23",
+    "topic": "Gun Control and Gun Rights"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2665,
+  "left": {
+    "article_id": "2665:left",
+    "story_id": 2665,
+    "stance": "left",
+    "publisher": "The Guardian",
+    "title": "Trump faces test of temperament in Las Vegas – and entrenched partisan divide",
+    "body": "Donald Trump faces a test of temperament on Wednesday as he visits Las Vegas, the scene of the deadliest mass shooting in modern US history, with Democrats stepping up political pressure for tighter gun laws.",
+    "roundup": "President Trump left Washington Wednesday morning en route to Las Vegas where he plans to meet with the victims, first responders and doctors caught up in the deadliest mass shooting in U.S. history. But he is expected to steer clear of the gun control issue.",
+    "date": "2017-10-04",
+    "topic": "Violence in America"
+  },
+  "center": {
+    "article_id": "2665:center",
+    "story_id": 2665,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Trump to console Las Vegas after deadly shooting, but he's unlikely to change gun policy",
+    "body": "President Trump will land in Las Vegas on Wednesday to console a city — and a nation — still reeling from the deadliest shooting spree in modern U.S. history.",
+    "roundup": "President Trump left Washington Wednesday morning en route to Las Vegas where he plans to meet with the victims, first responders and doctors caught up in the deadliest mass shooting in U.S. history. But he is expected to steer clear of the gun control issue.",
+    "date": "2017-10-04",
+    "topic": "Violence in America"
+  },
+  "right": {
+    "article_id": "2665:right",
+    "story_id": 2665,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump heads to Las Vegas to comfort a grieving city, expected to avoid gun politics",
+    "body": "President Trump left Washington Wednesday morning en route to Las Vegas where he plans to meet with the victims, first responders and doctors caught up in the deadliest mass shooting in U.S. history. But he is expected to steer clear of the gun control issue.",
+    "roundup": "President Trump left Washington Wednesday morning en route to Las Vegas where he plans to meet with the victims, first responders and doctors caught up in the deadliest mass shooting in U.S. history. But he is expected to steer clear of the gun control issue.",
+    "date": "2017-10-04",
+    "topic": "Violence in America"
+  }
+}

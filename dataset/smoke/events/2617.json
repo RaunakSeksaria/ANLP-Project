@@ -1,0 +1,36 @@
+{
+  "story_id": 2617,
+  "left": {
+    "article_id": "2617:left",
+    "story_id": 2617,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Obama Speaks Out On Trump Ending Dreamer Protections",
+    "body": "Former President Barack Obama said Tuesday that President Donald Trump’s decision to dismantle the program protecting young undocumented immigrants was “contrary to our spirit, and to common sense.”",
+    "roundup": "Former president Barack Obama on Tuesday criticized President Trump's decision to end the immigration program designed to protect undocumented immigrants who were brought to the U.S. as children.",
+    "date": "2017-09-05",
+    "topic": "Immigration"
+  },
+  "center": {
+    "article_id": "2617:center",
+    "story_id": 2617,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Obama on Trump's DACA decision: 'To target these young people is wrong'",
+    "body": "Former president Barack Obama on Tuesday criticized President Trump's decision to end the immigration program designed to protect undocumented immigrants who were brought to the U.S. as children.",
+    "roundup": "Former president Barack Obama on Tuesday criticized President Trump's decision to end the immigration program designed to protect undocumented immigrants who were brought to the U.S. as children.",
+    "date": "2017-09-05",
+    "topic": "Immigration"
+  },
+  "right": {
+    "article_id": "2617:right",
+    "story_id": 2617,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Obama Rips Trump As ‘Cruel’ For Rolling Back DACA Amnesty Program",
+    "body": "Former President Obama lashed out at President Trump for ending the Deferred Action for Childhood Arrivals (DACA) amnesty program, which was thought to be on shaky legal ground.",
+    "roundup": "Former president Barack Obama on Tuesday criticized President Trump's decision to end the immigration program designed to protect undocumented immigrants who were brought to the U.S. as children.",
+    "date": "2017-09-05",
+    "topic": "Immigration"
+  }
+}

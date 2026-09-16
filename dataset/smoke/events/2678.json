@@ -1,0 +1,36 @@
+{
+  "story_id": 2678,
+  "left": {
+    "article_id": "2678:left",
+    "story_id": 2678,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "‘Frankly disgusting’: Trump lashes out at press, threatens NBC over news report he calls ‘pure fiction’",
+    "body": "President Trump on Wednesday threatened NBC over a news report he called \"pure fiction,\" and he lashed out at the news media, declaring that it is \"frankly disgusting the press is able to write whatever it wants to write.\"",
+    "roundup": "President Trump is threatening to revoke NBC's broadcasting license after the network wrote a report claiming that he wants to expand the nuclear arsenal by \"tenfold\".",
+    "date": "2017-10-11",
+    "topic": "Nuclear Weapons"
+  },
+  "center": {
+    "article_id": "2678:center",
+    "story_id": 2678,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump threatens to revoke NBC’s broadcast license over unflattering report",
+    "body": "President Trump on Wednesday forcefully denied an NBC News report that he asked to dramatically expand the U.S. nuclear arsenal and suggested he might pull the network’s broadcasting license.",
+    "roundup": "President Trump is threatening to revoke NBC's broadcasting license after the network wrote a report claiming that he wants to expand the nuclear arsenal by \"tenfold\".",
+    "date": "2017-10-11",
+    "topic": "Nuclear Weapons"
+  },
+  "right": {
+    "article_id": "2678:right",
+    "story_id": 2678,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Trump denies he wants to increase nuke production, questions when to challenge NBC's broadcast license",
+    "body": "President Trump refuted a story from NBC News published Wednesday stating the president wanted to increase the U.S. nuclear arsenal by tenfold, calling the article \"pure fiction\" that was \"made up to demean\" — and then threatened to challenge their broadcast license.",
+    "roundup": "President Trump is threatening to revoke NBC's broadcasting license after the network wrote a report claiming that he wants to expand the nuclear arsenal by \"tenfold\".",
+    "date": "2017-10-11",
+    "topic": "Nuclear Weapons"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2747,
+  "left": {
+    "article_id": "2747:left",
+    "story_id": 2747,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "Mueller subpoenas Trump campaign for Russia documents",
+    "body": "Special counsel Robert Mueller's team has issued a subpoena to the Trump campaign asking multiple campaign officials to produce Russia-related documents, according to a source with first-hand knowledge of the matter.",
+    "roundup": "Special Counsel Robert Mueller has subpoenaed the Trump campaign for the first time, requesting documents related to Russia from more than a dozen top officials.",
+    "date": "2017-11-17",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2747:center",
+    "story_id": 2747,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Special Counsel Mueller Issued Subpoena for Russia-Related Documents From Trump Campaign Officials",
+    "body": "Special counsel Robert Mueller’s team in mid-October issued a subpoena to President Donald Trump’s campaign requesting Russia-related documents from more than a dozen top officials, according to a person familiar with the matter.",
+    "roundup": "Special Counsel Robert Mueller has subpoenaed the Trump campaign for the first time, requesting documents related to Russia from more than a dozen top officials.",
+    "date": "2017-11-17",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2747:right",
+    "story_id": 2747,
+    "stance": "right",
+    "publisher": "TheBlaze.com",
+    "title": "Report: Mueller issued subpoenas for a dozen Trump campaign officials",
+    "body": "According to the Wall Street Journal, Special Counsel Robert Mueller’s investigation into Russian collusion and election tampering included issuing subpoenas for over a dozen Trump campaign officials.",
+    "roundup": "Special Counsel Robert Mueller has subpoenaed the Trump campaign for the first time, requesting documents related to Russia from more than a dozen top officials.",
+    "date": "2017-11-17",
+    "topic": "Elections"
+  }
+}

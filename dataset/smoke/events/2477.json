@@ -1,0 +1,36 @@
+{
+  "story_id": 2477,
+  "left": {
+    "article_id": "2477:left",
+    "story_id": 2477,
+    "stance": "left",
+    "publisher": "CBS News",
+    "title": "Jeff Sessions to testify: Focus of Russia probe shifts to attorney general",
+    "body": "President Trump's attorney general is now being drawn into the investigations of Russian election meddling.",
+    "roundup": "Attorney General Jeff Sessions will testify Tuesday before the same Senate committee that heard from former FBI Director James Comey last week, keeping national attention on a Russia investigation that White House officials have been trying to push to the background.",
+    "date": "2017-06-12",
+    "topic": "Justice"
+  },
+  "center": {
+    "article_id": "2477:center",
+    "story_id": 2477,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Jeff Sessions’s Testimony to Keep Russia Probe in Focus",
+    "body": "Attorney General Jeff Sessions will testify Tuesday before the same Senate committee that heard from former FBI Director James Comey last week, keeping national attention on a Russia investigation that White House officials have been trying to push to the background.",
+    "roundup": "Attorney General Jeff Sessions will testify Tuesday before the same Senate committee that heard from former FBI Director James Comey last week, keeping national attention on a Russia investigation that White House officials have been trying to push to the background.",
+    "date": "2017-06-12",
+    "topic": "Justice"
+  },
+  "right": {
+    "article_id": "2477:right",
+    "story_id": 2477,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Attorney General Jeff Sessions to testify; Senate Democrats demand public hearing",
+    "body": "Democrats indicated Sunday that the decision by Attorney General Jeff Sessions to testify to Congress on Russian involvement in the November presidential election isn’t good enough — they want Tuesday’s testimony to be public.",
+    "roundup": "Attorney General Jeff Sessions will testify Tuesday before the same Senate committee that heard from former FBI Director James Comey last week, keeping national attention on a Russia investigation that White House officials have been trying to push to the background.",
+    "date": "2017-06-12",
+    "topic": "Justice"
+  }
+}

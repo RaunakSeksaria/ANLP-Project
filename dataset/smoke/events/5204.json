@@ -1,0 +1,36 @@
+{
+  "story_id": 5204,
+  "left": {
+    "article_id": "5204:left",
+    "story_id": 5204,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "U.S. Charges Russian Intelligence Officers in Major Cyberattacks",
+    "body": "The Justice Department on Monday announced indictments of six Russian military intelligence officers in connection with major hacks worldwide, including of the Winter Olympics and elections in France as well as an attack in 2017 aimed at destabilizing Ukraine that spread rapidly and was blamed for billions of dollars in damage. Prosecutors said the suspects were from the same Russian unit that conducted one of the Kremlin’s major operations to interfere in the 2016 American election: the theft of Democratic emails. They attacked the 2017 French presidential elections; targeted British",
+    "roundup": "On Monday, the Department of Justice (DOJ) unsealed charges against six Russian cyberhackers, who reportedly go by \"Sandworm,\" alleging they were behind several hacks over the last four years. Some of those include allegedly hacking the 2018 PyeongChang Winter Olympics, the 2017 French elections, and Ukrainian Parliament, finance ministry and electrical grid. Sandworm, who reportedly work for the Russian Main Intelligence Directorate (GRU) (which is accused of interfering in the 2016 U.S. presidential election), are charged with conspiracy to conduct computer fraud and abuse, conspiracy to commit wire fraud, wire fraud, damaging protected computers and aggravated identity theft. The story was covered by outlets from across the political spectrum. Some center-rated outlets focused on detailed analysis of what the DOJ indictment means for 2020 election security.",
+    "date": "2020-10-19",
+    "topic": "Cybersecurity"
+  },
+  "center": {
+    "article_id": "5204:center",
+    "story_id": 5204,
+    "stance": "center",
+    "publisher": "Wired",
+    "title": "US Indicts Sandworm, Russia's Most Destructive Cyberwar Unit",
+    "body": "NEARLY HALF A decade ago, the Russian hackers known as Sandworm hit Western Ukraine with the first-ever cyberattack to cause a blackout, an unprecedented act of cyberwar that turned off the lights for a quarter million Ukrainians. They were just getting started. From there Sandworm embarked on a years-long spree of wantonly destructive attacks: another blackout attack on the Ukrainian capital of Kyiv in 2016, the release of the NotPetya worm in 2017 that spread globally from Ukraine to cause $10 billion in damage, and a cyberattack that temporarily destroyed",
+    "roundup": "On Monday, the Department of Justice (DOJ) unsealed charges against six Russian cyberhackers, who reportedly go by \"Sandworm,\" alleging they were behind several hacks over the last four years. Some of those include allegedly hacking the 2018 PyeongChang Winter Olympics, the 2017 French elections, and Ukrainian Parliament, finance ministry and electrical grid. Sandworm, who reportedly work for the Russian Main Intelligence Directorate (GRU) (which is accused of interfering in the 2016 U.S. presidential election), are charged with conspiracy to conduct computer fraud and abuse, conspiracy to commit wire fraud, wire fraud, damaging protected computers and aggravated identity theft. The story was covered by outlets from across the political spectrum. Some center-rated outlets focused on detailed analysis of what the DOJ indictment means for 2020 election security.",
+    "date": "2020-10-19",
+    "topic": "Cybersecurity"
+  },
+  "right": {
+    "article_id": "5204:right",
+    "story_id": 5204,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "DOJ Charges 6 Russians With Worldwide Hacking, Targets Include France, Ukraine And 2018 Olympics",
+    "body": "The Department of Justice (DOJ) announced Monday indictments for six Russian military hackers who were part of the Russian Main Intelligence Directorate (GRU). “No country has weaponized its cyber capabilities as maliciously and irresponsibly as Russia, wantonly causing unprecedented collateral damage to pursue small tactical advantages and to satisfy fits of spite,”Assistant Attorney General for National Security John C. Demers said Monday. The six hackers began their work in 2015, according to the DOJ. The hackers “engaged in computer intrusions and attacks” to undermine, retaliate against and destabilize foreign nations",
+    "roundup": "On Monday, the Department of Justice (DOJ) unsealed charges against six Russian cyberhackers, who reportedly go by \"Sandworm,\" alleging they were behind several hacks over the last four years. Some of those include allegedly hacking the 2018 PyeongChang Winter Olympics, the 2017 French elections, and Ukrainian Parliament, finance ministry and electrical grid. Sandworm, who reportedly work for the Russian Main Intelligence Directorate (GRU) (which is accused of interfering in the 2016 U.S. presidential election), are charged with conspiracy to conduct computer fraud and abuse, conspiracy to commit wire fraud, wire fraud, damaging protected computers and aggravated identity theft. The story was covered by outlets from across the political spectrum. Some center-rated outlets focused on detailed analysis of what the DOJ indictment means for 2020 election security.",
+    "date": "2020-10-19",
+    "topic": "Cybersecurity"
+  }
+}

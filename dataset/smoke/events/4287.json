@@ -1,0 +1,36 @@
+{
+  "story_id": 4287,
+  "left": {
+    "article_id": "4287:left",
+    "story_id": 4287,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "US troops were injured in Iran missile attack despite Pentagon initially saying there were no casualties",
+    "body": "(CNN)Several US service members were injured during last week's Iranian missile attack on Al-Asad airbase in Iraq despite the Pentagon initially saying that no casualties were suffered. \"While no U.S. service members were killed in the Jan. 8 Iranian attack on Al Asad Air base, several were treated for concussion symptoms from the blast and are still being assessed,\" the US-led military coalition fighting ISIS in Iraq and Syria said in a statement Thursday. \"Out of an abundance of caution, service members were transported from Al Asad Air Base,",
+    "roundup": "Iran's retaliatory missile strikes on U.S.-Iraq military bases last week left 11 U.S. troops with concussion-like symptoms, despite initial Pentagon reports that said no American soldiers were hurt. A Department of Defense official reportedly told CNN Friday that symptoms emerged \"after the fact.\"",
+    "date": "2020-01-17",
+    "topic": "US Military"
+  },
+  "center": {
+    "article_id": "4287:center",
+    "story_id": 4287,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "American Troops Were Injured in Jan. 8 Iran Missile Attack",
+    "body": "WASHINGTON—Nearly a dozen American troops were injured in the Iranian missile attack on two bases in Iraq last week, Defense Department officials said, after initially stating that there were no casualties in the strikes. Eleven individuals are being screened for traumatic brain injuries following the attacks on two bases in Iraq that house American troops. Iran fired a dozen rockets total at Erbil in northern Iraq and the sprawling Al Asad air base in the west in retaliation for the American killing of Maj. Gen. Qassem Soleimani days before. Pentagon",
+    "roundup": "Iran's retaliatory missile strikes on U.S.-Iraq military bases last week left 11 U.S. troops with concussion-like symptoms, despite initial Pentagon reports that said no American soldiers were hurt. A Department of Defense official reportedly told CNN Friday that symptoms emerged \"after the fact.\"",
+    "date": "2020-01-17",
+    "topic": "US Military"
+  },
+  "right": {
+    "article_id": "4287:right",
+    "story_id": 4287,
+    "stance": "right",
+    "publisher": "New York Post (News)",
+    "title": "Iranian missile attack on Iraq bases injured 11 US troops, officials say",
+    "body": "Iran’s missile attack on bases housing US troops in Iraq last week injured 11 American troops — despite the Army previously saying no causalities were recorded, a report said Thursday. Officials from the US-led coalition fighting ISIS in Iraq told CNN in a statement that troops suffered concussion-related symptoms that emerged days after the attack. “While no US service members were killed in the Jan. 8 Iranian attack on Al Asad Air base, several were treated for concussion symptoms from the blast and are still being assessed,” the officials told",
+    "roundup": "Iran's retaliatory missile strikes on U.S.-Iraq military bases last week left 11 U.S. troops with concussion-like symptoms, despite initial Pentagon reports that said no American soldiers were hurt. A Department of Defense official reportedly told CNN Friday that symptoms emerged \"after the fact.\"",
+    "date": "2020-01-17",
+    "topic": "US Military"
+  }
+}

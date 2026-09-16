@@ -1,0 +1,36 @@
+{
+  "story_id": 2938,
+  "left": {
+    "article_id": "2938:left",
+    "story_id": 2938,
+    "stance": "left",
+    "publisher": "The Guardian",
+    "title": "UK, US, Germany and France unite to condemn spy attack",
+    "body": "The leaders of Britain, the US, Germany and France have released a joint statement strongly condemning the Salisbury nerve agent attack as “an assault on UK sovereignty” and saying it is highly likely that Russia was behind it.",
+    "roundup": "The leaders of Britain, the US, Germany and France have released a joint statement strongly condemning the Salisbury nerve agent attack as “an assault on UK sovereignty” and saying it is highly likely that Russia was behind it.",
+    "date": "2018-03-15",
+    "topic": "World"
+  },
+  "center": {
+    "article_id": "2938:center",
+    "story_id": 2938,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Russia spy: Allies condemn nerve agent attack",
+    "body": "The leaders of France, Germany, the US and UK have issued a statement on the nerve agent attack in the UK, saying there is \"no plausible alternative explanation\" than Russian culpability.",
+    "roundup": "The leaders of Britain, the US, Germany and France have released a joint statement strongly condemning the Salisbury nerve agent attack as “an assault on UK sovereignty” and saying it is highly likely that Russia was behind it.",
+    "date": "2018-03-15",
+    "topic": "World"
+  },
+  "right": {
+    "article_id": "2938:right",
+    "story_id": 2938,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "In joint statement, world leaders agree Russia behind nerve agent attack on former spy",
+    "body": "The leaders of the United States, Germany and France have joined together with the United Kingdom in accusing Russia of being behind the nerve agent attack on an ex-Russian spy.",
+    "roundup": "The leaders of Britain, the US, Germany and France have released a joint statement strongly condemning the Salisbury nerve agent attack as “an assault on UK sovereignty” and saying it is highly likely that Russia was behind it.",
+    "date": "2018-03-15",
+    "topic": "World"
+  }
+}

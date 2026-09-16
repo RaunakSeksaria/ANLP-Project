@@ -1,0 +1,36 @@
+{
+  "story_id": 4219,
+  "left": {
+    "article_id": "4219:left",
+    "story_id": 4219,
+    "stance": "left",
+    "publisher": "ABC News (Online)",
+    "title": "House passes pair of funding bills to avert government shutdown",
+    "body": "The House has passed a pair of funding measures to avert a government shutdown on Tuesday, voting across party lines detailing roughly $1.4 trillion in government funding ahead of the Friday deadline. The spending package -- consisting of two separate spending bills and thousands of pages of legislative text -- was introduced on Monday, and includes a boost on domestic spending backed by Democrats while also upping military spending. It also includes an increase in funding for President Donald Trump's border wall and largely keeps the status quo on the",
+    "roundup": "The House of Representatives passed a $1.37 trillion spending package Tuesday to fund the government through September 2020; President Donald Trump reportedly plans to sign the measure if the Senate approves it. Reporting from all sides focused on the notion that the bill will help avert a government shutdown. Different outlets focused on different details of the bill; frequently mentioned details included the bill's elimination of several Obamacare taxes, and increased funding for southern border wall construction and gun violence research.",
+    "date": "2019-12-17",
+    "topic": "Federal Budget"
+  },
+  "center": {
+    "article_id": "4219:center",
+    "story_id": 4219,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "House approves spending deal that would avert government shutdown, raise tobacco age, research gun violence",
+    "body": "WASHINGTON – The House passed a $1.37 trillion spending package that includes money for President Donald Trump's border wall, funding for gun violence research and increasing the age for purchasing tobacco products from 18 to 21. The approval Tuesday could avert a government shutdown that would begin Friday, when the government is set to run out of funding. The package will go to the Senate for approval before being sent to Trump for his signature. The votes on the spending package, which was broken up into two bills, marked",
+    "roundup": "The House of Representatives passed a $1.37 trillion spending package Tuesday to fund the government through September 2020; President Donald Trump reportedly plans to sign the measure if the Senate approves it. Reporting from all sides focused on the notion that the bill will help avert a government shutdown. Different outlets focused on different details of the bill; frequently mentioned details included the bill's elimination of several Obamacare taxes, and increased funding for southern border wall construction and gun violence research.",
+    "date": "2019-12-17",
+    "topic": "Federal Budget"
+  },
+  "right": {
+    "article_id": "4219:right",
+    "story_id": 4219,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "House approves $1.4 trillion spending bill, repealing ObamaCare taxes",
+    "body": "The Democratic-controlled House on Tuesday approved a $1.4 trillion federal spending bill to avoid a government shutdown that includes funding for President Trump's border wall, strips ObamaCare taxes, raises the minimum age for buying tobacco products and gives Democrats increases for a variety of other domestic programs. The House – as it prepares to vote on articles of impeachment against President Trump – approved all 12 spending bills. They now go to the Senate to sync up later this week. “I am proud that we were able to come together,",
+    "roundup": "The House of Representatives passed a $1.37 trillion spending package Tuesday to fund the government through September 2020; President Donald Trump reportedly plans to sign the measure if the Senate approves it. Reporting from all sides focused on the notion that the bill will help avert a government shutdown. Different outlets focused on different details of the bill; frequently mentioned details included the bill's elimination of several Obamacare taxes, and increased funding for southern border wall construction and gun violence research.",
+    "date": "2019-12-17",
+    "topic": "Federal Budget"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3335,
+  "left": {
+    "article_id": "3335:left",
+    "story_id": 3335,
+    "stance": "left",
+    "publisher": "Newsweek",
+    "title": "GOP Representative Proposes Banning All Political Discussions in Pennsylvania Classrooms",
+    "body": "A Republican Pennsylvania representative proposed legislation that would ban all political discussions in K-12 public school classrooms to help prevent \"indoctrination\" by teachers.",
+    "roundup": "A Pennsylvania state lawmaker has introduced a bill that would ban public schoolteachers from discussing many modern-day political matters in the classroom and prohibit them from endorsing, supporting, or opposing any candidate running for office. Supporters say it will protect classrooms from bias, while dissenters say it will stifle teachers' free speech.",
+    "date": "2018-09-21",
+    "topic": "Education"
+  },
+  "center": {
+    "article_id": "3335:center",
+    "story_id": 3335,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Pennsylvania lawmaker introduces bill to ban teachers from discussing politics, government in classrooms",
+    "body": "A Pennsylvania state lawmaker has introduced a bill that would ban public school teachers from discussing politics or government in their classrooms.",
+    "roundup": "A Pennsylvania state lawmaker has introduced a bill that would ban public schoolteachers from discussing many modern-day political matters in the classroom and prohibit them from endorsing, supporting, or opposing any candidate running for office. Supporters say it will protect classrooms from bias, while dissenters say it will stifle teachers' free speech.",
+    "date": "2018-09-21",
+    "topic": "Education"
+  },
+  "right": {
+    "article_id": "3335:right",
+    "story_id": 3335,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "PA Lawmaker's Bill Would Ban Teachers From Talking Politics in the Classroom",
+    "body": "A Pennsylvania state lawmaker is pushing a bill that would ban schoolteachers from talking about modern-day civics, politics and public affairs in the classroom.",
+    "roundup": "A Pennsylvania state lawmaker has introduced a bill that would ban public schoolteachers from discussing many modern-day political matters in the classroom and prohibit them from endorsing, supporting, or opposing any candidate running for office. Supporters say it will protect classrooms from bias, while dissenters say it will stifle teachers' free speech.",
+    "date": "2018-09-21",
+    "topic": "Education"
+  }
+}

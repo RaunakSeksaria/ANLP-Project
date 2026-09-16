@@ -1,0 +1,36 @@
+{
+  "story_id": 3298,
+  "left": {
+    "article_id": "3298:left",
+    "story_id": 3298,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Twitter Finally Bans Alex Jones And Infowars",
+    "body": "The Infowars creator is a known conspiracy theorist who has also harassed families of mass shooting victims.",
+    "roundup": "Twitter has permanently banned conspiracy theorist Alex Jones and his \"Infowars\" show, citing \"abusive behavior\".",
+    "date": "2018-09-06",
+    "topic": "Technology"
+  },
+  "center": {
+    "article_id": "3298:center",
+    "story_id": 3298,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "Twitter permanently bans Alex Jones, Infowars citing abuse",
+    "body": "Twitter is permanently banning right-wing conspiracy theorist Alex Jones and his “Infowars” show for abusive behavior.",
+    "roundup": "Twitter has permanently banned conspiracy theorist Alex Jones and his \"Infowars\" show, citing \"abusive behavior\".",
+    "date": "2018-09-06",
+    "topic": "Technology"
+  },
+  "right": {
+    "article_id": "3298:right",
+    "story_id": 3298,
+    "stance": "right",
+    "publisher": "Breitbart News",
+    "title": "Twitter Permanently Blacklists Alex Jones, Infowars",
+    "body": "Twitter on Thursday permanently banned accounts belonging to Alex Jones and Infowars over a video of the radio host confronting a CNN reporter for lobbying to blacklist him from the social media platform, which CEO Jack Dorsey described as a “digital town hall” before Congress the day before.",
+    "roundup": "Twitter has permanently banned conspiracy theorist Alex Jones and his \"Infowars\" show, citing \"abusive behavior\".",
+    "date": "2018-09-06",
+    "topic": "Technology"
+  }
+}

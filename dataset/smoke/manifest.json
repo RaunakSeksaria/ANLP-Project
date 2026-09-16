@@ -1,0 +1,72 @@
+{
+  "seed": 42,
+  "stories": {
+    "train": 256,
+    "val": 32,
+    "test": 32
+  },
+  "articles": 960,
+  "triplets": {
+    "publisher": 1268,
+    "ideology": 1280,
+    "per_anchor": 2
+  },
+  "negatives_pool_used": 2198,
+  "eval_unseen_publisher": {
+    "n": 300,
+    "outlets": [
+      "ABC News",
+      "AP Fact Check",
+      "American Spectator",
+      "Ann Coulter",
+      "Ben Stein",
+      "Brent Bozell",
+      "Dick Morris",
+      "John Stossel",
+      "Matt Welch"
+    ]
+  },
+  "negative_source_breakdown": {
+    "publisher: negative from abp": 1240,
+    "publisher: anchor dropped": 12,
+    "publisher: negative from neus": 28,
+    "ideology: negative from abp": 1280
+  },
+  "publisher_match_rate_abp": 0.9779,
+  "lengths": {
+    "neus_body": {
+      "median_words": 69.0,
+      "p90_words": 90,
+      "max_words": 91,
+      "est_median_bpe": 89,
+      "est_p90_bpe": 117
+    },
+    "neus_roundup": {
+      "median_words": 52.5,
+      "p90_words": 146,
+      "max_words": 246,
+      "est_median_bpe": 68,
+      "est_p90_bpe": 189
+    },
+    "gen_source": {
+      "median_words": 157.5,
+      "p90_words": 210,
+      "max_words": 220,
+      "est_median_bpe": 204,
+      "est_p90_bpe": 273
+    },
+    "abp_negative_content": {
+      "median_words": 768.0,
+      "p90_words": 1669,
+      "max_words": 10219,
+      "est_median_bpe": 998,
+      "est_p90_bpe": 2169
+    }
+  },
+  "note": "BPE figures are word_count * 1.3 estimates; run a real tokenizer for authoritative numbers.",
+  "sampling_caveat": {
+    "neus_body_median_words_sample": 69,
+    "neus_body_median_words_corpus": 82,
+    "note": "Seed 42 drew a sample whose NeuS bodies run ~13 words short of the eligible corpus (below the 5th percentile of 200 resamples). Bodies are byte-identical to data/prepared/articles.jsonl -- this is sampling variance, not truncation. It makes the generation-side cost extrapolate ~10-15% low; the ABP negatives (median 768 words) dominate the memory profile anyway and are drawn from the full pool."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 1962,
+  "left": {
+    "article_id": "1962:left",
+    "story_id": 1962,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "House Unveils Bill To Help Puerto Rico Deal With Its Debt Crisis",
+    "body": "After months of negotiations, and fits and starts, House Republicans have unveiled revised legislation to help Puerto Rico tackle its $70 billion debt. The bill, released just before midnight on Wednesday, is the third attempt by lawmakers to aid the commonwealth, which is home to 3.5 million Americans. Its underlying text is primarily unchanged, but is now language the Treasury Department appears ready to support. If passed, it would establish an oversight board to guide Puerto Rico’s government through the restructuring of its debt — a power the island",
+    "roundup": "House leaders came to an agreement to restructure Puerto Rico's 72 billion dollar debt.",
+    "date": "2016-05-19",
+    "topic": "US House"
+  },
+  "center": {
+    "article_id": "1962:center",
+    "story_id": 1962,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Republicans, Obama Administration Reach Agreement on Puerto Rico Restructuring Bill",
+    "body": "House Republicans reached an agreement with the Obama administration to provide Puerto Rico a path to restructure its $70 billion debt load, the first step toward ending its decadelong recession. With nearly all other details ironed out, disagreements had remained over how to handle appointments to a seven-member board designed to oversee the island’s finances. Lawmakers reached a compromise late Wednesday over a previous sticking point about how to respect the territory’s constitutional priorities governing bond and pension payments.",
+    "roundup": "House leaders came to an agreement to restructure Puerto Rico's 72 billion dollar debt.",
+    "date": "2016-05-19",
+    "topic": "US House"
+  },
+  "right": {
+    "article_id": "1962:right",
+    "story_id": 1962,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "House leaders push new Puerto Rico bill to rescue it from $72B debt",
+    "body": "House leaders urged members Thursday to support the latest version of a bill designed to impose fiscal oversight on Puerto Rico and rescue it from $72 billion in bond debt, saying the parties negotiated in good faith and that Congress should act now to avoid a taxpayer bailout down the road.",
+    "roundup": "House leaders came to an agreement to restructure Puerto Rico's 72 billion dollar debt.",
+    "date": "2016-05-19",
+    "topic": "US House"
+  }
+}

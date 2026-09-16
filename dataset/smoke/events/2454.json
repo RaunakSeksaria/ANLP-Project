@@ -1,0 +1,36 @@
+{
+  "story_id": 2454,
+  "left": {
+    "article_id": "2454:left",
+    "story_id": 2454,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Donald Trump’s Communications Director Resigns",
+    "body": "Mike Dubke served in the White House for nearly three months before tendering his resignation.",
+    "roundup": "Veteran GOP Strategist Mike Dubke resigned as WH Communications Director.",
+    "date": "2017-05-30",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2454:center",
+    "story_id": 2454,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Mike Dubke Quits as White House Communications Director",
+    "body": "Departure comes as President Trump seeks reset amid probes",
+    "roundup": "Veteran GOP Strategist Mike Dubke resigned as WH Communications Director.",
+    "date": "2017-05-30",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2454:right",
+    "story_id": 2454,
+    "stance": "right",
+    "publisher": "Breitbart News",
+    "title": "Mike Dubke Resigns as White House Communications Director",
+    "body": "The seasoned Republican operative was one of the few staffers respected by establishment Republicans in Washington, D.C., but was ultimately unwilling to continue to try to shape a daily narrative for the Trump White House.",
+    "roundup": "Veteran GOP Strategist Mike Dubke resigned as WH Communications Director.",
+    "date": "2017-05-30",
+    "topic": "White House"
+  }
+}

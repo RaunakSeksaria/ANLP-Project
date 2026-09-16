@@ -1,0 +1,36 @@
+{
+  "story_id": 5441,
+  "left": {
+    "article_id": "5441:left",
+    "story_id": 5441,
+    "stance": "left",
+    "publisher": "CBS News (Online)",
+    "title": "Senate passes $1.9 trillion COVID relief resolution after all-night \"vote-a-rama\"",
+    "body": "The Senate passed a budget resolution very early Friday morning, a key step for the Democratic-controlled Congress to pass President Biden's $1.9 trillion COVID-19 relief proposal without any Republican votes. The 51-50 vote, with Vice President Kamala Harris breaking the tie, came after an all-night marathon \"vote-a-arama.\" The \"vote-a-rama\" included 41 votes with dozens of amendments considered. Harris cast her first tie-breaking votes as vice president, allowing the resolution to finally pass shortly before 6 a.m. with support from all 50 Democratic senators. The Senate voted to reject a major",
+    "roundup": "The House voted 219-209 Friday to approve a budget resolution that will help advance the Biden administration's $1.9 trillion COVID-19 relief package. The Senate voted 51-50 early Friday morning to pass the measure; Vice President Kamala Harris cast the tie-breaking vote. The moves are a part of the budget reconciliation process, which allows lawmakers to approve and advance budget-related legislation by a simple majority rather than with the 60 Senate votes usually needed. Some left-rated sources highlighted Harris making her first tie-breaking vote in the Senate, and the dozens of other measures voted on during the Senate's all-night session. Many reports from right-rated sources focused on how budget reconciliation will overrule dissent from Republicans, and on President Biden's willingness to move forward without Republican support.",
+    "date": "2021-02-05",
+    "topic": "Economic Policy"
+  },
+  "center": {
+    "article_id": "5441:center",
+    "story_id": 5441,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "Congress Approves Budget, Paving the Way For Biden's COVID-19 Relief Package",
+    "body": "The House quickly approved a budget resolution intended to speed the drafting of President Biden's $1.9 trillion coronavirus relief package. The Senate approved the same budget resolution early Friday morning. With the Senate evenly divided, Vice President Harris cast the tiebreaking vote. Democrats are planning to use a feature of the budget process called reconciliation to pass the legislation with a simple majority in the Senate, meaning it could be approved entirely along party lines. The process is expected to last weeks and key components face calls for changes, including",
+    "roundup": "The House voted 219-209 Friday to approve a budget resolution that will help advance the Biden administration's $1.9 trillion COVID-19 relief package. The Senate voted 51-50 early Friday morning to pass the measure; Vice President Kamala Harris cast the tie-breaking vote. The moves are a part of the budget reconciliation process, which allows lawmakers to approve and advance budget-related legislation by a simple majority rather than with the 60 Senate votes usually needed. Some left-rated sources highlighted Harris making her first tie-breaking vote in the Senate, and the dozens of other measures voted on during the Senate's all-night session. Many reports from right-rated sources focused on how budget reconciliation will overrule dissent from Republicans, and on President Biden's willingness to move forward without Republican support.",
+    "date": "2021-02-05",
+    "topic": "Economic Policy"
+  },
+  "right": {
+    "article_id": "5441:right",
+    "story_id": 5441,
+    "stance": "right",
+    "publisher": "National Review",
+    "title": "House Passes Budget Resolution, Clearing Path for Dems to Push COVID Relief Through",
+    "body": "The House on Friday passed a budget resolution, mounting a key procedural hurdle and clearing a path for Congress to pass President Biden’s sweeping $1.9 trillion coronavirus relief package. The Senate passed the budget resolution earlier on Friday in a 51-50 vote along party lines, with Vice President Kamala Harris casting the tie-breaking vote. Democrats plan to use a process called budget reconciliation to pass the hefty relief bill, which allows the legislation to be approved and sent to Biden’s desk with a simple majority of votes, rather than the",
+    "roundup": "The House voted 219-209 Friday to approve a budget resolution that will help advance the Biden administration's $1.9 trillion COVID-19 relief package. The Senate voted 51-50 early Friday morning to pass the measure; Vice President Kamala Harris cast the tie-breaking vote. The moves are a part of the budget reconciliation process, which allows lawmakers to approve and advance budget-related legislation by a simple majority rather than with the 60 Senate votes usually needed. Some left-rated sources highlighted Harris making her first tie-breaking vote in the Senate, and the dozens of other measures voted on during the Senate's all-night session. Many reports from right-rated sources focused on how budget reconciliation will overrule dissent from Republicans, and on President Biden's willingness to move forward without Republican support.",
+    "date": "2021-02-05",
+    "topic": "Economic Policy"
+  }
+}

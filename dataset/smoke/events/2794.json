@@ -1,0 +1,36 @@
+{
+  "story_id": 2794,
+  "left": {
+    "article_id": "2794:left",
+    "story_id": 2794,
+    "stance": "left",
+    "publisher": "Slate",
+    "title": "Mueller Team Pushes Back, Denies Accusation it Unlawfully Got Trump Transition Emails",
+    "body": "Special Counsel Robert Mueller’s office is not staying silent following explosive accusations by a lawyer for President Donald Trump’s transition team that the investigators looking into claims of collusion with Moscow during the campaign unlawfully received tens of thousands of emails from the General Services Administration.",
+    "roundup": "A lawyer in President Trump's transition team is accusing Special Counsel Robert Mueller of obtaining tens of thousands of emails unlawfully, which he received from the General Services Administration as part of the Russia probe.",
+    "date": "2017-12-17",
+    "topic": "Homeland Security"
+  },
+  "center": {
+    "article_id": "2794:center",
+    "story_id": 2794,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Trump allies say Mueller unlawfully obtained thousands of emails",
+    "body": "An organization established for U.S. President Donald Trump’s transition to the White House said on Saturday the special counsel investigating allegations of Russian meddling in the 2016 election had obtained tens of thousands of emails unlawfully.",
+    "roundup": "A lawyer in President Trump's transition team is accusing Special Counsel Robert Mueller of obtaining tens of thousands of emails unlawfully, which he received from the General Services Administration as part of the Russia probe.",
+    "date": "2017-12-17",
+    "topic": "Homeland Security"
+  },
+  "right": {
+    "article_id": "2794:right",
+    "story_id": 2794,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump transition lawyer: Mueller improperly obtained documents in Russia probe",
+    "body": "Exclusive— A lawyer for the Trump presidential transition team is accusing Special Counsel Robert Mueller’s office of inappropriately obtaining transition documents as part of its Russia probe, including confidential attorney-client communications, privileged communications and thousands of emails without their knowledge.",
+    "roundup": "A lawyer in President Trump's transition team is accusing Special Counsel Robert Mueller of obtaining tens of thousands of emails unlawfully, which he received from the General Services Administration as part of the Russia probe.",
+    "date": "2017-12-17",
+    "topic": "Homeland Security"
+  }
+}

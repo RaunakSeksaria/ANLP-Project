@@ -1,0 +1,36 @@
+{
+  "story_id": 3632,
+  "left": {
+    "article_id": "3632:left",
+    "story_id": 3632,
+    "stance": "left",
+    "publisher": "CBS News",
+    "title": "New York passes law allowing abortions up until baby's due date if mother's health is at risk",
+    "body": "New York state has enacted strong new legal protections for abortion rights. The new law, signed by Governor Andrew Cuomo on Tuesday, safeguards rights laid out in Roe v. Wade and",
+    "roundup": "New York passed a law Tuesday expanding abortion rights, including a provision allowing abortions up to a baby's due date if a mother's health is at risk.",
+    "date": "2019-01-23",
+    "topic": "Abortion"
+  },
+  "center": {
+    "article_id": "3632:center",
+    "story_id": 3632,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "NY enacts new protections for abortion rights",
+    "body": "New York state enacted one of the nation’s strongest protections for abortion rights Tuesday, a move that state leaders say was needed to safeguard those rights should the U.S. Supreme",
+    "roundup": "New York passed a law Tuesday expanding abortion rights, including a provision allowing abortions up to a baby's due date if a mother's health is at risk.",
+    "date": "2019-01-23",
+    "topic": "Abortion"
+  },
+  "right": {
+    "article_id": "3632:right",
+    "story_id": 3632,
+    "stance": "right",
+    "publisher": "National Review",
+    "title": "New York State Senate Passes Bill Permitting Abortions up to Birth",
+    "body": "The New York State Senate passed the Reproductive Health Act (RHA) this evening by a vote of 38-24, on the 46th anniversary of the Supreme Court decision in Roe v. Wade, which found that",
+    "roundup": "New York passed a law Tuesday expanding abortion rights, including a provision allowing abortions up to a baby's due date if a mother's health is at risk.",
+    "date": "2019-01-23",
+    "topic": "Abortion"
+  }
+}

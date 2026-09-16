@@ -1,0 +1,95 @@
+{
+  "all_triplet_constraints_passed": true,
+  "baseline_records_per_split": {
+    "test": 64,
+    "train": 512,
+    "validation": 64
+  },
+  "duplicate_article_id_counts": {
+    "per_split": {
+      "test": 0,
+      "train": 0,
+      "validation": 0
+    },
+    "total": 0
+  },
+  "duplicate_article_text_counts": {
+    "per_split": {
+      "test": 0,
+      "train": 2,
+      "validation": 0
+    },
+    "total": 2
+  },
+  "event_rejection_reasons": {
+    "test": {},
+    "train": {},
+    "validation": {}
+  },
+  "input_directory": "/home2/manas.agrawal/anlp/ANLP-Project/dataset/smoke",
+  "missing_title_counts": {
+    "test": {
+      "center": 0,
+      "left": 0,
+      "right": 0,
+      "total": 0
+    },
+    "train": {
+      "center": 0,
+      "left": 0,
+      "right": 0,
+      "total": 0
+    },
+    "validation": {
+      "center": 0,
+      "left": 0,
+      "right": 0,
+      "total": 0
+    }
+  },
+  "rejected_events_per_split": {
+    "test": 0,
+    "train": 0,
+    "validation": 0
+  },
+  "rejected_triplets_per_split": {
+    "test": 0,
+    "train": 0,
+    "validation": 0
+  },
+  "seed": 42,
+  "source_events_per_split": {
+    "test": 32,
+    "train": 256,
+    "validation": 32
+  },
+  "triplet_anchor_counts": {
+    "test": {
+      "left": 32,
+      "right": 32
+    },
+    "train": {
+      "left": 256,
+      "right": 256
+    },
+    "validation": {
+      "left": 32,
+      "right": 32
+    }
+  },
+  "triplet_records_per_split": {
+    "test": 64,
+    "train": 512,
+    "validation": 64
+  },
+  "triplet_rejection_reasons": {
+    "test": {},
+    "train": {},
+    "validation": {}
+  },
+  "valid_events_per_split": {
+    "test": 32,
+    "train": 256,
+    "validation": 32
+  }
+}

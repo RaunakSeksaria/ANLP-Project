@@ -1,0 +1,36 @@
+{
+  "story_id": 2700,
+  "left": {
+    "article_id": "2700:left",
+    "story_id": 2700,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Corker says White House should stay out of tax debate; Trump fires back with insult",
+    "body": "Senator Bob Corker (R-Tenn.) admonished President Trump on Tuesday to stop interfering in the debate over tax legislation and said his volatility could lead the United States into war, prompting a slew of Twitter insults from the president and renewing a long-simmering feud just hours before he is scheduled to visit Capitol Hill.",
+    "roundup": "Senator Bob Corker (R-TN) called President Donald Trump “utterly untruthful” on Tuesday in an exchange of insults on Twitter hours before the president was to meet with lawmakers on Capitol Hill to build consensus for tax reform.",
+    "date": "2017-10-24",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "2700:center",
+    "story_id": 2700,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Trump, key Republican U.S. senator spar ahead of tax meeting",
+    "body": "A senior Republican senator called President Donald Trump “utterly untruthful” on Tuesday in an exchange of insults on Twitter hours before the president was to meet with lawmakers on Capitol Hill to build consensus for tax reform.",
+    "roundup": "Senator Bob Corker (R-TN) called President Donald Trump “utterly untruthful” on Tuesday in an exchange of insults on Twitter hours before the president was to meet with lawmakers on Capitol Hill to build consensus for tax reform.",
+    "date": "2017-10-24",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "2700:right",
+    "story_id": 2700,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump rips Corker: 'Couldn’t get elected dog catcher'",
+    "body": "President Trump slammed Sen. Bob Corker on Tuesday for going “negative on anything Trump” after the retiring Republican lawmaker ramped up criticism of the administration and its policies.",
+    "roundup": "Senator Bob Corker (R-TN) called President Donald Trump “utterly untruthful” on Tuesday in an exchange of insults on Twitter hours before the president was to meet with lawmakers on Capitol Hill to build consensus for tax reform.",
+    "date": "2017-10-24",
+    "topic": "Politics"
+  }
+}

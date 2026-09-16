@@ -1,0 +1,36 @@
+{
+  "story_id": 2534,
+  "left": {
+    "article_id": "2534:left",
+    "story_id": 2534,
+    "stance": "left",
+    "publisher": "Daily Kos",
+    "title": "Trumpcare vote delayed while McCain recovers from surgery",
+    "body": "While Sen. John McCain remains in Arizona recovering from Friday's craniotomy, surgery to remove a 5 cm blood clot from above his left eye, business will not go on as usual in Washington. Majority Leader Mitch McConnell, who has to have every Republican senator voting to have a prayer of passing Trumpcare, has postponed the vote for the week or two (more likely two) that McCain's recovery will take.",
+    "roundup": "Senate Majority Leader Mitch McConnell, R-Ky., announced the scheduled Better Care Act vote would be delayed indefinitely because of McCain's absence.",
+    "date": "2017-07-17",
+    "topic": "US Senate"
+  },
+  "center": {
+    "article_id": "2534:center",
+    "story_id": 2534,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Senate delays healthcare vote as McCain recovers from surgery",
+    "body": "The U.S. Senate will delay its consideration of healthcare legislation while Arizona Republican Senator John McCain recuperates from surgery, Senate Republican leader Mitch McConnell announced over the weekend.",
+    "roundup": "Senate Majority Leader Mitch McConnell, R-Ky., announced the scheduled Better Care Act vote would be delayed indefinitely because of McCain's absence.",
+    "date": "2017-07-17",
+    "topic": "US Senate"
+  },
+  "right": {
+    "article_id": "2534:right",
+    "story_id": 2534,
+    "stance": "right",
+    "publisher": "CBN",
+    "title": "Health Care Setback: Senate Vote Delayed After McCain's Surgery",
+    "body": "Over the weekend, Senate Majority Leader Mitch McConnell, R-Ky., announced the scheduled Better Care Act vote would be delayed indefinitely because of McCain's absence.",
+    "roundup": "Senate Majority Leader Mitch McConnell, R-Ky., announced the scheduled Better Care Act vote would be delayed indefinitely because of McCain's absence.",
+    "date": "2017-07-17",
+    "topic": "US Senate"
+  }
+}

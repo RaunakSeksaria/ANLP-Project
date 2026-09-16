@@ -1,0 +1,36 @@
+{
+  "story_id": 4423,
+  "left": {
+    "article_id": "4423:left",
+    "story_id": 4423,
+    "stance": "left",
+    "publisher": "Los Angeles Times",
+    "title": "What will it cost to change your travel plans over coronavirus fears?",
+    "body": "There are roughly 110,000 confirmed cases of the new coronavirus worldwide, according to the World Health Organization. And more cases are reported in new places every day. As a result, travelers (especially those who have underlying health problems) may want to cancel or postpone upcoming vacation plans.",
+    "roundup": "Tourism and air travel have been hit especially hard by the spread of the COVID-19 coronavirus. Some airlines have started running ghost flights to preserve their routes until after the disease crisis as patrons continue to cancel flights and travel plans, and some airline executives have taken pay cuts amidst the cancellations. While the Center for Disease Control (CDC) has not recommended people avoid flying altogether, it has advised older individuals to stay away from crowded spaces. Some voices from the right have downplayed the crisis, criticizing other sections of the media for purportedly exaggerating the seriousness of the virus.",
+    "date": "2020-03-10",
+    "topic": "Coronavirus"
+  },
+  "center": {
+    "article_id": "4423:center",
+    "story_id": 4423,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Airlines Trim Capacity Over Coronavirus Spread, Some Executives Take Pay Cuts",
+    "body": "Airlines on Tuesday detailed the growing impact of the coronavirus by cutting more flights in domestic and international markets, parking planes, freezing hiring and reducing executive pay. American Airlines Group Inc. and Delta Air Lines Inc. both said they planned to reduce the number of flights across their networks.",
+    "roundup": "Tourism and air travel have been hit especially hard by the spread of the COVID-19 coronavirus. Some airlines have started running ghost flights to preserve their routes until after the disease crisis as patrons continue to cancel flights and travel plans, and some airline executives have taken pay cuts amidst the cancellations. While the Center for Disease Control (CDC) has not recommended people avoid flying altogether, it has advised older individuals to stay away from crowded spaces. Some voices from the right have downplayed the crisis, criticizing other sections of the media for purportedly exaggerating the seriousness of the virus.",
+    "date": "2020-03-10",
+    "topic": "Coronavirus"
+  },
+  "right": {
+    "article_id": "4423:right",
+    "story_id": 4423,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "Why Airlines Are Flying Scores of 'Ghost Flights' During Wuhan Virus Outbreak",
+    "body": "The Wuhan virus is spreading fear around the globe thanks to a Trump deranged and irresponsible media. This isn’t some superbug, folks. The seasonal flu is still deadlier. Now, that’s not to say you shouldn’t wash your hands regularly or take any of the precautions recommended by health officials that greatly reduce the chance of you getting sick. Regardless, those most at risk are the usual suspects: the elderly and the immunocompromised. A large chunk of the deaths in the U.S. from the WuFlu, which is extremely low compared to",
+    "roundup": "Tourism and air travel have been hit especially hard by the spread of the COVID-19 coronavirus. Some airlines have started running ghost flights to preserve their routes until after the disease crisis as patrons continue to cancel flights and travel plans, and some airline executives have taken pay cuts amidst the cancellations. While the Center for Disease Control (CDC) has not recommended people avoid flying altogether, it has advised older individuals to stay away from crowded spaces. Some voices from the right have downplayed the crisis, criticizing other sections of the media for purportedly exaggerating the seriousness of the virus.",
+    "date": "2020-03-10",
+    "topic": "Coronavirus"
+  }
+}

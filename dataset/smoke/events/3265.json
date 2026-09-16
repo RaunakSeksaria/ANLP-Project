@@ -1,0 +1,36 @@
+{
+  "story_id": 3265,
+  "left": {
+    "article_id": "3265:left",
+    "story_id": 3265,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "What might Michael Cohen tell Robert Mueller?",
+    "body": "In the hours after Donald Trump’s former attorney Michael Cohen pleaded guilty to various crimes on Tuesday, his attorney Lanny Davis appeared on a number of television shows and granted other interviews centered on a common theme: Cohen has information that could be of interest to special counsel Robert S. Mueller III.",
+    "roundup": "Michael Cohen's lawyer Lanny Davis said that Cohen is \"more than happy\" to share with special counsel Robert Mueller \"all that he knows,\" particularly as it pertains to the 2016 Trump Tower meeting which Davis described as \"the obvious possibility of a conspiracy to collude.\"",
+    "date": "2018-08-22",
+    "topic": "Russia"
+  },
+  "center": {
+    "article_id": "3265:center",
+    "story_id": 3265,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Lanny Davis: Cohen 'more than happy' to tell Mueller 'all that he knows'",
+    "body": "Michael Cohen's attorney on Tuesday night said his client had knowledge that would be \"of interest\" to Robert Mueller and would be willing to tell the special counsel “all that he knows.\"",
+    "roundup": "Michael Cohen's lawyer Lanny Davis said that Cohen is \"more than happy\" to share with special counsel Robert Mueller \"all that he knows,\" particularly as it pertains to the 2016 Trump Tower meeting which Davis described as \"the obvious possibility of a conspiracy to collude.\"",
+    "date": "2018-08-22",
+    "topic": "Russia"
+  },
+  "right": {
+    "article_id": "3265:right",
+    "story_id": 3265,
+    "stance": "right",
+    "publisher": "New York Post (News)",
+    "title": "Cohen willing to tell Mueller about ‘conspiracy to collude’: lawyer",
+    "body": "Michael Cohen is willing to speak with Special Counsel Robert Mueller about a “conspiracy to collude” with Russia during the 2016 presidential campaign, his lawyer said on Tuesday night.",
+    "roundup": "Michael Cohen's lawyer Lanny Davis said that Cohen is \"more than happy\" to share with special counsel Robert Mueller \"all that he knows,\" particularly as it pertains to the 2016 Trump Tower meeting which Davis described as \"the obvious possibility of a conspiracy to collude.\"",
+    "date": "2018-08-22",
+    "topic": "Russia"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3264,
+  "left": {
+    "article_id": "3264:left",
+    "story_id": 3264,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Animal crackers have been caged for 116 years. Pressure on Nabisco helped free them.",
+    "body": "After more than a century of imprisonment, Barnum’s cracker creatures are roaming free — until they meet their mushy demise in the mouths of children, anyway.",
+    "roundup": "Nabisco has redesigned the Barnum's animal cracker boxes, eliminating cages and showing the animals roaming free. The move comes at the request of PETA, particularly as opposition has grown to animal abuse within the circus.",
+    "date": "2018-08-22",
+    "topic": "Food"
+  },
+  "center": {
+    "article_id": "3264:center",
+    "story_id": 3264,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "No More Cages: New Animal Cracker Packaging Sets The Mighty Beasts Free",
+    "body": "Lions and tigers and bears are now roaming free – on the box for Barnum's Animals.",
+    "roundup": "Nabisco has redesigned the Barnum's animal cracker boxes, eliminating cages and showing the animals roaming free. The move comes at the request of PETA, particularly as opposition has grown to animal abuse within the circus.",
+    "date": "2018-08-22",
+    "topic": "Food"
+  },
+  "right": {
+    "article_id": "3264:right",
+    "story_id": 3264,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Animal Cracker Company Caves to Peta, Changes Packaging",
+    "body": "People for the Ethical Treatment of Animals (PETA) praised the new packaging for Barnum’s Animals crackers Monday after the manufacturer caved to pressure and removed the animal cages from its packaging.",
+    "roundup": "Nabisco has redesigned the Barnum's animal cracker boxes, eliminating cages and showing the animals roaming free. The move comes at the request of PETA, particularly as opposition has grown to animal abuse within the circus.",
+    "date": "2018-08-22",
+    "topic": "Food"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3465,
+  "left": {
+    "article_id": "3465:left",
+    "story_id": 3465,
+    "stance": "left",
+    "publisher": "The Guardian",
+    "title": "Kyrsten Sinema wins Arizona Senate race in breakthrough for Democrats",
+    "body": "Sinema becomes state’s first female senator after a lengthy vote count in one of the most closely watched midterm races",
+    "roundup": "After a tight contest, Democrat Kyrsten Sinema wins the Arizona Senate race and becomes the first female Senator from that state.",
+    "date": "2018-11-13",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "3465:center",
+    "story_id": 3465,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "Democrat Kyrsten Sinema Wins Arizona Senate Race",
+    "body": "After tight contest, the moderate is elected state’s first Democratic senator in 30 years",
+    "roundup": "After a tight contest, Democrat Kyrsten Sinema wins the Arizona Senate race and becomes the first female Senator from that state.",
+    "date": "2018-11-13",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "3465:right",
+    "story_id": 3465,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Democrat Kyrsten Sinema wins Arizona Senate election as Martha McSally concedes",
+    "body": "Democrats netted another Senate seat Monday night after Republican Martha McSally conceded Arizona’s race to Democrat Kyrsten Sinema.",
+    "roundup": "After a tight contest, Democrat Kyrsten Sinema wins the Arizona Senate race and becomes the first female Senator from that state.",
+    "date": "2018-11-13",
+    "topic": "Elections"
+  }
+}

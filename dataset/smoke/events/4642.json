@@ -1,0 +1,36 @@
+{
+  "story_id": 4642,
+  "left": {
+    "article_id": "4642:left",
+    "story_id": 4642,
+    "stance": "left",
+    "publisher": "CBS News",
+    "title": "Two autopsies both find George Floyd died by homicide, but differ on some details",
+    "body": "George Floyd, the Minnesota man who died after an officer arresting him pressed his knee onto his neck, died by homicide, according to the results of two autopsies released on Monday — one by the county medical examiner and the other by independent pathologists commissioned by Floyd's family. But the two autopsy reports differed on exactly how the man died. Dr. Allecia Wilson, one of the pathologists who conducted the independent autopsy, said Monday afternoon that Floyd died as a result of mechanical asphyxiation. But the report released later",
+    "roundup": "An independent autopsy commissioned by George Floyd's family concluded that Floyd died of asphyxiation and suffocation, while an autopsy from the Hennepin County Medical Examiner attributed Floyd's death to a heart attack brought on by the manner of his arrest. The results of each autopsy, which were released Monday, called Floyd's death in police custody last week a homicide; Floyd died after an officer knelt on his neck for more than eight minutes while he was handcuffed. Some coverage from left- and center-rated outlets framed the medical examiner's report as questionable, pointing to the county coroner's initially inconclusive report on the death last week; the initial report also suggested that asphyxia and strangulation did not cause Floyd's death. Some coverage from right-rated outlets concentrated more on the coroner's official report while minimizing the privately-conducted autopsy.",
+    "date": "2020-06-01",
+    "topic": "Violence in America"
+  },
+  "center": {
+    "article_id": "4642:center",
+    "story_id": 4642,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Medical examiner and family-commissioned autopsy agree: George Floyd's death was a homicide",
+    "body": "MINNEAPOLIS – Both the Hennepin County Medical Examiner's office and an autopsy commissioned by George Floyd's family have ruled that the death of Floyd – in an incident that has triggered nationwide unrest – was a homicide and the 46-year-old's heart stopped beating while police restrained him and compressed his neck. The medical examiner's report released Monday listed \"cardiopulmonary arrest complicating law enforcement subdual, restraint and neck compression\" as the cause of death. It came hours after Floyd family attorney Benjamin Crump held a press conference to announce the",
+    "roundup": "An independent autopsy commissioned by George Floyd's family concluded that Floyd died of asphyxiation and suffocation, while an autopsy from the Hennepin County Medical Examiner attributed Floyd's death to a heart attack brought on by the manner of his arrest. The results of each autopsy, which were released Monday, called Floyd's death in police custody last week a homicide; Floyd died after an officer knelt on his neck for more than eight minutes while he was handcuffed. Some coverage from left- and center-rated outlets framed the medical examiner's report as questionable, pointing to the county coroner's initially inconclusive report on the death last week; the initial report also suggested that asphyxia and strangulation did not cause Floyd's death. Some coverage from right-rated outlets concentrated more on the coroner's official report while minimizing the privately-conducted autopsy.",
+    "date": "2020-06-01",
+    "topic": "Violence in America"
+  },
+  "right": {
+    "article_id": "4642:right",
+    "story_id": 4642,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Medical examiner deems George Floyd's manner of death a homicide",
+    "body": "The medical examiner for Hennepin County deemed George Floyd's cause of death a homicide. The county's medical examiner listed Floyd's cause of death as \"cardiopulmonary arrest complicating law enforcement subdual, restraint and neck compression,\" meaning the autopsy deemed that the heart attack Floyd suffered was triggered by the manner of his arrest. The manner of death was listed as a homicide, which means that the death was caused by the intentional actions of another person. The medical examiner already noted that early findings found Floyd had not died of asphyxia",
+    "roundup": "An independent autopsy commissioned by George Floyd's family concluded that Floyd died of asphyxiation and suffocation, while an autopsy from the Hennepin County Medical Examiner attributed Floyd's death to a heart attack brought on by the manner of his arrest. The results of each autopsy, which were released Monday, called Floyd's death in police custody last week a homicide; Floyd died after an officer knelt on his neck for more than eight minutes while he was handcuffed. Some coverage from left- and center-rated outlets framed the medical examiner's report as questionable, pointing to the county coroner's initially inconclusive report on the death last week; the initial report also suggested that asphyxia and strangulation did not cause Floyd's death. Some coverage from right-rated outlets concentrated more on the coroner's official report while minimizing the privately-conducted autopsy.",
+    "date": "2020-06-01",
+    "topic": "Violence in America"
+  }
+}

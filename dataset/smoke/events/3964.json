@@ -1,0 +1,36 @@
+{
+  "story_id": 3964,
+  "left": {
+    "article_id": "3964:left",
+    "story_id": 3964,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "California's Newsom signs bill to force Trump tax returns",
+    "body": "California Gov. Gavin Newsom embraced a politically explosive and legally dubious attempt to pry loose President Donald Trump’s tax returns on Tuesday, signing legislation that would boot Trump from California primary ballots if he doesn’t make his filings public. For Democrats who wield absolute control over Sacramento, the measure offered a chance to directly confront a president who is deeply unpopular among most California voters — and for Newsom to escalate his long-standing feud with the president while distinguishing himself from Gov. Jerry Brown, who vetoed a similar measure in",
+    "roundup": "A new California law signed by Governor Gavin Newsom on Tuesday will require all presidential candidates to disclose the last five years of their tax returns in order to be eligible for placement on the state's 2020 election ballot. Most outlets reported that the law was directly targeted at President Donald Trump, whose tax returns are not public. Some on the left focused on ongoing efforts at both the federal and state level to force Trump to release his returns; many on the right focused on Republican claims that the law is unconstitutional and will not survive a legal challenge.",
+    "date": "2019-07-30",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "3964:center",
+    "story_id": 3964,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "California Requires Trump to Release Tax Returns for Spot on Primary Ballot",
+    "body": "California will require presidential candidates to hand over their tax returns in order to appear on the state’s primary-election ballot, setting up a likely legal conflict with President Trump over his continued refusal to disclose any tax documents. Under a law signed Tuesday by Gov. Gavin Newsom, candidates must turn over five years of tax returns at least 98 days before the March 3 primary. The state would then release a redacted version of the documents. “These are extraordinary times and states have a legal and moral duty to do",
+    "roundup": "A new California law signed by Governor Gavin Newsom on Tuesday will require all presidential candidates to disclose the last five years of their tax returns in order to be eligible for placement on the state's 2020 election ballot. Most outlets reported that the law was directly targeted at President Donald Trump, whose tax returns are not public. Some on the left focused on ongoing efforts at both the federal and state level to force Trump to release his returns; many on the right focused on Republican claims that the law is unconstitutional and will not survive a legal challenge.",
+    "date": "2019-07-30",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "3964:right",
+    "story_id": 3964,
+    "stance": "right",
+    "publisher": "Breitbart News",
+    "title": "California Gov. Gavin Newsom to Sign Bill Requiring Trump Tax Returns",
+    "body": "California Gov. Gavin Newsom has reportedly decided to sign a controversial bill requiring that all presidential candidates publish their tax returns to appear on the state’s primary ballot. The bill is targeted at President Donald Trump, who has not published his tax returns.",
+    "roundup": "A new California law signed by Governor Gavin Newsom on Tuesday will require all presidential candidates to disclose the last five years of their tax returns in order to be eligible for placement on the state's 2020 election ballot. Most outlets reported that the law was directly targeted at President Donald Trump, whose tax returns are not public. Some on the left focused on ongoing efforts at both the federal and state level to force Trump to release his returns; many on the right focused on Republican claims that the law is unconstitutional and will not survive a legal challenge.",
+    "date": "2019-07-30",
+    "topic": "Elections"
+  }
+}

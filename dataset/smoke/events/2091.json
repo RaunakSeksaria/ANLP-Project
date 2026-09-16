@@ -1,0 +1,36 @@
+{
+  "story_id": 2091,
+  "left": {
+    "article_id": "2091:left",
+    "story_id": 2091,
+    "stance": "left",
+    "publisher": "NBC News (Online)",
+    "title": "Why It's So Hard for Trump to Retreat on Immigration",
+    "body": "Since launching his presidential candidacy 14 months ago, Donald Trump's most consistent and uncompromising policy issue has been immigration. Indeed, it was the subject of his first general-election TV ad that started airing on Friday. Yet over the weekend, his top aides and advisers suggested that Trump might be shifting on his past position that all of the 11 million undocumented immigrants living in the United States must be deported forcibly.",
+    "roundup": "Trumps's campaign manager says Trump may be considering moderating his immigration stance. But Trump says he is not \"flip-flopping.\"",
+    "date": "2016-08-22",
+    "topic": "Immigration"
+  },
+  "center": {
+    "article_id": "2091:center",
+    "story_id": 2091,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "Trump Campaign Signals He May Moderate Immigration Stance",
+    "body": "Is Donald Trump considering wavering on a key campaign promise? That's what several news reports published over the weekend suggest. And while the Trump campaign issued a statement denying any shift on immigration policy, top surrogates and campaign operatives hinted that a change just might be on its way.",
+    "roundup": "Trumps's campaign manager says Trump may be considering moderating his immigration stance. But Trump says he is not \"flip-flopping.\"",
+    "date": "2016-08-22",
+    "topic": "Immigration"
+  },
+  "right": {
+    "article_id": "2091:right",
+    "story_id": 2091,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Trump: ‘I’m not flip-flopping’ on immigration",
+    "body": "GOP presidential nominee Donald Trump said Monday he’s not “flip-flopping” on immigration, calling for a “fair but firm” answer and saying that “we have to be very, very strong” when people enter the country illegally.",
+    "roundup": "Trumps's campaign manager says Trump may be considering moderating his immigration stance. But Trump says he is not \"flip-flopping.\"",
+    "date": "2016-08-22",
+    "topic": "Immigration"
+  }
+}

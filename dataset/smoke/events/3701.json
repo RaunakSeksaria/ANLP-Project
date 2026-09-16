@@ -1,0 +1,36 @@
+{
+  "story_id": 3701,
+  "left": {
+    "article_id": "3701:left",
+    "story_id": 3701,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Here Are The 81 People And Entities Close To Trump Democrats Are Investigating",
+    "body": "The list includes Trump’s sons, Eric Trump and Donald Trump Jr., as well as his son-in-law, Jared Kushner.",
+    "roundup": "House Democrats launched a broad probe into President Trump on Monday, requesting documents from 81 agencies and individuals as they investigate his business dealings, interactions with Russia, and possible obstruction of justice.",
+    "date": "2019-03-04",
+    "topic": "US House"
+  },
+  "center": {
+    "article_id": "3701:center",
+    "story_id": 3701,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "House Panel Requests Documents From Associates of Trump",
+    "body": "Information sought from former White House staff, Trump Organization executives and inaugural committee officials",
+    "roundup": "House Democrats launched a broad probe into President Trump on Monday, requesting documents from 81 agencies and individuals as they investigate his business dealings, interactions with Russia, and possible obstruction of justice.",
+    "date": "2019-03-04",
+    "topic": "US House"
+  },
+  "right": {
+    "article_id": "3701:right",
+    "story_id": 3701,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "Dems Continue Their Assault on The Trump Administration By Launching Another Probe",
+    "body": "Democrats are desperate to take down President Donald Trump. The Russia probe has proven to be ineffective and, quite frankly, a waste of time and taxpayer money. They didn't find what",
+    "roundup": "House Democrats launched a broad probe into President Trump on Monday, requesting documents from 81 agencies and individuals as they investigate his business dealings, interactions with Russia, and possible obstruction of justice.",
+    "date": "2019-03-04",
+    "topic": "US House"
+  }
+}

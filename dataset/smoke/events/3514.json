@@ -1,0 +1,36 @@
+{
+  "story_id": 3514,
+  "left": {
+    "article_id": "3514:left",
+    "story_id": 3514,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "Capitol Hill ceremony to honor Bush offers bipartisan moment",
+    "body": "In a deeply divided political climate, Washington witnessed a rare moment of unity on Monday as lawmakers from both sides of the aisle came together to remember George H.W. Bush.",
+    "roundup": "Americans began to pay their respects to former President George H. W. Bush at the Capitol Rotunda, where he will lie in state until Wednesday morning.",
+    "date": "2018-12-04",
+    "topic": "General News"
+  },
+  "center": {
+    "article_id": "3514:center",
+    "story_id": 3514,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "George HW Bush funeral: Trump pays respects at US Capitol",
+    "body": "US President Donald Trump and his wife Melania have paid their respects to President George HW Bush as he lies in state at the US Capitol.",
+    "roundup": "Americans began to pay their respects to former President George H. W. Bush at the Capitol Rotunda, where he will lie in state until Wednesday morning.",
+    "date": "2018-12-04",
+    "topic": "General News"
+  },
+  "right": {
+    "article_id": "3514:right",
+    "story_id": 3514,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "'Here lies a great man': Americans pay respects to Bush in nation's 'hallowed cathedral'",
+    "body": "Americans began to get a chance to pay their respects in person Monday to former President George H.W. Bush, whose body was brought to the U.S. Capitol to lie in state, joining just 31 other heroes so honored.",
+    "roundup": "Americans began to pay their respects to former President George H. W. Bush at the Capitol Rotunda, where he will lie in state until Wednesday morning.",
+    "date": "2018-12-04",
+    "topic": "General News"
+  }
+}

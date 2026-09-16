@@ -1,0 +1,36 @@
+{
+  "story_id": 3208,
+  "left": {
+    "article_id": "3208:left",
+    "story_id": 3208,
+    "stance": "left",
+    "publisher": "Daily Beast",
+    "title": "Jeff Sessions' 'Religious Liberty Task Force' Declares Holy War on LGBT People",
+    "body": "The Attorney General's new 'Religious Liberty Task Force' will ensure that the Trump administration's program of discrimination against LGBT people and others continues unchecked.",
+    "roundup": "Attorney General Jeff Sessions announced that the Department of Justice will establish a Religious Liberty Task Force to “protect and promote religious liberty.\"",
+    "date": "2018-07-30",
+    "topic": "Religion and Faith"
+  },
+  "center": {
+    "article_id": "3208:center",
+    "story_id": 3208,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Sessions announces 'religious liberty task force'",
+    "body": "Attorney General Jeff Sessions announced Monday that the Department of Justice is creating a \"religious liberty task force.\"",
+    "roundup": "Attorney General Jeff Sessions announced that the Department of Justice will establish a Religious Liberty Task Force to “protect and promote religious liberty.\"",
+    "date": "2018-07-30",
+    "topic": "Religion and Faith"
+  },
+  "right": {
+    "article_id": "3208:right",
+    "story_id": 3208,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Jeff Sessions forms Religious Liberty Task Force to protect freedom of religion",
+    "body": "The Justice Department on Monday announced the formation of a Religious Liberty Task Force aimed at ensuring religious groups’ protections when their beliefs conflict with government regulations.",
+    "roundup": "Attorney General Jeff Sessions announced that the Department of Justice will establish a Religious Liberty Task Force to “protect and promote religious liberty.\"",
+    "date": "2018-07-30",
+    "topic": "Religion and Faith"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 1997,
+  "left": {
+    "article_id": "1997:left",
+    "story_id": 1997,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Obama, others decry Orlando nightclub shooting as it reignites political debate",
+    "body": "President Obama was briefed Sunday morning on the Orlando shooting by Lisa Monaco, his homeland security and counterterrorism adviser, as lawmakers Expressed Their outrage and concern about the massacre at the gay nightclub.",
+    "roundup": "The deadliest shooting in US history happened last night at the Orlando club Pulse.",
+    "date": "2016-06-12",
+    "topic": "Violence in America"
+  },
+  "center": {
+    "article_id": "1997:center",
+    "story_id": 1997,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Officials: Orlando suspect a U.S. citizen, probe underway for terror ties",
+    "body": "Investigators were reviewing a range of possible terror links to a gunman who opened fire at a crowded Orlando nightclub early Sunday, leaving at least 50 dead and 53 others wounded. A federal law enforcement official identified the attacker as Omar Mateen of Port St. Lucie, Fla. The official, who is not authorized to comment publicly, said Mateen is a U.S. citizen, and investigators were reviewing whether Mate",
+    "roundup": "The deadliest shooting in US history happened last night at the Orlando club Pulse.",
+    "date": "2016-06-12",
+    "topic": "Violence in America"
+  },
+  "right": {
+    "article_id": "1997:right",
+    "story_id": 1997,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "50 killed in shooting at Florida nightclub in possible act of Islamic terror",
+    "body": "A gunman who federal authorities say had possible ties to terrorism opened fire early Sunday morning in a packed Orlando nightclub, killing 50 people and wounding at least 53 more in a bloody scene that ended hours later when police stormed the building and killed the shooter. Gov. Rick Scott declared a state of emergency in Orange County following the attack.",
+    "roundup": "The deadliest shooting in US history happened last night at the Orlando club Pulse.",
+    "date": "2016-06-12",
+    "topic": "Violence in America"
+  }
+}

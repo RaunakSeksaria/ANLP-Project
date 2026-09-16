@@ -1,0 +1,36 @@
+{
+  "story_id": 3189,
+  "left": {
+    "article_id": "3189:left",
+    "story_id": 3189,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Michael Cohen Tape Suggests Team Trump Lied About Karen McDougal",
+    "body": "In the recording, Trump discussed a payment he supposedly knew nothing about.",
+    "roundup": "President Trump's ex-lawyer Michael Cohen reportedly recorded a conversation in which they discussed a payment made to a former Playboy model who said she had an affair with Trump.",
+    "date": "2018-07-20",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "3189:center",
+    "story_id": 3189,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Michael Cohen taped Trump discussing payment to a Playboy model",
+    "body": "President Donald Trump's lawyer Michael Cohen secretly recorded a conversation in which he and Trump discussed payments to a former Playboy model who claimed to have had an affair with Trump, a person familiar with the matter said Friday.",
+    "roundup": "President Trump's ex-lawyer Michael Cohen reportedly recorded a conversation in which they discussed a payment made to a former Playboy model who said she had an affair with Trump.",
+    "date": "2018-07-20",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "3189:right",
+    "story_id": 3189,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Larry Klayman: Unethical for Cohen to Secretly Tape Trump",
+    "body": "Attorney Michael Cohen went against ethics guidelines by allegedly making a secret recording of a conversation he had with then-candidate Donald Trump in 2016, Freedom Watch founder Larry Klayman told Newsmax TV.",
+    "roundup": "President Trump's ex-lawyer Michael Cohen reportedly recorded a conversation in which they discussed a payment made to a former Playboy model who said she had an affair with Trump.",
+    "date": "2018-07-20",
+    "topic": "Politics"
+  }
+}

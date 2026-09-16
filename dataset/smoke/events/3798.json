@@ -1,0 +1,36 @@
+{
+  "story_id": 3798,
+  "left": {
+    "article_id": "3798:left",
+    "story_id": 3798,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "McConnell on Mueller report: 'Case closed'",
+    "body": "Mitch McConnell pointedly declared “case closed” on special counsel Robert Mueller’s investigation on Tuesday, in an extended partisan riff mocking Democrats for being fixated on bringing down President Donald Trump and being slow to respond to Russian election threats. The GOP leader offered little defense of the Mueller report’s depiction of Trump repeatedly trying to derail the investigation, instead saying that it was time to move on to other issues and that Democrats were “angry that our legal system will not magically undo the 2016 election.”",
+    "roundup": "Senate Majority Leader Mitch McConnell (R- Kentucky) delivers speech on Senate floor telling colleagues that the Mueller Report was conclusive and nothing further is necessary. Senate Minority Leader Chuck Schumer (D- New York) rebukes right after.",
+    "date": "2019-05-07",
+    "topic": "US Congress"
+  },
+  "center": {
+    "article_id": "3798:center",
+    "story_id": 3798,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "GOP leader McConnell to say ‘case closed’ on Mueller probe",
+    "body": "WASHINGTON (AP) — Senate Majority Leader Mitch McConnell is declaring “case closed” on the Russia probe and potential obstruction by President Donald Trump. The Republican leader, in his most significant public comments yet on the investigation, is expected to outline in a Tuesday speech how special counsel Robert Mueller’s “exhaustive” probe went on for two years and is now complete. The remarks are being billed as his final thoughts on the topic. “It’s finally over,” McConnell is expected to say.",
+    "roundup": "Senate Majority Leader Mitch McConnell (R- Kentucky) delivers speech on Senate floor telling colleagues that the Mueller Report was conclusive and nothing further is necessary. Senate Minority Leader Chuck Schumer (D- New York) rebukes right after.",
+    "date": "2019-05-07",
+    "topic": "US Congress"
+  },
+  "right": {
+    "article_id": "3798:right",
+    "story_id": 3798,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "McConnell rails against Mueller report politics in blistering floor speech: ‘Case closed’",
+    "body": "Senate Majority Leader Mitch McConnell, in a scorching floor speech on Tuesday, accused Democrats of rooting for a \"national crisis\" for political gain as he appealed to lawmakers to move on from the Russia controversy now that Special Counsel Robert Mueller's report is complete. \"Case closed,\" McConnell, R-Ky., declared. \"Case closed.\" Coming as Democrats clash with Attorney General Bill Barr over his handling of the report while using the findings to fuel their own investigations, McConnell suggested the political debate has shifted from the real problem of Russian interference in",
+    "roundup": "Senate Majority Leader Mitch McConnell (R- Kentucky) delivers speech on Senate floor telling colleagues that the Mueller Report was conclusive and nothing further is necessary. Senate Minority Leader Chuck Schumer (D- New York) rebukes right after.",
+    "date": "2019-05-07",
+    "topic": "US Congress"
+  }
+}

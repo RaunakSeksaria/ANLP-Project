@@ -1,0 +1,36 @@
+{
+  "story_id": 2663,
+  "left": {
+    "article_id": "2663:left",
+    "story_id": 2663,
+    "stance": "left",
+    "publisher": "ABC News (Online)",
+    "title": "President Trump travels to hurricane-ravaged Puerto Rico",
+    "body": "President Donald Trump will travel to Puerto Rico today -- two weeks after Hurricane Maria first struck the island. The president said he will meet with FEMA and military officials, first responders, and the people of Puerto Rico. Additionally, he said the governor of the U.S. Virgin Islands will “probably” travel to Puerto Rico to meet with him.",
+    "roundup": "President Donald Trump will travel to Puerto Rico today to meet with FEMA and military officials, first responders, and the people of Puerto Rico. The president’s trip comes amid some criticism over the federal government’s response to the island twice hit by a hurricane in the past month.",
+    "date": "2017-10-03",
+    "topic": "Disaster"
+  },
+  "center": {
+    "article_id": "2663:center",
+    "story_id": 2663,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Five things to watch as Trump visits Puerto Rico",
+    "body": "President Trump is heading to Puerto Rico Tuesday to survey the devastation from Hurricane Maria after he attacked San Juan's mayor and others after they criticized the federal response to the disaster.",
+    "roundup": "President Donald Trump will travel to Puerto Rico today to meet with FEMA and military officials, first responders, and the people of Puerto Rico. The president’s trip comes amid some criticism over the federal government’s response to the island twice hit by a hurricane in the past month.",
+    "date": "2017-10-03",
+    "topic": "Disaster"
+  },
+  "right": {
+    "article_id": "2663:right",
+    "story_id": 2663,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Trump to visit Puerto Rico amid accusations of mishandling Hurricane Maria aftermath",
+    "body": "President Donald Trump is embarking on a trip to Puerto Rican capital San Juan in the wake of criticism from local politicians for the allegedly weak response to Hurricane Maria that destroyed the U.S. territory.",
+    "roundup": "President Donald Trump will travel to Puerto Rico today to meet with FEMA and military officials, first responders, and the people of Puerto Rico. The president’s trip comes amid some criticism over the federal government’s response to the island twice hit by a hurricane in the past month.",
+    "date": "2017-10-03",
+    "topic": "Disaster"
+  }
+}

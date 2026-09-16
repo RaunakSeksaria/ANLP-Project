@@ -1,0 +1,36 @@
+{
+  "story_id": 2713,
+  "left": {
+    "article_id": "2713:left",
+    "story_id": 2713,
+    "stance": "left",
+    "publisher": "ThinkProgress",
+    "title": "Puerto Rico’s power restoration efforts hit a snag as Trump-connected company gets the boot",
+    "body": "Lawmakers call on federal government to take more active role.",
+    "roundup": "The FBI is investigating the $300 million contract to restore Puerto Rico's power after it was awarded to a very small company with ties to Donald Trump's Interior Secretary, Ryan Zinke. The company only had 2 employees with Hurricane Marie hit.",
+    "date": "2017-10-30",
+    "topic": "Disaster"
+  },
+  "center": {
+    "article_id": "2713:center",
+    "story_id": 2713,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "FBI Is Probing Puerto Rico Power Contract",
+    "body": "The Federal Bureau of Investigation is investigating a decision by Puerto Rico’s power authority to award a $300 million contract to a tiny Montana energy firm to rebuild electrical infrastructure damaged in Hurricane Maria, according to people familiar with the matter.",
+    "roundup": "The FBI is investigating the $300 million contract to restore Puerto Rico's power after it was awarded to a very small company with ties to Donald Trump's Interior Secretary, Ryan Zinke. The company only had 2 employees with Hurricane Marie hit.",
+    "date": "2017-10-30",
+    "topic": "Disaster"
+  },
+  "right": {
+    "article_id": "2713:right",
+    "story_id": 2713,
+    "stance": "right",
+    "publisher": "New York Post (News)",
+    "title": "FBI probes shady Puerto Rico power contract",
+    "body": "The FBI has launched an investigation into a $300 million contract awarded to a tiny Montana electric company to ​help rebuild Puerto Rico’s power grid after the island was decimated by Hurricane Maria, it was reported on Monday.",
+    "roundup": "The FBI is investigating the $300 million contract to restore Puerto Rico's power after it was awarded to a very small company with ties to Donald Trump's Interior Secretary, Ryan Zinke. The company only had 2 employees with Hurricane Marie hit.",
+    "date": "2017-10-30",
+    "topic": "Disaster"
+  }
+}

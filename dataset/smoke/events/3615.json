@@ -1,0 +1,36 @@
+{
+  "story_id": 3615,
+  "left": {
+    "article_id": "3615:left",
+    "story_id": 3615,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "‘Fox & Friends’ Host Falsely Claims Alexandria Ocasio-Cortez Will Tax 70 Percent Of Paychecks",
+    "body": "The congresswoman’s suggestion was that a 70 percent rate be applied only to earnings beyond $10 million.",
+    "roundup": "Rep. Alexandria Ocasio-Cortez has proposed a 70% tax on earnings over $10 million, drawing debate across the aisle as well as within the Democratic party over where the government should raise revenue. Some have criticized the new lawmaker for taking too drastic an approach, while others note that the top tax rate has been higher or just as high in the past.",
+    "date": "2019-01-15",
+    "topic": "Taxes"
+  },
+  "center": {
+    "article_id": "3615:center",
+    "story_id": 3615,
+    "stance": "center",
+    "publisher": "CNBC",
+    "title": "Alexandria Ocasio-Cortez has kick-started the Democratic tax debate with her 70% marginal rate idea",
+    "body": "The tax furor triggered by Rep. Alexandria Ocasio-Cortez has opened debate on a core question for all Democrats: Where should government get more money?",
+    "roundup": "Rep. Alexandria Ocasio-Cortez has proposed a 70% tax on earnings over $10 million, drawing debate across the aisle as well as within the Democratic party over where the government should raise revenue. Some have criticized the new lawmaker for taking too drastic an approach, while others note that the top tax rate has been higher or just as high in the past.",
+    "date": "2019-01-15",
+    "topic": "Taxes"
+  },
+  "right": {
+    "article_id": "3615:right",
+    "story_id": 3615,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Harry Reid Criticizes Ocasio-Cortez Tax Proposal as Too ‘Rapid’",
+    "body": "Former Nevada Democratic Sen. Majority Leader Harry Reid had some criticism for his party’s new star.",
+    "roundup": "Rep. Alexandria Ocasio-Cortez has proposed a 70% tax on earnings over $10 million, drawing debate across the aisle as well as within the Democratic party over where the government should raise revenue. Some have criticized the new lawmaker for taking too drastic an approach, while others note that the top tax rate has been higher or just as high in the past.",
+    "date": "2019-01-15",
+    "topic": "Taxes"
+  }
+}

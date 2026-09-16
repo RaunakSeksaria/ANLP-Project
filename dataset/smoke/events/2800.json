@@ -1,0 +1,36 @@
+{
+  "story_id": 2800,
+  "left": {
+    "article_id": "2800:left",
+    "story_id": 2800,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "Paul Ryan Asked If He’s ‘Living In A Fantasy World’ Amid His Defense Of Tax Bill",
+    "body": "The House speaker said he couldn’t predict how the bill would affect the deficit because that’s “in the future.”",
+    "roundup": "Savannah Guthrie interviewed Paul Ryan on the merits of the GOP's tax bill, with Guthrie asking if Ryan is living in a \"fantasy world\" for advocating that the plan will benefit the middle class. He asserted that the corporate tax cuts will help businesses reinvest in their employees.",
+    "date": "2017-12-20",
+    "topic": "Media Bias"
+  },
+  "center": {
+    "article_id": "2800:center",
+    "story_id": 2800,
+    "stance": "center",
+    "publisher": "Business Insider",
+    "title": "'Are you living in a fantasy world?': 'Today' show host grills Paul Ryan on tax bill",
+    "body": "The \"Today\" show host Savannah Guthrie didn't mince words Wednesday in challenging House Speaker Paul Ryan's argument that the GOP tax bill will spur enough economic growth to make up for an explosion in the deficit.",
+    "roundup": "Savannah Guthrie interviewed Paul Ryan on the merits of the GOP's tax bill, with Guthrie asking if Ryan is living in a \"fantasy world\" for advocating that the plan will benefit the middle class. He asserted that the corporate tax cuts will help businesses reinvest in their employees.",
+    "date": "2017-12-20",
+    "topic": "Media Bias"
+  },
+  "right": {
+    "article_id": "2800:right",
+    "story_id": 2800,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "NBC Anchor Treats Paul Ryan Like A Whipping Boy -- 'Are You Living In A Fantasy World?’",
+    "body": "House Speaker Paul Ryan had a tough time on the “Today Show” Wednesday when host Savannah Guthrie asked if he was “living in a fantasy world.”",
+    "roundup": "Savannah Guthrie interviewed Paul Ryan on the merits of the GOP's tax bill, with Guthrie asking if Ryan is living in a \"fantasy world\" for advocating that the plan will benefit the middle class. He asserted that the corporate tax cuts will help businesses reinvest in their employees.",
+    "date": "2017-12-20",
+    "topic": "Media Bias"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 3926,
+  "left": {
+    "article_id": "3926:left",
+    "story_id": 3926,
+    "stance": "left",
+    "publisher": "CBS News",
+    "title": "Trump to announce executive action on census citizenship question",
+    "body": "President Trump will announce an executive action to add the citizenship question to the 2020 census, two senior administration officials have confirmed to CBS News. Mr. Trump announced a White House Rose Garden press conference on the topic for Thursday afternoon. The anticipated announcement comes as the president exhibits frustration over the Supreme Court decision that his administration failed to provide adequate justification for adding the question. Multiple legal battles over the question are still playing out in lower courts. It isn't yet clear exactly what kind of",
+    "roundup": "Supporters say adding the citizenship question to the US Census would help enforce the Voting Rights Act. Opponents say this would result in undercounting minorities and immigrants.",
+    "date": "2019-07-11",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "3926:center",
+    "story_id": 3926,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Trump to announce executive action on census citizenship question",
+    "body": "President Trump on Thursday plans to announce an executive action related to the census, according to a White House official. The action is expected to address the citizenship question that the Supreme Court recently blocked the administration from adding to the 2020 census. Trump tweeted that he will hold a news conference in the afternoon “on the Census and Citizenship.” White House officials declined to discuss the content of the executive action, but said it may not be a full-blown executive order. Trump has hinted in recent days that he",
+    "roundup": "Supporters say adding the citizenship question to the US Census would help enforce the Voting Rights Act. Opponents say this would result in undercounting minorities and immigrants.",
+    "date": "2019-07-11",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "3926:right",
+    "story_id": 3926,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "Trump to Take Executive Action on Census Citizenship",
+    "body": "President Donald Trump President Donald Trump will announce an executive action to continue his fight to include a citizenship question on the 2020 U.S. Census, the latest sign he may not be dissuaded after being rebuffed by the Supreme Court. The executive action is expected to be announced at a news conference Thursday, according to three people familiar with Trump’s plan. The people declined to detail what the executive action would do, but indicated it may not be an executive order. The people, who asked for anonymity because the plan",
+    "roundup": "Supporters say adding the citizenship question to the US Census would help enforce the Voting Rights Act. Opponents say this would result in undercounting minorities and immigrants.",
+    "date": "2019-07-11",
+    "topic": "White House"
+  }
+}

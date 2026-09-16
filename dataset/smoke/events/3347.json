@@ -1,0 +1,36 @@
+{
+  "story_id": 3347,
+  "left": {
+    "article_id": "3347:left",
+    "story_id": 3347,
+    "stance": "left",
+    "publisher": "Los Angeles Times",
+    "title": "Fed hikes its key interest rate again and signals more increases coming despite Trump's criticism",
+    "body": "Despite President Trump's unusual public criticism of their monetary policy, Federal Reserve officials inched up their key interest rate again on Wednesday — and indicated they would be undaunted to do so again in the face of strong economic growth.",
+    "roundup": "The Federal Reserve raised interest rates on Wednesday for the third time this year and indicated that more hikes will come, citing strong economic growth. President Trump has been publicly critical of the move, tweeting in July, “Debt coming due & we are raising rates -- Really?”",
+    "date": "2018-09-26",
+    "topic": "Economy and Jobs"
+  },
+  "center": {
+    "article_id": "3347:center",
+    "story_id": 3347,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "The Fed Just Raised Its Rate Again. When Will It Start To Hurt Consumers?",
+    "body": "The Federal Reserve announced another quarter-percentage-point increase in interest rates Wednesday as expected, citing a strong labor market and economy.",
+    "roundup": "The Federal Reserve raised interest rates on Wednesday for the third time this year and indicated that more hikes will come, citing strong economic growth. President Trump has been publicly critical of the move, tweeting in July, “Debt coming due & we are raising rates -- Really?”",
+    "date": "2018-09-26",
+    "topic": "Economy and Jobs"
+  },
+  "right": {
+    "article_id": "3347:right",
+    "story_id": 3347,
+    "stance": "right",
+    "publisher": "Breitbart News",
+    "title": "Fed Hikes Interest Rates for Third Time in 2018, Signals More Hikes to Come",
+    "body": "The Federal Reserve raised interest rates on Wednesday and signaled that additional increases were on the way this year and next.",
+    "roundup": "The Federal Reserve raised interest rates on Wednesday for the third time this year and indicated that more hikes will come, citing strong economic growth. President Trump has been publicly critical of the move, tweeting in July, “Debt coming due & we are raising rates -- Really?”",
+    "date": "2018-09-26",
+    "topic": "Economy and Jobs"
+  }
+}

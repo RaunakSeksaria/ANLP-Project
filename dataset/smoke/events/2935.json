@@ -1,0 +1,36 @@
+{
+  "story_id": 2935,
+  "left": {
+    "article_id": "2935:left",
+    "story_id": 2935,
+    "stance": "left",
+    "publisher": "Daily Beast",
+    "title": "State Dept.: Tillerson Found Out He Was Fired From Trump’s Tweet",
+    "body": "Rex Tillerson did not talk to Donald Trump before he was fired Tuesday and apparently found out from the president’s tweet about it this morning, according to the State Department. A report from The Washington Post—which broke the news of Tillerson’s firing—claimed Trump asked the outgoing secretary of State to step aside last Friday, days before his strongly critical comments against Russia on Monday. However, a statement from Undersecretary of State Steve Goldstein, tweeted by ABC News’ Conor Finnegan, said: “The Secretary had every intention of staying because of the",
+    "roundup": "The White House has terminated Steve Goldstein, a top State Department aide, after he revealed that Secretary of State Rex Tillerson found out he was fired via President Trump's tweet, contradicting the official White House account which stated otherwise.",
+    "date": "2018-03-13",
+    "topic": "White House"
+  },
+  "center": {
+    "article_id": "2935:center",
+    "story_id": 2935,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Top Tillerson aide fired after contradicting White House account of firing",
+    "body": "The White House has reportedly fired an aide at the State Department who contradicted the White House account of President Trump's firing of Secretary of State Rex Tillerson.",
+    "roundup": "The White House has terminated Steve Goldstein, a top State Department aide, after he revealed that Secretary of State Rex Tillerson found out he was fired via President Trump's tweet, contradicting the official White House account which stated otherwise.",
+    "date": "2018-03-13",
+    "topic": "White House"
+  },
+  "right": {
+    "article_id": "2935:right",
+    "story_id": 2935,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Pink slips and promotions fly at White House in chaotic day of turnover",
+    "body": "A key Cabinet official was canned and another promoted, while one of the president’s closest aides was escorted from the White House on Tuesday in one of the busiest – and most chaotic – days of the Trump administration.",
+    "roundup": "The White House has terminated Steve Goldstein, a top State Department aide, after he revealed that Secretary of State Rex Tillerson found out he was fired via President Trump's tweet, contradicting the official White House account which stated otherwise.",
+    "date": "2018-03-13",
+    "topic": "White House"
+  }
+}

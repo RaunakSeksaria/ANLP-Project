@@ -1,0 +1,36 @@
+{
+  "story_id": 5186,
+  "left": {
+    "article_id": "5186:left",
+    "story_id": 5186,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "The US broke its record for the highest number of new coronavirus cases in a day",
+    "body": "The United States broke its record for the highest number of confirmed coronavirus cases reported in a single day on Friday, an alarming sign that what some epidemiologists are calling a “third wave” of infections is spreading at breakneck speed as winter approaches. According to the New York Times, by the end of the day on Friday, at least 85,085 cases were reported across the country — about 10,000 cases more than the previous same-day high on July 16. Public health experts have long warned that uneven compliance with social",
+    "roundup": "On Saturday, the United States added 83,718 new cases, which marks the second-highest single-day number after the 83,757 infections logged Friday, according to data from Johns Hopkins University. Friday's case numbers were approximately 10,000 cases higher than the previously recorded single-day high on July 16. In total the U.S. has reported 8.58 million infections. This month alone, 29 states have set records for increases in new cases, including five states considered key in the presidential election: Ohio, Michigan, North Carolina, Pennsylvania and Wisconsin. Coverage from across the political spectrum reported on the record numbers and analyzed the numbers overall and in each region. Some right-rated outlets focused on the rise in cases in cities with Democratic leaders, such as New York; some left-rated outlets tended to frame other news such as Mike Pence aides' positive virus tests and Trump's perceived recent shift in campaign rhetoric, in the context of the U.S.' record-breaking numbers.",
+    "date": "2020-10-25",
+    "topic": "Coronavirus"
+  },
+  "center": {
+    "article_id": "5186:center",
+    "story_id": 5186,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "U.S. Coronavirus Cases Near 84,000 for Second Day in a Row",
+    "body": "The U.S. added nearly 84,000 coronavirus cases for the second-straight day, with new infections coming in barely below the daily record set the previous day. Saturday’s total of 83,718 new cases marks the second-highest single-day count after the record 83,757 infections logged Friday, according to data compiled by Johns Hopkins University. The U.S. has reported nearly 8.58 million infections in total, with the death toll nearing 225,000.",
+    "roundup": "On Saturday, the United States added 83,718 new cases, which marks the second-highest single-day number after the 83,757 infections logged Friday, according to data from Johns Hopkins University. Friday's case numbers were approximately 10,000 cases higher than the previously recorded single-day high on July 16. In total the U.S. has reported 8.58 million infections. This month alone, 29 states have set records for increases in new cases, including five states considered key in the presidential election: Ohio, Michigan, North Carolina, Pennsylvania and Wisconsin. Coverage from across the political spectrum reported on the record numbers and analyzed the numbers overall and in each region. Some right-rated outlets focused on the rise in cases in cities with Democratic leaders, such as New York; some left-rated outlets tended to frame other news such as Mike Pence aides' positive virus tests and Trump's perceived recent shift in campaign rhetoric, in the context of the U.S.' record-breaking numbers.",
+    "date": "2020-10-25",
+    "topic": "Coronavirus"
+  },
+  "right": {
+    "article_id": "5186:right",
+    "story_id": 5186,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Nation reports record-high daily COVID-19 case count",
+    "body": "The United States confirmed more than 83,000 new coronavirus infections Friday, the highest total of the pandemic. The weekly average number of new cases reported each day has risen steadily since the first week of October, from about 43,000 to more than 61,000 as of Friday, COVID Tracking Project data shows. The previous record-high weekly average was exactly a month ago, with more than 67,000. The positivity rate in the U.S. has been on the rise since the start of October but still falls far short of the rate during",
+    "roundup": "On Saturday, the United States added 83,718 new cases, which marks the second-highest single-day number after the 83,757 infections logged Friday, according to data from Johns Hopkins University. Friday's case numbers were approximately 10,000 cases higher than the previously recorded single-day high on July 16. In total the U.S. has reported 8.58 million infections. This month alone, 29 states have set records for increases in new cases, including five states considered key in the presidential election: Ohio, Michigan, North Carolina, Pennsylvania and Wisconsin. Coverage from across the political spectrum reported on the record numbers and analyzed the numbers overall and in each region. Some right-rated outlets focused on the rise in cases in cities with Democratic leaders, such as New York; some left-rated outlets tended to frame other news such as Mike Pence aides' positive virus tests and Trump's perceived recent shift in campaign rhetoric, in the context of the U.S.' record-breaking numbers.",
+    "date": "2020-10-25",
+    "topic": "Coronavirus"
+  }
+}

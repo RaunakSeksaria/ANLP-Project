@@ -1,0 +1,36 @@
+{
+  "story_id": 3662,
+  "left": {
+    "article_id": "3662:left",
+    "story_id": 3662,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "Republicans gush over Klobuchar",
+    "body": "GOP senators praised the Minnesota Democrat for her deal-cutting ways — even as they worried it could doom her presidential bid.",
+    "roundup": "Senator Amy Klobuchar (D-MN) enters the 2020 Presidential race as a moderate in an increasingly crowded field.",
+    "date": "2019-02-11",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "3662:center",
+    "story_id": 3662,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Senator Klobuchar joins Democratic presidential field",
+    "body": "Senator Amy Klobuchar entered the 2020 presidential race on Sunday, becoming the first moderate in an increasingly crowded field of Democrats vying to challenge Republican President Donald Trump.",
+    "roundup": "Senator Amy Klobuchar (D-MN) enters the 2020 Presidential race as a moderate in an increasingly crowded field.",
+    "date": "2019-02-11",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "3662:right",
+    "story_id": 3662,
+    "stance": "right",
+    "publisher": "Reason",
+    "title": "Scandal-Plagued Sen. Amy Klobuchar Announces 2020 Presidential Run",
+    "body": "\"Minnesota Nice\" branding belies mean streak and temper, said staff. Will it harm her presidential chances?",
+    "roundup": "Senator Amy Klobuchar (D-MN) enters the 2020 Presidential race as a moderate in an increasingly crowded field.",
+    "date": "2019-02-11",
+    "topic": "Elections"
+  }
+}

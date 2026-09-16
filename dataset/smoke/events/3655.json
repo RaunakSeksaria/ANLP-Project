@@ -1,0 +1,36 @@
+{
+  "story_id": 3655,
+  "left": {
+    "article_id": "3655:left",
+    "story_id": 3655,
+    "stance": "left",
+    "publisher": "Politico",
+    "title": "Sorting through the mess in Virginia",
+    "body": "Virginia law spells out how to replace a governor — but the cascading scandals hitting state officials make everything more complicated.",
+    "roundup": "The political upheaval in Virginia intensified on Wednesday as Attorney General Mark Herring admitted to wearing blackface in college and an accuser released a statement detailing allegations of sexual assault against Lt. Gov. Justin Fairfax.",
+    "date": "2019-02-06",
+    "topic": "Politics"
+  },
+  "center": {
+    "article_id": "3655:center",
+    "story_id": 3655,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Fairfax accuser says consensual situation 'quickly turned into a sexual assault'",
+    "body": "Vanessa Tyson, a professor who has accused Virginia Lt. Gov. Justin Fairfax (D) of sexual assault, issued her first statement Wednesday detailing her allegation against him.",
+    "roundup": "The political upheaval in Virginia intensified on Wednesday as Attorney General Mark Herring admitted to wearing blackface in college and an accuser released a statement detailing allegations of sexual assault against Lt. Gov. Justin Fairfax.",
+    "date": "2019-02-06",
+    "topic": "Politics"
+  },
+  "right": {
+    "article_id": "3655:right",
+    "story_id": 3655,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Another one: Virginia AG Mark Herring admits to wearing blackface in 1980",
+    "body": "Virginia Attorney General Mark Herring, a Democrat, admitted Wednesday to wearing blackface at a college party in 1980, further ensnaring the state’s leadership in chaos.",
+    "roundup": "The political upheaval in Virginia intensified on Wednesday as Attorney General Mark Herring admitted to wearing blackface in college and an accuser released a statement detailing allegations of sexual assault against Lt. Gov. Justin Fairfax.",
+    "date": "2019-02-06",
+    "topic": "Politics"
+  }
+}

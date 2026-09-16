@@ -1,0 +1,36 @@
+{
+  "story_id": 2846,
+  "left": {
+    "article_id": "2846:left",
+    "story_id": 2846,
+    "stance": "left",
+    "publisher": "HuffPost",
+    "title": "On The Anniversary Of Trump’s Inauguration, The Government Is Shut Down",
+    "body": "“We will no longer accept politicians who are all talk and no action,” he proclaimed at his inauguration.",
+    "roundup": "Senators voted late Friday to reject a House-passed bill that would have funded the government until February 16. Although the voting did not fall completely along party lines, most Democrats voted against the bill in hopes of negotiation on \"Dreamers,\" while many Republicans were making arguments related to child healthcare funding. Many on the Left are blaming the Trump administration and Republicans for the shutdown, while those on the Right blame Democrats and Senate Minority Leader Chuck Schumer.",
+    "date": "2018-01-20",
+    "topic": "US Congress"
+  },
+  "center": {
+    "article_id": "2846:center",
+    "story_id": 2846,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Senate rejects funding bill, partial shutdown begins",
+    "body": "Senators voted late Friday to reject a House-passed bill that would have funded the government until Feb. 16, beginning a partial government shutdown.",
+    "roundup": "Senators voted late Friday to reject a House-passed bill that would have funded the government until February 16. Although the voting did not fall completely along party lines, most Democrats voted against the bill in hopes of negotiation on \"Dreamers,\" while many Republicans were making arguments related to child healthcare funding. Many on the Left are blaming the Trump administration and Republicans for the shutdown, while those on the Right blame Democrats and Senate Minority Leader Chuck Schumer.",
+    "date": "2018-01-20",
+    "topic": "US Congress"
+  },
+  "right": {
+    "article_id": "2846:right",
+    "story_id": 2846,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Illegal immigrants cheer as Dreamer shutdown hits",
+    "body": "Democrats called it the Trump shutdown. Republicans labeled it the Schumer shutdown. But in reality, it was the Dreamer shutdown.",
+    "roundup": "Senators voted late Friday to reject a House-passed bill that would have funded the government until February 16. Although the voting did not fall completely along party lines, most Democrats voted against the bill in hopes of negotiation on \"Dreamers,\" while many Republicans were making arguments related to child healthcare funding. Many on the Left are blaming the Trump administration and Republicans for the shutdown, while those on the Right blame Democrats and Senate Minority Leader Chuck Schumer.",
+    "date": "2018-01-20",
+    "topic": "US Congress"
+  }
+}

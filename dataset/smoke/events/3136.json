@@ -1,0 +1,36 @@
+{
+  "story_id": 3136,
+  "left": {
+    "article_id": "3136:left",
+    "story_id": 3136,
+    "stance": "left",
+    "publisher": "Newsweek",
+    "title": "U.S. Debt on Track to Grow to 'Highest Level in U.S. History by Far' Says CBO",
+    "body": "America’s growing budget deficit will increase debt to the highest level in U.S. history by far, according to the Congressional Budget Office 2018 long-term budget outlook.",
+    "roundup": "The U.S. national debt is headed towards historic levels, expected to double to 152 percent of the economy by 2048, according to the Congressional Budget Office. Primary factors include the recent tax cuts, which the GOP is currently considering making permanent for individuals, as well as increasing costs of Social Security and Medicare.",
+    "date": "2018-06-26",
+    "topic": "Federal Budget"
+  },
+  "center": {
+    "article_id": "3136:center",
+    "story_id": 3136,
+    "stance": "center",
+    "publisher": "Wall Street Journal (News)",
+    "title": "CBO: Rising Interest Would Increasingly Pressure Government Finances",
+    "body": "Rising interest rates will put increasing pressure on government finances and push interest payments to record levels in the coming decades, the Congressional Budget Office said Tuesday.",
+    "roundup": "The U.S. national debt is headed towards historic levels, expected to double to 152 percent of the economy by 2048, according to the Congressional Budget Office. Primary factors include the recent tax cuts, which the GOP is currently considering making permanent for individuals, as well as increasing costs of Social Security and Medicare.",
+    "date": "2018-06-26",
+    "topic": "Federal Budget"
+  },
+  "right": {
+    "article_id": "3136:right",
+    "story_id": 3136,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Federal debt to reach $100 trillion: CBO",
+    "body": "The government is now staring at $100 trillion in total debt, the Congressional Budget Office said Tuesday, chronicling the disastrous trajectory of federal fiscal health.",
+    "roundup": "The U.S. national debt is headed towards historic levels, expected to double to 152 percent of the economy by 2048, according to the Congressional Budget Office. Primary factors include the recent tax cuts, which the GOP is currently considering making permanent for individuals, as well as increasing costs of Social Security and Medicare.",
+    "date": "2018-06-26",
+    "topic": "Federal Budget"
+  }
+}

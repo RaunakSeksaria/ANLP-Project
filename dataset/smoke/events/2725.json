@@ -1,0 +1,36 @@
+{
+  "story_id": 2725,
+  "left": {
+    "article_id": "2725:left",
+    "story_id": 2725,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Paradise Papers leak: Documents reveal how the wealthy are hiding their money",
+    "body": "A huge leak of financial documents revealed by a group of about 100 media organizations on Sunday provided deep insights into some of the mechanisms used by top politicians and celebrities to escape paying taxes.",
+    "roundup": "Less than one week after Trump reiterated his promise to \"bring back trillions of dollars from offshore\", millions of leaked documents revealed that several Trump officials have used offshore accounts to keep company finances or personal investments in tax havens, including Rex Tillerson, Ben Carson, and Steve Mnuchin.",
+    "date": "2017-11-06",
+    "topic": "Taxes"
+  },
+  "center": {
+    "article_id": "2725:center",
+    "story_id": 2725,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Leaked documents reveal offshore dealings of top Trump officials",
+    "body": "A slew of leaked documents reported by a consortium of news organizations show several individuals connected to President Trump as having legally protected their business investments or influenced policies that would keep client and company funds in tax havens.",
+    "roundup": "Less than one week after Trump reiterated his promise to \"bring back trillions of dollars from offshore\", millions of leaked documents revealed that several Trump officials have used offshore accounts to keep company finances or personal investments in tax havens, including Rex Tillerson, Ben Carson, and Steve Mnuchin.",
+    "date": "2017-11-06",
+    "topic": "Taxes"
+  },
+  "right": {
+    "article_id": "2725:right",
+    "story_id": 2725,
+    "stance": "right",
+    "publisher": "Red State",
+    "title": "The Paradise Papers: The Next Big Scandal To Hit Washington",
+    "body": "Ok. What’s going on? Several news organizations have gotten their hands on leaked documents that have to deal with offshore accounts, tax havens and policies being influenced by some Trump associates and cabinet members.",
+    "roundup": "Less than one week after Trump reiterated his promise to \"bring back trillions of dollars from offshore\", millions of leaked documents revealed that several Trump officials have used offshore accounts to keep company finances or personal investments in tax havens, including Rex Tillerson, Ben Carson, and Steve Mnuchin.",
+    "date": "2017-11-06",
+    "topic": "Taxes"
+  }
+}

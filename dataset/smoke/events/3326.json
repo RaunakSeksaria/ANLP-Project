@@ -1,0 +1,36 @@
+{
+  "story_id": 3326,
+  "left": {
+    "article_id": "3326:left",
+    "story_id": 3326,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "China Once Looked Tough on Trade. Now Its Options Are Dwindling.",
+    "body": "BEIJING — President Trump imposed tariffs in July on $34 billion in Chinese goods. China matched them dollar for dollar with its own. Then he hit an additional $16 billion in goods in August. China matched that, too. Now, Mr. Trump has made his biggest move yet, announcing 10 percent tariffs starting in a week on $200 billion a year of Chinese goods. But this time, China can’t match them all — and that crystallizes a growing problem for Beijing.",
+    "roundup": "In response to President Trump's tariffs on Chinese goods, China announced today that they will be imposing another $60 billion in new trade tariffs on US goods.",
+    "date": "2018-09-18",
+    "topic": "Trade"
+  },
+  "center": {
+    "article_id": "3326:center",
+    "story_id": 3326,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "China hits back at Trump with tariffs on $60bn of US goods",
+    "body": "China has hit back at President Donald Trump by imposing new trade tariffs on $60bn of American goods. It comes after the US slapped duties on $200bn of Chinese imports on Monday, escalating its trade war with Beijing. China will target American goods such as liquefied natural gas, which are produced in states loyal to the US president.",
+    "roundup": "In response to President Trump's tariffs on Chinese goods, China announced today that they will be imposing another $60 billion in new trade tariffs on US goods.",
+    "date": "2018-09-18",
+    "topic": "Trade"
+  },
+  "right": {
+    "article_id": "3326:right",
+    "story_id": 3326,
+    "stance": "right",
+    "publisher": "TheBlaze.com",
+    "title": "China retaliates with tariffs on another $60 billion in US imports",
+    "body": "The Chinese government has announced that it will be fulfilling its promise to retaliate against further U.S. tariffs. Chinese tariffs on $60 billion worth of U.S. products are scheduled to go into effect next week.",
+    "roundup": "In response to President Trump's tariffs on Chinese goods, China announced today that they will be imposing another $60 billion in new trade tariffs on US goods.",
+    "date": "2018-09-18",
+    "topic": "Trade"
+  }
+}

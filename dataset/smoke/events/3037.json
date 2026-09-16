@@ -1,0 +1,36 @@
+{
+  "story_id": 3037,
+  "left": {
+    "article_id": "3037:left",
+    "story_id": 3037,
+    "stance": "left",
+    "publisher": "Daily Beast",
+    "title": "Congress Can Still Save the Internet—but the Clock Is Ticking",
+    "body": "It’s not too late to rescue net neutrality: Congress can restore the rules if it takes action before 60 legislative days have passed since they expired. But will it get the votes?",
+    "roundup": "Senate Democrats are pushing to force a vote on reinstating net neutrality regulations, which the Trump administration overturned last December. With Sen. John McCain absent, they have the votes to succeed, although it is unlikely to pass in the House. Supporters of the vote say that the regulations are important in protecting consumers, while detractors argue that such rules stifle innovation and are an example of government overreach.",
+    "date": "2018-05-09",
+    "topic": "Technology"
+  },
+  "center": {
+    "article_id": "3037:center",
+    "story_id": 3037,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Senate Dems move to force net neutrality vote",
+    "body": "Senate Democrats on Wednesday formally launched their push to bring a vote on restoring net neutrality protections to the Senate floor.",
+    "roundup": "Senate Democrats are pushing to force a vote on reinstating net neutrality regulations, which the Trump administration overturned last December. With Sen. John McCain absent, they have the votes to succeed, although it is unlikely to pass in the House. Supporters of the vote say that the regulations are important in protecting consumers, while detractors argue that such rules stifle innovation and are an example of government overreach.",
+    "date": "2018-05-09",
+    "topic": "Technology"
+  },
+  "right": {
+    "article_id": "3037:right",
+    "story_id": 3037,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Senate Democrats press vote to save Obama-era net neutrality rules",
+    "body": "Senate Democrats launched a drive Wednesday to force a vote that could restore Obama-era “net neutrality” rules for the internet, looking to overturn the Trump administration’s decision last year to revoke the rules.",
+    "roundup": "Senate Democrats are pushing to force a vote on reinstating net neutrality regulations, which the Trump administration overturned last December. With Sen. John McCain absent, they have the votes to succeed, although it is unlikely to pass in the House. Supporters of the vote say that the regulations are important in protecting consumers, while detractors argue that such rules stifle innovation and are an example of government overreach.",
+    "date": "2018-05-09",
+    "topic": "Technology"
+  }
+}

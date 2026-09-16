@@ -1,0 +1,36 @@
+{
+  "story_id": 3188,
+  "left": {
+    "article_id": "3188:left",
+    "story_id": 3188,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "Intel chief's shocked reaction to Putin invite (Watch)",
+    "body": "Director of National Intelligence Dan Coats reacted to breaking news that Russian President Vladimir Putin is in talks for a visit to Washington in the fall, according to the White House.",
+    "roundup": "Director of National Intelligence Dan Coats was surprised to hear that President Trump has invited Russian President Vladimir Putin to come to Washington in the Fall.",
+    "date": "2018-07-20",
+    "topic": "Russia"
+  },
+  "center": {
+    "article_id": "3188:center",
+    "story_id": 3188,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "Incredulity as Russian leader is invited to visit US",
+    "body": "President Donald Trump has invited Russian leader Vladimir Putin to visit the US, in a move that drew startled laughter from a US intelligence chief.",
+    "roundup": "Director of National Intelligence Dan Coats was surprised to hear that President Trump has invited Russian President Vladimir Putin to come to Washington in the Fall.",
+    "date": "2018-07-20",
+    "topic": "Russia"
+  },
+  "right": {
+    "article_id": "3188:right",
+    "story_id": 3188,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "Trump's Director of National Intelligence Was Pretty Surprised to Hear Putin Was Invited to the White House",
+    "body": "President Trump has another date with Russia's Vladimir Putin this fall, according to The White House.",
+    "roundup": "Director of National Intelligence Dan Coats was surprised to hear that President Trump has invited Russian President Vladimir Putin to come to Washington in the Fall.",
+    "date": "2018-07-20",
+    "topic": "Russia"
+  }
+}

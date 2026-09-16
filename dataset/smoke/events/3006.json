@@ -1,0 +1,36 @@
+{
+  "story_id": 3006,
+  "left": {
+    "article_id": "3006:left",
+    "story_id": 3006,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Senate panel narrowly endorses Mike Pompeo for secretary of state after Trump intervenes with key Republican",
+    "body": "Secretary of state nominee Mike Pompeo narrowly eked out an endorsement from the Senate Foreign Relations Committee on Monday after President Trump and a Democratic senator intervened at the last minute, all but guaranteeing that he will be confirmed by the full Senate later this week.",
+    "roundup": "The Senate Foreign Relations Committee approved the nomination of President Trump’s choice for secretary of state, Mike Pompeo, after Senator Rand Paul (R-KY) decided to support the CIA director.",
+    "date": "2018-04-24",
+    "topic": "US Senate"
+  },
+  "center": {
+    "article_id": "3006:center",
+    "story_id": 3006,
+    "stance": "center",
+    "publisher": "Reuters",
+    "title": "Senate committee paves way for Pompeo to become top U.S. diplomat",
+    "body": "A Senate committee approved the nomination of President Donald Trump’s choice for secretary of state, Mike Pompeo, on Monday after a Republican senator who had been opposed threw his support behind the CIA director in the face of party pressure.",
+    "roundup": "The Senate Foreign Relations Committee approved the nomination of President Trump’s choice for secretary of state, Mike Pompeo, after Senator Rand Paul (R-KY) decided to support the CIA director.",
+    "date": "2018-04-24",
+    "topic": "US Senate"
+  },
+  "right": {
+    "article_id": "3006:right",
+    "story_id": 3006,
+    "stance": "right",
+    "publisher": "CBN",
+    "title": "'We Should See This More Often': Democrat Casts Shocking Pompeo Vote to Help Mourning GOP Friend",
+    "body": "In a surprising twist, the Senate Foreign Relations Committee will send President Donald Trump's pick for secretary of state, Mike Pompeo, to the Senate floor with a favorable recommendation.",
+    "roundup": "The Senate Foreign Relations Committee approved the nomination of President Trump’s choice for secretary of state, Mike Pompeo, after Senator Rand Paul (R-KY) decided to support the CIA director.",
+    "date": "2018-04-24",
+    "topic": "US Senate"
+  }
+}

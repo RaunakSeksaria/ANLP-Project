@@ -1,0 +1,36 @@
+{
+  "story_id": 3466,
+  "left": {
+    "article_id": "3466:left",
+    "story_id": 3466,
+    "stance": "left",
+    "publisher": "ThinkProgress",
+    "title": "Abrams campaign wins court rulings as push for a runoff election continues",
+    "body": "A court extended the deadline to certify election results until Friday.",
+    "roundup": "A federal judge ruled that Georgia election officials must review all provisional ballots cast in last week's gubernatorial race, delaying the state's deadline for certifying the results until Friday. Democrat Stacey Abrams hopes that Republican Brian Kemp's lead will fall below 50 percent, which would lock the two in a runoff.",
+    "date": "2018-11-13",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "3466:center",
+    "story_id": 3466,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Federal judge orders review of all provisional ballots in Georgia, delays deadline for certification",
+    "body": "A federal judge has ordered Georgia election officials to review all provisional ballots cast in the midterm elections and prohibited the state from certifying the election before Friday.",
+    "roundup": "A federal judge ruled that Georgia election officials must review all provisional ballots cast in last week's gubernatorial race, delaying the state's deadline for certifying the results until Friday. Democrat Stacey Abrams hopes that Republican Brian Kemp's lead will fall below 50 percent, which would lock the two in a runoff.",
+    "date": "2018-11-13",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "3466:right",
+    "story_id": 3466,
+    "stance": "right",
+    "publisher": "Washington Free Beacon",
+    "title": "Judge Orders Review of Georgia’s Provisional Ballots, but Abrams Comeback Still Unlikely",
+    "body": "A federal judge ruled Monday that Georgia election officials must review provisional ballots that haven't been counted in the state's hotly contested governor's race.",
+    "roundup": "A federal judge ruled that Georgia election officials must review all provisional ballots cast in last week's gubernatorial race, delaying the state's deadline for certifying the results until Friday. Democrat Stacey Abrams hopes that Republican Brian Kemp's lead will fall below 50 percent, which would lock the two in a runoff.",
+    "date": "2018-11-13",
+    "topic": "Elections"
+  }
+}

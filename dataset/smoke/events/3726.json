@@ -1,0 +1,36 @@
+{
+  "story_id": 3726,
+  "left": {
+    "article_id": "3726:left",
+    "story_id": 3726,
+    "stance": "left",
+    "publisher": "BuzzFeed News",
+    "title": "California Congressman Says He's Suing Twitter For Allowing Parody Accounts Alleging To Be His Mom",
+    "body": "Devin Nunes, a Republican congressman from California, said on Monday that he is suing Twitter, a GOP operative, and unnamed defendants behind parody accounts on the social network, for defamation and other claims, after those accounts insulted him on the platform. In an appearance on Hannity, Nunes said he was suing Twitter in the first of many lawsuits he plans to file against technology companies for their bias against conservatives. That appearance came after Fox News reported that the congressman had filed a $250 million lawsuit \"in Virginia state court\"",
+    "roundup": "Rep. Devin Nunes is suing Twitter and some of its users for over $250 million, alleging that the platform censored conservative voices and allowed defamatory statements to spread in order to influence the 2018 midterm elections.",
+    "date": "2019-03-18",
+    "topic": "Technology"
+  },
+  "center": {
+    "article_id": "3726:center",
+    "story_id": 3726,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Nunes sues Twitter, users for more than $250M",
+    "body": "Rep. Devin Nunes (R-Calif.), the ranking member of the House Intelligence Committee and its former chairman, is suing Twitter and a number of its users for more than $250 million. The lawsuit filed Monday alleges the social media giant censored conservative voices by \"shadow-banning\" them, which Nunes says potentially impacted the 2018 midterm election results. Others named in the lawsuit include GOP operative Liz Mair, Mair Strategies, \"Devin Nunes' Mom\" (@DevinNunesMom) and \"Devin Nunes' cow\" (@DevinCow), two parody accounts that mocked the Trump ally and California Republican.",
+    "roundup": "Rep. Devin Nunes is suing Twitter and some of its users for over $250 million, alleging that the platform censored conservative voices and allowed defamatory statements to spread in order to influence the 2018 midterm elections.",
+    "date": "2019-03-18",
+    "topic": "Technology"
+  },
+  "right": {
+    "article_id": "3726:right",
+    "story_id": 3726,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Nunes sues Twitter, some users, seeks over $250M alleging anti-conservative 'shadow bans,' smears",
+    "body": "California GOP Rep. Devin Nunes filed a major lawsuit seeking $250 million in compensatory damages and $350,000 in punitive damages against Twitter and a handful of its users on Monday,",
+    "roundup": "Rep. Devin Nunes is suing Twitter and some of its users for over $250 million, alleging that the platform censored conservative voices and allowed defamatory statements to spread in order to influence the 2018 midterm elections.",
+    "date": "2019-03-18",
+    "topic": "Technology"
+  }
+}

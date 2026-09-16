@@ -1,0 +1,36 @@
+{
+  "story_id": 2732,
+  "left": {
+    "article_id": "2732:left",
+    "story_id": 2732,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "Mitch McConnell Says Roy Moore Should Exit Senate Race ‘if These Allegations Are True’",
+    "body": "Senator Mitch McConnell of Kentucky, the majority leader, said on Thursday that if Roy S. Moore made sexual overtures to four women when they were teenagers, as they allege, the Republican Party nominee for a Senate seat in Alabama should step aside ahead of a Dec. 12 special election.",
+    "roundup": "Roy Moore, the highly conservative Republican candidate for Alabama's open Senate seat, has been accused of sexually assaulting a 14 year old when he was 32 years old.",
+    "date": "2017-11-09",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2732:center",
+    "story_id": 2732,
+    "stance": "center",
+    "publisher": "NPR (Online News)",
+    "title": "Woman Accuses Alabama Senate Candidate Of Sexual Contact When She Was 14",
+    "body": "Roy Moore, the Republican nominee for the open Senate seat in Alabama, is facing an accusation from a woman who says that he initiated sexual contact when she was 14 years old and he was a 32-year-old assistant district attorney.",
+    "roundup": "Roy Moore, the highly conservative Republican candidate for Alabama's open Senate seat, has been accused of sexually assaulting a 14 year old when he was 32 years old.",
+    "date": "2017-11-09",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2732:right",
+    "story_id": 2732,
+    "stance": "right",
+    "publisher": "Washington Examiner",
+    "title": "Alabama state auditor defends Roy Moore against sexual allegations, invokes Mary and Joseph",
+    "body": "Judge Roy Moore, the Republican candidate for Alabama's upcoming special Senate election, denies allegations that he romantically pursued teenagers as young as 14 when he was in his 30s. Even if the allegations are true, one statewide elected official in Alabama said it's \"much ado about nothing.\"",
+    "roundup": "Roy Moore, the highly conservative Republican candidate for Alabama's open Senate seat, has been accused of sexually assaulting a 14 year old when he was 32 years old.",
+    "date": "2017-11-09",
+    "topic": "Elections"
+  }
+}

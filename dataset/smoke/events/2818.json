@@ -1,0 +1,36 @@
+{
+  "story_id": 2818,
+  "left": {
+    "article_id": "2818:left",
+    "story_id": 2818,
+    "stance": "left",
+    "publisher": "Guest Writer - Left",
+    "title": "OPINION: Kim Jong Un pitting South Korea against US by re-establishing talks",
+    "body": "North and South Korea officially resumed direct contact through a military hotline on Wednesday, but while the move engendered optimism among many South Koreans, there are plenty of people on both sides of the globe questioning the motives of dictator Kim Jong Un.",
+    "roundup": "North Korea Contacted Seoul over a hotline for the first time in almost two years. The call was to discuss the Winter Olympics, but some question the motives of Kim Jong Un.",
+    "date": "2018-01-03",
+    "topic": "North Korea"
+  },
+  "center": {
+    "article_id": "2818:center",
+    "story_id": 2818,
+    "stance": "center",
+    "publisher": "BBC News",
+    "title": "North Korea reopens hotline to South to discuss Olympics",
+    "body": "North Korea has reopened a hotline to South Korea, almost two years after it was disabled on the orders of leader Kim Jong-un.",
+    "roundup": "North Korea Contacted Seoul over a hotline for the first time in almost two years. The call was to discuss the Winter Olympics, but some question the motives of Kim Jong Un.",
+    "date": "2018-01-03",
+    "topic": "North Korea"
+  },
+  "right": {
+    "article_id": "2818:right",
+    "story_id": 2818,
+    "stance": "right",
+    "publisher": "Newsmax (News)",
+    "title": "As Trump Taunts Kim, NKorea Speaks With Seoul Over Hotline",
+    "body": "North Korea contacted authorities in Seoul over a hotline for the first time in about two years, paving the way for a thaw during the Winter Olympics despite President Donald Trump's fresh taunts at Kim Jong Un.",
+    "roundup": "North Korea Contacted Seoul over a hotline for the first time in almost two years. The call was to discuss the Winter Olympics, but some question the motives of Kim Jong Un.",
+    "date": "2018-01-03",
+    "topic": "North Korea"
+  }
+}

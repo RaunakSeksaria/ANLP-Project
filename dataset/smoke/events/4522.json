@@ -1,0 +1,36 @@
+{
+  "story_id": 4522,
+  "left": {
+    "article_id": "4522:left",
+    "story_id": 4522,
+    "stance": "left",
+    "publisher": "CNN (Web News)",
+    "title": "The social-distancing deniers have arrived",
+    "body": "(CNN) - Patience is in ever-shorter supply. No one is happy with the current situation. But some Americans see the yoke of oppression in public health efforts to keep people home, and they're growing louder. Underneath the general frustration and dazed acceptance of so much of the world changing its lifestyle for the time being lurks a growing defiance of the science that tells us how to deal with Covid-19 and the government that is telling everyone (to varying degrees) to stay indoors. That President Donald Trump, normally an",
+    "roundup": "Protests broke out in several states this week, with the largest happening in Michigan, as people expressed disdain amid continued social and economic shutdowns. Many of the demonstrations were reportedly led by self-proclaimed pro-Trump conservatives. Left- and center-rated outlets were more likely to frame protesters as \"far-right\" groups who were ignoring social distancing recommendations and questioning the severity of the pandemic. Conversely, right-rated outlets generally painted the protests as pertaining more to economic instability and the public's desire to return to work. Many reporting outlets also focused on President Trump's apparent support for the demonstrations.",
+    "date": "2020-04-17",
+    "topic": "Coronavirus"
+  },
+  "center": {
+    "article_id": "4522:center",
+    "story_id": 4522,
+    "stance": "center",
+    "publisher": "Associated Press",
+    "title": "Pro-Trump protesters push back on stay-at-home orders",
+    "body": "While many Americans are filled with fear, Melissa Ackison says the coronavirus pandemic has filled her with anger. The stay-at-home orders are government overreach, the conservative Ohio state Senate candidate says, and the labeling of some workers as “essential” arbitrary. “It enrages something inside of you,” said Ackison, who was among those who protested Republican Gov. Mike DeWine’s orders at the statehouse in Columbus with her 10-year-old son. She has “no fear whatsoever” of contracting the virus, she said Thursday, dismissing it as hype. The Ohio protest was among a",
+    "roundup": "Protests broke out in several states this week, with the largest happening in Michigan, as people expressed disdain amid continued social and economic shutdowns. Many of the demonstrations were reportedly led by self-proclaimed pro-Trump conservatives. Left- and center-rated outlets were more likely to frame protesters as \"far-right\" groups who were ignoring social distancing recommendations and questioning the severity of the pandemic. Conversely, right-rated outlets generally painted the protests as pertaining more to economic instability and the public's desire to return to work. Many reporting outlets also focused on President Trump's apparent support for the demonstrations.",
+    "date": "2020-04-17",
+    "topic": "Coronavirus"
+  },
+  "right": {
+    "article_id": "4522:right",
+    "story_id": 4522,
+    "stance": "right",
+    "publisher": "Fox News (Online News)",
+    "title": "Rallies to reopen economy spread across country as officials urge caution to prevent coronavirus resurgence",
+    "body": "A growing wave of rallies are taking place across the country as protesters demand that state governments lift their orders closing businesses and public places as soon as possible, even as officials urge caution to prevent a resurgence of coronavirus. These Americans say they are suffering because of the economic shutdowns nationwide to reduce the spread of the coronavirus and are antsy to resume working and going out in public as usual.",
+    "roundup": "Protests broke out in several states this week, with the largest happening in Michigan, as people expressed disdain amid continued social and economic shutdowns. Many of the demonstrations were reportedly led by self-proclaimed pro-Trump conservatives. Left- and center-rated outlets were more likely to frame protesters as \"far-right\" groups who were ignoring social distancing recommendations and questioning the severity of the pandemic. Conversely, right-rated outlets generally painted the protests as pertaining more to economic instability and the public's desire to return to work. Many reporting outlets also focused on President Trump's apparent support for the demonstrations.",
+    "date": "2020-04-17",
+    "topic": "Coronavirus"
+  }
+}

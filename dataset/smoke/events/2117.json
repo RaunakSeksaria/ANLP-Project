@@ -1,0 +1,36 @@
+{
+  "story_id": 2117,
+  "left": {
+    "article_id": "2117:left",
+    "story_id": 2117,
+    "stance": "left",
+    "publisher": "Guest Writer - Left",
+    "title": "OPINION: Hillary Clinton’s 'deplorables' comment is not entirely wrong",
+    "body": "At some point in every election cycle, a TV news anchor — and more likely several of them — will speak in reverential tones about “the wisdom of the American people.” This expression of clichéd, lazy patriotism implies that the collective choice made by voters when they go to the polls is magically infallible. Unfortunately, that is simply not true.",
+    "roundup": "Is this really what Hillary Clinton thinks about Trump supporters? Is it a game changer?",
+    "date": "2016-09-13",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2117:center",
+    "story_id": 2117,
+    "stance": "center",
+    "publisher": "Christian Science Monitor",
+    "title": "Clinton's 'deplorables' slip: 2012 campaign hints it's not a game-changer",
+    "body": "Past perceived gaffes, such as Romney's '47 percent' comment in 2012, have drawn far more attention from the media than from voters, who may make up their minds about candidates in other ways.",
+    "roundup": "Is this really what Hillary Clinton thinks about Trump supporters? Is it a game changer?",
+    "date": "2016-09-13",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2117:right",
+    "story_id": 2117,
+    "stance": "right",
+    "publisher": "Guest Writer - Right",
+    "title": "OPINION: 'Basket of deplorables': For once, Hillary told the truth about what she really thinks",
+    "body": "Hillary let the cat out of a bag Friday. For once, she told us what she really thinks. the truth. No lies, no filters, no politically correct editing.",
+    "roundup": "Is this really what Hillary Clinton thinks about Trump supporters? Is it a game changer?",
+    "date": "2016-09-13",
+    "topic": "Elections"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2561,
+  "left": {
+    "article_id": "2561:left",
+    "story_id": 2561,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Top Venezuelan opposition leaders taken into custody amid fears of wider crackdowns",
+    "body": "Masked security forces staged raids in the middle of the night Tuesday to haul away two leading Venezuelan opposition leaders, suggesting an expanded crackdown on dissent after widely denounced elections aimed at boosting the authoritarian government.",
+    "roundup": "Clashes continue in Venezuela as two leaders of the resistance were arrested last night. As imposing sanctions are discussed in the U.S., Venezuelan President Maduro is illegally working to rewrite the constitution.",
+    "date": "2017-08-01",
+    "topic": "World"
+  },
+  "center": {
+    "article_id": "2561:center",
+    "story_id": 2561,
+    "stance": "center",
+    "publisher": "Chicago Tribune",
+    "title": "Police take 2 Venezuela opposition leaders from their homes in the middle of the night",
+    "body": "Two of Venezuela's leading opposition figures were taken from their homes in the middle of the night by state security agents on Tuesday in President Nicolas Maduro's government's first moves against prominent enemies since a widely denounced vote granting the ruling party nearly unlimited powers.",
+    "roundup": "Clashes continue in Venezuela as two leaders of the resistance were arrested last night. As imposing sanctions are discussed in the U.S., Venezuelan President Maduro is illegally working to rewrite the constitution.",
+    "date": "2017-08-01",
+    "topic": "World"
+  },
+  "right": {
+    "article_id": "2561:right",
+    "story_id": 2561,
+    "stance": "right",
+    "publisher": "Townhall",
+    "title": "White House Compares Venezuelan President to Assad, Kim Jong Un",
+    "body": "On Monday Treasury Secretary Steve Mnuchin and White House National Security Advisor H.R. McMaster announced new sanctions for Venezuelan President Nicholas Maduro after the dictator moved to illegally rewrite the country's constitution.",
+    "roundup": "Clashes continue in Venezuela as two leaders of the resistance were arrested last night. As imposing sanctions are discussed in the U.S., Venezuelan President Maduro is illegally working to rewrite the constitution.",
+    "date": "2017-08-01",
+    "topic": "World"
+  }
+}

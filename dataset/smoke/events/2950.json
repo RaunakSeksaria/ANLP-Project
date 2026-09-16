@@ -1,0 +1,36 @@
+{
+  "story_id": 2950,
+  "left": {
+    "article_id": "2950:left",
+    "story_id": 2950,
+    "stance": "left",
+    "publisher": "New York Times (News)",
+    "title": "Trump Plans Stiff Trade Tariffs and Other Penalties on China",
+    "body": "President Trump plans to announce at least $50 billion worth of annual tariffs and other penalties on China for its theft of technology and trade secrets, which administration officials say has robbed American companies of billions of dollars in revenue and killed thousands of jobs.",
+    "roundup": "President Donald Trump will announce today a series of trade enforcement actions designed to punish China for years of widespread violations of U.S. intellectual property rights.",
+    "date": "2018-03-22",
+    "topic": "Trade"
+  },
+  "center": {
+    "article_id": "2950:center",
+    "story_id": 2950,
+    "stance": "center",
+    "publisher": "Chicago Tribune",
+    "title": "Trump to hit China with $50 billion in tariffs over intellectual property violations",
+    "body": "President Donald Trump will announce Thursday a series of trade enforcement actions designed to punish China for years of widespread violations of U.S. intellectual property rights, the White House said.",
+    "roundup": "President Donald Trump will announce today a series of trade enforcement actions designed to punish China for years of widespread violations of U.S. intellectual property rights.",
+    "date": "2018-03-22",
+    "topic": "Trade"
+  },
+  "right": {
+    "article_id": "2950:right",
+    "story_id": 2950,
+    "stance": "right",
+    "publisher": "Washington Times",
+    "title": "Trump targeting China with proposed trade tariffs",
+    "body": "President Trump will crack down on what he calls China’s unfair trade practices and theft of U.S. intellectual property with a package of punitive actions Thursday that include up to $60 billion in tariffs on imports.",
+    "roundup": "President Donald Trump will announce today a series of trade enforcement actions designed to punish China for years of widespread violations of U.S. intellectual property rights.",
+    "date": "2018-03-22",
+    "topic": "Trade"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "story_id": 2770,
+  "left": {
+    "article_id": "2770:left",
+    "story_id": 2770,
+    "stance": "left",
+    "publisher": "Washington Post",
+    "title": "Trump: ‘We need Republican Roy Moore to win in Alabama’",
+    "body": "President Trump on Monday offered his most explicit endorsement to date of Roy Moore, the embattled Republican Senate candidate in Alabama who stands accused of making unwanted sexual advances on teenage girls when he was in his 30s.",
+    "roundup": "President Trump explicitly endorsed embattled candidate Roy Moore on Monday, saying he needs a Republican in the Alabama seat to help push through key parts of his agenda such as tax cuts and the border wall.",
+    "date": "2017-12-04",
+    "topic": "Elections"
+  },
+  "center": {
+    "article_id": "2770:center",
+    "story_id": 2770,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Trump endorses Roy Moore for Alabama Senate seat despite sex assault allegations",
+    "body": "President Trump explicitly endorsed embattled candidate Roy Moore on Monday, saying he needs a Republican in the Alabama seat to help push through key parts of his agenda such as tax cuts and the border wall.",
+    "roundup": "President Trump explicitly endorsed embattled candidate Roy Moore on Monday, saying he needs a Republican in the Alabama seat to help push through key parts of his agenda such as tax cuts and the border wall.",
+    "date": "2017-12-04",
+    "topic": "Elections"
+  },
+  "right": {
+    "article_id": "2770:right",
+    "story_id": 2770,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "Trump Gives Roy Moore His Full Endorsement",
+    "body": "President Donald Trump endorsed Alabama Senate candidate Roy Moore Monday morning, after hesitation due to the multiple allegations of sexual misconduct against the Republican candidate.",
+    "roundup": "President Trump explicitly endorsed embattled candidate Roy Moore on Monday, saying he needs a Republican in the Alabama seat to help push through key parts of his agenda such as tax cuts and the border wall.",
+    "date": "2017-12-04",
+    "topic": "Elections"
+  }
+}

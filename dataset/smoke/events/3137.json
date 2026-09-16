@@ -1,0 +1,36 @@
+{
+  "story_id": 3137,
+  "left": {
+    "article_id": "3137:left",
+    "story_id": 3137,
+    "stance": "left",
+    "publisher": "The Sacramento Bee",
+    "title": "Supreme Court’s anti-abortion ruling in California upholds the right to misinform",
+    "body": "There’s a reason California lawmakers in 2015 required “crisis pregnancy” centers to disclose if they’re unlicensed, and to post signs telling patients the state provides free or cheap “prenatal care and abortion for eligible women.” It’s the same reason the centers exist at all.",
+    "roundup": "The Supreme Court on Tuesday issued a 5-4 decision overturning a California law that required faith-based crisis pregnancy centers to provide information about publicly funded abortion and contraception services. Supporters have celebrated the ruling as a victory for the pro-life movement and for free speech. Detractors have said it will spread misinformation about abortion, particularly since the pregnancy centers are not licensed medical clinics.",
+    "date": "2018-06-26",
+    "topic": "Abortion"
+  },
+  "center": {
+    "article_id": "3137:center",
+    "story_id": 3137,
+    "stance": "center",
+    "publisher": "USA TODAY",
+    "title": "Supreme Court rules against California law targeting anti-abortion pregnancy centers",
+    "body": "The Supreme Court on Tuesday dealt a major blow to a California law requiring anti-abortion pregnancy centers to inform women about publicly funded abortion and contraception services.",
+    "roundup": "The Supreme Court on Tuesday issued a 5-4 decision overturning a California law that required faith-based crisis pregnancy centers to provide information about publicly funded abortion and contraception services. Supporters have celebrated the ruling as a victory for the pro-life movement and for free speech. Detractors have said it will spread misinformation about abortion, particularly since the pregnancy centers are not licensed medical clinics.",
+    "date": "2018-06-26",
+    "topic": "Abortion"
+  },
+  "right": {
+    "article_id": "3137:right",
+    "story_id": 3137,
+    "stance": "right",
+    "publisher": "Fox News (Opinion)",
+    "title": "Supreme Court NIFLA decision is major victory for pro-life groups and women, vindication for First Amendment",
+    "body": "Tuesday’s 5-4 Supreme Court decision overturning a California law that required pro-life pregnancy centers to provide women with information about abortion is a victory for the First Amendment, for women seeking support during their pregnancies, and for the pregnancy centers.",
+    "roundup": "The Supreme Court on Tuesday issued a 5-4 decision overturning a California law that required faith-based crisis pregnancy centers to provide information about publicly funded abortion and contraception services. Supporters have celebrated the ruling as a victory for the pro-life movement and for free speech. Detractors have said it will spread misinformation about abortion, particularly since the pregnancy centers are not licensed medical clinics.",
+    "date": "2018-06-26",
+    "topic": "Abortion"
+  }
+}

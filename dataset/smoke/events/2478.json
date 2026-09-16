@@ -1,0 +1,36 @@
+{
+  "story_id": 2478,
+  "left": {
+    "article_id": "2478:left",
+    "story_id": 2478,
+    "stance": "left",
+    "publisher": "Vox",
+    "title": "Trump gets another travel ban defeat — and the clock is ticking",
+    "body": "The Ninth Circuit Court of Appeals upheld a Hawaii judge’s ruling barring Donald Trump’s travel ban — which would prevent all entries from six majority-Muslim countries for 90 days, and nearly all refugee admissions for 120 days — from going into effect on Monday.",
+    "roundup": "The 9th Circuit Court of Appeals ruled Monday to uphold in large part the Hawaiian court's decision to block President Trump's travel ban.",
+    "date": "2017-06-12",
+    "topic": "Immigration"
+  },
+  "center": {
+    "article_id": "2478:center",
+    "story_id": 2478,
+    "stance": "center",
+    "publisher": "The Hill",
+    "title": "Appeals court refuses to reinstate Trump travel ban",
+    "body": "The 9th Circuit Court of Appeals on Monday ruled against President Trump's so-called travel ban, delivering another blow to the administration as it waits for the Supreme Court to decide whether to intervene.",
+    "roundup": "The 9th Circuit Court of Appeals ruled Monday to uphold in large part the Hawaiian court's decision to block President Trump's travel ban.",
+    "date": "2017-06-12",
+    "topic": "Immigration"
+  },
+  "right": {
+    "article_id": "2478:right",
+    "story_id": 2478,
+    "stance": "right",
+    "publisher": "The Daily Caller",
+    "title": "9th Circuit Upholds Injunction On Trump’s Second Travel Ban",
+    "body": "The 9th U.S. Circuit Court of Appeals upheld an injunction barring enforcement of key provisions of President Donald Trump’s second executive order on refugees and migrants Monday, finding the president exceeded his lawful authority in issuing the directive.",
+    "roundup": "The 9th Circuit Court of Appeals ruled Monday to uphold in large part the Hawaiian court's decision to block President Trump's travel ban.",
+    "date": "2017-06-12",
+    "topic": "Immigration"
+  }
+}
