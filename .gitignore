@@ -219,3 +219,5 @@ __marimo__/
 
 # Datasets
 data/
+!src/data/
+!src/data/*.py
