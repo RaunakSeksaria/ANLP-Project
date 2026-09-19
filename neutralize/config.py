@@ -18,13 +18,23 @@ class GenConfig:
     top_k: int = 1
     seed: int = 42
     max_output_tokens: int = 4096
-    thinking_budget: int = 0   # 0 disables thinking: the main source of drift and cost
+    # Gemini 3.x controls thinking with thinking_level (MINIMAL/LOW/MEDIUM/HIGH);
+    # thinking_budget is the older knob and is silently IGNORED there -- budget=2048
+    # measurably produced 0 thought tokens on gemini-3.7-flash. When thinking_level
+    # is set it wins; otherwise the budget is sent, which still works on 2.x.
+    # Default off: unpinned thinking ran ~918 tok/call elsewhere, which would roughly
+    # triple this job's output bill. Whether it improves the summaries is UNTESTED --
+    # the A/B was blocked by quota, not answered.
+    thinking_budget: int = 0        # 0 disables, -1 automatic (2.x models)
+    thinking_level: str = ""        # "", MINIMAL, LOW, MEDIUM, HIGH (3.x models)
 
     # --- length target ------------------------------------------------------
     # Soft: mean word count over the cluster's articles, +/- tolerance. The hard
     # ratios are a sanity guard that triggers a malformed-output retry, not a
     # style preference.
-    length_tolerance: float = 0.15
+    # Wide on purpose: human summary length correlates only r=0.58 with source
+    # length, so a tight band manufactures revisions that are not real failures.
+    length_tolerance: float = 0.25
     hard_min_ratio: float = 0.4
     hard_max_ratio: float = 2.5
 
@@ -83,6 +93,7 @@ class GenConfig:
             "seed": self.seed,
             "max_output_tokens": self.max_output_tokens,
             "thinking_budget": self.thinking_budget,
+            "thinking_level": self.thinking_level,
             "reveal_stance": self.reveal_stance,
             "reveal_publisher": self.reveal_publisher,
         }

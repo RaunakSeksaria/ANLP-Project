@@ -93,8 +93,7 @@ returns human-readable failures, which go back into the prompt:
 > source articles (limit 8). Rewrite them in neutral terms. They include:
 > slammed, outrage, shocking…
 
-The metrics reuse what the repo already has — `eda/framing_bias.py` and the ROUGE
-in `scripts/eval_generations.py` — and cover introduced affect vocabulary,
+The metrics reuse `eda/framing_bias.py` and cover introduced affect vocabulary,
 bias-lexicon hits, per-source coverage (bias by omission), stance parity, shared
 numbers retained, and length. Thresholds live in `GenConfig` and are settable
 with `--set max_stance_parity_gap=0.05`.

@@ -14,7 +14,7 @@ than silently dropped, so the list stays auditable against the source.
 
 import random
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"  # v2: length target is the longest source, not the mean
 
 RESPONSE_SCHEMA = {
     "type": "object",
@@ -134,9 +134,18 @@ def order_articles(cluster, cfg):
 
 
 def target_words(cluster):
-    """Mean word count over the cluster's articles."""
+    """Word count of the LONGEST article in the cluster.
+
+    Not the mean. On BigNewsAlign the three sources of an event share only ~5% of
+    their content words and can differ 5x in length, so a mean target lands below
+    the longest source in 64% of events -- instructing the model to write less
+    than one of its own inputs while also demanding every source's facts. The
+    longest article is the floor that keeps those two instructions compatible,
+    and it matches the one piece of human gold available: NeuS roundups run
+    0.94x the longest source (median, n=3,094).
+    """
     counts = [len(a["body"].split()) for a in cluster["articles"] if a["body"].strip()]
-    return round(sum(counts) / len(counts)) if counts else 0
+    return max(counts) if counts else 0
 
 
 def render_sources(articles, cfg):

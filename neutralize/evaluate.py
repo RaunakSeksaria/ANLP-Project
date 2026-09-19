@@ -10,8 +10,10 @@ it asks Gemini to rewrite with those strings in the prompt. Swap the whole thing
 out with `--evaluator mymodule:my_evaluate`; it only has to return a dict of
 numbers whose keys line up with the thresholds in GenConfig.
 
-Everything here reuses code that already exists in the repo -- eda/framing_bias.py
-and the ROUGE in scripts/eval_generations.py -- rather than reimplementing it.
+The framing-bias metric is eda/framing_bias.py, reused rather than
+reimplemented. Coverage uses a local content-word recall instead of ROUGE F1:
+the question is whether each source's contribution survived, and a summary is
+expected to be far shorter than its sources combined.
 """
 
 import re
@@ -85,7 +87,8 @@ def evaluate(summary, cluster, cfg=None, resources=None):
 
     m = {}
     m["words"] = len(summary.split())
-    target = round(sum(len(a["body"].split()) for a in arts) / len(arts))
+    # Must match prompt.target_words: the longest article, not the mean.
+    target = max((len(a["body"].split()) for a in arts), default=0)
     m["target_words"] = target
     m["length_ratio"] = m["words"] / target if target else 0.0
 

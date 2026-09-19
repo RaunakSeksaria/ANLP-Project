@@ -32,14 +32,21 @@ class TransientExhausted(RuntimeError):
 
 
 class Reply:
-    __slots__ = ("text", "conflicts", "finish_reason", "usage", "blocked")
+    __slots__ = ("text", "conflicts", "finish_reason", "usage", "blocked",
+                 "model_version", "response_id")
 
-    def __init__(self, text, conflicts, finish_reason, usage, blocked=None):
+    def __init__(self, text, conflicts, finish_reason, usage, blocked=None,
+                 model_version=None, response_id=None):
         self.text = text
         self.conflicts = conflicts
         self.finish_reason = finish_reason
         self.usage = usage
         self.blocked = blocked
+        # The id we ask for is not necessarily the version that answers: an alias
+        # moves under you, and a dataset built over weeks can silently span two
+        # model versions with nothing in the records to show it.
+        self.model_version = model_version
+        self.response_id = response_id
 
 
 class RateGate:
@@ -148,8 +155,10 @@ class GeminiClient:
             response_schema=RESPONSE_SCHEMA,
         )
         if use_thinking:
-            kw["thinking_config"] = types.ThinkingConfig(
-                thinking_budget=self.cfg.thinking_budget)
+            level = (self.cfg.thinking_level or "").strip().upper()
+            kw["thinking_config"] = (
+                types.ThinkingConfig(thinking_level=level) if level
+                else types.ThinkingConfig(thinking_budget=self.cfg.thinking_budget))
         return types.GenerateContentConfig(**kw)
 
     def generate(self, prompt, label=""):
@@ -214,17 +223,26 @@ class GeminiClient:
         finish = str(getattr(cands[0], "finish_reason", "")) if cands else ""
         fb = getattr(resp, "prompt_feedback", None)
         blocked = str(getattr(fb, "block_reason", "") or "") or None
-        return Reply(text, conflicts, finish, _usage(resp), blocked)
+        return Reply(text, conflicts, finish, _usage(resp), blocked,
+                     getattr(resp, "model_version", None),
+                     getattr(resp, "response_id", None))
 
     def _log(self, msg):
         if self.verbose:
             print(f"  {msg}", file=sys.stderr, flush=True)
 
 
+# A genuinely broken TLS setup will not fix itself in four seconds. A connection
+# dropped mid-stream will. Both can surface as an SSL-named exception, so match on
+# the message: UNEXPECTED_EOF_WHILE_READING is connection churn and must be retried.
+_FATAL_TLS = ("certificate_verify_failed", "certificate verify failed",
+              "self signed certificate", "hostname mismatch",
+              "certificate has expired", "unable to get local issuer")
+
+
 def _fatal_transport(e):
-    """An SSL or DNS-resolution failure will not fix itself in four seconds."""
-    name = type(e).__name__.lower()
-    return "ssl" in name or "certificate" in str(e).lower()
+    msg = str(e).lower()
+    return any(s in msg for s in _FATAL_TLS)
 
 
 def _short(e, n=160):
