@@ -14,7 +14,7 @@ than silently dropped, so the list stays auditable against the source.
 
 import random
 
-PROMPT_VERSION = "v2"  # v2: length target is the longest source, not the mean
+PROMPT_VERSION = "v3"  # v3: source labels and source-format asides banned from the summary
 
 RESPONSE_SCHEMA = {
     "type": "object",
@@ -27,8 +27,10 @@ RESPONSE_SCHEMA = {
             "type": "array",
             "items": {"type": "string"},
             "description": (
-                "One entry per factual disagreement between sources, naming the "
-                "sources and both versions. Empty if the sources agree."
+                "One entry per factual disagreement, as a PLAIN SENTENCE naming "
+                "the sources and both versions -- not an object. Example: "
+                "'Source A reports 49 killed; Source C reports about 20.' "
+                "Empty list if the sources agree."
             ),
         },
     },
@@ -104,6 +106,11 @@ ATTRIBUTION VERBS
 Use `said`, `wrote`, `reported`, `stated`. Never `admitted`, `conceded`, \
 `claimed`, `alleged`, `insisted`, `boasted`, `refused to say` -- each one \
 editorialises about the speaker's honesty or motive.
+
+NEVER NAME THE SOURCES IN THE SUMMARY
+`Source A`, `Source B` and so on are labels for your reading only. They must not appear anywhere in `summary`. Where a fact is contested, attribute it the way a wire report would -- "one account put the toll at 49, another at about 20" -- or name the outlet if the source identifies itself. The `conflicts` field is the only place source labels belong.
+
+Do not describe the sources themselves. That an outlet ran video, tweets, or a photo gallery is a fact about the article, not about the event, and does not belong in the summary.
 
 FORM
 Continuous prose. No headline, no byline, no dateline, no bullet points, no \

@@ -42,6 +42,11 @@ class GenConfig:
     max_network_retries: int = 3     # timeouts, 429, 5xx. Prompt unchanged.
     max_malformed_retries: int = 3   # empty/unparseable/truncated/absurd length.
     max_revisions: int = 0           # eval-metric feedback loop. 0 = off.
+    request_timeout: int = 400        # seconds; NIM latency p90 ~48s, max seen 226s
+    # Abort the run after this many failures in a row. A long unbroken run of
+    # failures means the endpoint or the key is down, and continuing just
+    # marks thousands of clusters failed. Isolated failures do not trip it.
+    stop_after_consecutive_failures: int = 10
     backoff_base: float = 2.0
     backoff_cap: float = 60.0
 
