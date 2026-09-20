@@ -166,6 +166,10 @@ class LEDBaselineDataset(Dataset[UnpaddedExample]):
         """Return the stripped decoder target for diagnostics."""
         return self._records[index].target_text
 
+    def record(self, index: int) -> BaselineRecord:
+        """Return validated metadata without duplicating JSONL loading logic."""
+        return self._records[index]
+
     def _tokenize_target(self, text: str) -> Mapping[str, Any]:
         options = {
             "truncation": True,

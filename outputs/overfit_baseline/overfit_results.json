@@ -1,0 +1,26 @@
+{
+  "batch_size": 1,
+  "completed_optimizer_steps": 100,
+  "device": "cuda",
+  "early_stopping": true,
+  "final_exact_match_count": 8,
+  "final_loss": 0.00010740605648607016,
+  "final_overlap_f1": 1.0,
+  "final_token_accuracy": 1.0,
+  "initial_exact_match_count": 0,
+  "initial_loss": 5.134484231472015,
+  "initial_overlap_f1": 0.07385710660155856,
+  "initial_token_accuracy": 0.31153846153846154,
+  "learning_rate": 0.0001,
+  "model_name": "allenai/led-base-16384",
+  "optimizer_settings": {
+    "gradient_clip_max_norm": 1.0,
+    "name": "torch.optim.AdamW",
+    "scheduler": null,
+    "weight_decay": 0.0
+  },
+  "passed": true,
+  "precision": "fp32",
+  "seed": 42,
+  "subset_size": 8
+}

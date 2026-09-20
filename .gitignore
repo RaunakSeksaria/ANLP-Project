@@ -221,3 +221,9 @@ __marimo__/
 data/
 !src/data/
 !src/data/*.py
+
+# Models
+outputs/overfit_baseline/model.safetensors
+outputs/baseline/best
+outputs/baseline/last
+outputs/baseline_main/

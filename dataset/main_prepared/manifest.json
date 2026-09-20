@@ -1,0 +1,96 @@
+{
+  "all_triplet_constraints_passed": true,
+  "baseline_records_per_split": {
+    "test": 2000,
+    "train": 16000,
+    "validation": 2000
+  },
+  "duplicate_article_id_counts": {
+    "per_split": {
+      "test": 0,
+      "train": 0,
+      "validation": 0
+    },
+    "total": 0
+  },
+  "duplicate_article_text_counts": {
+    "per_split": {
+      "test": 300,
+      "train": 10970,
+      "validation": 306
+    },
+    "total": 11576
+  },
+  "event_rejection_reasons": {
+    "test": {},
+    "train": {},
+    "validation": {}
+  },
+  "input_articles_file": "/home2/manas.agrawal/anlp/ANLP-Project/dataset/main/articles.jsonl",
+  "input_directory": "/home2/manas.agrawal/anlp/ANLP-Project/dataset/main/articles.jsonl",
+  "missing_title_counts": {
+    "test": {
+      "center": 0,
+      "left": 0,
+      "right": 0,
+      "total": 0
+    },
+    "train": {
+      "center": 0,
+      "left": 0,
+      "right": 0,
+      "total": 0
+    },
+    "validation": {
+      "center": 0,
+      "left": 0,
+      "right": 0,
+      "total": 0
+    }
+  },
+  "rejected_events_per_split": {
+    "test": 0,
+    "train": 0,
+    "validation": 0
+  },
+  "rejected_triplets_per_split": {
+    "test": 0,
+    "train": 0,
+    "validation": 0
+  },
+  "seed": 42,
+  "source_events_per_split": {
+    "test": 1000,
+    "train": 8000,
+    "validation": 1000
+  },
+  "triplet_anchor_counts": {
+    "test": {
+      "left": 1000,
+      "right": 1000
+    },
+    "train": {
+      "left": 8000,
+      "right": 8000
+    },
+    "validation": {
+      "left": 1000,
+      "right": 1000
+    }
+  },
+  "triplet_records_per_split": {
+    "test": 2000,
+    "train": 16000,
+    "validation": 2000
+  },
+  "triplet_rejection_reasons": {
+    "test": {},
+    "train": {},
+    "validation": {}
+  },
+  "valid_events_per_split": {
+    "test": 1000,
+    "train": 8000,
+    "validation": 1000
+  }
+}
