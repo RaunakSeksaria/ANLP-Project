@@ -39,14 +39,63 @@ def parse_message(msg):
     try:
         obj = json.loads(body)
     except json.JSONDecodeError:
-        return content, []
+        return _salvage(body), []
     if not isinstance(obj, dict) or not obj.get("summary"):
         return content, []
+
+    # Nemotron sometimes emits the whole object a second time INSIDE the summary
+    # field, so `summary` comes back as a serialised {"summary": ..., "conflicts":
+    # ...} blob. Unwrap it rather than shipping the JSON as the summary text --
+    # 87 of the first 10,000 records were corrupted this way, and regenerating
+    # does not reliably clear it because it is a formatting slip, not a sampling
+    # one. Bounded loop in case it nests more than once.
+    for _ in range(3):
+        s = obj.get("summary")
+        if not isinstance(s, str):
+            break
+        stripped = re.sub(r"^```(?:json)?\s*|\s*```$", "", s.strip()).strip()
+        if not stripped.startswith("{"):
+            break
+        try:
+            inner = json.loads(stripped)
+        except json.JSONDecodeError:
+            # Truncated or malformed nested object: recover the summary string
+            # with a regex rather than losing the record entirely.
+            m = re.search(r'"summary"\s*:\s*"(.*?)"\s*,\s*"conflicts"', stripped, re.S)
+            if m:
+                obj = {"summary": m.group(1).encode().decode("unicode_escape"),
+                       "conflicts": obj.get("conflicts") or []}
+            break
+        if not isinstance(inner, dict) or not inner.get("summary"):
+            break
+        obj = {"summary": inner["summary"],
+               "conflicts": inner.get("conflicts") or obj.get("conflicts") or []}
+
     conflicts = []
     for c in obj.get("conflicts") or []:
         conflicts.append(c if isinstance(c, str)
                          else json.dumps(c, ensure_ascii=False))
     return str(obj["summary"]).strip(), conflicts
+
+
+# The model sometimes omits the opening `{"summary": "` but still emits the
+# closing JSON syntax, so the content is prose with a tail like
+#   ... convention.",\n  "conflicts": []\n}
+# json.loads fails on that and the raw text -- braces included -- would become
+# the summary. Strip the scaffolding instead of shipping it.
+_JSON_TAIL = re.compile(
+    r'"?\s*,?\s*"conflicts"\s*:\s*\[.*?\]\s*\}?\s*`*\s*$', re.S)
+_JSON_HEAD = re.compile(r'^\s*\{?\s*"summary"\s*:\s*"')
+
+
+def _salvage(text):
+    out = _JSON_HEAD.sub("", text)
+    out = _JSON_TAIL.sub("", out)
+    out = out.strip().rstrip("`").strip()
+    # a lone trailing quote left by the stripped tail
+    if out.endswith('"') and out.count('"') % 2 == 1:
+        out = out[:-1].rstrip()
+    return out.strip() or text
 
 
 class NvidiaClient:
