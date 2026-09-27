@@ -16,7 +16,7 @@ import httpx
 from google import genai
 from google.genai import errors, types
 
-from .prompt import RESPONSE_SCHEMA, SYSTEM
+from .prompt import RESPONSE_SCHEMA, SYSTEM, response_schema, system_prompt
 
 # 429 and 5xx are worth waiting out. 400/401/403/404 are a bad key, a bad model
 # id or a malformed request -- retrying those three times only wastes time.
@@ -145,14 +145,14 @@ class GeminiClient:
 
     def _config(self, use_thinking):
         kw = dict(
-            system_instruction=SYSTEM,
+            system_instruction=system_prompt(self.cfg),
             temperature=self.cfg.temperature,
             top_p=self.cfg.top_p,
             top_k=self.cfg.top_k,
             seed=self.cfg.seed,
             max_output_tokens=self.cfg.max_output_tokens,
             response_mime_type="application/json",
-            response_schema=RESPONSE_SCHEMA,
+            response_schema=response_schema(self.cfg),
         )
         if use_thinking:
             level = (self.cfg.thinking_level or "").strip().upper()

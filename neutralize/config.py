@@ -57,6 +57,16 @@ class GenConfig:
     reveal_stance: bool = False
     reveal_publisher: bool = False
     shuffle_seed: int = 42
+    # How to handle a factual disagreement between sources.
+    #   "attribute" (v3) -- state both versions with neutral attribution
+    #   "range"     (v4) -- reconcile numbers into a range ("an estimated
+    #                       350-400 deaths") instead of listing each claim
+    conflict_style: str = "attribute"
+    # "fuse"      -- many articles in, one neutral article out (the 10k corpus)
+    # "neutralise"-- ONE article in, the same article out with framing removed.
+    #                Downstream sees a single source, so the target must be
+    #                reachable from that source alone.
+    task: str = "fuse"
 
     # --- input field names --------------------------------------------------
     # A different key layout is a config change, not a code change.
@@ -101,6 +111,8 @@ class GenConfig:
             "thinking_level": self.thinking_level,
             "reveal_stance": self.reveal_stance,
             "reveal_publisher": self.reveal_publisher,
+            "conflict_style": self.conflict_style,
+            "task": self.task,
         }
 
     def to_dict(self):

@@ -17,7 +17,7 @@ import requests
 from .client import (
     FatalAPIError, RateGate, Reply, TransientExhausted, _fatal_transport, _short,
 )
-from .prompt import SYSTEM
+from .prompt import SYSTEM, system_prompt
 
 URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 
@@ -40,6 +40,16 @@ def parse_message(msg):
         obj = json.loads(body)
     except json.JSONDecodeError:
         return _salvage(body), []
+    # the neutralise task returns {"neutral", "removed"}; fusion returns
+    # {"summary", "conflicts"}. Normalise to the same two slots.
+    if isinstance(obj, dict) and obj.get("neutral") and not obj.get("summary"):
+        rem = obj.get("removed") or []
+        # The model sometimes returns `removed` as one string instead of a list.
+        # Iterating that yields one entry per CHARACTER, which is how the first
+        # smoke test logged "C", "h", "a", "n", "g".
+        if isinstance(rem, str):
+            rem = [rem]
+        obj = {"summary": obj["neutral"], "conflicts": rem}
     if not isinstance(obj, dict) or not obj.get("summary"):
         return content, []
 
@@ -71,8 +81,11 @@ def parse_message(msg):
         obj = {"summary": inner["summary"],
                "conflicts": inner.get("conflicts") or obj.get("conflicts") or []}
 
+    raw_conf = obj.get("conflicts") or []
+    if isinstance(raw_conf, str):
+        raw_conf = [raw_conf]
     conflicts = []
-    for c in obj.get("conflicts") or []:
+    for c in raw_conf:
         conflicts.append(c if isinstance(c, str)
                          else json.dumps(c, ensure_ascii=False))
     return str(obj["summary"]).strip(), conflicts
@@ -111,7 +124,7 @@ class NvidiaClient:
     def _body(self, prompt):
         return {
             "model": self.cfg.model,
-            "messages": [{"role": "system", "content": SYSTEM},
+            "messages": [{"role": "system", "content": system_prompt(self.cfg)},
                          {"role": "user", "content": prompt}],
             "temperature": self.cfg.temperature,
             "top_p": self.cfg.top_p,

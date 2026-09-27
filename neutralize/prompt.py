@@ -16,6 +16,78 @@ import random
 
 PROMPT_VERSION = "v3"  # v3: source labels and source-format asides banned from the summary
 
+# How a factual disagreement is handled. The rest of the prompt is identical, so
+# the two styles are directly comparable on the same events.
+DISAGREE_ATTRIBUTE = """WHERE SOURCES DISAGREE
+- State both versions with neutral attribution, and record the disagreement in \
+the `conflicts` field. Do not pick a winner, average the figures, or quietly drop \
+the version you find less plausible.
+- A fact only one source reports is not a conflict. Include it plainly."""
+
+DISAGREE_RANGE = """WHERE SOURCES DISAGREE
+- When sources give DIFFERENT NUMBERS for the same quantity, report a RANGE \
+rather than listing each figure. One source saying 400 deaths and another 350 \
+becomes "an estimated 350-400 deaths". Use the lowest and highest figures \
+reported, smallest first, and mark it as an estimate or as a figure that varies \
+by account.
+- Never average the figures, never pick one, and never invent a bound that no \
+source reported.
+- If the sources agree on a number, state it plainly -- a single figure is not a \
+range.
+- When the disagreement is NOT numeric -- two accounts of what happened, of \
+someone's motive, of whether an event was planned -- do not force a range and do \
+not name the outlets. Report the uncertainty itself: "accounts differ on whether \
+the interviews were conducted live or recorded earlier". Where one account is a \
+hedged official statement and another is a flat assertion, preserve that \
+difference in strength.
+- Record every disagreement you reconciled in the `conflicts` field, including \
+the individual figures, so the reconciliation stays auditable.
+- A fact only one source reports is not a conflict. Include it plainly."""
+
+CONTESTED_ATTRIBUTE = ('Where a fact is contested, attribute it the way a wire '
+                       'report would -- "one account put the toll at 49, another '
+                       'at about 20" -- or name the outlet if the source '
+                       'identifies itself.')
+
+# The worked example here is what the model actually imitates. Leaving the
+# attribute-style example in place while asking for ranges produced no ranges at
+# all: the model copied the example and ignored the rule above it.
+CONTESTED_RANGE = ('Where a contested fact is NUMERIC, give the range and nothing '
+                   'else: "an estimated 350-400 deaths", "between 12 and 15 '
+                   'arrests". Do NOT write "one account says X, another says Y" '
+                   'for a number -- the range replaces that phrasing entirely. '
+                   'Do not name outlets.')
+
+_STYLES = {"attribute": DISAGREE_ATTRIBUTE, "range": DISAGREE_RANGE}
+_CONTESTED = {"attribute": CONTESTED_ATTRIBUTE, "range": CONTESTED_RANGE}
+_STYLE_VERSION = {"attribute": "v3", "range": "v4-range"}
+
+
+def system_prompt(cfg):
+    if getattr(cfg, "task", "fuse") == "neutralise":
+        return NEUTRALISE_SYSTEM
+    style = (getattr(cfg, "conflict_style", "attribute") or "attribute").lower()
+    if style not in _STYLES:
+        raise ValueError(f"conflict_style must be one of {sorted(_STYLES)}, got {style!r}")
+    return (SYSTEM.replace("{DISAGREE}", _STYLES[style])
+                  .replace("{CONTESTED}", _CONTESTED[style]))
+
+
+NEUTRALISE_VERSION = "n1"
+
+
+def prompt_version(cfg):
+    """Recorded in every output record; task and style are part of the identity."""
+    if getattr(cfg, "task", "fuse") == "neutralise":
+        return NEUTRALISE_VERSION
+    style = (getattr(cfg, "conflict_style", "attribute") or "attribute").lower()
+    return _STYLE_VERSION.get(style, PROMPT_VERSION)
+
+
+def response_schema(cfg):
+    return (NEUTRALISE_SCHEMA if getattr(cfg, "task", "fuse") == "neutralise"
+            else RESPONSE_SCHEMA)
+
 RESPONSE_SCHEMA = {
     "type": "object",
     "properties": {
@@ -54,11 +126,7 @@ Never round, never paraphrase a quotation, never merge two quotations.
 - Nothing that is not in at least one source. You have no outside knowledge of \
 this event and must not supply any.
 
-WHERE SOURCES DISAGREE
-- State both versions with neutral attribution, and record the disagreement in \
-the `conflicts` field. Do not pick a winner, average the figures, or quietly drop \
-the version you find less plausible.
-- A fact only one source reports is not a conflict. Include it plainly.
+{DISAGREE}
 
 THE SIXTEEN BIASES TO REMOVE
 
@@ -108,7 +176,7 @@ Use `said`, `wrote`, `reported`, `stated`. Never `admitted`, `conceded`, \
 editorialises about the speaker's honesty or motive.
 
 NEVER NAME THE SOURCES IN THE SUMMARY
-`Source A`, `Source B` and so on are labels for your reading only. They must not appear anywhere in `summary`. Where a fact is contested, attribute it the way a wire report would -- "one account put the toll at 49, another at about 20" -- or name the outlet if the source identifies itself. The `conflicts` field is the only place source labels belong.
+`Source A`, `Source B` and so on are labels for your reading only. They must not appear anywhere in `summary`. {CONTESTED} The `conflicts` field is the only place source labels belong.
 
 Do not describe the sources themselves. That an outlet ran video, tweets, or a photo gallery is a fact about the article, not about the event, and does not belong in the summary.
 
@@ -175,7 +243,9 @@ def render_sources(articles, cfg):
 
 
 def build_prompt(cluster, cfg):
-    """Returns (prompt_text, target_word_count)."""
+    """Returns (prompt_text, target_word_count). Dispatches on cfg.task."""
+    if getattr(cfg, "task", "fuse") == "neutralise":
+        return build_neutralise_prompt(cluster, cfg)
     articles = order_articles(cluster, cfg)
     target = target_words(cluster)
     lo, hi = _band(target, cfg)
@@ -229,3 +299,140 @@ def build_revision_prompt(cluster, cfg, draft, failure_notes):
 
 def malformed_note(reason):
     return f"\n\nThe previous attempt was rejected: {reason} Return valid JSON with keys `summary` and `conflicts`."
+
+
+# ---------------------------------------------------------------------------
+# Single-article neutralisation
+#
+# A different task from fusion: one article in, the same article out with its
+# framing removed. Downstream the model will only ever see one source, so the
+# target must be reachable from that one source and nothing else. The v3 fusion
+# corpus measurably failed this -- 9.6% of its outputs stated a calendar date no
+# source gave, because the model resolved "Friday" from world knowledge. The
+# hard rule below exists specifically to stop that.
+# ---------------------------------------------------------------------------
+
+NEUTRALISE_SYSTEM = """\
+You are a copy editor. You are given ONE news article. Rewrite it so that it \
+reports the same events with the framing removed.
+
+This is a rewrite, not a summary and not a fact-check. The output should be \
+about as long as the input.
+
+THE ONE HARD RULE: ADD NOTHING
+Everything in your rewrite must come from the article in front of you. You have \
+no other knowledge of this story, these people, or this period, and you must \
+write as though you have none.
+
+Specifically, never add:
+- a date, day or year the article does not state. If it says "Friday", write \
+"Friday". Do not work out the calendar date. If it gives no date, give none.
+- a location, job title, party, age or affiliation the article does not give.
+- background, context or explanation of who someone is or why something matters.
+- a consequence, cause or outcome the article does not report.
+- a number the article does not contain, including totals you could compute.
+
+If you find yourself about to write something you know but the article does not \
+say, stop and leave it out. An article that says less than you know is correct.
+
+KEEP EVERY FACT
+Removing framing is not removing content. Every event, actor, figure, date, \
+place and quotation in the article must survive into your rewrite. If you cannot \
+neutralise a sentence without dropping a fact, keep the fact and neutralise the \
+wording around it.
+
+- Copy numbers, names, titles and dates exactly as the article gives them.
+- Copy direct quotations character for character. Never paraphrase inside \
+quotation marks, never merge two quotations, never trim a quotation to change \
+its sense. If a quotation is itself loaded, keep it and attribute it -- what a \
+person said is a fact about them.
+
+WHAT TO REMOVE
+
+These are AllSides' types of media bias. Work through the article and strip each \
+one, changing nothing else.
+
+1.  SPIN -- vague or evocative phrasing that steers the reading. Replace with \
+the plain description of what happened.
+2.  SLANT -- one angle promoted by what gets elaborated. Give each fact the \
+space its importance warrants, not the space the article gave it.
+3.  SENSATIONALISM -- shocking or exaggerated wording. Cut intensifiers \
+(`massive`, `explosive`, `stunning`, `slams`, `erupts`, `blasts`), scare quotes, \
+and exclamation.
+4.  BIAS BY OMISSION -- you cannot fix what the article left out, and you must \
+not fill the gap from your own knowledge. Leave the gap.
+5.  STORY CHOICE and PLACEMENT -- open with the event itself, not with the \
+reaction to it, the accusation about it, or one side's characterisation of it.
+6.  WORD CHOICE -- prefer the descriptive term to the loaded one. Where a term \
+is contested, use the neutral descriptive form.
+7.  UNSUBSTANTIATED CLAIMS -- an assertion the article does not support becomes \
+attributed to whoever made it, or goes.
+8.  OPINION PRESENTED AS FACT -- judgement in the reporter's voice must be \
+attributed to a named person, or cut.
+9.  SUBJECTIVE QUALIFYING ADJECTIVES -- `controversial`, `so-called`, `radical`, \
+`failed`, `hardline`, `extreme`, `disgraced`. Cut them. If a label is contested, \
+report who applies it.
+10. MUDSLINGING / AD HOMINEM -- keep the substance of a criticism, attributed; \
+drop the abuse.
+11. MIND READING -- no sentence may assert what a person thinks, wants, fears or \
+really means unless the article quotes them saying it.
+12. NEGATIVITY BIAS -- report outcomes and magnitudes as given, without \
+dramatising.
+13. FLAWED LOGIC -- do not connect two facts causally unless the article makes \
+that claim explicitly; where it does, attribute it.
+14. ELITE V. POPULIST -- attribute officials and ordinary people in the same \
+register.
+
+ATTRIBUTION VERBS
+Use `said`, `wrote`, `reported`, `stated`, `told`. Never `admitted`, `conceded`, \
+`claimed`, `alleged`, `insisted`, `boasted`, `refused to say` -- each editorialises \
+about the speaker's honesty or motive.
+
+FORM
+Continuous prose. No headline, no byline, no dateline, no bullets, no section \
+headers, no preamble. Do not mention the article, the outlet, or that you are \
+rewriting anything. Begin with the first sentence of the account itself."""
+
+
+NEUTRALISE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "neutral": {
+            "type": "string",
+            "description": "The article rewritten with its framing removed.",
+        },
+        "removed": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": (
+                "One short PLAIN SENTENCE per edit, naming the bias type and the "
+                "wording changed, e.g. 'Sensationalism: \"slammed\" -> \"criticised\"'. "
+                "The audit trail for the rewrite. Empty list if nothing needed "
+                "changing."
+            ),
+        },
+    },
+    "required": ["neutral", "removed"],
+}
+
+
+def build_neutralise_prompt(cluster, cfg):
+    """One article in. Returns (prompt_text, target_word_count).
+
+    The 'cluster' carries exactly one article; the target length is that
+    article's own length, since this is a rewrite rather than a compression.
+    """
+    a = cluster["articles"][0]
+    target = len(a["body"].split())
+    title = (a.get("title") or "").strip()
+    return (
+        "Rewrite the following article with its framing removed.\n\n"
+        "=== ARTICLE ===\n"
+        + (f"Headline: {title}\n" if title else "")
+        + a["body"].strip()
+        + "\n\n=== TASK ===\n"
+        f"Rewrite it. Keep every fact, add nothing that is not above, and aim "
+        f"for roughly {target} words.\n\n"
+        "Return JSON with two keys: `neutral` (the rewritten article) and "
+        "`removed` (one short sentence per bias edit you made)."
+    ), target
