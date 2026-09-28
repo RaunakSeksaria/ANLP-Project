@@ -7,6 +7,7 @@ import argparse
 import json
 import math
 import statistics
+import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -566,6 +567,18 @@ def validate_data(data_dir: Path) -> ValidationResult:
     data_dir = data_dir.resolve()
     result = ValidationResult(data_dir)
     manifest = load_manifest(data_dir / "manifest.json", result)
+    if manifest and manifest.get("schema") == "anchor_specific_neutral_v1":
+        root = str(Path(__file__).resolve().parents[2])
+        if root not in sys.path:
+            sys.path.insert(0, root)
+        from src.scripts.prepare_side_neutral import validate_prepared
+        try:
+            result.split_summaries = validate_prepared(data_dir)
+            if result.split_summaries != manifest.get("counts"):
+                result.errors.append("Manifest counts differ from prepared records")
+        except (ValueError, KeyError, OSError, TypeError) as exc:
+            result.errors.append(str(exc))
+        return result
     baselines_by_split: dict[str, list[LocatedRecord]] = {}
     triplets_by_split: dict[str, list[LocatedRecord]] = {}
     baseline_indexes: dict[str, dict[str, dict[str, LocatedRecord]]] = {}

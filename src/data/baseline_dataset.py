@@ -63,6 +63,7 @@ class BaselineRecord:
     target_article_id: str
     target_title: str
     target_text: str
+    event_ids: tuple[str, ...] = ()
 
 
 class LEDBaselineDataset(Dataset[UnpaddedExample]):
@@ -123,6 +124,11 @@ class LEDBaselineDataset(Dataset[UnpaddedExample]):
                 line_number,
                 f"record split {strings['split']!r} does not match parent directory {expected_split!r}",
             )
+        event_ids = value.get("event_ids", [])
+        if not isinstance(event_ids, list) or any(
+            not isinstance(item, str) or not item.strip() for item in event_ids
+        ):
+            raise self._error(line_number, "event_ids must be a list of non-empty strings")
         return BaselineRecord(
             example_id=strings["example_id"],
             split=strings["split"],
@@ -134,6 +140,7 @@ class LEDBaselineDataset(Dataset[UnpaddedExample]):
             target_article_id=strings["target_article_id"],
             target_title=target_title,
             target_text=target_text,
+            event_ids=tuple(event_ids),
         )
 
     def _load_records(self) -> list[BaselineRecord]:

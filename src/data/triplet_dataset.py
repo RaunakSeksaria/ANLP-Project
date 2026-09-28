@@ -62,6 +62,7 @@ class ArticleRef:
     split: str
     title: str
     text: str
+    event_ids: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -205,7 +206,7 @@ class LEDTripletDataset(Dataset[TripletExample]):
                     f"{record.input_article_id!r}"
                 )
             role_key = (record.event_id, record.input_ideology)
-            if role_key in event_roles:
+            if role_key in event_roles and not record.event_ids:
                 raise ValueError(f"{self.baseline_path}: ambiguous event/ideology {role_key}")
             event_roles.add(role_key)
             articles[record.input_article_id] = ArticleRef(
@@ -215,6 +216,7 @@ class LEDTripletDataset(Dataset[TripletExample]):
                 split=record.split,
                 title=record.input_title.strip(),
                 text=record.input_text.strip(),
+                event_ids=record.event_ids,
             )
             targets[(record.event_id, record.input_article_id)] = record
         return articles, targets
@@ -310,6 +312,8 @@ class LEDTripletDataset(Dataset[TripletExample]):
         reasons: list[str] = []
         if anchor.event_id != positive.event_id:
             reasons.append("anchor_positive_different_event")
+        if anchor.event_ids and not set(anchor.event_ids).intersection(positive.event_ids):
+            reasons.append("anchor_positive_no_shared_original_event")
         if anchor.ideology == positive.ideology:
             reasons.append("anchor_positive_same_ideology")
         if anchor.text.strip() == positive.text.strip():
@@ -514,7 +518,9 @@ class LEDTripletDataset(Dataset[TripletExample]):
             "labels": self._encode_target(record.target_text),
             "triplet_valid_mask": record.triplet_valid,
             "triplet_id": record.triplet_id,
-            "example_id": f"{record.anchor.event_id}:{record.anchor.ideology}-to-center",
+            "example_id": self._targets[
+                (record.anchor.event_id, record.anchor.article_id)
+            ].example_id,
             "anchor_article_id": record.anchor.article_id,
             "positive_article_id": record.positive.article_id,
             "negative_article_id": negative.article_id if record.negative else "",

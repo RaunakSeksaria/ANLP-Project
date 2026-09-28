@@ -4,14 +4,14 @@
 #SBATCH -p u22
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=6
-#SBATCH --exclude=gnode[001-012,016-017,019-023,025-035,037-038,040-041]
+#SBATCH --exclude=gnode[001-012,016-017,019-023,025-035,037-038,040-041,066-067]
 #SBATCH --gres=gpu:2
 #SBATCH --mem-per-cpu=3G
 #SBATCH --time=4-00:00:00
-#SBATCH --output=triplet_lambda_03.logs
+#SBATCH --output=side_neutral_lambda035_%j.logs
 #SBATCH --mail-type=END
 #SBATCH --mail-user=manas.agrawal@research.iiit.ac.in
-#SBATCH --job-name=anlp_lambda035
+#SBATCH --job-name=side_neutral_lambda035
 
 # Conda's non-interactive activation hook can reference shell variables that
 # are unset in Slurm jobs, so do not enable Bash nounset (`set -u`) here.
@@ -28,6 +28,14 @@ if [ ! -f "${PROJECT_ROOT}/src/scripts/train_joint.py" ]; then
     exit 1
 fi
 cd "${PROJECT_ROOT}"
+
+# Checkpoints include large optimizer states; keep them off the home quota.
+# Scratch belongs to the allocated compute node. Copy/upload selected models
+# from that node before its scratch storage is cleaned.
+ANLP_OUTPUT_ROOT=${ANLP_OUTPUT_ROOT:-/scratch/${USER}/anlp_outputs}
+ANLP_RUN_ID=${SLURM_JOB_ID:-manual-$(date +%Y%m%d-%H%M%S-%N)}
+RUN_OUTPUT_DIR="${ANLP_OUTPUT_ROOT}/side_neutral_lambda035_${ANLP_RUN_ID}"
+echo "Default run artifacts: $(hostname):${RUN_OUTPUT_DIR}"
 
 echo "========================================================"
 echo "BEFORE ENVIRONMENT ACTIVATION: $(date)"
@@ -53,8 +61,8 @@ echo "========================================================"
 
 TRAIN_COMMAND=(
     python -u "${PROJECT_ROOT}/src/scripts/train_joint.py"
-    --data-dir "${PROJECT_ROOT}/dataset/neutral_articles_10k_prepared"
-    --output-dir "${PROJECT_ROOT}/outputs/joint_mean_lambda035"
+    --data-dir "${PROJECT_ROOT}/dataset/side_neutral/prepared"
+    --output-dir "${RUN_OUTPUT_DIR}"
     --model-name allenai/led-base-16384
     --train-batch-size 1
     --eval-batch-size 1
@@ -78,8 +86,8 @@ TRAIN_COMMAND=(
     --precision fp32
     --wandb-entity manasagrawal206-iiit-hyderabad
     --wandb-project anlp-project
-    --wandb-run-name joint-mean-lambda035
-    --overwrite-output-dir
+    --wandb-run-name side-neutral-lambda035
+    "$@"
 )
 
 echo "BEFORE TRAINING COMMAND: $(date)"
@@ -98,6 +106,6 @@ echo "Training exit status: ${TRAIN_STATUS}"
 if [ "${TRAIN_STATUS}" -eq 0 ]; then
     echo "Lambda-0.35 joint training completed successfully."
 else
-    echo "Lambda-0.35 joint training failed; inspect triplet_lambda_03.logs."
+    echo "Lambda-0.35 joint training failed; inspect side_neutral_lambda035_<job-id>.logs."
 fi
 exit "${TRAIN_STATUS}"

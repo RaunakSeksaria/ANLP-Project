@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import errno
 import sys
 from pathlib import Path
 from typing import Sequence
@@ -101,6 +102,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 1
     except Exception as exc:
         print(f"JOINT TRAINING ERROR: {exc}", file=sys.stderr)
+        if isinstance(exc, OSError) and exc.errno in (errno.EDQUOT, errno.ENOSPC):
+            print(
+                "Output storage is full or its quota is exhausted. Select an output "
+                "directory on storage with sufficient quota (the launchers default "
+                "to compute-node scratch). Existing partial checkpoints may be "
+                "incomplete; use a fresh run directory.",
+                file=sys.stderr,
+            )
         return 1
     return 0
 
