@@ -15,6 +15,12 @@ from .train_baseline import (
     calculate_step_counts,
     run_training,
 )
+from .train_joint import (
+    JointTrainingConfig,
+    calculate_joint_steps,
+    evaluate_joint_checkpoint,
+    run_joint_training,
+)
 
 __all__ = [
     "EvaluationMetrics",
@@ -28,4 +34,8 @@ __all__ = [
     "TrainingConfig",
     "calculate_step_counts",
     "run_training",
+    "JointTrainingConfig",
+    "calculate_joint_steps",
+    "evaluate_joint_checkpoint",
+    "run_joint_training",
 ]

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare baseline pairs and ideology triplets from LLM-neutral articles."""
+"""Prepare baseline pairs and ideology triplets from LLM-neutral stories."""
 
 from __future__ import annotations
 
@@ -18,8 +18,10 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 
-DEFAULT_INPUT_PATH = PROJECT_ROOT / "dataset" / "llm_neutral" / "articles.jsonl"
-DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "dataset" / "llm_neutral_prepared"
+DEFAULT_INPUT_PATH = (
+    PROJECT_ROOT / "dataset" / "llm_neutral" / "neutral_articles_10k.jsonl"
+)
+DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "dataset" / "neutral_articles_10k_prepared"
 SPLITS = ("train", "validation", "test")
 ROLES = ("left", "center", "right")
 SPLIT_ALIASES = {
@@ -28,9 +30,13 @@ SPLIT_ALIASES = {
     "validation": "validation",
     "test": "test",
 }
-REQUIRED_ARTICLE_FIELDS = frozenset(
+FLAT_ARTICLE_FIELDS = frozenset(
     {"article_id", "story_id", "stance", "split", "title", "body"}
 )
+NESTED_STORY_FIELDS = frozenset(
+    {"story_id", "split", "left", "right", "center", "neutral", "source", "generator"}
+)
+NESTED_ARTICLE_FIELDS = frozenset({"article_id", "publisher", "title", "body"})
 
 
 @dataclass(frozen=True)
@@ -59,7 +65,8 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=DEFAULT_INPUT_PATH,
         help=(
-            "Directory containing articles.jsonl, or the articles.jsonl path itself "
+            "Directory containing neutral_articles_10k.jsonl/articles.jsonl, or a "
+            "JSONL path itself "
             f"(default: {DEFAULT_INPUT_PATH})"
         ),
     )
@@ -81,7 +88,12 @@ def stable_id(value: str) -> tuple[int, int | str]:
 
 
 def articles_path(input_path: Path) -> Path:
-    path = input_path / "articles.jsonl" if input_path.is_dir() else input_path
+    if input_path.is_dir():
+        neutral_path = input_path / "neutral_articles_10k.jsonl"
+        flat_path = input_path / "articles.jsonl"
+        path = neutral_path if neutral_path.is_file() else flat_path
+    else:
+        path = input_path
     if not path.is_file():
         raise FileNotFoundError(f"Article JSONL file not found: {path}")
     return path
@@ -99,7 +111,7 @@ def required_string(
 def parse_article(record: Any, path: Path, line_number: int) -> Article:
     if not isinstance(record, dict):
         raise ValueError(f"{path}:{line_number}: record must be a JSON object")
-    missing = sorted(REQUIRED_ARTICLE_FIELDS - record.keys())
+    missing = sorted(FLAT_ARTICLE_FIELDS - record.keys())
     if missing:
         raise ValueError(
             f"{path}:{line_number}: missing required fields: {', '.join(missing)}"
@@ -130,7 +142,7 @@ def parse_article(record: Any, path: Path, line_number: int) -> Article:
     )
 
 
-def load_events(path: Path) -> dict[str, list[Event]]:
+def load_flat_events(path: Path) -> dict[str, list[Event]]:
     grouped: dict[str, dict[str, Article]] = defaultdict(dict)
     with path.open(encoding="utf-8") as handle:
         for line_number, line in enumerate(handle, 1):
@@ -169,6 +181,150 @@ def load_events(path: Path) -> dict[str, list[Event]]:
             Event(story_id, split, roles["left"], roles["center"], roles["right"])
         )
     return events
+
+
+def nested_article(
+    value: Any,
+    *,
+    role: str,
+    story_id: str,
+    split: str,
+    path: Path,
+    line_number: int,
+) -> Article:
+    if not isinstance(value, dict):
+        raise ValueError(f"{path}:{line_number}: {role} must be a JSON object")
+    missing = sorted(NESTED_ARTICLE_FIELDS - value.keys())
+    if missing:
+        raise ValueError(
+            f"{path}:{line_number}: {role} is missing required fields: "
+            f"{', '.join(missing)}"
+        )
+    article_id = required_string(value, "article_id", path, line_number)
+    title = required_string(value, "title", path, line_number)
+    text = required_string(value, "body", path, line_number)
+    required_string(value, "publisher", path, line_number)
+    if not article_id:
+        raise ValueError(f"{path}:{line_number}: {role}.article_id is empty")
+    if not text:
+        raise ValueError(f"{path}:{line_number}: {role}.body is empty")
+    return Article(article_id, story_id, role, split, title, text)
+
+
+def parse_neutral_story(record: Any, path: Path, line_number: int) -> Event:
+    if not isinstance(record, dict):
+        raise ValueError(f"{path}:{line_number}: record must be a JSON object")
+    missing = sorted(NESTED_STORY_FIELDS - record.keys())
+    if missing:
+        raise ValueError(
+            f"{path}:{line_number}: missing required fields: {', '.join(missing)}"
+        )
+    story_id = required_string(record, "story_id", path, line_number)
+    raw_split = required_string(record, "split", path, line_number).lower()
+    neutral_text = required_string(record, "neutral", path, line_number)
+    required_string(record, "source", path, line_number)
+    if not story_id:
+        raise ValueError(f"{path}:{line_number}: story_id is empty")
+    if raw_split not in SPLIT_ALIASES:
+        raise ValueError(f"{path}:{line_number}: unsupported split {raw_split!r}")
+    if not neutral_text:
+        raise ValueError(f"{path}:{line_number}: neutral is empty")
+    if not isinstance(record["generator"], dict):
+        raise ValueError(f"{path}:{line_number}: generator must be a JSON object")
+
+    split = SPLIT_ALIASES[raw_split]
+    left = nested_article(
+        record["left"],
+        role="left",
+        story_id=story_id,
+        split=split,
+        path=path,
+        line_number=line_number,
+    )
+    right = nested_article(
+        record["right"],
+        role="right",
+        story_id=story_id,
+        split=split,
+        path=path,
+        line_number=line_number,
+    )
+    # Validate the supplied original center article, but use the generated
+    # neutral text—not that article—as the supervised generation target.
+    original_center = nested_article(
+        record["center"],
+        role="center",
+        story_id=story_id,
+        split=split,
+        path=path,
+        line_number=line_number,
+    )
+    neutral_id = f"{story_id}:neutral"
+    article_ids = {left.article_id, right.article_id, original_center.article_id}
+    if len(article_ids) != 3:
+        raise ValueError(f"{path}:{line_number}: story contains duplicate article IDs")
+    if neutral_id in article_ids:
+        raise ValueError(
+            f"{path}:{line_number}: synthetic neutral article ID {neutral_id!r} "
+            "collides with a source article ID"
+        )
+    neutral = Article(neutral_id, story_id, "center", split, "", neutral_text)
+    return Event(story_id, split, left, neutral, right)
+
+
+def detect_schema(path: Path) -> str:
+    with path.open(encoding="utf-8") as handle:
+        first_line = handle.readline()
+    if not first_line:
+        raise ValueError(f"{path}: input file is empty")
+    if not first_line.strip():
+        raise ValueError(f"{path}:1: blank lines are not allowed")
+    try:
+        record = json.loads(first_line)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"{path}:1: malformed JSON: {exc.msg}") from exc
+    if not isinstance(record, dict):
+        raise ValueError(f"{path}:1: record must be a JSON object")
+    if NESTED_STORY_FIELDS <= record.keys():
+        return "nested_neutral_story"
+    if FLAT_ARTICLE_FIELDS <= record.keys():
+        return "flat_article"
+    raise ValueError(
+        f"{path}:1: unsupported schema; expected flat article fields or nested "
+        "neutral-story fields"
+    )
+
+
+def load_neutral_events(path: Path) -> dict[str, list[Event]]:
+    events = {split: [] for split in SPLITS}
+    seen_story_ids: set[str] = set()
+    with path.open(encoding="utf-8") as handle:
+        for line_number, line in enumerate(handle, 1):
+            if not line.strip():
+                raise ValueError(f"{path}:{line_number}: blank lines are not allowed")
+            try:
+                value = json.loads(line)
+            except json.JSONDecodeError as exc:
+                raise ValueError(
+                    f"{path}:{line_number}: malformed JSON: {exc.msg}"
+                ) from exc
+            event = parse_neutral_story(value, path, line_number)
+            if event.event_id in seen_story_ids:
+                raise ValueError(
+                    f"{path}:{line_number}: duplicate story_id {event.event_id!r}"
+                )
+            seen_story_ids.add(event.event_id)
+            events[event.split].append(event)
+    for split in SPLITS:
+        events[split].sort(key=lambda event: stable_id(event.event_id))
+    return events
+
+
+def load_events(path: Path) -> dict[str, list[Event]]:
+    schema = detect_schema(path)
+    if schema == "nested_neutral_story":
+        return load_neutral_events(path)
+    return load_flat_events(path)
 
 
 def baseline_record(event: Event, ideology: str) -> dict[str, str]:
@@ -233,6 +389,7 @@ def duplicate_extras(values: Iterable[str]) -> int:
 
 def prepare(input_path: Path, output_dir: Path, seed: int) -> dict[str, Any]:
     source_path = articles_path(input_path)
+    source_schema = detect_schema(source_path)
     events_by_split = load_events(source_path)
     rng = random.Random(seed)
     baseline_counts = {split: 0 for split in SPLITS}
@@ -290,6 +447,10 @@ def prepare(input_path: Path, output_dir: Path, seed: int) -> dict[str, Any]:
         "seed": seed,
         "input_directory": str(input_path.resolve()),
         "input_articles_file": str(source_path.resolve()),
+        "source_schema": source_schema,
+        "generation_target": (
+            "neutral" if source_schema == "nested_neutral_story" else "center"
+        ),
         "source_events_per_split": source_counts,
         "valid_events_per_split": source_counts,
         "rejected_events_per_split": {split: 0 for split in SPLITS},

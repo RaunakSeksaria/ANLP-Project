@@ -1,0 +1,376 @@
+==========================================
+SLURM_JOB_ID = 2712377
+SLURM_NODELIST = gnode049
+SLURM_JOB_GPUS = 2,3
+==========================================
+========================================================
+BEFORE ENVIRONMENT ACTIVATION: Tue Sep 22 08:13:01 PM IST 2026
+Host: gnode049
+Working directory: /home2/manas.agrawal/anlp/ANLP-Project
+Slurm job ID: 2712377
+Allocated CPUs: 12
+Allocated GPUs: 2
+CONDA_DEFAULT_ENV: base
+Python before activation: /home2/manas.agrawal/miniforge3/bin/python
+Running environment command: conda activate torch_env
+AFTER ENVIRONMENT ACTIVATION: Tue Sep 22 08:13:03 PM IST 2026
+CONDA_DEFAULT_ENV: torch_env
+Python after activation: /home2/manas.agrawal/miniforge3/envs/torch_env/bin/python
+Python 3.12.14
+PyTorch: 2.7.0+cu118
+Transformers: 5.16.1
+CUDA available: True
+Visible GPU count: 2
+GPU 0: NVIDIA GeForce RTX 2080 Ti (UUID: GPU-be9428b4-0830-e843-2469-f42fe31fa468)
+GPU 1: NVIDIA GeForce RTX 2080 Ti (UUID: GPU-c2b525fe-628f-79d9-2906-c66dfcc8256a)
+========================================================
+BEFORE TRAINING COMMAND: Tue Sep 22 08:13:20 PM IST 2026
+Running command: python -u /home2/manas.agrawal/anlp/ANLP-Project/src/scripts/train_joint.py --data-dir /home2/manas.agrawal/anlp/ANLP-Project/dataset/neutral_articles_10k_prepared --output-dir /home2/manas.agrawal/anlp/ANLP-Project/outputs/joint_mean_lambda01 --model-name allenai/led-base-16384 --train-batch-size 1 --eval-batch-size 1 --gradient-accumulation-steps 8 --max-epochs 10 --learning-rate 3e-5 --weight-decay 0.01 --warmup-ratio 0.10 --max-grad-norm 1.0 --early-stopping-patience 3 --early-stopping-min-delta 0.0 --max-input-length 512 --max-target-length 512 --generation-max-new-tokens 512 --triplet-lambda 0.1 --triplet-margin 0.2 --attention-window 512 --seed 42 --num-workers 0 --device cuda --precision fp32 --wandb-entity manasagrawal206-iiit-hyderabad --wandb-project anlp-project --wandb-run-name joint-mean-lambda01 --overwrite-output-dir
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home2/manas.agrawal/.netrc.
+wandb: Currently logged in as: manasagrawal206 (anlp-team) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run hkgo3x89
+wandb: Tracking run with wandb version 0.29.0
+wandb: Run data is saved locally in /home2/manas.agrawal/anlp/ANLP-Project/outputs/joint_mean_lambda01/wandb/run-20260922_201520-hkgo3x89
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run joint-mean-lambda01
+wandb: ⭐️ View project at https://wandb.ai/manasagrawal206-iiit-hyderabad/anlp-project
+wandb: 🚀 View run at https://wandb.ai/manasagrawal206-iiit-hyderabad/anlp-project/runs/hkgo3x89
+Loading weights:   0%|          | 0/296 [00:00<?, ?it/s]Loading weights: 100%|██████████| 296/296 [00:00<00:00, 5554.35it/s]
+[transformers] Input ids are automatically padded from 302 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 170 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 235 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 294 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 118 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 176 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 135 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 163 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 224 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 208 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 247 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 234 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 188 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 115 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 297 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 286 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 102 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 162 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 116 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 153 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 346 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 146 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 186 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 246 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 175 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 245 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 187 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 206 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 211 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 104 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 250 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 124 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 98 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 228 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 357 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 137 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 222 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 212 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 241 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 122 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 179 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 138 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 253 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 260 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 169 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 255 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 112 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 303 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 200 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 136 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 326 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 207 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 157 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 166 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 190 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 273 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 277 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 269 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 254 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 282 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 97 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 173 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 177 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 216 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 185 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 202 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 140 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 283 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 143 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 251 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 284 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 355 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 85 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 218 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 156 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 139 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 183 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 262 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 126 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 141 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 275 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 158 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 127 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 165 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 239 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 155 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 266 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 193 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 236 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 106 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 159 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 223 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 197 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 171 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 164 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 172 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 257 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 189 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 154 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 191 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 323 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 233 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 305 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 167 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 91 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 327 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 215 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 174 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 198 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 276 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 229 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 263 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 87 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 120 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 209 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 210 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 129 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 133 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 205 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 232 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 92 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 128 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 110 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 288 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 308 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 238 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 114 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 100 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 196 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 131 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 296 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 88 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 94 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 248 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 300 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 291 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 194 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 258 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 280 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 151 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 306 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 289 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 161 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 96 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 295 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 199 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 105 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 152 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 231 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 314 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 287 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 107 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 109 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 225 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 261 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 76 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 244 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 313 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 95 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 335 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 180 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 80 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 249 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 132 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 256 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 213 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 301 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 343 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 358 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 219 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 252 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 317 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 149 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 271 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 150 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 181 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 184 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 160 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 274 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 134 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 79 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 316 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 325 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 117 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 359 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 217 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 201 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 334 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 125 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 144 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 192 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 311 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 227 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 321 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 111 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 195 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 168 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 278 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 214 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 243 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 148 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 299 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 178 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 319 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 292 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 99 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 377 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 290 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 374 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 130 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 336 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 264 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 108 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 103 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 293 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 279 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 230 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 352 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 142 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 242 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 123 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 203 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 281 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 101 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 145 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 204 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 240 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 221 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 226 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 259 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 237 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 324 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 220 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 89 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 78 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 339 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 338 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 375 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 350 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 272 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 320 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 119 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 329 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 345 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 298 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 332 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 370 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 331 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 86 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 147 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 265 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 341 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 285 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 182 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 71 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 312 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 364 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 270 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 347 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 310 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 304 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 322 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 362 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 340 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 93 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 315 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 351 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 379 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 81 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 267 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 344 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 113 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 337 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 328 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 318 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 77 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 349 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 391 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 268 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 353 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 330 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 371 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 74 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 406 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 363 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 72 to 512 to be a multiple of `config.attention_window`: 512
+Epoch 0/10 | train_fixed_loss=4.1646 train_fixed_acc=0.3793 | val_loss=4.1766 val_acc=0.3799 val_subset_f1=0.0535 val_subset_repeat3=0.0000 val_subset_len_ratio=0.0490 val_subset_eos=1.0000 | val_triplet_loss=0.1285 | pretrained
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.56s/it]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.56s/it]
+[transformers] Input ids are automatically padded from 83 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 121 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 75 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 367 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 73 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 380 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 386 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 372 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 381 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 309 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 342 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 90 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 84 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 82 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 307 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 365 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 354 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 360 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 356 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 333 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 376 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 348 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 361 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 69 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 388 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 454 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 378 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 383 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 65 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 369 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 366 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 394 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 382 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 393 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 442 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 368 to 512 to be a multiple of `config.attention_window`: 512
+[transformers] Input ids are automatically padded from 70 to 512 to be a multiple of `config.attention_window`: 512
+Epoch 1/10 | train_gen_loss=2.3082 train_acc=0.5140 train_triplet_loss=0.0910 train_total_loss=2.3128 | val_loss=2.1734 val_acc=0.5363 val_subset_f1=0.3965 val_subset_repeat3=0.2744 val_subset_len_ratio=0.8495 val_subset_eos=0.9961 | val_triplet_loss=0.0477 | improved=yes patience=0/3
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.58s/it]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.58s/it]
+Epoch 2/10 | train_gen_loss=1.9759 train_acc=0.5613 train_triplet_loss=0.0319 train_total_loss=1.9661 | val_loss=2.1416 val_acc=0.5419 val_subset_f1=0.4107 val_subset_repeat3=0.1909 val_subset_len_ratio=0.7293 val_subset_eos=0.9844 | val_triplet_loss=0.0293 | improved=yes patience=0/3
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.58s/it]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.58s/it]
+Epoch 3/10 | train_gen_loss=1.7610 train_acc=0.5955 train_triplet_loss=0.0195 train_total_loss=1.7426 | val_loss=2.1670 val_acc=0.5431 val_subset_f1=0.4229 val_subset_repeat3=0.1981 val_subset_len_ratio=0.8963 val_subset_eos=0.9688 | val_triplet_loss=0.0242 | improved=no patience=1/3
+JOINT TRAINING ERROR: [Errno 122] Disk quota exceeded
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mjoint-mean-lambda01[0m at: [34mhttps://wandb.ai/manasagrawal206-iiit-hyderabad/anlp-project/runs/hkgo3x89[0m
+[1;34mwandb[0m: Find logs at: [1;35moutputs/joint_mean_lambda01/wandb/run-20260922_201520-hkgo3x89/logs[0m
+AFTER TRAINING COMMAND: Wed Sep 23 02:32:41 AM IST 2026
+Training exit status: 1
+Lambda-0.1 joint training failed; inspect triple_loss_batch.logs.
