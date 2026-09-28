@@ -73,7 +73,7 @@ def system_prompt(cfg):
                   .replace("{CONTESTED}", _CONTESTED[style]))
 
 
-NEUTRALISE_VERSION = "n1"
+NEUTRALISE_VERSION = "n2"  # n2: headline facts kept, identifying descriptors kept, no invented quote settings
 
 
 def prompt_version(cfg):
@@ -331,6 +331,13 @@ Specifically, never add:
 - background, context or explanation of who someone is or why something matters.
 - a consequence, cause or outcome the article does not report.
 - a number the article does not contain, including totals you could compute.
+- a speaker, audience, medium or setting for a quotation. If the article gives \
+a quotation or a fragment without saying who said it, where, or in what form, \
+your rewrite must not say either. Write it as: The phrase "..." was also \
+reported. Nothing more. Never write "a message read", "a sign said", "a witness \
+said", "he told reporters" or "in a statement" unless the article itself says \
+so. Joining fragments into continuous prose is not permission to invent how \
+they connect.
 
 If you find yourself about to write something you know but the article does not \
 say, stop and leave it out. An article that says less than you know is correct.
@@ -341,6 +348,10 @@ place and quotation in the article must survive into your rewrite. If you cannot
 neutralise a sentence without dropping a fact, keep the fact and neutralise the \
 wording around it.
 
+- The headline is part of the article. Every fact in it that the body does not \
+repeat -- who, where, how many, what kind of place or group -- must appear in \
+your prose. Drop only the headline's form: labels such as "Watch:" or \
+"BREAKING", title-case capitalisation, teaser phrasing.
 - Copy numbers, names, titles and dates exactly as the article gives them.
 - Copy direct quotations character for character. Never paraphrase inside \
 quotation marks, never merge two quotations, never trim a quotation to change \
@@ -364,7 +375,11 @@ not fill the gap from your own knowledge. Leave the gap.
 5.  STORY CHOICE and PLACEMENT -- open with the event itself, not with the \
 reaction to it, the accusation about it, or one side's characterisation of it.
 6.  WORD CHOICE -- prefer the descriptive term to the loaded one. Where a term \
-is contested, use the neutral descriptive form.
+is contested, use the neutral descriptive form. A descriptor that IDENTIFIES \
+who or what was involved -- sexual orientation, religion, nationality, \
+ethnicity, party, occupation, as in "a gay nightclub" or "a Republican \
+senator" -- is a fact, not bias. Keep it. Remove a descriptor only when it \
+EVALUATES rather than identifies.
 7.  UNSUBSTANTIATED CLAIMS -- an assertion the article does not support becomes \
 attributed to whoever made it, or goes.
 8.  OPINION PRESENTED AS FACT -- judgement in the reporter's voice must be \

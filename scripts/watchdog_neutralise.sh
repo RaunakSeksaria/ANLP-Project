@@ -11,10 +11,11 @@ KEYVAR="${2:-NEMOTRON_3_ULTRA_KEY}"
 # count and the tail of the run log, so the morning diagnosis does not depend on
 # anyone having watched it happen.
 #
-#   start:  setsid nohup scratch/watchdog.sh > /dev/null 2>&1 < /dev/null &
+#   start:  setsid nohup scripts/watchdog_neutralise.sh <stance> <KEYVAR> > /dev/null 2>&1 < /dev/null &
 #   stop:   touch runs/nemotron/STOP_NEUTRALISE_${STANCE}   (or pkill -f watchdog.sh)
 
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)" || exit 1
+mkdir -p runs/nemotron
 
 OUT=runs/nemotron/neutralised_${STANCE}.jsonl
 RUNLOG=runs/nemotron/run_neutralise_${STANCE}.log
@@ -39,7 +40,9 @@ while true; do
     exit 0
   fi
 
-  if pgrep -f "scripts/generate_neutral.py" > /dev/null; then
+  # Match on this stance's output file: the other stance's generator also runs
+  # scripts/generate_neutral.py and would otherwise make a dead run look alive.
+  if pgrep -f "neutralised_${STANCE}.jsonl" > /dev/null; then
     sleep 60
     continue
   fi
@@ -79,6 +82,6 @@ while true; do
   fi
 
   log "  restarting..."
-  setsid nohup scratch/run_neutralise.sh "$STANCE" "$KEYVAR" >> "$RUNLOG" 2>&1 < /dev/null &
+  setsid nohup scripts/run_neutralise.sh "$STANCE" "$KEYVAR" >> "$RUNLOG" 2>&1 < /dev/null &
   sleep 90
 done
