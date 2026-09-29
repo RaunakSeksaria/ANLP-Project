@@ -24,6 +24,10 @@ STOP=runs/nemotron/STOP_NEUTRALISE_${STANCE}
 TARGET=10000
 MAX_RESTARTS=20
 restarts=0
+# A stop marker in the run log belongs to a run THIS watchdog launched only after
+# its first launch. On (re)start it is a leftover from before -- whoever started
+# us (a human, or supervise_neutralise.sh after its cool-off) meant "try again".
+launched=0
 
 log() { echo "[$(date '+%F %T')] $*" >> "$WLOG"; }
 
@@ -63,7 +67,7 @@ while true; do
 
   # A clean 'stopped early' means 5 consecutive failures -- the endpoint or
   # the key is unhealthy. Back off hard rather than hammering it.
-  if tail -20 "$RUNLOG" 2>/dev/null | grep -q "STOPPED EARLY"; then
+  if [ "$launched" -eq 1 ] && tail -20 "$RUNLOG" 2>/dev/null | grep -q "STOPPED EARLY"; then
     # The run itself judged the endpoint unhealthy. Restarting re-runs the same
     # doomed work and writes a row per cluster; that produced 188k junk records
     # across 21 restarts once. Stop and let a human look.
@@ -71,7 +75,7 @@ while true; do
     log "          Completed records are safe. Fix the endpoint/key, then re-run"
     log "          the runner script by hand."
     exit 2
-  elif tail -20 "$RUNLOG" 2>/dev/null | grep -q "run aborted"; then
+  elif [ "$launched" -eq 1 ] && tail -20 "$RUNLOG" 2>/dev/null | grep -q "run aborted"; then
     log "  reason: FATAL (bad key / unknown model). Not retryable -- exiting."
     exit 1
   fi
@@ -83,5 +87,6 @@ while true; do
 
   log "  restarting..."
   setsid nohup scripts/run_neutralise.sh "$STANCE" "$KEYVAR" >> "$RUNLOG" 2>&1 < /dev/null &
+  launched=1
   sleep 90
 done

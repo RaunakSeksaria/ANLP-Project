@@ -20,7 +20,7 @@ INTERVAL=1800
 MAX_RELAUNCH=6
 TARGET=10000
 LOG=runs/nemotron/supervise_neutralise.log
-declare -A KEY=([left]=NEMOTRON_3_ULTRA_KEY [right]=NEMOTRON_3_ULTRA_KEY_2)
+declare -A KEY=([left]=NEMOTRON_3_ULTRA_KEY [right]=NEMOTRON_3_ULTRA_KEY)
 declare -A RELAUNCH=([left]=0 [right]=0)
 
 log() { echo "[$(date '+%F %T')] $*" >> "$LOG"; }

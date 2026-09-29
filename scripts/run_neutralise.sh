@@ -20,15 +20,21 @@ IN="data/final/single_${STANCE}_10k.jsonl"
 [ -f "$IN" ] || IN="single_${STANCE}_10k.jsonl"
 mkdir -p runs/nemotron
 
+# Per-stance rate override, read on every (re)start so a rate-limited key can be
+# slowed without touching code:  echo "WORKERS=8 RPM=20" > runs/nemotron/rate_right
+WORKERS=14 RPM=40
+[ -f "runs/nemotron/rate_${STANCE}" ] && . "runs/nemotron/rate_${STANCE}"
+
 exec .venv/bin/python3 scripts/generate_neutral.py \
   --task neutralise \
   --provider nvidia --api-key-env "$KEYVAR" \
   --model nvidia/nemotron-3-ultra-550b-a55b \
   --in  "$IN" \
   --out "runs/nemotron/neutralised_${STANCE}.jsonl" \
-  --workers 14 --rpm 40 --thinking-level HIGH \
+  --workers "$WORKERS" --rpm "$RPM" --thinking-level HIGH \
   --temperature 1.0 --top-p 0.95 --max-output-tokens 16384 \
   --stop-after 5 \
   --set max_network_retries=3 \
+  --set backoff_base=4 --set backoff_cap=120 \
   --set enforce_length=false \
   --set hard_max_ratio=3.0
