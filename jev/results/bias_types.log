@@ -1,0 +1,9 @@
+spent before $0.9502; this run may spend up to $0.25
+0 already scored, 3000 to go; spent so far $0.9502
+  500/3000  33.7/s  spent $0.9820
+  1000/3000  35.5/s  spent $1.0139
+  1500/3000  35.6/s  spent $1.0457
+  2000/3000  35.2/s  spent $1.0775
+  2500/3000  34.2/s  spent $1.1093
+  3000/3000  32.9/s  spent $1.1412
+scored 3000, failed 0, stopped_on_budget=False; total spent $1.1412 over 41500 requests

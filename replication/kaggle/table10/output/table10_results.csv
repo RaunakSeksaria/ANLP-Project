@@ -1,0 +1,8 @@
+variant,val_acc,val_auc,train_loss,val_loss,train_time_s,train_time_min,trainable_params_M,n_train,backbone,encoder,pooling,chunk_agg,chunking,freeze_backbone,simple_head
+No Transformers,0.8231,0.9457,0.6348,0.4544,1443.6,24.1,109.68,30043,bert,none,attention,mean,True,False,False
+No Chunking,0.7781,0.9334,0.6764,0.5164,722.3,12.0,117.56,30043,bert,transformer,attention,mean,False,False,False
+Freeze BERT,0.5815,0.7638,0.9945,0.8998,761.5,12.7,8.08,30043,bert,transformer,attention,mean,True,True,False
+Max Pool,0.8184,0.9479,0.6349,0.4591,1647.0,27.4,117.56,30043,bert,transformer,attention,max,True,False,False
+No Classifier,0.8236,0.9495,0.6114,0.4565,1645.7,27.4,117.56,30043,bert,transformer,attention,mean,True,False,True
+No Attention,0.8143,0.9458,0.6458,0.483,1643.4,27.4,117.56,30043,bert,transformer,mean,mean,True,False,False
+Full Model,0.8099,0.9453,0.645,0.4872,1646.9,27.4,117.56,30043,bert,transformer,attention,mean,True,False,False

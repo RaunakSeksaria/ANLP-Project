@@ -1,0 +1,2 @@
+variant,val_acc,val_auc,train_loss,val_loss,train_time_s,train_time_min,trainable_params_M,n_train,backbone,encoder,pooling,chunk_agg,chunking,freeze_backbone,simple_head
+No Classifier,0.8221,0.9493,0.611,0.4581,1685.9,28.1,117.56,30043,bert,transformer,attention,mean,True,False,True

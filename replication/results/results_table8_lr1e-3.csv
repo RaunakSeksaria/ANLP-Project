@@ -1,0 +1,13 @@
+variant,tag,val_acc,val_auc,train_loss,val_loss,train_time_s,epochs,lr,emb_dim,n_train,trainable_params_M,backbone,encoder,pooling,chunk_agg,chunking,freeze_backbone,simple_head
+"TCN no chunk, no attn",standalone-lr1e-3,0.5885,0.7746,0.9443,0.7907,166.7,1,0.001,256,30043,8.67,embedding,tcn,mean,mean,False,False,False
+"TCN no chunk, attn",standalone-lr1e-3,0.5372,0.7472,0.9596,0.8357,185.7,1,0.001,256,30043,8.67,embedding,tcn,attention,mean,False,False,False
+"GRU no chunk, no attn",standalone-lr1e-3,0.7188,0.8719,0.8431,0.6793,164.0,1,0.001,256,30043,8.18,embedding,gru,mean,mean,False,False,False
+"GRU no chunk, attn",standalone-lr1e-3,0.7742,0.9176,0.6958,0.5441,166.1,1,0.001,256,30043,8.18,embedding,gru,attention,mean,False,False,False
+"TCN with chunk, no attn",standalone-lr1e-3,0.5448,0.7488,0.9489,0.8227,143.0,1,0.001,256,30043,8.67,embedding,tcn,mean,mean,True,False,False
+"TCN with chunk, attn",standalone-lr1e-3,0.5488,0.7541,0.9549,0.8327,139.8,1,0.001,256,30043,8.67,embedding,tcn,attention,mean,True,False,False
+"GRU with chunk, no attn",standalone-lr1e-3,0.6926,0.8556,0.8761,0.7193,123.7,1,0.001,256,30043,8.18,embedding,gru,mean,mean,True,False,False
+"GRU with chunk, attn",standalone-lr1e-3,0.7568,0.9058,0.7402,0.5837,125.6,1,0.001,256,30043,8.18,embedding,gru,attention,mean,True,False,False
+"TCN no chunk, no attn",standalone-lr1e-3-L8,0.5025,0.6829,1.0499,0.9851,279.2,1,0.001,256,8,30043,9.46,embedding,tcn,mean,mean,False,False,False
+"TCN no chunk, attn",standalone-lr1e-3-L8,0.5977,0.7841,1.025,0.8462,303.6,1,0.001,256,8,30043,9.46,embedding,tcn,attention,mean,False,False,False
+"TCN with chunk, no attn",standalone-lr1e-3-L8,0.3657,0.5259,1.0935,1.0927,168.8,1,0.001,256,8,30043,9.46,embedding,tcn,mean,mean,True,False,False
+"TCN with chunk, attn",standalone-lr1e-3-L8,0.3657,0.5282,1.0937,1.0928,173.3,1,0.001,256,8,30043,9.46,embedding,tcn,attention,mean,True,False,False

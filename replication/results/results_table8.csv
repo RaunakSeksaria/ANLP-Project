@@ -1,0 +1,9 @@
+variant,tag,val_acc,val_auc,train_loss,val_loss,train_time_s,epochs,lr,emb_dim,n_train,trainable_params_M,backbone,encoder,pooling,chunk_agg,chunking,freeze_backbone,simple_head
+"TCN no chunk, no attn",standalone,0.3657,0.6152,1.0936,1.0922,151.2,1,2e-05,256,30043,8.67,embedding,tcn,mean,mean,False,False,False
+"TCN no chunk, attn",standalone,0.3657,0.6152,1.0936,1.0922,179.4,1,2e-05,256,30043,8.67,embedding,tcn,attention,mean,False,False,False
+"GRU no chunk, no attn",standalone,0.3768,0.6269,1.0859,1.0792,144.8,1,2e-05,256,30043,8.18,embedding,gru,mean,mean,False,False,False
+"GRU no chunk, attn",standalone,0.3925,0.6189,1.0846,1.0762,161.3,1,2e-05,256,30043,8.18,embedding,gru,attention,mean,False,False,False
+"TCN with chunk, no attn",standalone,0.3657,0.5943,1.0938,1.0924,139.0,1,2e-05,256,30043,8.67,embedding,tcn,mean,mean,True,False,False
+"TCN with chunk, attn",standalone,0.3657,0.5944,1.0938,1.0924,140.0,1,2e-05,256,30043,8.67,embedding,tcn,attention,mean,True,False,False
+"GRU with chunk, no attn",standalone,0.3732,0.6194,1.0865,1.0804,165.1,1,2e-05,256,30043,8.18,embedding,gru,mean,mean,True,False,False
+"GRU with chunk, attn",standalone,0.3882,0.6141,1.0853,1.0779,194.8,1,2e-05,256,30043,8.18,embedding,gru,attention,mean,True,False,False

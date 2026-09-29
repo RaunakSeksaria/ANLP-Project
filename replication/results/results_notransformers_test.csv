@@ -1,0 +1,2 @@
+variant,tag,val_acc,val_auc,train_loss,val_loss,train_time_s,epochs,lr,emb_dim,tcn_levels,n_train,trainable_params_M,backbone,encoder,pooling,chunk_agg,chunking,freeze_backbone,simple_head
+No Transformers (no BERT),nobert-lr2e-5,0.3716,0.5584,1.0932,1.0885,114.4,1,2e-05,256,4,30043,7.88,embedding,none,attention,mean,True,False,False

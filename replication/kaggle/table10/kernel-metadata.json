@@ -1,0 +1,16 @@
+{
+  "id": "harshitlalwani/chunkybert-table10-ablations",
+  "title": "chunkybert-table10-ablations",
+  "code_file": "table10_sweep.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "",
+  "dataset_sources": ["harshitlalwani/media-bias-csv"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

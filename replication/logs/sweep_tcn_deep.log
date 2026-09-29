@@ -1,0 +1,9 @@
+=== 18:33:19 [1e-3 L8] TCN no chunk, no attn ===
+RESULT {"variant": "TCN no chunk, no attn", "tag": "standalone-lr1e-3-L8", "val_acc": 0.5025, "val_auc": 0.6829, "train_loss": 1.0499, "val_loss": 0.9851, "train_time_s": 279.2, "epochs": 1, "lr": 0.001, "emb_dim": 256, "tcn_levels": 8, "n_train": 30043, "trainable_params_M": 9.46, "backbone": "embedding", "encoder": "tcn", "pooling": "mean", "chunk_agg": "mean", "chunking": false, "freeze_backbone": false, "simple_head": false}
+=== 18:38:38 [1e-3 L8] TCN no chunk, attn ===
+RESULT {"variant": "TCN no chunk, attn", "tag": "standalone-lr1e-3-L8", "val_acc": 0.5977, "val_auc": 0.7841, "train_loss": 1.025, "val_loss": 0.8462, "train_time_s": 303.6, "epochs": 1, "lr": 0.001, "emb_dim": 256, "tcn_levels": 8, "n_train": 30043, "trainable_params_M": 9.46, "backbone": "embedding", "encoder": "tcn", "pooling": "attention", "chunk_agg": "mean", "chunking": false, "freeze_backbone": false, "simple_head": false}
+=== 18:44:27 [1e-3 L8] TCN with chunk, no attn ===
+RESULT {"variant": "TCN with chunk, no attn", "tag": "standalone-lr1e-3-L8", "val_acc": 0.3657, "val_auc": 0.5259, "train_loss": 1.0935, "val_loss": 1.0927, "train_time_s": 168.8, "epochs": 1, "lr": 0.001, "emb_dim": 256, "tcn_levels": 8, "n_train": 30043, "trainable_params_M": 9.46, "backbone": "embedding", "encoder": "tcn", "pooling": "mean", "chunk_agg": "mean", "chunking": true, "freeze_backbone": false, "simple_head": false}
+=== 18:48:00 [1e-3 L8] TCN with chunk, attn ===
+RESULT {"variant": "TCN with chunk, attn", "tag": "standalone-lr1e-3-L8", "val_acc": 0.3657, "val_auc": 0.5282, "train_loss": 1.0937, "val_loss": 1.0928, "train_time_s": 173.3, "epochs": 1, "lr": 0.001, "emb_dim": 256, "tcn_levels": 8, "n_train": 30043, "trainable_params_M": 9.46, "backbone": "embedding", "encoder": "tcn", "pooling": "attention", "chunk_agg": "mean", "chunking": true, "freeze_backbone": false, "simple_head": false}
+SWEEP DONE
