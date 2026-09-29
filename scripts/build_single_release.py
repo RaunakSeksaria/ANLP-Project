@@ -31,7 +31,7 @@ def main():
                     help="default runs/nemotron/neutralised_<stance>.jsonl plus any "
                          "runs/nemotron/extra_<stance>_*.jsonl (disjoint slices run on other keys)")
     ap.add_argument("--inputs", nargs="+", default=None,
-                    help="default single_<stance>_10k.jsonl plus single_<stance>_extra.jsonl if present")
+                    help="default single_<stance>_10k.jsonl plus every single_<stance>_extra*.jsonl")
     ap.add_argument("--out", default=None,
                     help="default <stance>_neutral_10k.jsonl, or <stance>_neutral_dedup.jsonl with --dedupe")
     ap.add_argument("--dedupe", action="store_true",
@@ -44,8 +44,7 @@ def main():
             [ROOT / f"runs/nemotron/neutralised_{st}.jsonl",
              *sorted((ROOT / "runs/nemotron").glob(f"extra_{st}_*.jsonl"))])
     inputs = ([Path(i) for i in args.inputs] if args.inputs else
-              [p for p in (ROOT / f"single_{st}_10k.jsonl", ROOT / f"single_{st}_extra.jsonl")
-               if p.exists()])
+              [ROOT / f"single_{st}_10k.jsonl", *sorted(ROOT.glob(f"single_{st}_extra*.jsonl"))])
     out = Path(args.out or ROOT / (f"{st}_neutral_dedup.jsonl" if args.dedupe else f"{st}_neutral_10k.jsonl"))
 
     # split + article_id, from the fusion release (same 10k events)

@@ -6,11 +6,9 @@ input article appears **exactly once**.
 
 | file | records | train | val | test |
 | --- | --- | --- | --- | --- |
-| `left_neutral_dedup.jsonl` | 9,437 | 7,684 | 885 | 868 |
+| `left_neutral_dedup.jsonl` | 10,000 | 8,247 | 885 | 868 |
 | `right_neutral_dedup.jsonl` | 10,000 | 8,200 | 893 | 907 |
 
-**Left holds every distinct left article BigNewsAlign has** (9,441 in the whole
-export, minus 4 that were near-copies of articles already in the dataset).
 "Unique" is judged ignoring case and punctuation, because some outlets ran the
 same article twice with only straight vs curly quotes changed. Those count as
 one article, and the kept record's `event_ids` lists both copies' events.
@@ -19,9 +17,21 @@ one article, and the kept record's `event_ids` lists both copies' events.
 
 - **From the 10k-event corpus** (5,695 left, 6,158 right): every unique article in
   the events behind `neutral_articles_10k.jsonl`, in their original splits.
-- **Added from the rest of the BigNewsAlign export** (3,742 left, 3,842 right),
-  chosen with `scripts/make_extra_articles.py`, shortest first. **All added articles
-  are in train**, so val and test are exactly those of the 10k-event corpus.
+- **Added from the rest of the 250-word export** `bignewsalign_max250_LCR.jsonl`
+  (3,742 left, 3,842 right), chosen with `scripts/make_extra_articles.py`,
+  shortest first. For left, that exhausts the export: it has only 9,441 distinct
+  left articles.
+- **Left top-up from a 275-word cut** (563 left). This was built from
+  `bignewsalign_full_LCR.jsonl` with `build_lcr_subset_from_jsonl.py --max-words 275`,
+  under the **same selection rules as the 250 export**: only events with a full
+  left/centre/right trio, and the shortest article per event and stance. The 563
+  shortest new distinct left articles were taken (mean 185 words, 100-251). 275 is
+  the lowest cap that yields enough under those rules (250 gives 3, 260 gives 424).
+  Articles from events without a trio were deliberately *not* used, even though
+  the full file has thousands, so every article in both files meets the same
+  selection criteria. That keeps the two stances comparable.
+- **All added articles are in train**, so val and test are exactly those of the
+  10k-event corpus. Articles from any event already in the dataset were skipped.
   Candidates were screened against every article already in the dataset (both
   stances, all splits) and against each other. Anything with word 5-gram
   Jaccard >= 0.8 was dropped, so no near-copy of a val/test article entered train.
@@ -31,7 +41,7 @@ one article, and the kept record's `event_ids` lists both copies' events.
 
 The source corpus (BigNewsAlign) is organised by *event*, and one article often
 belongs to several events, up to 32 times. In the 10k-event files
-(`left_neutral_10k.jsonl`) that meant 43% of records repeated an input the model
+(`dead_data/left_neutral_10k.jsonl`) that meant 43% of records repeated an input the model
 had already seen, each time with a different generated target. That's an
 overfitting risk, so these files keep **one record per unique article**.
 
@@ -79,16 +89,16 @@ held-out events as `neutral_articles_10k.jsonl`.
 | check | left | right |
 | --- | --- | --- |
 | parse errors, stray line breaks, duplicate ids, repeated articles, split leakage | 0 | 0 |
-| loaded attribution verbs per 1,000 words, input → output | 0.82 → 0.48 | 0.95 → 0.46 |
-| intensifiers per 1,000 words | 0.26 → 0.05 | 0.23 → 0.07 |
-| subjective adjectives per 1,000 words | 0.41 → 0.16 | 0.42 → 0.16 |
-| quotations verbatim / elided / reworded / hallucinated | 89.4 / 9.5 / 1.0 / 0.1% | 91.1 / 7.8 / 1.0 / 0.0% |
+| loaded attribution verbs per 1,000 words, input → output | 0.81 → 0.48 | 0.95 → 0.46 |
+| intensifiers per 1,000 words | 0.25 → 0.06 | 0.23 → 0.07 |
+| subjective adjectives per 1,000 words | 0.40 → 0.16 | 0.42 → 0.16 |
+| quotations verbatim / elided / reworded / hallucinated | 89.3 / 9.6 / 1.0 / 0.1% | 91.1 / 7.8 / 1.0 / 0.0% |
 | named entities kept | 93.2% | 93.5% |
-| length, output/input (median) | 0.87 | 0.92 |
+| length, output/input (median) | 0.88 | 0.92 |
 | median similarity to the input (1.0 = unchanged) | 0.74 | 0.80 |
-| near-unchanged copies (≥0.98) | 1.2% | 2.8% |
-| "The article reports / notes …" | 12.4% | 5.5% |
-| adds a title/first name not in the input | 22.7% | 21.8% |
+| near-unchanged copies (≥0.98) | 1.1% | 2.8% |
+| "The article reports / notes …" | 12.2% | 5.5% |
+| adds a title/first name not in the input | 22.6% | 21.8% |
 | adds a date or year not in the input | 1.1% | 0.9% |
 
 Right rewrites less aggressively than left, and left leans more on "the article
@@ -97,7 +107,7 @@ fragments (left 2, right 9). Their ids, and those behind every other flag, are i
 `<file>.eda.json`.
 
 **Known issues:** the same as in the 10k release, documented in detail in
-`left_neutral_10k.README.md`.
+`dead_data/left_neutral_10k.README.md`.
 - About 12% of outputs contain "The article reports / notes …".
 - About 20% add a title or first name the input doesn't give ("President", "Donald").
 - About 1% add a date or year from world knowledge.

@@ -53,8 +53,11 @@ def main():
     ap.add_argument("--stance", choices=("left", "right"), required=True)
     ap.add_argument("--target", type=int, default=10000, help="unique articles wanted in total")
     ap.add_argument("--min-words", type=int, default=20)
+    ap.add_argument("--max-words", type=int, default=None,
+                    help="word cap, counted as the export does: len(text.split(' '))")
     ap.add_argument("--jaccard", type=float, default=0.8)
-    ap.add_argument("--out", default=None, help="default single_<stance>_extra.jsonl")
+    ap.add_argument("--out", default=None,
+                    help="default single_<stance>_extra.jsonl; use a new name for a later batch")
     args = ap.parse_args()
     st = args.stance
     out = Path(args.out or ROOT / f"single_{st}_extra.jsonl")
@@ -68,14 +71,25 @@ def main():
             index.add(shingles(body))
             if s == st:
                 have_fp.add(fingerprint(body))
+    # every event already represented: the 10k release plus earlier extra batches.
+    # A new article from one of those events is skipped -- its id would collide,
+    # and a second article about a val/test event would leak the story into train.
     for line in (ROOT / "neutral_articles_10k.jsonl").open(encoding="utf-8"):
         have_ids.add(json.loads(line)["story_id"])
+    for s in ("left", "right"):
+        for path in ROOT.glob(f"single_{s}_extra*.jsonl"):
+            if path.resolve() == out.resolve():
+                continue                 # this batch's own previous output
+            for line in path.open(encoding="utf-8"):
+                have_ids.add(json.loads(line)["source_story_id"])
     have = len(have_fp)
 
     cands, seen = [], set()
     for line in open(args.raw, encoding="utf-8"):
         r = json.loads(line)
-        if r["political_bias"] != st:
+        if r["political_bias"] != st or str(r["group_uid"]) in have_ids:
+            continue
+        if args.max_words and len(r["textString"].split(" ")) > args.max_words:
             continue
         f = fingerprint(r["textString"])
         if len(f.split()) < args.min_words or f in have_fp or f in seen:
@@ -99,7 +113,6 @@ def main():
     with out.open("w", encoding="utf-8") as fo:
         for r in taken:
             gid = str(r["group_uid"])
-            assert gid not in have_ids, f"group_uid {gid} is already an event in the 10k release"
             fo.write(json.dumps({
                 "story_id": f"{gid}:{st}", "source_story_id": gid, "stance": st,
                 "split": "train", "article_id": f"{gid}:{INDEX[st]}",
