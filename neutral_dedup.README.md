@@ -6,11 +6,26 @@ input article appears **exactly once**.
 
 | file | records | train | val | test |
 | --- | --- | --- | --- | --- |
-| `left_neutral_dedup.jsonl` | 5,695 | 3,942 | 885 | 868 |
-| `right_neutral_dedup.jsonl` | 6,160 | 4,360 | 893 | 907 |
+| `left_neutral_dedup.jsonl` | 9,437 | 7,684 | 885 | 868 |
+| `right_neutral_dedup.jsonl` | 10,000 | 8,200 | 893 | 907 |
 
-Both files are complete: every unique left and right article in the 10k-event
-corpus has exactly one neutralised rewrite.
+**Left holds every distinct left article BigNewsAlign has** (9,441 in the whole
+export, minus 4 that were near-copies of articles already in the dataset).
+"Unique" is judged ignoring case and punctuation, because some outlets ran the
+same article twice with only straight vs curly quotes changed. Those count as
+one article, and the kept record's `event_ids` lists both copies' events.
+
+### Where the articles come from
+
+- **From the 10k-event corpus** (5,695 left, 6,158 right): every unique article in
+  the events behind `neutral_articles_10k.jsonl`, in their original splits.
+- **Added from the rest of the BigNewsAlign export** (3,742 left, 3,842 right),
+  chosen with `scripts/make_extra_articles.py`, shortest first. **All added articles
+  are in train**, so val and test are exactly those of the 10k-event corpus.
+  Candidates were screened against every article already in the dataset (both
+  stances, all splits) and against each other. Anything with word 5-gram
+  Jaccard >= 0.8 was dropped, so no near-copy of a val/test article entered train.
+  Added records have `event_ids` with a single id: the event they were taken from.
 
 ## Why deduplicated
 
@@ -59,23 +74,27 @@ train = [(r["source"], r["left_neutralised"]) for r in rows if r["split"] == "tr
 The left and right files share no article text. Val and test come from the same
 held-out events as `neutral_articles_10k.jsonl`.
 
-## Quality (left; reproduce with `scripts/eda_neutralised.py`)
+## Quality (reproduce with `scripts/eda_neutralised.py <file>`)
 
-| check | result |
-| --- | --- |
-| parse errors, stray line breaks, duplicate ids, repeated articles, split leakage | 0 |
-| loaded vocabulary per 1,000 words, input → output | intensifiers 0.27 → 0.05, subjective adjectives 0.41 → 0.16, loaded attribution verbs 0.83 → 0.50 |
-| quotations reproduced verbatim or elided | 99.1% (reworded 0.9%, hallucinated 2 spans) |
-| named entities kept | 93.2% |
-| length, output/input | median 0.88 |
+| check | left | right |
+| --- | --- | --- |
+| parse errors, stray line breaks, duplicate ids, repeated articles, split leakage | 0 | 0 |
+| loaded attribution verbs per 1,000 words, input → output | 0.82 → 0.48 | 0.95 → 0.46 |
+| intensifiers per 1,000 words | 0.26 → 0.05 | 0.23 → 0.07 |
+| subjective adjectives per 1,000 words | 0.41 → 0.16 | 0.42 → 0.16 |
+| quotations verbatim / elided / reworded / hallucinated | 89.4 / 9.5 / 1.0 / 0.1% | 91.1 / 7.8 / 1.0 / 0.0% |
+| named entities kept | 93.2% | 93.5% |
+| length, output/input (median) | 0.87 | 0.92 |
+| median similarity to the input (1.0 = unchanged) | 0.74 | 0.80 |
+| near-unchanged copies (≥0.98) | 1.2% | 2.8% |
+| "The article reports / notes …" | 12.4% | 5.5% |
+| adds a title/first name not in the input | 22.7% | 21.8% |
+| adds a date or year not in the input | 1.1% | 0.9% |
 
-Right audits the same or slightly better. It keeps 93.6% of entities; 91.5% of
-quotations are verbatim; loaded attribution verbs fall from 0.97 to 0.45 per 1,000
-words; only 5.1% of outputs contain "the article …" (left: 12.3%). It rewrites
-less aggressively than left (median similarity to the input 0.79 against 0.73),
-and 2.8% of outputs are near-unchanged copies. A handful of right records (2
-truncated, 2 with JSON leaking into the text) are listed in
-`right_neutral_dedup.eda.json`.
+Right rewrites less aggressively than left, and left leans more on "the article
+…" attribution. A handful of records per file are truncated or carry JSON
+fragments (left 2, right 9). Their ids, and those behind every other flag, are in
+`<file>.eda.json`.
 
 **Known issues:** the same as in the 10k release, documented in detail in
 `left_neutral_10k.README.md`.
