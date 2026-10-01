@@ -1,0 +1,32 @@
+[
+  {
+    "lambda": 0.0,
+    "lambda_key": "lambda_0",
+    "ari": 0.004831848541140814,
+    "nmi": 0.003854684159336266,
+    "ideology_silhouette": 0.010827168747488725,
+    "centroid_cosine_distance": 0.0028169710090937272,
+    "kmeans_inertia": 339.19675405176287,
+    "kmeans_cluster_sizes": [
+      963,
+      1037
+    ],
+    "pca_pc1_explained_variance": 0.18807072607907488,
+    "pca_pc2_explained_variance": 0.08149627947391784
+  },
+  {
+    "lambda": 0.35,
+    "lambda_key": "lambda_0_35",
+    "ari": 0.00042828815818096494,
+    "nmi": 0.0007028281706775694,
+    "ideology_silhouette": 0.003384154184434414,
+    "centroid_cosine_distance": 0.004573029113875915,
+    "kmeans_inertia": 951.2325694579719,
+    "kmeans_cluster_sizes": [
+      1238,
+      762
+    ],
+    "pca_pc1_explained_variance": 0.10848124514091162,
+    "pca_pc2_explained_variance": 0.10280020449708926
+  }
+]

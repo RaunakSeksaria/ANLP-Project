@@ -1,0 +1,26 @@
+[
+  {
+    "lambda": 0.0,
+    "alignment": 0.3086159662748418,
+    "alignment_ci_low": 0.30291296594109945,
+    "alignment_ci_high": 0.3145097035770174,
+    "alignment_pairs": 2000,
+    "uniformity": -0.7577847246948665,
+    "uniformity_ci_low": -0.7661890226633191,
+    "uniformity_ci_high": -0.7474506863554897,
+    "uniformity_articles": 2000,
+    "uniformity_distances": 1999000
+  },
+  {
+    "lambda": 0.35,
+    "alignment": 0.3763947787796613,
+    "alignment_ci_low": 0.37042135206500215,
+    "alignment_ci_high": 0.3826333196117481,
+    "alignment_pairs": 2000,
+    "uniformity": -1.965877412968375,
+    "uniformity_ci_low": -1.9718485941119464,
+    "uniformity_ci_high": -1.9546552274973228,
+    "uniformity_articles": 2000,
+    "uniformity_distances": 1999000
+  }
+]

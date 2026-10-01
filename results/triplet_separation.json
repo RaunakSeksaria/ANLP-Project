@@ -1,0 +1,53 @@
+{
+  "models": [
+    {
+      "lambda": 0.0,
+      "num_triplets": 2000,
+      "mean_d_pos": 0.30304828710081677,
+      "mean_d_neg": 0.38969693852664095,
+      "mean_separation_gap": 0.0866486514258242,
+      "median_separation_gap": 0.08916106957621456,
+      "ordering_success_pct": 72.95,
+      "margin": 0.2,
+      "mean_requested_margin_gap": -0.11335134857417582,
+      "requested_squared_margin_satisfaction_pct": 23.05,
+      "actual_training_margin_satisfaction_pct": 19.950000000000003,
+      "d_pos_ci_low": 0.29718871480223247,
+      "d_pos_ci_high": 0.3091688866560654,
+      "d_neg_ci_low": 0.3843045548995828,
+      "d_neg_ci_high": 0.39501899412669417,
+      "gap_ci_low": 0.07921765716459217,
+      "gap_ci_high": 0.09411718140447307
+    },
+    {
+      "lambda": 0.35,
+      "num_triplets": 2000,
+      "mean_d_pos": 0.37681067869052287,
+      "mean_d_neg": 1.0304064415300536,
+      "mean_separation_gap": 0.6535957628395306,
+      "median_separation_gap": 0.6681405362075511,
+      "ordering_success_pct": 98.85000000000001,
+      "margin": 0.2,
+      "mean_requested_margin_gap": 0.4535957628395306,
+      "requested_squared_margin_satisfaction_pct": 94.6,
+      "actual_training_margin_satisfaction_pct": 88.25,
+      "d_pos_ci_low": 0.37065946470229266,
+      "d_pos_ci_high": 0.3835929309657327,
+      "d_neg_ci_low": 1.020832847961367,
+      "d_neg_ci_high": 1.040350528375925,
+      "gap_ci_low": 0.6412534200981027,
+      "gap_ci_high": 0.6656654122346903
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "comparison": "lambda_0_35 - lambda_0",
+      "mean_paired_gap_change": 0.5669471114137064,
+      "bootstrap_95_ci": [
+        0.5560097835738623,
+        0.5775599010906546
+      ],
+      "num_triplets": 2000
+    }
+  ]
+}

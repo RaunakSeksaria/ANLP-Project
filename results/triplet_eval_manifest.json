@@ -1,0 +1,72 @@
+{
+  "timestamp": "2026-10-01T15:23:58.434043+00:00",
+  "git_commit": null,
+  "script_sha256": "d2ed3822b2d6b5d01ecf3898814508be4f94e90bf567f801f2af6bde59873c4a",
+  "seed": 42,
+  "triplet_count": 2000,
+  "potential_directed_triplets": 98960697,
+  "metadata_sha256": "5ffa193044ab9ceae4bf06681e7c0c1fe8ebb12b27a0e195b0717426998f23b2",
+  "sampled_triplets_file": "results/sampled_triplets.csv",
+  "sampled_triplets_sha256": "e4f30616f89565b5ccc93cb1732b3644677c6a7ba177fcf485b52b0e68f0ce75",
+  "reused_saved_triplets": true,
+  "sample_id_field": "sample_id",
+  "ideology_field": "ideology",
+  "event_field": "event_ids",
+  "sampling": "Seeded greedy preference for globally unused articles, then least-used alternatives; unique directed tuples; not claimed uniform over all possible triplets",
+  "negative_rule": "Same ideology as anchor and disjoint event memberships from anchor",
+  "positive_rule": "Different ideology from anchor and at least one shared event membership",
+  "article_usage": {
+    "unique_articles": 6000,
+    "max_uses": 1,
+    "usage_histogram": {
+      "1": 6000
+    }
+  },
+  "normalization": "float64 L2-normalized copies, stored files untouched",
+  "distances": "d_pos=||z_a-z_p||^2, d_neg=||z_a-z_n||^2; gap=d_neg-d_pos",
+  "margin": {
+    "values": {
+      "lambda_0_35": 0.2,
+      "lambda_0": 0.2
+    },
+    "training_distance": "unsquared L2; TripletMarginLoss(p=2, eps=1e-6)",
+    "requested_distance": "squared L2",
+    "note": "Requested squared-margin satisfaction is not the training loss criterion; both are reported separately.",
+    "training_semantics_verified": true
+  },
+  "models": {
+    "lambda_0_35": {
+      "lambda": 0.35,
+      "file": "embedding_data_backup/lambda_0_35_embeddings.npy",
+      "checkpoint": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda035@03598e556d4f5bd9abd2e7ddb304b80498037e24"
+    },
+    "lambda_0": {
+      "lambda": 0.0,
+      "file": "embedding_data_backup/lambda_0_embeddings.npy",
+      "checkpoint": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda0@03598e556d4f5bd9abd2e7ddb304b80498037e24"
+    }
+  },
+  "input_sha256": {
+    "embedding_data_backup/manifest.json": "f823b5c8064ce9ad1b039c75a567706b2fb380b2742974e54ceb62a57f83dace",
+    "embedding_data_backup/metadata.parquet": "5ffa193044ab9ceae4bf06681e7c0c1fe8ebb12b27a0e195b0717426998f23b2",
+    "embedding_data_backup/README.md": "4998d312c8925aa88c2f21eacbe4ba19dcda7dc8a5bc677e589dee9f8d5f7031",
+    "embedding_data_backup/lambda_0_35_embeddings.npy": "3a34e3dfd88b1a867b5e80482e6ca644040d167629fe3da48b62040acfcf2fd9",
+    "embedding_data_backup/lambda_0_embeddings.npy": "586edee188ce61223fc34c06d53a0113f32e38d0cc913cc947722bc8f5600acb"
+  },
+  "audit_file": "results/embedding_audit.json",
+  "audit_status": "PASS",
+  "bootstrap": {
+    "seed": 43,
+    "repetitions": 2000,
+    "unit": "triplet",
+    "interval": "95% percentile",
+    "same_draws_across_models": true,
+    "limitation": "Conditional on this sampled triplet set; shared events can cause dependence; excludes training-run uncertainty"
+  },
+  "package_versions": {
+    "numpy": "2.5.2",
+    "pyarrow": "25.0.1",
+    "matplotlib": "3.11.2"
+  },
+  "neutral_text_used": false
+}

@@ -1,0 +1,4 @@
+# Only required for the optional re-extraction spot check (enabled by default).
+torch>=2.5
+transformers>=4.40
+huggingface-hub>=0.25
