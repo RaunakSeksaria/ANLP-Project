@@ -1,0 +1,42 @@
+{
+  "samples": 11855,
+  "left_samples": 5695,
+  "right_samples": 6160,
+  "hidden_dim": 768,
+  "dtype": "float32",
+  "checkpoints": {
+    "lambda_0": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda0@03598e556d4f5bd9abd2e7ddb304b80498037e24",
+    "lambda_0_35": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda035@03598e556d4f5bd9abd2e7ddb304b80498037e24"
+  },
+  "pooling": "float32 attention-mask-aware mean, then L2 normalization (src.models.pooling.masked_mean_pool)",
+  "tokenizer": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda0@03598e556d4f5bd9abd2e7ddb304b80498037e24",
+  "tokenizer_sha256": "fdebe197cabe6cd156c7b8f3daa09b9b43388143f857bc64561e98375f8c5267",
+  "max_input_length": 512,
+  "attention_window": 512,
+  "global_attention": "first token only",
+  "original_article_fields": {
+    "left": "left_original.body",
+    "right": "right_original.body"
+  },
+  "ignored_rewrite_fields": {
+    "left": "left_neutralised",
+    "right": "right_neutralised"
+  },
+  "truncated_articles": 1,
+  "shapes": {
+    "lambda_0": [
+      11855,
+      768
+    ],
+    "lambda_0_35": [
+      11855,
+      768
+    ]
+  },
+  "file_sizes_bytes": {
+    "lambda_0_embeddings.npy": 36418688,
+    "lambda_0_35_embeddings.npy": 36418688
+  },
+  "extracted_at_utc": "2026-10-01T13:39:43.708844+00:00",
+  "git_commit": "d86549ecbb449c59a04f8b1b020b90774ecb4e86"
+}

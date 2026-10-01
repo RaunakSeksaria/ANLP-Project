@@ -227,3 +227,4 @@ outputs/overfit_baseline/model.safetensors
 outputs/baseline/best
 outputs/baseline/last
 outputs/baseline_main/
+.embedding_hf_cache/
