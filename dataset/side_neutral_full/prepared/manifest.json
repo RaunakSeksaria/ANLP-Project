@@ -1,0 +1,35 @@
+{
+  "schema": "anchor_specific_neutral_v1",
+  "seed": 42,
+  "source_sha256": {
+    "left_neutral_dedup.jsonl": "c02d202b6c64a2833693fda46540cb3de72af731ae2a7f487e9d03fb370b36eb",
+    "right_neutral_dedup.jsonl": "ec565f612f85910d03e825593688e3c6a1ef05315e75f7a2a0c380c0855c0484"
+  },
+  "generation_target": "anchor's own side-specific neutralised text",
+  "positive_policy": "opposite ideology sharing an original event_id",
+  "negative_policy": "same ideology and split, outside connected event component",
+  "split_policy": "preserve supplied splits; val renamed validation; fail on leakage",
+  "counts": {
+    "train": {
+      "baseline_records": 12484,
+      "triplet_records": 12484,
+      "left": 6034,
+      "right": 6450,
+      "event_groups": 4217
+    },
+    "validation": {
+      "baseline_records": 1778,
+      "triplet_records": 1778,
+      "left": 885,
+      "right": 893,
+      "event_groups": 831
+    },
+    "test": {
+      "baseline_records": 1775,
+      "triplet_records": 1775,
+      "left": 868,
+      "right": 907,
+      "event_groups": 834
+    }
+  }
+}

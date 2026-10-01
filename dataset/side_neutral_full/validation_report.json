@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "splits": {
+    "train": {
+      "baseline_records": 12484,
+      "triplet_records": 12484,
+      "left": 6034,
+      "right": 6450,
+      "event_groups": 4217
+    },
+    "validation": {
+      "baseline_records": 1778,
+      "triplet_records": 1778,
+      "left": 885,
+      "right": 893,
+      "event_groups": 831
+    },
+    "test": {
+      "baseline_records": 1775,
+      "triplet_records": 1775,
+      "left": 868,
+      "right": 907,
+      "event_groups": 834
+    }
+  }
+}
