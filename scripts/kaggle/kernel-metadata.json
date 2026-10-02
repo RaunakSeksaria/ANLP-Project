@@ -1,0 +1,15 @@
+{
+  "id": "raunakseksaria/anlp-side-neutral-train",
+  "title": "anlp-side-neutral-train",
+  "code_file": "runner.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": ["raunakseksaria/anlp-side-neutral", "raunakseksaria/anlp-side-neutral-smoke", "raunakseksaria/anlp-side-neutral-full"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

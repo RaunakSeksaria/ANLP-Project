@@ -1,0 +1,56 @@
+{
+  "hf_dataset": "RaunakSeksaria/anlp-project-datasets",
+  "sets": {
+    "neutral_articles_10k_prepared": {
+      "path": "dataset/neutral_articles_10k_prepared",
+      "description": "E1: left or right article -> the event's multi-source neutral article",
+      "rows": {
+        "train": 16000,
+        "validation": 2000,
+        "test": 2000
+      },
+      "sha256": {
+        "train/baseline.jsonl": "1b0c41a874e93c0dc1753129cd3efa4b2140c64b4a1ed9433ad431edb1b247cd",
+        "train/triplets.jsonl": "57e86e433dfd7454cf55139065316deab24b89c81258d8a2f97ee88305d0a754",
+        "validation/baseline.jsonl": "dda5c6b61e187bea12635710b613c699589d97a3f382956241b614cb26b2c70e",
+        "validation/triplets.jsonl": "83bec8afbcbafbf69340ac88bc06952295b13f4dd78a2fd5a75321b2cd36fd11",
+        "test/baseline.jsonl": "9a00e7c083624460a3083141df98b7a8f3d4db2a901cf96a619a1db17abe32f1",
+        "test/triplets.jsonl": "31bd825a808fff24dc19a6fc476ef13cfbc4185d9aae51cc226e52b0dd99995a"
+      }
+    },
+    "side_neutral_full": {
+      "path": "dataset/side_neutral_full/prepared",
+      "description": "E2: one article -> its own neutral rewrite; ideology-anchored triplets",
+      "rows": {
+        "train": 12484,
+        "validation": 1778,
+        "test": 1775
+      },
+      "sha256": {
+        "train/baseline.jsonl": "7d43a5c63a72772ef05fdd5d84a685adcc35256eb75b70e2a00ca99acfc8e109",
+        "train/triplets.jsonl": "c78e2e64b75294b11dc923dddc1ca3096ddeb53915c680db6c24189cf5e5460d",
+        "validation/baseline.jsonl": "b79d40c5abdeb294a51d14bbac4eba09a4049b262cc37d270171f8d7c5d66554",
+        "validation/triplets.jsonl": "c59c5cfc6ecd64359ed46289d0fa00d2a3675f1a993665964a25e2f17ffbbf44",
+        "test/baseline.jsonl": "8c6a8e5325e21b9d1dfd337b39ccf967ed423c09fab9b88f3c09ee418d4ca77d",
+        "test/triplets.jsonl": "c947274e34201e2721c7e94538359bade6cd777f41491427fd515c6c44f59e12"
+      }
+    },
+    "side_neutral_full_publisher": {
+      "path": "dataset/side_neutral_full_publisher/prepared",
+      "description": "E2 with publisher-anchored triplet negatives (baseline files identical to side_neutral_full)",
+      "rows": {
+        "train": 12484,
+        "validation": 1778,
+        "test": 1775
+      },
+      "sha256": {
+        "train/baseline.jsonl": "7d43a5c63a72772ef05fdd5d84a685adcc35256eb75b70e2a00ca99acfc8e109",
+        "train/triplets.jsonl": "a6f28e13a1507a3eb475218410a1836d4869054e979ddfb2536bfa311d034848",
+        "validation/baseline.jsonl": "b79d40c5abdeb294a51d14bbac4eba09a4049b262cc37d270171f8d7c5d66554",
+        "validation/triplets.jsonl": "57aadff8d9d26af5e059c78bb5b27d2a80cd315ac22f7c81455b84c6fbb745b7",
+        "test/baseline.jsonl": "8c6a8e5325e21b9d1dfd337b39ccf967ed423c09fab9b88f3c09ee418d4ca77d",
+        "test/triplets.jsonl": "668b5d7e23006bb269910550e4d4566c72251e6226f2e5270959404a0b3eff2f"
+      }
+    }
+  }
+}

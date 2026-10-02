@@ -1,0 +1,14 @@
+{
+  "id": "raunakseksaria/anlp-hf-upload",
+  "title": "anlp-hf-upload",
+  "code_file": "upload_to_hf.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": ["raunakseksaria/anlp-hf-token"],
+  "competition_sources": [],
+  "kernel_sources": ["raunakseksaria/anlp-side-neutral-train"],
+  "model_sources": []
+}

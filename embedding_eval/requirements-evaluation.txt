@@ -1,0 +1,5 @@
+numpy>=1.26
+scipy>=1.11
+pyarrow>=17
+matplotlib>=3.8
+# Optional: wandb (only used with --wandb)
