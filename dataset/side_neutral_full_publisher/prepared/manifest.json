@@ -1,0 +1,94 @@
+{
+  "schema": "anchor_specific_neutral_v1",
+  "seed": 42,
+  "source_sha256": {
+    "left_neutral_dedup.jsonl": "c02d202b6c64a2833693fda46540cb3de72af731ae2a7f487e9d03fb370b36eb",
+    "right_neutral_dedup.jsonl": "ec565f612f85910d03e825593688e3c6a1ef05315e75f7a2a0c380c0855c0484"
+  },
+  "generation_target": "anchor's own side-specific neutralised text",
+  "positive_policy": "opposite ideology sharing an original event_id",
+  "negative_policy": "same publisher as the anchor, outside its connected event group, same split",
+  "split_policy": "preserve supplied splits; val renamed validation; fail on leakage",
+  "counts": {
+    "train": {
+      "baseline_records": 12484,
+      "triplet_records": 12484,
+      "left": 6034,
+      "right": 6450,
+      "event_groups": 4217
+    },
+    "validation": {
+      "baseline_records": 1778,
+      "triplet_records": 1778,
+      "left": 885,
+      "right": 893,
+      "event_groups": 831
+    },
+    "test": {
+      "baseline_records": 1775,
+      "triplet_records": 1775,
+      "left": 868,
+      "right": 907,
+      "event_groups": 834
+    }
+  },
+  "derived_from": {
+    "base": "dataset/side_neutral_full/prepared",
+    "base_triplets_sha256": {
+      "train": "c78e2e64b75294b11dc923dddc1ca3096ddeb53915c680db6c24189cf5e5460d",
+      "validation": "c59c5cfc6ecd64359ed46289d0fa00d2a3675f1a993665964a25e2f17ffbbf44",
+      "test": "c947274e34201e2721c7e94538359bade6cd777f41491427fd515c6c44f59e12"
+    },
+    "unchanged": "baseline files and every non-negative triplet field"
+  },
+  "variant_seed": "42:publisher",
+  "variant_check": {
+    "train": {
+      "triplets": 12484,
+      "negative_same_publisher": 12484,
+      "negatives_changed": 12484
+    },
+    "validation": {
+      "triplets": 1778,
+      "negative_same_publisher": 1778,
+      "negatives_changed": 1775
+    },
+    "test": {
+      "triplets": 1775,
+      "negative_same_publisher": 1775,
+      "negatives_changed": 1773
+    }
+  },
+  "anchors_by_publisher": {
+    "train": {
+      "cnn": 535,
+      "nyt": 1622,
+      "dailykos": 1325,
+      "hpo": 1735,
+      "wpo": 817,
+      "breitbart": 2978,
+      "fox": 1777,
+      "wat": 1695
+    },
+    "validation": {
+      "hpo": 261,
+      "dailykos": 181,
+      "nyt": 254,
+      "cnn": 76,
+      "wpo": 113,
+      "breitbart": 395,
+      "wat": 230,
+      "fox": 268
+    },
+    "test": {
+      "cnn": 72,
+      "dailykos": 162,
+      "nyt": 244,
+      "hpo": 266,
+      "wpo": 124,
+      "breitbart": 369,
+      "wat": 239,
+      "fox": 299
+    }
+  }
+}
