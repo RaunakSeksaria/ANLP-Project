@@ -2,10 +2,16 @@
 
 Layout is <experiment>/<run>/; the model card is rebuilt from every run already
 in the repo, so each upload adds rows instead of replacing the card.
-Set EXPERIMENT and RUNS below, and kernel_sources in kernel-metadata.json to the
-training kernel. The HF token comes from the private dataset anlp-hf-token.
+On Kaggle: set EXPERIMENT and RUNS below, and kernel_sources in
+kernel-metadata.json to the training kernel; the token comes from the private
+dataset anlp-hf-token. Elsewhere (e.g. Ada), pass run folders and export HF_TOKEN:
+
+  HF_TOKEN=... python kaggle/hf_upload/upload_to_hf.py \
+      --experiment side-neutral-full-publisher --run lambda02=runs/ada/<run>_<jobid>
 """
+import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -56,29 +62,44 @@ def card_rows(api, token):
 
 
 def main():
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "huggingface_hub>=0.34"], check=True)
-    from huggingface_hub import HfApi
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--experiment", default=EXPERIMENT)
+    parser.add_argument("--run", action="append", default=[], metavar="NAME=DIR",
+                        help="run folder holding train/best and test_eval (repeatable)")
+    parser.add_argument("--stage-dir", type=Path, default=STAGE)
+    args = parser.parse_args()
+    experiment = args.experiment
+    roots = dict(item.split("=", 1) for item in args.run)
+    runs = list(roots) or list(RUNS)
+    try:
+        from huggingface_hub import HfApi
+    except ImportError:
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", "huggingface_hub>=0.34"], check=True)
+        from huggingface_hub import HfApi
 
-    token = find("hf_token.txt").read_text().strip()
+    token = os.environ.get("HF_TOKEN") or find("hf_token.txt").read_text().strip()
     api = HfApi(token=token)
     api.create_repo(REPO_ID, repo_type="model", private=True, exist_ok=True)
     existing = [f for f in api.list_repo_files(REPO_ID)
-                if any(f.startswith(f"{EXPERIMENT}/{run}/") for run in RUNS)]
+                if any(f.startswith(f"{experiment}/{run}/") for run in runs)]
     if existing:
         raise SystemExit(f"refusing to overwrite: {len(existing)} files already under "
-                         f"{EXPERIMENT}/{{{','.join(RUNS)}}}, e.g. {existing[0]}")
+                         f"{experiment}/{{{','.join(runs)}}}, e.g. {existing[0]}")
+    if args.stage_dir.exists():
+        shutil.rmtree(args.stage_dir)
 
-    for run in RUNS:
-        root = find(f"runs/{run}/train/best/model.safetensors").parents[2]
-        stage = STAGE / EXPERIMENT / run
+    for run in runs:
+        root = (Path(roots[run]) if run in roots
+                else find(f"runs/{run}/train/best/model.safetensors").parents[2])
+        stage = args.stage_dir / experiment / run
         (stage / "metrics").mkdir(parents=True, exist_ok=True)
         for name in MODEL_FILES:
             shutil.copy2(root / "train" / "best" / name, stage / name)
         for rel in METRIC_FILES:
             shutil.copy2(root / rel, stage / "metrics" / Path(rel).name)
         print(f"staged {run} from {root}", flush=True)
-    api.upload_folder(repo_id=REPO_ID, folder_path=str(STAGE),
-                      commit_message=f"add {EXPERIMENT}: " + ", ".join(RUNS))
+    api.upload_folder(repo_id=REPO_ID, folder_path=str(args.stage_dir),
+                      commit_message=f"add {experiment}: " + ", ".join(runs))
 
     rows = card_rows(api, token)
     sections = "\n\n".join(f"### {exp}\n\n{desc}" for exp, (_, desc) in EXPERIMENTS.items()
