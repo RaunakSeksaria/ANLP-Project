@@ -38,6 +38,8 @@ def main():
                     help="one record per unique input article. The 10k are events and one "
                          "article belongs to several of them; every copy sits in the same split, "
                          "so keeping the first loses no split information")
+    ap.add_argument("--exclude-events", default=None,
+                    help="file of source story ids to leave out, one per line")
     args = ap.parse_args()
     st = args.stance
     runs = ([Path(r) for r in args.run] if args.run else
@@ -73,6 +75,11 @@ def main():
                 gen[r["story_id"].rsplit(":", 1)[0]] = r
     print("runs:", ", ".join(r.name for r in runs))
 
+    if args.exclude_events:
+        drop = {l.strip() for l in open(args.exclude_events) if l.strip()}
+        src = {k: v for k, v in src.items() if k not in drop}
+        gen = {k: v for k, v in gen.items() if k not in drop}
+        print(f"excluded {len(drop)} event(s) listed in {args.exclude_events}")
     missing = sorted(set(src) - set(gen))
     mismatched = 0
     order = sorted(gen, key=lambda s: ({"train": 0, "val": 1, "test": 2}.get(meta.get(s, ("",))[0], 3), s))

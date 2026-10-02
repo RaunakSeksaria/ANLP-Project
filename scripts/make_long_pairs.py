@@ -17,7 +17,9 @@ An article qualifies when
   - its text is new: not already in the dataset, and not a near-copy (word
     5-gram Jaccard >= 0.8) of any existing article in either stance and any
     split, or of an article already taken here.
-The event must not already be represented anywhere in the dataset. Events are
+The event must not already be represented anywhere in the dataset, and its
+left and right articles must not be near-copies of each other (outlets often
+run the same wire story). Events are
 drawn in a seeded random order rather than shortest-first, so the lengths
 spread across the whole allowed range. Every record goes to train.
 """
@@ -59,8 +61,14 @@ def main():
     for line in (ROOT / "neutral_articles_10k.jsonl").open(encoding="utf-8"):
         have_events.add(json.loads(line)["story_id"])
     for path in ROOT.glob("single_*_*.jsonl"):
+        long_set = "_long" in path.name
         for line in path.open(encoding="utf-8"):
-            have_events.add(str(json.loads(line)["source_story_id"]))
+            r = json.loads(line)
+            have_events.add(str(r["source_story_id"]))
+            if long_set:                 # earlier long batches are text-deduped against too
+                body = r["articles"][0]["body"]
+                index.add(shingles(body))
+                have_fp.add(fingerprint(body))
     side = ROOT / "dataset/side_neutral_full/prepared"
     for path in side.glob("*/baseline.jsonl"):
         for line in path.open(encoding="utf-8"):
@@ -81,7 +89,7 @@ def main():
     print(f"candidate events (left and right both {args.min_words + 1}-{args.max_words} words): {len(cands):,}")
 
     random.Random(args.seed).shuffle(cands)
-    taken, skipped = [], {"tokens": 0, "seen text": 0, "near-copy": 0}
+    taken, skipped = [], {"tokens": 0, "seen text": 0, "same wire copy": 0, "near-copy": 0}
     for gid in cands:
         if len(taken) >= args.n:
             break
@@ -94,6 +102,11 @@ def main():
             skipped["seen text"] += 1
             continue
         shs = [shingles(pair[s]["textString"]) for s in ("left", "right")]
+        # both outlets running the same wire story makes a near-identical
+        # anchor/positive pair; skip the event
+        if len(shs[0] & shs[1]) / max(len(shs[0] | shs[1]), 1) >= args.jaccard:
+            skipped["same wire copy"] += 1
+            continue
         if any(index.near(sh) for sh in shs):
             skipped["near-copy"] += 1
             continue
