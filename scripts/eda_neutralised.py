@@ -1,6 +1,6 @@
 """Quality and correctness audit for a single-article neutralisation release.
 
-    uv run python scripts/eda_neutralised.py left_neutral_10k.jsonl
+    uv run python scripts/eda_neutralised.py left_neutral_dedup.jsonl
 
 The same families of check the fusion corpus got, re-aimed at one article in,
 one article out:
