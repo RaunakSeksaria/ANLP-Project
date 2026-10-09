@@ -20,6 +20,7 @@
 #   LAMBDA=0.35 DATA=dataset/side_neutral_full_publisher/prepared \
 #     RUN=ada-side_neutral_full_publisher-lambda035 sbatch src/scripts/ada_train_side_neutral.sh
 #   DRY_RUN=1 sbatch src/scripts/ada_train_side_neutral.sh             # check env + data, no training
+#   MODEL=allenai/led-large-16384 LAMBDA=0.35 ... sbatch ...            # LED-large instead of base
 #
 # W&B: export WANDB_API_KEY before sbatch, or keep WANDB_KEY in .env; without a
 # key, or if wandb will not import, the run continues with --disable-wandb.
@@ -29,6 +30,7 @@ cd "${SLURM_SUBMIT_DIR:-$PWD}"
 mkdir -p logs runs/ada
 
 LAMBDA="${LAMBDA:-0.1}"
+MODEL="${MODEL:-allenai/led-base-16384}"
 DATA="${DATA:-dataset/side_neutral_full/prepared}"
 RUN="${RUN:-ada-side_neutral_full-lambda${LAMBDA//./}}"
 OUT="runs/ada/${RUN}_${SLURM_JOB_ID:-manual}"
@@ -36,7 +38,7 @@ OUT="runs/ada/${RUN}_${SLURM_JOB_ID:-manual}"
 export HF_HOME="${HF_HOME:-$PWD/.cache/huggingface}"
 export TOKENIZERS_PARALLELISM=false PYTHONUNBUFFERED=1 OMP_NUM_THREADS="${SLURM_CPUS_PER_TASK:-8}"
 
-echo "host $(hostname) | job ${SLURM_JOB_ID:-none} | lambda ${LAMBDA} | data ${DATA} | out ${OUT}"
+echo "host $(hostname) | job ${SLURM_JOB_ID:-none} | model ${MODEL} | lambda ${LAMBDA} | data ${DATA} | out ${OUT}"
 nvidia-smi -L || true
 [ -f "${DATA}/manifest.json" ] || { echo "missing ${DATA}; run: git archive origin/data ${DATA%/prepared} | tar -x"; exit 1; }
 [ -d .venv ] || uv sync   # first build ~30 min; must happen inside a job, never on the login node
@@ -59,7 +61,7 @@ fi
 
 TRAIN=(python -u src/scripts/train_joint.py
     --data-dir "${DATA}" --output-dir "${OUT}/train"
-    --model-name allenai/led-base-16384
+    --model-name "${MODEL}"
     --train-batch-size 1 --eval-batch-size 4 --gradient-accumulation-steps 8
     --max-epochs 4 --early-stopping-patience 2
     --learning-rate 3e-5 --weight-decay 0.01 --warmup-ratio 0.10 --max-grad-norm 1.0
