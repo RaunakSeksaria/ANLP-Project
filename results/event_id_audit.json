@@ -1,0 +1,508 @@
+{
+  "summary": {
+    "semantics": "event_ids is a list of raw source story_id values for every left/right pairing in which the exact original article body occurs. It is multi-valued and does not establish a semantically exclusive or validated real-world event cluster.",
+    "datatype": "Arrow list<string>; Python list[str]",
+    "articles": 11855,
+    "source_pairing_rows": 10000,
+    "article_event_memberships": 20000,
+    "articles_with_multiple_event_ids": 4009,
+    "ids_per_article": {
+      "min": 1,
+      "median": 1,
+      "mean": 1.687051876845213,
+      "max": 32,
+      "histogram": {
+        "1": 7846,
+        "2": 2293,
+        "3": 811,
+        "4": 394,
+        "5": 208,
+        "6": 94,
+        "7": 72,
+        "8": 43,
+        "9": 26,
+        "10": 23,
+        "11": 15,
+        "12": 10,
+        "13": 3,
+        "14": 4,
+        "15": 2,
+        "16": 1,
+        "17": 2,
+        "18": 1,
+        "19": 2,
+        "21": 1,
+        "23": 1,
+        "25": 1,
+        "26": 1,
+        "32": 1
+      }
+    },
+    "articles_per_event_id": {
+      "min": 2,
+      "median": 2.0,
+      "mean": 2,
+      "max": 2,
+      "histogram": {
+        "2": 10000
+      }
+    },
+    "event_ids_with_both_ideologies": 10000,
+    "distinct_left_right_article_pairings": 8349,
+    "source_ids_per_distinct_article_pair_histogram": {
+      "1": 7110,
+      "2": 970,
+      "3": 190,
+      "4": 43,
+      "5": 20,
+      "6": 9,
+      "7": 4,
+      "8": 2,
+      "10": 1
+    },
+    "source_membership_match": "20,000 of 20,000 exact-body/source-story memberships match metadata",
+    "source_title_variants": 2,
+    "review_sample": {
+      "seed": 42,
+      "sampled_from_saved_triplets": 2000,
+      "count": 20,
+      "judgment_counts": {
+        "related_developments": 5,
+        "same_specific_story": 11,
+        "different_events": 3,
+        "topic_only_or_insufficient": 1
+      },
+      "scope": "A manual qualitative check of these 20 full original articles, not a validated precision estimate for all sampled triplets"
+    },
+    "inputs_sha256": {
+      "/home2/manas.agrawal/anlp/ANLP-Project/embedding_data_backup/metadata.parquet": "5ffa193044ab9ceae4bf06681e7c0c1fe8ebb12b27a0e195b0717426998f23b2",
+      "/home2/manas.agrawal/anlp/ANLP-Project/results/sampled_triplets.csv": "e4f30616f89565b5ccc93cb1732b3644677c6a7ba177fcf485b52b0e68f0ce75",
+      "/home2/manas.agrawal/anlp/neutral_articles_10k.jsonl": "0a7ba18d147a15debbb96ed06da63e448c9e8186c3bbe4a71d4a2f0b387cb108"
+    }
+  },
+  "reviews": [
+    {
+      "triplet_id": "triplet_000170",
+      "saved_triplet_index": 170,
+      "shared_event_ids": [
+        "463590",
+        "760927"
+      ],
+      "judgment": "related_developments",
+      "reason": "Same Parkland aftermath, but distinct Trump gun-policy responses: assault-weapon ban versus arming teachers.",
+      "anchor": {
+        "sample_id": "right_002579",
+        "ideology": "right",
+        "title": "Donald Trump still against assault weapon ban",
+        "article_beginning": "Should Trump keep Pence on the ticket in 2020? President Trump remains opposed to an assault weapon ban as he considers steps to prevent gun violence in schools, the White House said Thursday. White House deputy press secretary Ra…"
+      },
+      "positive": {
+        "sample_id": "left_000903",
+        "ideology": "left",
+        "title": "Donald Trump Argues He Never Said 'Give Teachers Guns' Before Pushing To Give Some Teachers Guns",
+        "article_beginning": "President Donald Trump elaborated on his proposal to arm 20 percent of teaching staff at schools in a series of tweets Thursday. Trump first made the proposal during a listening session with students and parents affected by mass s…"
+      }
+    },
+    {
+      "triplet_id": "triplet_000176",
+      "saved_triplet_index": 176,
+      "shared_event_ids": [
+        "350130"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "John Kerry's tearful public update on Teresa Heinz Kerry's hospitalization.",
+      "anchor": {
+        "sample_id": "left_002077",
+        "ideology": "left",
+        "title": "Teresa Heinz Kerry ‘doing better,’ says a teary John Kerry (video)",
+        "article_beginning": "Secretary of State John Kerry got a little emotional Wednesday while updating an audience on the condition of his sick wife. “Teresa is doing better under evaluation and we hope improving,” he said as he opened an annual summit be…"
+      },
+      "positive": {
+        "sample_id": "right_001185",
+        "ideology": "right",
+        "title": "John Kerry in tears: 'Teresa is doing better'",
+        "article_beginning": "John Kerry in tears: ‘Teresa is doing better’ U.S. Secretary of State John Kerry gave a teary-eyed thank you on Wednesday to well-wishers concerned about his wife Teresa’s medical condition. “Teresa is doing better, under evaluati…"
+      }
+    },
+    {
+      "triplet_id": "triplet_000187",
+      "saved_triplet_index": 187,
+      "shared_event_ids": [
+        "940984"
+      ],
+      "judgment": "different_events",
+      "reason": "Pompeo interview about a Trump–Taliban meeting versus comments about a possible Trump–Rouhani meeting with Iran.",
+      "anchor": {
+        "sample_id": "right_004079",
+        "ideology": "right",
+        "title": "FNC's Wallace Presses Pompeo on Why Trump Would Meet with Taliban Days Before 9/11",
+        "article_beginning": "On this week’s broadcast of “Fox News Sunday,” anchor Chris Wallace pressed Secretary of State Mike Pompeo on why President Donald Trump planned to meet with Taliban leaders in the United States three days before the anniversary o…"
+      },
+      "positive": {
+        "sample_id": "left_003767",
+        "ideology": "left",
+        "title": "U.S. President Trump Could Meet With Iran's Rouhani at U.N. With No Preconditions: Pompeo",
+        "article_beginning": "WASHINGTON — U.S. Secretary of State Mike Pompeo said on Tuesday that President Donald Trump could meet with Iranian President Hassan Rouhani at the upcoming United Nations meeting, with \"no preconditions.\" Pompeo made the comment…"
+      }
+    },
+    {
+      "triplet_id": "triplet_000255",
+      "saved_triplet_index": 255,
+      "shared_event_ids": [
+        "85388"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "Richard M. Daley's hospitalization and ICU stay.",
+      "anchor": {
+        "sample_id": "left_004684",
+        "ideology": "left",
+        "title": "Former Chicago Mayor Richard M. Daley hospitalized",
+        "article_beginning": "Former Chicago Mayor Richard M. Daley remained hospitalized early Sunday morning, two days after he fell ill. Daley, 71, was taken by ambulance to Northwestern Memorial Hospital in Chicago on Friday evening after he returned from …"
+      },
+      "positive": {
+        "sample_id": "right_005104",
+        "ideology": "right",
+        "title": "Former Chicago Mayor Richard Daley likely will remain in ICU for several days",
+        "article_beginning": "CHICAGO – Former Chicago Mayor Richard M. Daley likely will remain hospitalized in an intensive care unit for several days as doctors conduct tests to determine why he was feeling ill and disoriented during a conference in Arizona…"
+      }
+    },
+    {
+      "triplet_id": "triplet_000400",
+      "saved_triplet_index": 400,
+      "shared_event_ids": [
+        "9674"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "Obama's decision not to re-nominate Michael Boggs to the federal bench.",
+      "anchor": {
+        "sample_id": "left_005667",
+        "ideology": "left",
+        "title": "POTUS Dumps Wingnut Judicial Nominee Boggs",
+        "article_beginning": "From thinkprogress.org: In a victory for civil rights, abortion rights, and LGBT equality groups, President Obama will not re-nominate former Georgia legislator Michael Boggs to a lifetime position on the federal bench. Boggs, who…"
+      },
+      "positive": {
+        "sample_id": "right_006122",
+        "ideology": "right",
+        "title": "Obama will not re-nominate Michael Boggs for federal judgeship",
+        "article_beginning": "President Obama will not re-nominate Georgia judge Michael Boggs to the federal bench, appeasing Democrats who slammed the judicial nominee's position on various social issues. “It is with regret that we announce that the presiden…"
+      }
+    },
+    {
+      "triplet_id": "triplet_000859",
+      "saved_triplet_index": 859,
+      "shared_event_ids": [
+        "106273"
+      ],
+      "judgment": "different_events",
+      "reason": "George W. Bush on Jimmy Kimmel versus a separate appearance on Ellen about his inauguration poncho.",
+      "anchor": {
+        "sample_id": "right_005304",
+        "ideology": "right",
+        "title": "George W. Bush praises Jimmy Kimmel's Oscars opening monologue",
+        "article_beginning": "President Donald Trump may not have appreciated Jimmy Kimmel's opening monologue at the 89th Academy Awards, but the late night host has found a fan in former president George W. Bush. The 43rd President of the United States told …"
+      },
+      "positive": {
+        "sample_id": "left_004878",
+        "ideology": "left",
+        "title": "Ellen Asks George W. Bush About His Inauguration Poncho: 'Had You Put One On?'",
+        "article_beginning": "Former President George W. Bush appeared on “Ellen” yesterday to talk politics, friendship and the poncho. “The poncho was a problem,” host Ellen DeGeneres began. In case you forgot, the poncho in question was the infamous one Bus…"
+      }
+    },
+    {
+      "triplet_id": "triplet_000870",
+      "saved_triplet_index": 870,
+      "shared_event_ids": [
+        "606286"
+      ],
+      "judgment": "related_developments",
+      "reason": "Trump–Abe visit links the articles, but one reports an immigration-order press conference and the other a later golf/press-pool incident.",
+      "anchor": {
+        "sample_id": "right_003108",
+        "ideology": "right",
+        "title": "Trump: New Steps Next Week to 'Keep Country Safe'",
+        "article_beginning": "Friday at the White House, during a joint press conference with Japanese Prime Minister Shinzo Abe, when asked about the 9th Circuit Court ruling upholding the blocking of his executive order banning immigrants from seven Muslim-m…"
+      },
+      "positive": {
+        "sample_id": "left_000026",
+        "ideology": "left",
+        "title": "Trump ditches press pool to play golf with Japanese PM",
+        "article_beginning": "More disdain for transparency and tradition from the Trump administration. Members of President Trump's press pool on Saturday said they were kept from tagging along as the president golfed with Japanese Prime Minister Shinzo Abe.…"
+      }
+    },
+    {
+      "triplet_id": "triplet_000900",
+      "saved_triplet_index": 900,
+      "shared_event_ids": [
+        "377954"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "Obama's Chicago farewell address; one report and one response letter.",
+      "anchor": {
+        "sample_id": "right_002223",
+        "ideology": "right",
+        "title": "Obama to daughters: 'Of all that I have done ... I'm most proud to be your dad'",
+        "article_beginning": "A visibly emotional President Barack Obama thanked his wife and daughters during his farewell address in Chicago Tuesday evening. Addressing 18-year-old Malia and 15-year-old Sasha, the president said, \"You have become two amazing…"
+      },
+      "positive": {
+        "sample_id": "left_000831",
+        "ideology": "left",
+        "title": "Opinion | To President Obama: ‘We Will Miss You’",
+        "article_beginning": "To President Obama: ‘We Will Miss You’ To the Editor: Re “Obama’s Farewell to the Nation: ‘Yes, We Did!’” (front page, Jan. 11): On Tuesday night it sunk in that President Obama will be stepping down in a bit more than a week! Pre…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001024",
+      "saved_triplet_index": 1024,
+      "shared_event_ids": [
+        "854807"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "Different answers in the same Obama–Diane Sawyer interview after the Romney debate.",
+      "anchor": {
+        "sample_id": "right_006012",
+        "ideology": "right",
+        "title": "Obama: 'I had a bad night' in debate",
+        "article_beginning": "President Obama said Wednesday he did not hand the election to Republican Mitt Romney with his poor debate performance last week. “Governor Romney had a good night. I had a bad night,” Mr. Obama told ABC News’ Diane Sawyer. “It’s …"
+      },
+      "positive": {
+        "sample_id": "left_005571",
+        "ideology": "left",
+        "title": "Obama Diane Sawyer Interview: President Says Mitt Romney Trying To 'Cloud' Abortion Stance",
+        "article_beginning": "WASHINGTON -- President Barack Obama says Mitt Romney's recent remark about not having abortion on his agenda is an attempt \"to cloud\" his rival's position on the issue. Obama says he had a \"bad night\" in last week's debate with R…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001048",
+      "saved_triplet_index": 1048,
+      "shared_event_ids": [
+        "378184"
+      ],
+      "judgment": "related_developments",
+      "reason": "Trump inauguration boycott context, but a broad map of boycotting House Democrats versus Trump reacting specifically to John Lewis.",
+      "anchor": {
+        "sample_id": "left_005235",
+        "ideology": "left",
+        "title": "This map shows the 71 House Democrats who have said they won't attend Trump's inauguration ceremony",
+        "article_beginning": "So far, 71 of the 194 Democratic members of the House have announced they will not attend Donald Trump’s inauguration ceremony on Friday, while the remaining 123 are either attending or have not made their intentions clear. As sho…"
+      },
+      "positive": {
+        "sample_id": "right_005661",
+        "ideology": "right",
+        "title": "Donald Trump: John Lewis Lied About Not Skipping Inaugurations Before Mine",
+        "article_beginning": "President-elect Donald Trump continued his feud with Democratic Congressman John Lewis after the civil rights legend said he does not believe Trump is a “legitimate president” and that this is the first inauguration he will not at…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001298",
+      "saved_triplet_index": 1298,
+      "shared_event_ids": [
+        "918633"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "Pence's Israel visit, including the same Tuesday Western Wall visit; one straight report and one retrospective.",
+      "anchor": {
+        "sample_id": "right_005175",
+        "ideology": "right",
+        "title": "On last day in Israel, Pence visits Western Wall, Yad Vashem",
+        "article_beginning": "JERUSALEM – Vice President Mike Pence is making a visit to the Western Wall and meeting with Israeli President Reuvin Rivlin on his final day of a trip to Israel. The vice president is also to visit the Yad Vashem Holocaust memori…"
+      },
+      "positive": {
+        "sample_id": "left_004754",
+        "ideology": "left",
+        "title": "Pence Visit Was a Balm to Israelis. Now Back to Reality.",
+        "article_beginning": "JERUSALEM — Prime Minister Benjamin Netanyahu of Israel positively basked in the glow of Vice President Mike Pence’s visit here, though it may yet turn out to be the halcyon days of a drawn-out, gloomy winter. Sandwiched between M…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001386",
+      "saved_triplet_index": 1386,
+      "shared_event_ids": [
+        "31577",
+        "655396"
+      ],
+      "judgment": "related_developments",
+      "reason": "Same E. Jean Carroll allegation, but a reaction to a specific Trump remark versus a broader opinion letter about testimony.",
+      "anchor": {
+        "sample_id": "right_000566",
+        "ideology": "right",
+        "title": "E. Jean Carroll on not being Donald Trump's 'type': 'I'm so glad'",
+        "article_beginning": "Is 'gun control' a winning issue for Democrats? Reacting to a recent statement from President Trump, E. Jean Carroll, the writer who accused the president of raping her in the 1990s, said she was “so glad” to find out she was not …"
+      },
+      "positive": {
+        "sample_id": "left_001933",
+        "ideology": "left",
+        "title": "Opinion | When Women Testify to Assault",
+        "article_beginning": "To the Editor: Re “Is Trump a Rapist?” (column, nytimes.com, June 26): Regarding E. Jean Carroll’s allegation of sexual assault against Donald Trump, Charles M. Blow writes: “Carroll’s allegation fits the behaviors that have been …"
+      }
+    },
+    {
+      "triplet_id": "triplet_001431",
+      "saved_triplet_index": 1431,
+      "shared_event_ids": [
+        "391482"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "The shooting at Marjory Stoneman Douglas High School in Parkland.",
+      "anchor": {
+        "sample_id": "left_000123",
+        "ideology": "left",
+        "title": "The 18th School Shooting of 2018: Mass Shooter in Parkland, Florida High School Arrested.",
+        "article_beginning": "There have been 18 school shootings so far this year, including one at a public school in Florida Wednesday afternoon. The title was changed to include all school shootings of 2018. The 18th school shooting of 2018 remains an acti…"
+      },
+      "positive": {
+        "sample_id": "right_002294",
+        "ideology": "right",
+        "title": "Several hurt in US school shooting: officials, media",
+        "article_beginning": "Miami (AFP) – Police were responding to an apparent shooting on Wednesday at a high school in Florida that reportedly left several people injured, officials and local media said. The incident was unfolding at Marjory Stoneman Doug…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001466",
+      "saved_triplet_index": 1466,
+      "shared_event_ids": [
+        "473155"
+      ],
+      "judgment": "different_events",
+      "reason": "Separate Sean Spicer book-tour incidents: a Rhode Island racial-slur accusation versus heckling in New York City.",
+      "anchor": {
+        "sample_id": "right_002608",
+        "ideology": "right",
+        "title": "Lawyer: Claim that Sean Spicer used racial slur is false",
+        "article_beginning": "NEW YORK – A lawyer for Sean Spicer says an accusation that the former White House press secretary used a racial slur to describe a black student while in high school is false. Attorney Michael Bowe says in emails to The Associate…"
+      },
+      "positive": {
+        "sample_id": "left_002606",
+        "ideology": "left",
+        "title": "Sean Spicer Heckled At Book Tour Event In New York City, Called 'Piece Of Garbage'",
+        "article_beginning": "Former White House press secretary Sean Spicer was heckled on Wednesday while promoting his new book in New York City. In a video sent to Think Progress reporter Aaron Rupar, an unidentified man can be heard yelling at Spicer duri…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001517",
+      "saved_triplet_index": 1517,
+      "shared_event_ids": [
+        "963354"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "Margaret Thatcher's death and reactions to it, including a U.S. House tribute.",
+      "anchor": {
+        "sample_id": "left_004787",
+        "ideology": "left",
+        "title": "Margaret Thatcher And Ronald Reagan: A Special Relationship In Photos",
+        "article_beginning": "Former British Prime Minister Margaret Thatcher died Monday at the age of 87, leaving behind -- among many things -- memories of one of the more notable special relationships between leaders of the United Kingdom and United States…"
+      },
+      "positive": {
+        "sample_id": "right_005211",
+        "ideology": "right",
+        "title": "U.S. House of Representatives to Honor Margaret Thatcher",
+        "article_beginning": "The U.S. House Of Representatives will pass a resolution this evening by unanimous consent honoring former Prime Minister of the United Kingdom Margaret Thatcher. Lady Thatcher passed away at the age of 87 on Monday in London. The…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001533",
+      "saved_triplet_index": 1533,
+      "shared_event_ids": [
+        "933945"
+      ],
+      "judgment": "related_developments",
+      "reason": "The 'pencil-neck Adam Schiff' insult connects them; merchandise announcement versus a broader opinion piece on Trump's insults.",
+      "anchor": {
+        "sample_id": "right_005188",
+        "ideology": "right",
+        "title": "Trump campaign unveils ‘Pencil-neck Adam Schiff’ T-shirts for sale",
+        "article_beginning": "President Trump is taking his displeasure with U.S. Rep. Adam Schiff, D-Calif., a step further with the sale of “Pencil-Neck Adam Schiff” T-shirts. The term stems from a Trump campaign rally held Thursday in Grand Rapids, Mich., w…"
+      },
+      "positive": {
+        "sample_id": "left_004766",
+        "ideology": "left",
+        "title": "President Toadstool",
+        "article_beginning": "Provoked by Trump’s insulting name for Adam Schiff …. There’s only one person who shut up Donald Trump with his insulting names: Stormy Daniels. After he called her an insulting name, she came back and referred to his “little toad…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001568",
+      "saved_triplet_index": 1568,
+      "shared_event_ids": [
+        "189394"
+      ],
+      "judgment": "topic_only_or_insufficient",
+      "reason": "Herman Cain's 9-9-9 plan appears as article subject versus only in links to debate clips under a Romney headline; no common occurrence is established.",
+      "anchor": {
+        "sample_id": "left_001033",
+        "ideology": "left",
+        "title": "Bruce Bartlett: Inside The Cain Tax Plan",
+        "article_beginning": "The New York Times: With recent polls showing increased support for Herman Cain as the G.O.P. presidential nominee, attention is being drawn to his platform, especially what he calls the 9-9-9 tax plan. News reports describe it as…"
+      },
+      "positive": {
+        "sample_id": "right_001021",
+        "ideology": "right",
+        "title": "GOP Debate - Romney: Obama Has Divided America",
+        "article_beginning": "Watch more debate highlights: Huntsman Mocks Cain: ‘I Thought 9-9-9 Was Price Of Pizza’ Bachmann: ‘Turn 9-9-9 Upside Down’ Herman Cain To Moderator: ‘The Problem With Your Anlaysis Is That It Is Incorrect’ Romney Jabs Charlie Rose…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001678",
+      "saved_triplet_index": 1678,
+      "shared_event_ids": [
+        "813094"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "The proposed Iraqi insurgent amnesty plan and the same controversy over whether attackers of U.S. soldiers would be pardoned.",
+      "anchor": {
+        "sample_id": "left_004657",
+        "ideology": "left",
+        "title": "Iraq Leader Says No Pardons for Attacks on Soldiers",
+        "article_beginning": "BAGHDAD, Iraq, June 27 —Prime Minister Nuri Kamal al-Maliki of Iraq said today that attacks on American soldiers would not be pardoned under the rules of a new Iraqi amnesty plan. In his first meeting with Western reporters since …"
+      },
+      "positive": {
+        "sample_id": "right_005076",
+        "ideology": "right",
+        "title": "Get-Out-of-Jail Card for Terrorists?",
+        "article_beginning": "U.S. lawmakers called a proposal to give amnesty to Iraq's insurgents a \"get-out-of-jail-free\" policy, and demanded that President Bush reject the plan. Iraqi Prime Minister Nouri al-Maliki's proposed reconciliation plan would gra…"
+      }
+    },
+    {
+      "triplet_id": "triplet_001705",
+      "saved_triplet_index": 1705,
+      "shared_event_ids": [
+        "560860",
+        "560867"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "Danny Glover/MoveOn push to nominate Paul Krugman for Treasury secretary; the left article describes a response petition.",
+      "anchor": {
+        "sample_id": "right_004887",
+        "ideology": "right",
+        "title": "Danny Glover Teams with Moveon.org to Nominate Paul Krugman for Treasury Post",
+        "article_beginning": "New York Times columnist Paul Krugman once suggested an alien invasion would be a grand way of turning the country's economic fortunes around. Now, actor Danny Glover thinks the far-left columnist is the right candidate to replace…"
+      },
+      "positive": {
+        "sample_id": "left_004473",
+        "ideology": "left",
+        "title": "White House Krugman Petition",
+        "article_beginning": "I received an email from Danny Glover on behalf of MoveOn.org, asking me to sign a petition through SignOn supporting the nomination of Pulitzer Prize winning economist Paul Krugman for Secretary of the Treasury. I wondered why I …"
+      }
+    },
+    {
+      "triplet_id": "triplet_001943",
+      "saved_triplet_index": 1943,
+      "shared_event_ids": [
+        "909662"
+      ],
+      "judgment": "same_specific_story",
+      "reason": "The Comey memo allegation that Trump asked him to end the Michael Flynn investigation.",
+      "anchor": {
+        "sample_id": "left_005634",
+        "ideology": "left",
+        "title": "The James Comey memo is an existential threat to Donald Trump's presidency",
+        "article_beginning": "(CNN)The reporting coming out of The New York Times and CNN is explosive: Deposed FBI Director James Comey wrote a memo following a February 14 meeting with Donald Trump in which he says the President told him \"I hope you can let …"
+      },
+      "positive": {
+        "sample_id": "right_006081",
+        "ideology": "right",
+        "title": "Krauthammer: “Who is going to step out now and defend the president in these denials?” | Special Report | Bret Baier",
+        "article_beginning": "Krauthammer: “Who is going to step out now and defend the president in these denials?” Charles Krauthammer told viewers Tuesday on “Special Report with Bret Baier” that when it comes to breaking allegations about President Trump b…"
+      }
+    }
+  ]
+}

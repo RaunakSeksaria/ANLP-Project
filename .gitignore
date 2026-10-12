@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -228,3 +229,8 @@ outputs/baseline/best
 outputs/baseline/last
 outputs/baseline_main/
 .embedding_hf_cache/
+=======
+__pycache__/
+*.pyc
+wandb/
+>>>>>>> embedding-evals
