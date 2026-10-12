@@ -1,0 +1,151 @@
+{
+  "summary": [
+    {
+      "split": "stratified",
+      "lambda_key": "lambda_0",
+      "lambda": "\u03bb=0",
+      "folds": 5,
+      "accuracy_mean": 0.7902150991142978,
+      "accuracy_std": 0.006302499320967723,
+      "macro_f1_mean": 0.789872876448372,
+      "macro_f1_std": 0.0062926583449973705,
+      "roc_auc_mean": 0.8676648746337069,
+      "roc_auc_std": 0.0061184458170029975
+    },
+    {
+      "split": "stratified",
+      "lambda_key": "lambda_0_35",
+      "lambda": "\u03bb=0.35",
+      "folds": 5,
+      "accuracy_mean": 0.7569801771404471,
+      "accuracy_std": 0.008416258650684244,
+      "macro_f1_mean": 0.7565536345109338,
+      "macro_f1_std": 0.008333012472286504,
+      "roc_auc_mean": 0.8331076188955908,
+      "roc_auc_std": 0.005802033969468695
+    },
+    {
+      "split": "publisher_held_out",
+      "lambda_key": "lambda_0",
+      "lambda": "\u03bb=0",
+      "folds": 3,
+      "accuracy_mean": 0.32276866766430895,
+      "accuracy_std": 0.07383541380363776,
+      "macro_f1_mean": 0.3216105230277054,
+      "macro_f1_std": 0.07343704798318143,
+      "roc_auc_mean": 0.26814350613640237,
+      "roc_auc_std": 0.08101274859449495
+    },
+    {
+      "split": "publisher_held_out",
+      "lambda_key": "lambda_0_35",
+      "lambda": "\u03bb=0.35",
+      "folds": 3,
+      "accuracy_mean": 0.3366055040471731,
+      "accuracy_std": 0.07196607890745402,
+      "macro_f1_mean": 0.3349754910197391,
+      "macro_f1_std": 0.07167267578968951,
+      "roc_auc_mean": 0.2807701341038076,
+      "roc_auc_std": 0.09207891304066555
+    }
+  ],
+  "paired_changes": [
+    {
+      "split": "stratified",
+      "comparison": "lambda_0_35 - lambda_0",
+      "folds": 5,
+      "accuracy_mean_change": -0.033234921973850716,
+      "accuracy_fold_changes": [
+        -0.03542808941374953,
+        -0.03669337832138342,
+        -0.03458456347532679,
+        -0.02277520033741043,
+        -0.03669337832138342
+      ],
+      "macro_f1_mean_change": -0.033319241937438224,
+      "macro_f1_fold_changes": [
+        -0.03532976938905197,
+        -0.03673792762744188,
+        -0.035086260779691236,
+        -0.022660751822779934,
+        -0.036781500068226114
+      ],
+      "roc_auc_mean_change": -0.0345572557381161,
+      "roc_auc_fold_changes": [
+        -0.037969767282761135,
+        -0.03764551953753015,
+        -0.03516342086359636,
+        -0.029899917904746554,
+        -0.0321076531019463
+      ]
+    },
+    {
+      "split": "publisher_held_out",
+      "comparison": "lambda_0_35 - lambda_0",
+      "folds": 3,
+      "accuracy_mean_change": 0.013836836382864093,
+      "accuracy_fold_changes": [
+        0.022429906542056066,
+        0.002462296091104932,
+        0.01661830651543128
+      ],
+      "macro_f1_mean_change": 0.013364967992033664,
+      "macro_f1_fold_changes": [
+        0.021948815560747015,
+        0.0021017313771977686,
+        0.01604435703815621
+      ],
+      "roc_auc_mean_change": 0.01262662796740525,
+      "roc_auc_fold_changes": [
+        0.006175338238017053,
+        0.005613761959514824,
+        0.026090783704683873
+      ]
+    }
+  ],
+  "permutation": {
+    "reference_model": "lambda_0",
+    "seed": 43,
+    "method": "globally permute ideology labels once; reuse stratified fold indices; fit pipeline anew",
+    "fold_scores": [
+      {
+        "fold": 0,
+        "accuracy": 0.5107549557148883,
+        "macro_f1": 0.5105459101230772,
+        "roc_auc": 0.5153074966332485,
+        "iterations": 5
+      },
+      {
+        "fold": 1,
+        "accuracy": 0.5115984816533108,
+        "macro_f1": 0.5109699744372345,
+        "roc_auc": 0.5104901579541877,
+        "iterations": 5
+      },
+      {
+        "fold": 2,
+        "accuracy": 0.5158161113454238,
+        "macro_f1": 0.5152503615264609,
+        "roc_auc": 0.5161397433430951,
+        "iterations": 5
+      },
+      {
+        "fold": 3,
+        "accuracy": 0.5170814002530578,
+        "macro_f1": 0.5170810566388402,
+        "roc_auc": 0.5214193949470076,
+        "iterations": 5
+      },
+      {
+        "fold": 4,
+        "accuracy": 0.5120202446225222,
+        "macro_f1": 0.511931341345621,
+        "roc_auc": 0.5201299164313625,
+        "iterations": 5
+      }
+    ],
+    "accuracy_mean": 0.5134542387178407,
+    "macro_f1_mean": 0.5131557288142468,
+    "roc_auc_mean": 0.5166973418617802
+  }
+}

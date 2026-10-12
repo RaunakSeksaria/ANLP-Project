@@ -33,7 +33,10 @@ from src.data.triplet_dataset import (
     create_triplet_dataloaders,
 )
 from src.models.led_baseline import forward_led_baseline
-from src.models.led_triplet import LEDTripletModel, load_led_triplet, masked_triplet_margin_loss
+from src.models.led_triplet import (
+    LEDTripletModel, load_led_triplet, masked_positive_attraction_loss,
+    masked_triplet_margin_loss,
+)
 from src.training.overfit_baseline import (
     decode_reference,
     generate_with_cache,
@@ -81,6 +84,9 @@ class JointTrainingConfig:
     generation_max_new_tokens: int = 512
     triplet_lambda: float = 0.1
     triplet_margin: float = 0.2
+    triplet_objective: str = "standard"
+    positive_distance_threshold: float = 0.5
+    positive_beta: float = 0.3
     attention_window: int = 512
     seed: int = 42
     num_workers: int = 0
@@ -162,6 +168,10 @@ class TripletEvaluation:
     invalid_count: int
     mean_unnormalized_embedding_norm: float
     embedding_variance: float
+    mean_positive_loss: float = 0.0
+    mean_weighted_positive_loss: float = 0.0
+    mean_auxiliary_loss: float = 0.0
+    fraction_attraction_active: float = 0.0
 
 
 @dataclass
@@ -175,6 +185,13 @@ class JointTrainEpoch:
     valid_triplet_fraction: float
     active_triplet_fraction: float
     optimizer_steps: int
+    ranking_loss: float = 0.0
+    positive_loss: float = 0.0
+    weighted_positive_loss: float = 0.0
+    attraction_active_fraction: float = 0.0
+    mean_anchor_positive_distance: float = 0.0
+    mean_anchor_negative_distance: float = 0.0
+    positive_beta: float = 0.0
 
 
 @dataclass
@@ -245,6 +262,12 @@ def validate_joint_config(config: JointTrainingConfig) -> None:
         raise ValueError("the first joint experiment requires precision=fp32")
     if config.triplet_lambda < 0 or config.triplet_margin <= 0:
         raise ValueError("triplet lambda must be nonnegative and margin must be positive")
+    if config.triplet_objective not in {"standard", "attraction"}:
+        raise ValueError("triplet objective must be standard or attraction")
+    if not math.isfinite(config.positive_distance_threshold) or config.positive_distance_threshold < 0:
+        raise ValueError("positive distance threshold must be finite and nonnegative")
+    if not math.isfinite(config.positive_beta) or config.positive_beta < 0:
+        raise ValueError("positive beta must be finite and nonnegative")
     if config.learning_rate <= 0 or config.max_grad_norm <= 0:
         raise ValueError("learning rate and max gradient norm must be positive")
     if config.weight_decay < 0 or not 0 <= config.warmup_ratio <= 1:
@@ -255,6 +278,8 @@ def validate_joint_config(config: JointTrainingConfig) -> None:
         not config.wandb_project.strip() or not config.wandb_entity.strip()
     ):
         raise ValueError("W&B project and entity must be non-empty when enabled")
+    if config.wandb_required and not config.wandb_enabled:
+        raise ValueError("--require-wandb cannot be combined with --disable-wandb")
     if not config.gradient_checkpointing:
         raise ValueError("gradient checkpointing must remain enabled for this experiment")
 
@@ -545,11 +570,14 @@ def evaluate_triplets(
     dataloader: DataLoader[TripletBatch],
     device: torch.device,
     margin: float,
+    objective: str = "standard",
+    threshold: float = 0.5,
+    beta: float = 0.3,
 ) -> TripletEvaluation:
     was_training = model.training
     model.eval()
-    valid = invalid = active = closer = satisfied = 0
-    loss_sum = dap_sum = dan_sum = norm_sum = 0.0
+    valid = invalid = active = attraction_active = closer = satisfied = 0
+    loss_sum = positive_sum = dap_sum = dan_sum = norm_sum = 0.0
     embedding_count = 0
     vector_sum: torch.Tensor | None = None
     vector_square_sum: torch.Tensor | None = None
@@ -580,6 +608,10 @@ def evaluate_triplets(
                     anchor, positive, negative, mask, margin
                 )
                 selected = mask.nonzero(as_tuple=False).flatten()
+                if objective == "attraction":
+                    _, per_positive = masked_positive_attraction_loss(d_ap, mask, threshold)
+                    positive_sum += float(per_positive[selected].sum().item())
+                    attraction_active += int((per_positive[selected] > 0).sum().item())
                 valid += len(selected)
                 loss_sum += float(per_example[selected].sum().item())
                 dap_sum += float(d_ap[selected].sum().item())
@@ -623,6 +655,10 @@ def evaluate_triplets(
         invalid_count=invalid,
         mean_unnormalized_embedding_norm=norm_sum / (3 * valid) if valid else 0.0,
         embedding_variance=variance,
+        mean_positive_loss=positive_sum / valid if valid else 0.0,
+        mean_weighted_positive_loss=beta * positive_sum / valid if valid and objective == "attraction" else 0.0,
+        mean_auxiliary_loss=(loss_sum + (beta * positive_sum if objective == "attraction" else 0.0)) / valid if valid else 0.0,
+        fraction_attraction_active=attraction_active / valid if valid else 0.0,
     )
 
 
@@ -671,8 +707,9 @@ def train_joint_epoch(
     optimizer.zero_grad(set_to_none=True)
     generation_sum = 0.0
     generation_tokens = correct_tokens = 0
-    examples = valid_examples = active = 0
-    triplet_sum = valid_triplet_sum = 0.0
+    examples = valid_examples = active = attraction_active = 0
+    triplet_sum = valid_triplet_sum = ranking_sum = positive_sum = weighted_positive_sum = 0.0
+    positive_distance_sum = negative_distance_sum = 0.0
     microbatches = 0
     optimizer_steps = 0
     group_logs: list[dict[str, float]] = []
@@ -693,6 +730,9 @@ def train_joint_epoch(
             **_model_inputs(batch),
             triplet_lambda=config.triplet_lambda,
             triplet_margin=config.triplet_margin,
+            triplet_objective=config.triplet_objective,
+            positive_distance_threshold=config.positive_distance_threshold,
+            positive_beta=config.positive_beta,
         )
         if not bool(torch.isfinite(output.total_loss)):
             raise FloatingPointError(f"non-finite loss for examples {ids}")
@@ -707,6 +747,13 @@ def train_joint_epoch(
                 f"triplet_lambda={config.triplet_lambda:.8g}, "
                 f"triplet_loss={output.triplet_loss.item():.8g}"
             )
+        if output.ranking_loss is not None and output.weighted_positive_loss is not None:
+            if not torch.allclose(
+                output.triplet_loss,
+                output.ranking_loss + output.weighted_positive_loss,
+                rtol=1e-6, atol=1e-7,
+            ):
+                raise ValueError("auxiliary loss does not reconstruct ranking plus attraction")
         remaining = total_microbatches - microbatch_index + 1
         position = (microbatch_index - 1) % config.gradient_accumulation_steps
         group_size = min(config.gradient_accumulation_steps, position + remaining)
@@ -723,21 +770,45 @@ def train_joint_epoch(
                 & batch["triplet_valid_mask"].bool()
             ).sum().item()
         )
+        valid_mask = batch["triplet_valid_mask"].bool()
+        attraction_count = int(
+            ((output.per_example_positive_loss > 0) & valid_mask).sum().item()
+        ) if output.per_example_positive_loss is not None else 0
+        ranking = output.ranking_loss if output.ranking_loss is not None else output.triplet_loss
+        positive = output.positive_loss if output.positive_loss is not None else output.triplet_loss.new_zeros(())
+        weighted_positive = (
+            output.weighted_positive_loss if output.weighted_positive_loss is not None
+            else output.triplet_loss.new_zeros(())
+        )
+        d_ap_sum = float(output.anchor_positive_distance[valid_mask].sum().item())
+        d_an_sum = float(output.anchor_negative_distance[valid_mask].sum().item())
         generation_sum += float(output.generation_loss.item())
         generation_tokens += token_count
         correct_tokens += correct_count
         triplet_sum += float(output.triplet_loss.item())
+        ranking_sum += float(ranking.item())
+        positive_sum += float(positive.item())
+        weighted_positive_sum += float(weighted_positive.item())
+        positive_distance_sum += d_ap_sum
+        negative_distance_sum += d_an_sum
         valid_triplet_sum += float(output.valid_triplet_mean.item()) * valid_count
         microbatches += 1
         examples += batch_size
         valid_examples += valid_count
         active += active_count
+        attraction_active += attraction_count
         group_logs.append(
             {
                 "generation_loss": float(output.generation_loss.item()),
                 "correct_tokens": float(correct_count),
                 "target_tokens": float(token_count),
                 "triplet_loss": float(output.triplet_loss.item()),
+                "ranking_loss": float(ranking.item()),
+                "positive_loss": float(positive.item()),
+                "weighted_positive_loss": float(weighted_positive.item()),
+                "positive_distance_sum": d_ap_sum,
+                "negative_distance_sum": d_an_sum,
+                "attraction_active": float(attraction_count),
                 "valid_triplet_mean": float(output.valid_triplet_mean.item()),
                 "valid": float(valid_count),
                 "active": float(active_count),
@@ -774,6 +845,13 @@ def train_joint_epoch(
         triplet_mean = sum(value["triplet_loss"] for value in group_logs) / len(
             group_logs
         )
+        ranking_mean = sum(value["ranking_loss"] for value in group_logs) / len(group_logs)
+        positive_mean = sum(value["positive_loss"] for value in group_logs) / len(group_logs)
+        weighted_positive_mean = sum(value["weighted_positive_loss"] for value in group_logs) / len(group_logs)
+        group_attraction_active = sum(value["attraction_active"] for value in group_logs)
+        group_d_ap = sum(value["positive_distance_sum"] for value in group_logs)
+        group_d_an = sum(value["negative_distance_sum"] for value in group_logs)
+        beta = config.positive_beta if config.triplet_objective == "attraction" else 0.0
         weighted_triplet_mean = config.triplet_lambda * triplet_mean
         total_mean = generation_mean + weighted_triplet_mean
         current_lr = float(optimizer.param_groups[0]["lr"])
@@ -792,6 +870,14 @@ def train_joint_epoch(
             "generation_loss": generation_mean,
             "token_accuracy": group_correct / group_target_tokens,
             "triplet_loss": triplet_mean,
+            "ranking_loss": ranking_mean,
+            "positive_loss": positive_mean,
+            "weighted_positive_loss": weighted_positive_mean,
+            "auxiliary_loss": triplet_mean,
+            "positive_beta": beta,
+            "attraction_active_fraction": group_attraction_active / group_valid if group_valid else 0.0,
+            "mean_anchor_positive_distance": group_d_ap / group_valid if group_valid else 0.0,
+            "mean_anchor_negative_distance": group_d_an / group_valid if group_valid else 0.0,
             "weighted_triplet_loss": weighted_triplet_mean,
             "total_loss": total_mean,
             "gradient_norm_before_clipping": float(grad_norm),
@@ -807,6 +893,14 @@ def train_joint_epoch(
                     "train/step_generation_loss": generation_mean,
                     "train/step_token_accuracy": group_correct / group_target_tokens,
                     "train/step_triplet_loss": triplet_mean,
+                    "train/step_ranking_loss": ranking_mean,
+                    "train/step_positive_loss": positive_mean,
+                    "train/step_weighted_positive_loss": weighted_positive_mean,
+                    "train/step_auxiliary_loss": triplet_mean,
+                    "train/step_positive_beta": beta,
+                    "train/step_attraction_active_fraction": group_attraction_active / group_valid if group_valid else 0.0,
+                    "train/step_mean_anchor_positive_distance": group_d_ap / group_valid if group_valid else 0.0,
+                    "train/step_mean_anchor_negative_distance": group_d_an / group_valid if group_valid else 0.0,
                     "train/step_weighted_triplet_loss": weighted_triplet_mean,
                     "train/step_total_loss": total_mean,
                     "train/gradient_norm_before_clipping": float(grad_norm),
@@ -835,6 +929,13 @@ def train_joint_epoch(
         valid_triplet_fraction=valid_examples / examples,
         active_triplet_fraction=active / valid_examples if valid_examples else 0.0,
         optimizer_steps=optimizer_steps,
+        ranking_loss=ranking_sum / microbatches,
+        positive_loss=positive_sum / microbatches,
+        weighted_positive_loss=weighted_positive_sum / microbatches,
+        attraction_active_fraction=attraction_active / valid_examples if valid_examples else 0.0,
+        mean_anchor_positive_distance=positive_distance_sum / valid_examples if valid_examples else 0.0,
+        mean_anchor_negative_distance=negative_distance_sum / valid_examples if valid_examples else 0.0,
+        positive_beta=config.positive_beta if config.triplet_objective == "attraction" else 0.0,
     )
 
 
@@ -877,6 +978,9 @@ def save_joint_checkpoint(
         "pooling": "float32_masked_mean_l2_normalized",
         "triplet_lambda": config.triplet_lambda,
         "triplet_margin": config.triplet_margin,
+        "triplet_objective": config.triplet_objective,
+        "positive_distance_threshold": config.positive_distance_threshold,
+        "positive_beta": config.positive_beta,
         "max_input_length": config.max_input_length,
         "max_target_length": config.max_target_length,
         "attention_window": config.attention_window,
@@ -964,6 +1068,11 @@ def log_epoch_to_wandb(
         "fixed_train/token_accuracy": fixed_train.token_accuracy,
         "fixed_train/token_overlap_f1": fixed_train.token_overlap_f1,
         "validation_triplet/loss": validation_triplet.mean_loss,
+        "validation_triplet/ranking_loss": validation_triplet.mean_loss,
+        "validation_triplet/positive_loss": validation_triplet.mean_positive_loss,
+        "validation_triplet/weighted_positive_loss": validation_triplet.mean_weighted_positive_loss,
+        "validation_triplet/auxiliary_loss": validation_triplet.mean_auxiliary_loss,
+        "validation_triplet/attraction_active_fraction": validation_triplet.fraction_attraction_active,
         "validation_triplet/anchor_positive_distance": (
             validation_triplet.mean_anchor_positive_distance
         ),
@@ -985,6 +1094,14 @@ def log_epoch_to_wandb(
                 "train/epoch_generation_loss": trained.generation_loss,
                 "train/epoch_token_accuracy": trained.token_accuracy,
                 "train/epoch_triplet_loss": trained.triplet_loss,
+                "train/epoch_ranking_loss": trained.ranking_loss,
+                "train/epoch_positive_loss": trained.positive_loss,
+                "train/epoch_weighted_positive_loss": trained.weighted_positive_loss,
+                "train/epoch_auxiliary_loss": trained.triplet_loss,
+                "train/epoch_positive_beta": trained.positive_beta,
+                "train/epoch_attraction_active_fraction": trained.attraction_active_fraction,
+                "train/epoch_mean_anchor_positive_distance": trained.mean_anchor_positive_distance,
+                "train/epoch_mean_anchor_negative_distance": trained.mean_anchor_negative_distance,
                 "train/epoch_weighted_triplet_loss": trained.weighted_triplet_loss,
                 "train/epoch_valid_triplet_mean": trained.valid_triplet_mean,
                 "train/epoch_total_loss": trained.total_loss,
@@ -1339,7 +1456,8 @@ def run_joint_training(config: JointTrainingConfig) -> dict[str, Any]:
             description=f"Epoch {epoch} · fixed train generation",
         )
         triplet_result = evaluate_triplets(
-            model, bundle.dataloaders["validation"], device, config.triplet_margin
+            model, bundle.dataloaders["validation"], device, config.triplet_margin,
+            config.triplet_objective, config.positive_distance_threshold, config.positive_beta,
         )
         write_jsonl(
             config.output_dir

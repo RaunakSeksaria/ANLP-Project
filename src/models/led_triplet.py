@@ -8,6 +8,7 @@ from typing import Any
 
 import torch
 from torch import nn
+from torch.nn import functional as F
 from transformers import LEDConfig, LEDForConditionalGeneration
 
 from src.models.pooling import masked_mean_pool
@@ -30,6 +31,10 @@ class JointForwardOutput:
     anchor_negative_distance: torch.Tensor
     per_example_triplet_loss: torch.Tensor
     valid_count: int
+    ranking_loss: torch.Tensor | None = None
+    positive_loss: torch.Tensor | None = None
+    weighted_positive_loss: torch.Tensor | None = None
+    per_example_positive_loss: torch.Tensor | None = None
 
 
 def masked_triplet_margin_loss(
@@ -55,9 +60,21 @@ def masked_triplet_margin_loss(
     valid_mean = (
         masked.sum() / valid_count if valid_count else per_example.new_zeros(())
     )
-    d_ap = torch.linalg.vector_norm(anchor - positive, ord=2, dim=-1)
-    d_an = torch.linalg.vector_norm(anchor - negative, ord=2, dim=-1)
+    # Match TripletMarginLoss's PairwiseDistance(p=2, eps=1e-6) exactly.
+    d_ap = F.pairwise_distance(anchor, positive, p=2, eps=1e-6)
+    d_an = F.pairwise_distance(anchor, negative, p=2, eps=1e-6)
     return batch_mean, valid_mean, per_example, d_ap, d_an
+
+
+def masked_positive_attraction_loss(
+    distances: torch.Tensor, valid_mask: torch.Tensor, threshold: float
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Return batch-denominated loss and masked per-example attraction."""
+    if distances.ndim != 1 or valid_mask.shape != distances.shape:
+        raise ValueError("invalid positive-distance or triplet-valid-mask shape")
+    per_example = torch.clamp_min(distances - threshold, 0.0)
+    masked = per_example * valid_mask.to(device=distances.device, dtype=distances.dtype)
+    return masked.sum() / distances.numel(), masked
 
 
 class LEDTripletModel(nn.Module):
@@ -103,6 +120,9 @@ class LEDTripletModel(nn.Module):
         triplet_valid_mask: torch.Tensor,
         triplet_lambda: float,
         triplet_margin: float,
+        triplet_objective: str = "standard",
+        positive_distance_threshold: float = 0.5,
+        positive_beta: float = 0.3,
         positive_input_ids: torch.Tensor | None = None,
         positive_attention_mask: torch.Tensor | None = None,
         positive_global_attention_mask: torch.Tensor | None = None,
@@ -142,6 +162,10 @@ class LEDTripletModel(nn.Module):
                 anchor_negative_distance=zeros,
                 per_example_triplet_loss=zeros,
                 valid_count=valid_count,
+                ranking_loss=scalar_zero,
+                positive_loss=scalar_zero,
+                weighted_positive_loss=scalar_zero,
+                per_example_positive_loss=zeros,
             )
 
         required = (
@@ -172,12 +196,28 @@ class LEDTripletModel(nn.Module):
             negative_attention_mask,  # type: ignore[arg-type]
             negative_global_attention_mask,  # type: ignore[arg-type]
         )
-        triplet_loss, valid_mean, per_example, d_ap, d_an = masked_triplet_margin_loss(
+        ranking_loss, ranking_valid_mean, per_example, d_ap, d_an = masked_triplet_margin_loss(
             anchor_z,
             positive_z,
             negative_z,
             triplet_valid_mask,
             triplet_margin,
+        )
+        if triplet_objective not in {"standard", "attraction"}:
+            raise ValueError(f"unknown triplet objective: {triplet_objective}")
+        if triplet_objective == "attraction":
+            positive_loss, per_positive = masked_positive_attraction_loss(
+                d_ap, triplet_valid_mask, positive_distance_threshold
+            )
+            weighted_positive_loss = positive_beta * positive_loss
+        else:
+            positive_loss = ranking_loss.new_zeros(())
+            weighted_positive_loss = positive_loss
+            per_positive = torch.zeros_like(per_example)
+        triplet_loss = ranking_loss + weighted_positive_loss
+        valid_mean = (
+            triplet_loss * batch_size / valid_count
+            if triplet_objective == "attraction" else ranking_valid_mean
         )
         total = generation_loss + triplet_lambda * triplet_loss
         return JointForwardOutput(
@@ -196,6 +236,10 @@ class LEDTripletModel(nn.Module):
             anchor_negative_distance=d_an,
             per_example_triplet_loss=per_example,
             valid_count=valid_count,
+            ranking_loss=ranking_loss,
+            positive_loss=positive_loss,
+            weighted_positive_loss=weighted_positive_loss,
+            per_example_positive_loss=per_positive,
         )
 
 

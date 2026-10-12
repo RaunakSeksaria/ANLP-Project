@@ -1,0 +1,47 @@
+[
+  {
+    "model": "Pretrained LED",
+    "model_key": "base",
+    "ari": 0.004559344660315107,
+    "nmi": 0.003808444508906697,
+    "ideology_silhouette": 0.010917362873705302,
+    "centroid_cosine_distance": 0.0028660230710999546,
+    "kmeans_inertia": 326.97377116690603,
+    "kmeans_cluster_sizes": [
+      819,
+      1181
+    ],
+    "pca_pc1_explained_variance": 0.20764402356126105,
+    "pca_pc2_explained_variance": 0.06360117156756913
+  },
+  {
+    "model": "\u03bb=0",
+    "model_key": "lambda_0",
+    "ari": 0.0018271060473202248,
+    "nmi": 0.001769938316861907,
+    "ideology_silhouette": 0.00881126305609649,
+    "centroid_cosine_distance": 0.002253675374914277,
+    "kmeans_inertia": 320.66794768274747,
+    "kmeans_cluster_sizes": [
+      788,
+      1212
+    ],
+    "pca_pc1_explained_variance": 0.19529815218225477,
+    "pca_pc2_explained_variance": 0.08034184901786512
+  },
+  {
+    "model": "\u03bb=0.35",
+    "model_key": "lambda_0_35",
+    "ari": -0.00020787830113706062,
+    "nmi": 0.0002046457836371883,
+    "ideology_silhouette": 0.0020746771841592864,
+    "centroid_cosine_distance": 0.0031260730584103946,
+    "kmeans_inertia": 942.104792858055,
+    "kmeans_cluster_sizes": [
+      1270,
+      730
+    ],
+    "pca_pc1_explained_variance": 0.10714434683790956,
+    "pca_pc2_explained_variance": 0.10077165531887011
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "samples": 20000,
+  "left_samples": 10000,
+  "right_samples": 10000,
+  "hidden_dim": 768,
+  "dtype": "float32",
+  "checkpoints": {
+    "lambda_0": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda0@03598e556d4f5bd9abd2e7ddb304b80498037e24",
+    "lambda_0_35": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda035@03598e556d4f5bd9abd2e7ddb304b80498037e24"
+  },
+  "tokenizer": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda0@03598e556d4f5bd9abd2e7ddb304b80498037e24",
+  "tokenizer_sha256": "fdebe197cabe6cd156c7b8f3daa09b9b43388143f857bc64561e98375f8c5267",
+  "pooling": "float32 attention-mask-aware mean followed by L2 normalization",
+  "normalization": "L2 unit normalization from masked_mean_pool",
+  "max_input_length": 512,
+  "attention_window": 512,
+  "global_attention": "first token only",
+  "architecture": "LED encoder only",
+  "original_fields": {
+    "left": "left_original.body",
+    "right": "right_original.body"
+  },
+  "neutral_fields": {
+    "left": "left_neutralised",
+    "right": "right_neutralised"
+  },
+  "neutral_encoder_input": "neutral rewrite text only; no title exists for rewrite",
+  "truncated_original_articles": 2,
+  "truncated_neutral_articles": 0,
+  "shapes": {
+    "lambda_0_original": [
+      20000,
+      768
+    ],
+    "lambda_0_neutral": [
+      20000,
+      768
+    ],
+    "lambda_0_35_original": [
+      20000,
+      768
+    ],
+    "lambda_0_35_neutral": [
+      20000,
+      768
+    ]
+  },
+  "file_sizes_bytes": {
+    "lambda_0_35_neutral.npy": 61440128,
+    "lambda_0_35_original.npy": 61440128,
+    "lambda_0_neutral.npy": 61440128,
+    "lambda_0_original.npy": 61440128
+  },
+  "metadata_file_size_bytes": 18037857,
+  "previous_original_spot_check": {
+    "matched_articles": 11853,
+    "sample_count": 10,
+    "lambda_0": {
+      "minimum_cosine_similarity": 1.0,
+      "mean_absolute_difference": 9.658083222063851e-09,
+      "maximum_absolute_difference": 8.940696716308594e-08,
+      "sample_ids": [
+        "left_001943",
+        "right_006366",
+        "left_002017",
+        "right_003635",
+        "left_009504",
+        "left_009435",
+        "right_004600",
+        "left_002113",
+        "left_004593",
+        "right_008320"
+      ]
+    },
+    "lambda_0_35": {
+      "minimum_cosine_similarity": 1.0,
+      "mean_absolute_difference": 1.3347854377343538e-08,
+      "maximum_absolute_difference": 7.636845111846924e-08,
+      "sample_ids": [
+        "left_001943",
+        "right_006366",
+        "left_002017",
+        "right_003635",
+        "left_009504",
+        "left_009435",
+        "right_004600",
+        "left_002113",
+        "left_004593",
+        "right_008320"
+      ]
+    }
+  },
+  "extracted_at_utc": "2026-10-01T21:32:16.365228+00:00",
+  "git_commit": "15a08762784dc61dbf211ecfdbd92b287954e80a"
+}

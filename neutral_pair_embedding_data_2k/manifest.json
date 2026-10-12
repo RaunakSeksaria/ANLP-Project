@@ -1,0 +1,101 @@
+{
+  "samples": 2000,
+  "left_samples": 1000,
+  "right_samples": 1000,
+  "selection": "Seeded sample without replacement per ideology; rows sorted by source order",
+  "selection_seed": 42,
+  "source_files": {
+    "left": "left_neutral_dedup.jsonl",
+    "right": "right_neutral_dedup.jsonl"
+  },
+  "source_file_sha256": {
+    "left": "07c8f652f10abe0abe38c72820a74f65a98a3cf0f899651b79a2ca9486190c2d",
+    "right": "b582100b9827f79be40a3df8c6a4655d30ac3728799df6f62090fcf43119349c"
+  },
+  "hidden_dim": 768,
+  "dtype": "float32",
+  "checkpoints": {
+    "base": "allenai/led-base-16384@38335783885b338d93791936c54bb4be46bebed9",
+    "lambda_0": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda0@03598e556d4f5bd9abd2e7ddb304b80498037e24",
+    "lambda_0_35": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda035@03598e556d4f5bd9abd2e7ddb304b80498037e24"
+  },
+  "base_description": "pretrained LED before ANLP task training; not randomly initialized",
+  "tokenizer": "RaunakSeksaria/anlp-neutral-led/side-neutral-full/lambda0@03598e556d4f5bd9abd2e7ddb304b80498037e24",
+  "tokenizer_sha256": "fdebe197cabe6cd156c7b8f3daa09b9b43388143f857bc64561e98375f8c5267",
+  "pooling": "float32 attention-mask-aware mean followed by L2 normalization",
+  "normalization": "L2 unit normalization from masked_mean_pool",
+  "max_input_length": 512,
+  "attention_window": 512,
+  "global_attention": "first token only",
+  "architecture": "LED encoder only",
+  "original_fields": {
+    "left": "left_original.body",
+    "right": "right_original.body"
+  },
+  "neutral_fields": {
+    "left": "left_neutralised",
+    "right": "right_neutralised"
+  },
+  "truncated_original_articles": 0,
+  "truncated_neutral_articles": 0,
+  "shapes": {
+    "base_original": [
+      2000,
+      768
+    ],
+    "base_neutral": [
+      2000,
+      768
+    ],
+    "lambda_0_original": [
+      2000,
+      768
+    ],
+    "lambda_0_neutral": [
+      2000,
+      768
+    ],
+    "lambda_0_35_original": [
+      2000,
+      768
+    ],
+    "lambda_0_35_neutral": [
+      2000,
+      768
+    ]
+  },
+  "file_sizes_bytes": {
+    "base_original.npy": 6144128,
+    "base_neutral.npy": 6144128,
+    "lambda_0_original.npy": 6144128,
+    "lambda_0_neutral.npy": 6144128,
+    "lambda_0_35_original.npy": 6144128,
+    "lambda_0_35_neutral.npy": 6144128
+  },
+  "metadata_file_size_bytes": 1872393,
+  "prior_full_extraction_check": {
+    "lambda_0": {
+      "original": {
+        "mean_absolute_difference": 9.359053088076053e-09,
+        "maximum_absolute_difference": 1.4901161193847656e-07
+      },
+      "neutral": {
+        "mean_absolute_difference": 9.82987380382383e-09,
+        "maximum_absolute_difference": 1.1920928955078125e-07
+      }
+    },
+    "lambda_0_35": {
+      "original": {
+        "mean_absolute_difference": 1.3273551147108265e-08,
+        "maximum_absolute_difference": 1.4901161193847656e-07
+      },
+      "neutral": {
+        "mean_absolute_difference": 1.3783615138152072e-08,
+        "maximum_absolute_difference": 1.7881393432617188e-07
+      }
+    }
+  },
+  "extracted_at_utc": "2026-10-01T21:55:09.495933+00:00",
+  "git_commit": "15a08762784dc61dbf211ecfdbd92b287954e80a",
+  "base_tokenizer_matches_training": true
+}

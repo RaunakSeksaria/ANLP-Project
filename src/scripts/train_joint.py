@@ -39,6 +39,9 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--generation-max-new-tokens", type=int, default=512)
     parser.add_argument("--triplet-lambda", type=float, default=0.1)
     parser.add_argument("--triplet-margin", type=float, default=0.2)
+    parser.add_argument("--triplet-objective", choices=("standard", "attraction"), default="standard")
+    parser.add_argument("--positive-distance-threshold", type=float, default=0.5)
+    parser.add_argument("--positive-beta", type=float, default=0.3)
     parser.add_argument("--attention-window", type=int, default=512)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--num-workers", type=int, default=0)
@@ -74,6 +77,9 @@ def config_from_args(args: argparse.Namespace) -> JointTrainingConfig:
         generation_max_new_tokens=args.generation_max_new_tokens,
         triplet_lambda=args.triplet_lambda,
         triplet_margin=args.triplet_margin,
+        triplet_objective=args.triplet_objective,
+        positive_distance_threshold=args.positive_distance_threshold,
+        positive_beta=args.positive_beta,
         attention_window=args.attention_window,
         seed=args.seed,
         num_workers=args.num_workers,
