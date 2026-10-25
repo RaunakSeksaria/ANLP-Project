@@ -1,0 +1,14 @@
+[
+  {
+    "lambda": 0.35,
+    "alignment": 0.07757558659142764,
+    "alignment_ci_low": 0.07405324588700138,
+    "alignment_ci_high": 0.0813361029412388,
+    "alignment_pairs": 2000,
+    "uniformity": -1.2633487657470766,
+    "uniformity_ci_low": -1.2750100889601794,
+    "uniformity_ci_high": -1.249675248169957,
+    "uniformity_articles": 2000,
+    "uniformity_distances": 1999000
+  }
+]

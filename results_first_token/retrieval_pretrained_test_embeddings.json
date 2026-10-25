@@ -1,0 +1,14 @@
+{
+  "model": "/tmp/anlp_led_pretrained_model",
+  "tokenizer": "outputs/side_neutral_first_token_lambda035_21275/best",
+  "metadata": "embedding_data/metadata.parquet",
+  "split": "test",
+  "rows": 1775,
+  "dimension": 768,
+  "pooling": "masked_mean",
+  "L2_normalized": true,
+  "max_input_length": 512,
+  "attention_window": 512,
+  "global_attention": "first token only",
+  "ordered_article_hash_sha256": "533fab9756eaf510941cb0a4d14c91823cb36d4a2fb711127d8d19378f2dead5"
+}

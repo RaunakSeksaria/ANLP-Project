@@ -1,0 +1,60 @@
+{
+  "triplets": 2000,
+  "source_triplets": "/home2/manas.agrawal/anlp/ANLP-Project/results/sampled_triplets.csv",
+  "distance": "squared Euclidean distance on float64-renormalized embeddings",
+  "models": {
+    "mean_lambda_0": {
+      "apd_mean_squared_l2": 0.30304828710081677,
+      "apd_95_ci": [
+        0.29718871480223247,
+        0.3091688866560654
+      ],
+      "negative_mean_squared_l2": 0.38969693852664095,
+      "msg_mean_squared_l2": 0.0866486514258242,
+      "msg_95_ci": [
+        0.07921765716459217,
+        0.09411718140447307
+      ],
+      "ordering_success_pct": 72.95,
+      "training_margin_satisfied_pct": 19.950000000000003,
+      "matrix_sha256": "586edee188ce61223fc34c06d53a0113f32e38d0cc913cc947722bc8f5600acb"
+    },
+    "mean_lambda_0_35": {
+      "apd_mean_squared_l2": 0.37681067869052287,
+      "apd_95_ci": [
+        0.37065946470229266,
+        0.3835929309657327
+      ],
+      "negative_mean_squared_l2": 1.0304064415300536,
+      "msg_mean_squared_l2": 0.6535957628395306,
+      "msg_95_ci": [
+        0.6412534200981027,
+        0.6656654122346903
+      ],
+      "ordering_success_pct": 98.85000000000001,
+      "training_margin_satisfied_pct": 88.25,
+      "matrix_sha256": "3a34e3dfd88b1a867b5e80482e6ca644040d167629fe3da48b62040acfcf2fd9"
+    },
+    "first_token_lambda_0_35": {
+      "apd_mean_squared_l2": 0.07990119661074647,
+      "apd_95_ci": [
+        0.07622929459310603,
+        0.08372990628948243
+      ],
+      "negative_mean_squared_l2": 0.724585967143685,
+      "msg_mean_squared_l2": 0.6446847705329383,
+      "msg_95_ci": [
+        0.6299739612150329,
+        0.6593208598289797
+      ],
+      "ordering_success_pct": 98.5,
+      "training_margin_satisfied_pct": 92.85,
+      "matrix_sha256": "3bbd0dec4bef74419e36cde03dd1692706fb0eb97653340acceebc7fd606fa8d"
+    }
+  },
+  "first_token_minus_mean_lambda_0_35_msg": -0.008910992306592298,
+  "first_token_minus_mean_lambda_0_35_msg_95_ci": [
+    -0.02067540130846634,
+    0.0019618986032803923
+  ]
+}
