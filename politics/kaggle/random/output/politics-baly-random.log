@@ -1,0 +1,56 @@
+[{"stream_name":"stdout","time":33.72786528,"data":"articles=/kaggle/input/datasets/harshitlalwani/baly-article-bias/baly_articles.csv splits=/kaggle/input/datasets/harshitlalwani/baly-article-bias/splits stories=/kaggle/input/datasets/harshitlalwani/stories-10k-eval/stories_10k_eval.jsonl\n"}
+,{"stream_name":"stdout","time":38.287442604,"data":"[politics_random] train=27978, valid=6996, test=1300\n"}
+,{"stream_name":"stderr","time":38.458312981,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":44.454551666,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 9253.04it/s]\n"}
+,{"stream_name":"stderr","time":44.481430602,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":44.481462033,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":44.481466971,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":44.481471021,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":44.481476914,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":44.481485334,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":44.481488173,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":44.481490805,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":44.481493659,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":44.481496208,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":44.481498785,"data":"\n"}
+,{"stream_name":"stderr","time":44.481501291,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":44.481503856,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":44.481506673,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":51.85333437,"data":"  [politics_random] ep1 step 0 loss 1.1799\n"}
+,{"stream_name":"stdout","time":202.751817163,"data":"  [politics_random] ep1 step 400 loss 0.8733\n"}
+,{"stream_name":"stdout","time":359.90718679,"data":"  [politics_random] ep1 step 800 loss 0.6767\n"}
+,{"stream_name":"stdout","time":517.204368981,"data":"  [politics_random] ep1 step 1200 loss 0.5838\n"}
+,{"stream_name":"stdout","time":673.781822245,"data":"  [politics_random] ep1 step 1600 loss 0.5267\n"}
+,{"stream_name":"stdout","time":773.953381112,"data":"[politics_random] epoch 1: {\"epoch\": 1, \"train_loss\": 0.5124459421638082, \"minutes\": 12.149749708175658, \"val_macro_f1\": 88.27727571258212, \"val_acc\": 88.33619210977702, \"val_mae\": 0.16337907375643224}\n"}
+,{"stream_name":"stdout","time":774.876321366,"data":"  [politics_random] ep2 step 0 loss 0.2061\n"}
+,{"stream_name":"stdout","time":931.669321499,"data":"  [politics_random] ep2 step 400 loss 0.2543\n"}
+,{"stream_name":"stdout","time":1087.927806475,"data":"  [politics_random] ep2 step 800 loss 0.2541\n"}
+,{"stream_name":"stdout","time":1244.176629844,"data":"  [politics_random] ep2 step 1200 loss 0.2560\n"}
+,{"stream_name":"stdout","time":1399.766711313,"data":"  [politics_random] ep2 step 1600 loss 0.2521\n"}
+,{"stream_name":"stdout","time":1499.426550191,"data":"[politics_random] epoch 2: {\"epoch\": 2, \"train_loss\": 0.253184231768137, \"minutes\": 12.082364086310069, \"val_macro_f1\": 89.91807181429297, \"val_acc\": 90.00857632933105, \"val_mae\": 0.13907947398513437}\n"}
+,{"stream_name":"stdout","time":1500.352688287,"data":"  [politics_random] ep3 step 0 loss 0.0794\n"}
+,{"stream_name":"stdout","time":1655.726163858,"data":"  [politics_random] ep3 step 400 loss 0.1652\n"}
+,{"stream_name":"stdout","time":1810.69249605,"data":"  [politics_random] ep3 step 800 loss 0.1678\n"}
+,{"stream_name":"stdout","time":1965.588620376,"data":"  [politics_random] ep3 step 1200 loss 0.1637\n"}
+,{"stream_name":"stdout","time":2121.045451931,"data":"  [politics_random] ep3 step 1600 loss 0.1632\n"}
+,{"stream_name":"stdout","time":2220.498166503,"data":"[politics_random] epoch 3: {\"epoch\": 3, \"train_loss\": 0.16417562156455595, \"minutes\": 12.008943418661753, \"val_macro_f1\": 90.28656464908762, \"val_acc\": 90.38021726700973, \"val_mae\": 0.13250428816466553}\n"}
+,{"stream_name":"stdout","time":2221.078288099,"data":"  [politics_random] ep4 step 0 loss 0.0348\n"}
+,{"stream_name":"stdout","time":2376.088955494,"data":"  [politics_random] ep4 step 400 loss 0.0978\n"}
+,{"stream_name":"stdout","time":2530.827415031,"data":"  [politics_random] ep4 step 800 loss 0.1016\n"}
+,{"stream_name":"stdout","time":2685.417126219,"data":"  [politics_random] ep4 step 1200 loss 0.1032\n"}
+,{"stream_name":"stdout","time":2840.240901813,"data":"  [politics_random] ep4 step 1600 loss 0.1057\n"}
+,{"stream_name":"stdout","time":2939.731193212,"data":"[politics_random] epoch 4: {\"epoch\": 4, \"train_loss\": 0.10663817870644177, \"minutes\": 11.98410165309906, \"val_macro_f1\": 90.58498336669342, \"val_acc\": 90.65180102915951, \"val_mae\": 0.12950257289879932}\n"}
+,{"stream_name":"stdout","time":2940.44071407,"data":"  [politics_random] ep5 step 0 loss 0.0034\n"}
+,{"stream_name":"stdout","time":3094.875089583,"data":"  [politics_random] ep5 step 400 loss 0.0707\n"}
+,{"stream_name":"stdout","time":3249.102133647,"data":"  [politics_random] ep5 step 800 loss 0.0673\n"}
+,{"stream_name":"stdout","time":3403.321287709,"data":"  [politics_random] ep5 step 1200 loss 0.0681\n"}
+,{"stream_name":"stdout","time":3557.422455233,"data":"  [politics_random] ep5 step 1600 loss 0.0681\n"}
+,{"stream_name":"stdout","time":3656.446207224,"data":"[politics_random] epoch 5: {\"epoch\": 5, \"train_loss\": 0.06597809657974199, \"minutes\": 11.93991823196411, \"val_macro_f1\": 90.58482184539233, \"val_acc\": 90.66609491137793, \"val_mae\": 0.1262149799885649}\n"}
+,{"stream_name":"stdout","time":3781.607653124,"data":"RESULT {\"model\": \"politics_random\", \"encoder\": \"launch/POLITICS\", \"split\": \"random\", \"best_val_macro_f1\": 90.58498336669342, \"epochs_run\": 5, \"test_macro_f1\": 89.17080950713813, \"test_acc\": 88.92307692307693, \"test_mae\": 0.18384615384615385, \"stories_macro_f1\": 59.02042072356568, \"stories_acc\": 63.21333333333333, \"stories_mae\": 0.4163, \"neutral_pred_share_LCR\": [0.308, 0.2719, 0.4201], \"neutral_mean_p_LCR\": [0.3160000145435333, 0.2777999937534332, 0.40630000829696655]}\n"}
+,{"stream_name":"stderr","time":3788.191052452,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3788.191095558,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3788.466884578,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3788.46691098,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3789.262880063,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3790.325040885,"data":"[NbConvertApp] Writing 329360 bytes to __results__.html\n"}
+]

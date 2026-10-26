@@ -37,6 +37,22 @@ settings), no Twitter-bio or Wikipedia media-level models.
 - [x] E4 AllSides bias types on 3,000 texts (`jev/bias_types.ipynb`), $0.19
 - [ ] E5 Omission bias: the three articles of a story compared in one request (not run)
 
+## F. Held aside (parked 2026-10-25; nothing running)
+- [ ] F1 Fold into `RESULTS.md`: new LED `first_token_pooling` results (classifiers, outlet leakage, VAD,
+      Jev, bias types) and POLITICS-on-LED tables. Numbers are in the chat log and these files:
+      `led_eval/kaggle/new_model/output/out/`, `politics/kaggle/{media,random_score}/output*/`,
+      `jev/results/{led_outputs,bias_types_led}.jsonl` (`jev/bias_types_led_report.py` prints the tables)
+- [ ] F2 Resume paused classifier queue on the Nemotron rewrite sets: `evaluation/long10k/run_all.sh`
+      (resumable). Done: ChunkyBERT + Baly random on both sets. Left: Baly media (long 51% done),
+      Baly AA, outlet classifier, No-Classifier, on both short and long sets. Then execute
+      `evaluation/{short,long10k}_eval.ipynb`
+- [ ] F3 POLITICS Table 3 replication (ideology tasks, 1 seed): Congress Speech + Hyperpartisan.
+      Hyperpartisan by-article data downloaded (Zenodo 5776081); need media→ideology mapping decision
+- [ ] F4 Jev: re-score short/long-set originals body-only for an exact paired comparison (~$1.25; spend at $2.84)
+- [ ] F5 QA / QuestEval content-preservation eval (`qa_eval/qa_eval.py`, never run, untested)
+- [ ] F6 Baly AA with 2-3 more seeds (~3.5 h Kaggle each); Baly triplet pre-training (D7)
+- [ ] F7 Seeds for the LED comparison (first-token vs λ0 vs λ0.35 differences are within single-seed noise)
+
 ## Carried over (not started)
 - [ ] Publisher-leakage classifier (`eval_metrics.md` item 2)
 - [ ] Commit the work (everything is currently untracked on branch `harshit`)

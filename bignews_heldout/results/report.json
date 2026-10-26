@@ -1,0 +1,129 @@
+{
+  "trained_articles": {
+    "BIGNEWSBLN_center.json": 772194,
+    "BIGNEWSBLN_left.json": 779499,
+    "BIGNEWSBLN_right.json": 779859,
+    "BIGNEWSALIGN.json": 4550899
+  },
+  "bignews": {
+    "train_ap.json": {
+      "articles": 279349,
+      "untrained_by_key": 37,
+      "sampled": 37
+    },
+    "train_breitbart.json": {
+      "articles": 206536,
+      "untrained_by_key": 24,
+      "sampled": 24
+    },
+    "train_cnn.json": {
+      "articles": 65386,
+      "untrained_by_key": 398,
+      "sampled": 398
+    },
+    "train_dailykos.json": {
+      "articles": 100848,
+      "untrained_by_key": 20,
+      "sampled": 20
+    },
+    "train_fox.json": {
+      "articles": 330235,
+      "untrained_by_key": 69,
+      "sampled": 69
+    },
+    "train_hill.json": {
+      "articles": 329911,
+      "untrained_by_key": 7762,
+      "sampled": 5000
+    },
+    "train_hpo.json": {
+      "articles": 241460,
+      "untrained_by_key": 43,
+      "sampled": 43
+    },
+    "train_nyt.json": {
+      "articles": 173755,
+      "untrained_by_key": 18,
+      "sampled": 18
+    },
+    "train_usatoday.json": {
+      "articles": 170740,
+      "untrained_by_key": 3,
+      "sampled": 3
+    },
+    "train_wat.json": {
+      "articles": 243229,
+      "untrained_by_key": 45,
+      "sampled": 45
+    },
+    "train_wpo.json": {
+      "articles": 198551,
+      "untrained_by_key": 22,
+      "sampled": 22
+    }
+  },
+  "candidates": 5679,
+  "clean": 5363,
+  "flagged": 316,
+  "flagged_by": {
+    "key": 0,
+    "exact": 0,
+    "near": 316
+  },
+  "by_outlet": {
+    "ap": {
+      "sampled": 37,
+      "clean": 37
+    },
+    "breitbart": {
+      "sampled": 24,
+      "clean": 24
+    },
+    "cnn": {
+      "sampled": 398,
+      "clean": 398
+    },
+    "dailykos": {
+      "sampled": 20,
+      "clean": 20
+    },
+    "fox": {
+      "sampled": 69,
+      "clean": 69
+    },
+    "hill": {
+      "sampled": 5000,
+      "clean": 4684
+    },
+    "hpo": {
+      "sampled": 43,
+      "clean": 43
+    },
+    "nyt": {
+      "sampled": 18,
+      "clean": 18
+    },
+    "usatoday": {
+      "sampled": 3,
+      "clean": 3
+    },
+    "wat": {
+      "sampled": 45,
+      "clean": 45
+    },
+    "wpo": {
+      "sampled": 22,
+      "clean": 22
+    }
+  },
+  "params": {
+    "per_outlet": 5000,
+    "seed": 42,
+    "n": 5,
+    "max_words": 400,
+    "sample": 4,
+    "jaccard": 0.8,
+    "max_bucket": 50
+  },
+  "seconds": 595
+}

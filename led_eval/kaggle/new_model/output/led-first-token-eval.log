@@ -1,0 +1,347 @@
+[{"stream_name":"stderr","time":36.980311252999996,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":36.988063007,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":43.797256064,"data":"\rLoading weights:   0%|          | 0/296 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 0/296 [00:00\u003c?, ?it/s]\rLoading weights:  69%|██████▉   | 204/296 [00:00\u003c00:00, 2036.91it/s]\rLoading weights:  71%|███████   | 210/296 [00:00\u003c00:00, 2097.51it/s]\rLoading weights: 100%|██████████| 296/296 [00:00\u003c00:00, 2428.63it/s]\n"}
+,{"stream_name":"stderr","time":43.800405578,"data":"\rLoading weights: 100%|██████████| 296/296 [00:00\u003c00:00, 2407.46it/s]\n"}
+,{"stream_name":"stderr","time":48.236736994,"data":"[transformers] Input ids are automatically padded from 401 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stderr","time":48.236776055,"data":"[transformers] Input ids are automatically padded from 412 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":51.7485408,"data":"  shard0 13/1000 0.1 min\n"}
+,{"stream_name":"stderr","time":51.764785486,"data":"[transformers] Input ids are automatically padded from 346 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":51.821375353,"data":"  shard1 13/1000 0.1 min\n"}
+,{"stream_name":"stderr","time":51.837836533,"data":"[transformers] Input ids are automatically padded from 347 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":54.081231056,"data":"  shard0 27/1000 0.1 min\n"}
+,{"stream_name":"stderr","time":54.097833267,"data":"[transformers] Input ids are automatically padded from 338 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":54.199451634,"data":"  shard1 27/1000 0.1 min\n"}
+,{"stream_name":"stderr","time":54.21385481,"data":"[transformers] Input ids are automatically padded from 328 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":56.381603065,"data":"  shard0 41/1000 0.1 min\n"}
+,{"stream_name":"stderr","time":56.395861499,"data":"[transformers] Input ids are automatically padded from 329 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":56.402013592,"data":"  shard1 41/1000 0.1 min\n"}
+,{"stream_name":"stderr","time":56.415958922,"data":"[transformers] Input ids are automatically padded from 323 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":58.500145547,"data":"  shard0 55/1000 0.2 min\n"}
+,{"stream_name":"stderr","time":58.515072342,"data":"[transformers] Input ids are automatically padded from 319 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":58.687953979,"data":"  shard1 55/1000 0.2 min\n"}
+,{"stream_name":"stderr","time":58.701766697,"data":"[transformers] Input ids are automatically padded from 315 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":60.728000811,"data":"  shard0 69/1000 0.2 min\n"}
+,{"stream_name":"stderr","time":60.742127493,"data":"[transformers] Input ids are automatically padded from 311 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":60.789817307,"data":"  shard1 69/1000 0.2 min\n"}
+,{"stream_name":"stderr","time":60.805473816,"data":"[transformers] Input ids are automatically padded from 307 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":62.875374601,"data":"  shard1 84/1000 0.2 min\n"}
+,{"stream_name":"stderr","time":62.890859935,"data":"[transformers] Input ids are automatically padded from 299 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":62.955193817,"data":"  shard0 83/1000 0.2 min\n"}
+,{"stream_name":"stderr","time":62.96943104,"data":"[transformers] Input ids are automatically padded from 304 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":64.90127428,"data":"  shard1 99/1000 0.3 min\n"}
+,{"stream_name":"stderr","time":64.914980585,"data":"[transformers] Input ids are automatically padded from 295 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":65.187161577,"data":"  shard0 98/1000 0.3 min\n"}
+,{"stream_name":"stderr","time":65.202871109,"data":"[transformers] Input ids are automatically padded from 296 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":67.008770855,"data":"  shard1 114/1000 0.3 min\n"}
+,{"stream_name":"stderr","time":67.019033448,"data":"[transformers] Input ids are automatically padded from 288 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":67.223016599,"data":"  shard0 113/1000 0.3 min\n"}
+,{"stream_name":"stderr","time":67.239018978,"data":"[transformers] Input ids are automatically padded from 290 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":69.011723701,"data":"  shard1 129/1000 0.4 min\n"}
+,{"stream_name":"stderr","time":69.026367607,"data":"[transformers] Input ids are automatically padded from 284 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":69.466778377,"data":"  shard0 128/1000 0.4 min\n"}
+,{"stream_name":"stderr","time":69.479998129,"data":"[transformers] Input ids are automatically padded from 285 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":71.040036198,"data":"  shard1 144/1000 0.4 min\n"}
+,{"stream_name":"stderr","time":71.05442919,"data":"[transformers] Input ids are automatically padded from 277 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":71.540681866,"data":"  shard0 143/1000 0.4 min\n"}
+,{"stream_name":"stderr","time":71.554351312,"data":"[transformers] Input ids are automatically padded from 281 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":73.129221603,"data":"  shard1 159/1000 0.4 min\n"}
+,{"stream_name":"stderr","time":73.142543179,"data":"[transformers] Input ids are automatically padded from 270 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":73.70092929,"data":"  shard0 158/1000 0.4 min\n"}
+,{"stream_name":"stderr","time":73.715347778,"data":"[transformers] Input ids are automatically padded from 276 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":75.133182684,"data":"  shard1 174/1000 0.5 min\n"}
+,{"stream_name":"stderr","time":75.146873715,"data":"[transformers] Input ids are automatically padded from 266 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":75.661866753,"data":"  shard0 173/1000 0.5 min\n"}
+,{"stream_name":"stderr","time":75.675737636,"data":"[transformers] Input ids are automatically padded from 273 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":76.932623135,"data":"  shard1 189/1000 0.5 min\n"}
+,{"stream_name":"stderr","time":76.945408452,"data":"[transformers] Input ids are automatically padded from 259 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":77.549649244,"data":"  shard0 188/1000 0.5 min\n"}
+,{"stream_name":"stderr","time":77.563605227,"data":"[transformers] Input ids are automatically padded from 269 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":78.81643238,"data":"  shard1 204/1000 0.5 min\n"}
+,{"stream_name":"stderr","time":78.829626287,"data":"[transformers] Input ids are automatically padded from 255 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":79.41372659,"data":"  shard0 203/1000 0.5 min\n"}
+,{"stream_name":"stderr","time":79.426994607,"data":"[transformers] Input ids are automatically padded from 266 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":80.754111814,"data":"  shard1 220/1000 0.5 min\n"}
+,{"stream_name":"stderr","time":80.767540918,"data":"[transformers] Input ids are automatically padded from 249 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":81.307420827,"data":"  shard0 218/1000 0.6 min\n"}
+,{"stream_name":"stderr","time":81.320490757,"data":"[transformers] Input ids are automatically padded from 263 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":82.639455721,"data":"  shard1 236/1000 0.6 min\n"}
+,{"stream_name":"stderr","time":82.653252174,"data":"[transformers] Input ids are automatically padded from 244 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":83.146814807,"data":"  shard0 233/1000 0.6 min\n"}
+,{"stream_name":"stderr","time":83.160333633,"data":"[transformers] Input ids are automatically padded from 256 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":84.54611865,"data":"  shard1 252/1000 0.6 min\n"}
+,{"stream_name":"stderr","time":84.559071228,"data":"[transformers] Input ids are automatically padded from 241 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":84.961885511,"data":"  shard0 249/1000 0.6 min\n"}
+,{"stream_name":"stderr","time":84.97537613,"data":"[transformers] Input ids are automatically padded from 253 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":86.353549698,"data":"  shard1 268/1000 0.6 min\n"}
+,{"stream_name":"stderr","time":86.366089138,"data":"[transformers] Input ids are automatically padded from 236 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":86.727527233,"data":"  shard0 265/1000 0.6 min\n"}
+,{"stream_name":"stderr","time":86.7408217,"data":"[transformers] Input ids are automatically padded from 249 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":88.211798211,"data":"  shard1 284/1000 0.7 min\n"}
+,{"stream_name":"stderr","time":88.225660515,"data":"[transformers] Input ids are automatically padded from 230 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":88.534560206,"data":"  shard0 281/1000 0.7 min\n"}
+,{"stream_name":"stderr","time":88.547733849,"data":"[transformers] Input ids are automatically padded from 246 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":89.957339499,"data":"  shard1 300/1000 0.7 min\n"}
+,{"stream_name":"stderr","time":89.971657679,"data":"[transformers] Input ids are automatically padded from 226 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":90.272775744,"data":"  shard0 297/1000 0.7 min\n"}
+,{"stream_name":"stderr","time":90.28671695,"data":"[transformers] Input ids are automatically padded from 243 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":91.732815305,"data":"  shard1 316/1000 0.7 min\n"}
+,{"stream_name":"stderr","time":91.746305608,"data":"[transformers] Input ids are automatically padded from 223 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":92.20793182,"data":"  shard0 313/1000 0.7 min\n"}
+,{"stream_name":"stderr","time":92.221727986,"data":"[transformers] Input ids are automatically padded from 239 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":93.497133301,"data":"  shard1 332/1000 0.8 min\n"}
+,{"stream_name":"stderr","time":93.512640135,"data":"[transformers] Input ids are automatically padded from 219 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":94.042517776,"data":"  shard0 329/1000 0.8 min\n"}
+,{"stream_name":"stderr","time":94.055394367,"data":"[transformers] Input ids are automatically padded from 235 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":95.052416975,"data":"  shard1 348/1000 0.8 min\n"}
+,{"stream_name":"stderr","time":95.064271157,"data":"[transformers] Input ids are automatically padded from 213 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":95.841944146,"data":"  shard0 345/1000 0.8 min\n"}
+,{"stream_name":"stderr","time":95.854225344,"data":"[transformers] Input ids are automatically padded from 232 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":96.635268785,"data":"  shard1 364/1000 0.8 min\n"}
+,{"stream_name":"stderr","time":96.647449508,"data":"[transformers] Input ids are automatically padded from 211 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":97.556043776,"data":"  shard0 361/1000 0.8 min\n"}
+,{"stream_name":"stderr","time":97.568457937,"data":"[transformers] Input ids are automatically padded from 230 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":98.128912619,"data":"  shard1 380/1000 0.8 min\n"}
+,{"stream_name":"stderr","time":98.140552626,"data":"[transformers] Input ids are automatically padded from 207 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":99.375143691,"data":"  shard0 377/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":99.388000978,"data":"[transformers] Input ids are automatically padded from 226 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":99.682995487,"data":"  shard1 397/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":99.696151538,"data":"[transformers] Input ids are automatically padded from 204 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":101.046038229,"data":"  shard0 393/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":101.058720661,"data":"[transformers] Input ids are automatically padded from 222 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":101.277124823,"data":"  shard1 414/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":101.289767286,"data":"[transformers] Input ids are automatically padded from 200 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":102.71196723,"data":"  shard0 409/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":102.723248121,"data":"[transformers] Input ids are automatically padded from 220 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":102.803050252,"data":"  shard1 431/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":102.814208549,"data":"[transformers] Input ids are automatically padded from 198 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":104.411418936,"data":"  shard1 448/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":104.423282389,"data":"[transformers] Input ids are automatically padded from 193 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":104.445586701,"data":"  shard0 425/1000 0.9 min\n"}
+,{"stream_name":"stderr","time":104.457230494,"data":"[transformers] Input ids are automatically padded from 216 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":105.911074228,"data":"  shard1 465/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":105.922299181,"data":"[transformers] Input ids are automatically padded from 189 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":106.102887974,"data":"  shard0 441/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":106.114952023,"data":"[transformers] Input ids are automatically padded from 213 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":107.292932255,"data":"  shard1 482/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":107.30439215,"data":"[transformers] Input ids are automatically padded from 187 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":107.787316144,"data":"  shard0 457/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":107.801765757,"data":"[transformers] Input ids are automatically padded from 210 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":108.72495356,"data":"  shard1 499/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":108.736203488,"data":"[transformers] Input ids are automatically padded from 186 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":109.358202077,"data":"  shard0 474/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":109.370804599,"data":"[transformers] Input ids are automatically padded from 209 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":110.219836683,"data":"  shard1 516/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":110.235395533,"data":"[transformers] Input ids are automatically padded from 185 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":111.032488712,"data":"  shard0 491/1000 1.0 min\n"}
+,{"stream_name":"stderr","time":111.044580349,"data":"[transformers] Input ids are automatically padded from 205 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":111.714863986,"data":"  shard1 533/1000 1.1 min\n"}
+,{"stream_name":"stderr","time":111.727268849,"data":"[transformers] Input ids are automatically padded from 183 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":112.586676731,"data":"  shard0 508/1000 1.1 min\n"}
+,{"stream_name":"stderr","time":112.598786177,"data":"[transformers] Input ids are automatically padded from 202 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":113.086005139,"data":"  shard1 550/1000 1.1 min\n"}
+,{"stream_name":"stderr","time":113.099111795,"data":"[transformers] Input ids are automatically padded from 180 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":114.117737758,"data":"  shard0 525/1000 1.1 min\n"}
+,{"stream_name":"stderr","time":114.129751819,"data":"[transformers] Input ids are automatically padded from 198 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":114.495410981,"data":"  shard1 567/1000 1.1 min\n"}
+,{"stream_name":"stderr","time":114.506850433,"data":"[transformers] Input ids are automatically padded from 179 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":115.683216216,"data":"  shard0 542/1000 1.1 min\n"}
+,{"stream_name":"stderr","time":115.696512742,"data":"[transformers] Input ids are automatically padded from 194 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":115.914735947,"data":"  shard1 584/1000 1.1 min\n"}
+,{"stream_name":"stderr","time":115.925528993,"data":"[transformers] Input ids are automatically padded from 177 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":117.197058055,"data":"  shard0 559/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":117.209345372,"data":"[transformers] Input ids are automatically padded from 191 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":117.401361117,"data":"  shard1 601/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":117.411673791,"data":"[transformers] Input ids are automatically padded from 175 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":118.655057551,"data":"  shard1 618/1000 1.2 min\n"}
+,{"stream_name":"stdout","time":118.669699764,"data":"  shard0 576/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":118.680538651,"data":"[transformers] Input ids are automatically padded from 188 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":119.937514961,"data":"  shard1 635/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":119.947873052,"data":"[transformers] Input ids are automatically padded from 173 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":120.127474103,"data":"  shard0 593/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":120.138455349,"data":"[transformers] Input ids are automatically padded from 184 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":121.350056121,"data":"  shard1 652/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":121.364140538,"data":"[transformers] Input ids are automatically padded from 171 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":121.590770668,"data":"  shard0 610/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":121.603043362,"data":"[transformers] Input ids are automatically padded from 182 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":122.692387185,"data":"  shard1 669/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":122.704025722,"data":"[transformers] Input ids are automatically padded from 169 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":123.028117563,"data":"  shard0 627/1000 1.2 min\n"}
+,{"stream_name":"stderr","time":123.039212065,"data":"[transformers] Input ids are automatically padded from 180 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":124.039024311,"data":"  shard1 687/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":124.049794468,"data":"[transformers] Input ids are automatically padded from 166 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":124.392357507,"data":"  shard0 644/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":124.40268416,"data":"[transformers] Input ids are automatically padded from 178 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":125.403950253,"data":"  shard1 705/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":125.415210503,"data":"[transformers] Input ids are automatically padded from 164 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":125.816728174,"data":"  shard0 661/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":125.828504624,"data":"[transformers] Input ids are automatically padded from 176 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":126.718183535,"data":"  shard1 723/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":126.729502311,"data":"[transformers] Input ids are automatically padded from 162 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":127.222779464,"data":"  shard0 678/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":127.234552507,"data":"[transformers] Input ids are automatically padded from 172 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":128.020084479,"data":"  shard1 741/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":128.031271357,"data":"[transformers] Input ids are automatically padded from 158 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":128.49854906,"data":"  shard0 695/1000 1.3 min\n"}
+,{"stream_name":"stderr","time":128.510002892,"data":"[transformers] Input ids are automatically padded from 169 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":129.359548309,"data":"  shard1 759/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":129.370744168,"data":"[transformers] Input ids are automatically padded from 156 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":129.821045871,"data":"  shard0 713/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":129.83157004,"data":"[transformers] Input ids are automatically padded from 166 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":130.597422139,"data":"  shard1 777/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":130.607478869,"data":"[transformers] Input ids are automatically padded from 152 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":131.233604883,"data":"  shard0 731/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":131.251993625,"data":"[transformers] Input ids are automatically padded from 163 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":131.937655993,"data":"  shard1 795/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":131.948821645,"data":"[transformers] Input ids are automatically padded from 149 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":132.664030529,"data":"  shard0 749/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":132.675248934,"data":"[transformers] Input ids are automatically padded from 158 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":133.186307452,"data":"  shard1 813/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":133.197329823,"data":"[transformers] Input ids are automatically padded from 145 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":133.989554402,"data":"  shard0 767/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":134.000550582,"data":"[transformers] Input ids are automatically padded from 155 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":134.36304606,"data":"  shard1 831/1000 1.4 min\n"}
+,{"stream_name":"stderr","time":134.373235984,"data":"[transformers] Input ids are automatically padded from 142 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":135.272823931,"data":"  shard0 785/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":135.283580132,"data":"[transformers] Input ids are automatically padded from 151 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":135.593901349,"data":"  shard1 849/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":135.604514417,"data":"[transformers] Input ids are automatically padded from 139 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":136.528659139,"data":"  shard0 803/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":136.539442526,"data":"[transformers] Input ids are automatically padded from 147 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":136.809138656,"data":"  shard1 867/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":136.819552694,"data":"[transformers] Input ids are automatically padded from 136 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":137.790821658,"data":"  shard0 821/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":137.805128516,"data":"[transformers] Input ids are automatically padded from 143 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":137.935094529,"data":"  shard1 885/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":137.945198366,"data":"[transformers] Input ids are automatically padded from 132 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":138.909522377,"data":"  shard0 839/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":138.919141785,"data":"[transformers] Input ids are automatically padded from 139 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":139.161164365,"data":"  shard1 904/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":139.172493543,"data":"[transformers] Input ids are automatically padded from 128 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":140.060961021,"data":"  shard0 857/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":140.070682293,"data":"[transformers] Input ids are automatically padded from 133 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":140.283791848,"data":"  shard1 923/1000 1.5 min\n"}
+,{"stream_name":"stderr","time":140.293395011,"data":"[transformers] Input ids are automatically padded from 122 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":141.142362737,"data":"  shard0 876/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":141.152257555,"data":"[transformers] Input ids are automatically padded from 129 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":141.442310096,"data":"  shard1 942/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":141.451534371,"data":"[transformers] Input ids are automatically padded from 115 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":142.282072122,"data":"  shard0 895/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":142.291528203,"data":"[transformers] Input ids are automatically padded from 121 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":142.459108549,"data":"  shard1 961/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":142.467960276,"data":"[transformers] Input ids are automatically padded from 107 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":143.272196191,"data":"  shard0 914/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":143.284548005,"data":"[transformers] Input ids are automatically padded from 114 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":143.436464376,"data":"  shard1 980/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":143.444873652,"data":"[transformers] Input ids are automatically padded from 98 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":144.268370996,"data":"  shard0 933/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":144.277361899,"data":"[transformers] Input ids are automatically padded from 107 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":144.306841432,"data":"  shard1 1000/1000 1.6 min\n"}
+,{"stream_name":"stdout","time":145.201768808,"data":"  shard0 952/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":145.210479584,"data":"[transformers] Input ids are automatically padded from 101 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":146.208271958,"data":"  shard0 972/1000 1.6 min\n"}
+,{"stream_name":"stderr","time":146.215722576,"data":"[transformers] Input ids are automatically padded from 94 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":147.094377426,"data":"  shard0 992/1000 1.7 min\n"}
+,{"stream_name":"stderr","time":147.099509086,"data":"[transformers] Input ids are automatically padded from 82 to 512 to be a multiple of `config.attention_window`: 512\n"}
+,{"stream_name":"stdout","time":147.697081921,"data":"  shard0 1012/1000 1.7 min\n"}
+,{"stream_name":"stdout","time":148.971278302,"data":"generation exit codes [0, 0], 2.3 min\n"}
+,{"stream_name":"stdout","time":149.158647036,"data":"8000 texts to score\n"}
+,{"stream_name":"stdout","time":150.084400235,"data":"vad: 8000 texts\n"}
+,{"stream_name":"stderr","time":156.290425729,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":158.783644619,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 2903.87it/s]\n"}
+,{"stream_name":"stderr","time":158.796222683,"data":"[transformers] \u001b[1mBertModel LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":158.796244612,"data":"Key                                        | Status     |  | \n"}
+,{"stream_name":"stderr","time":158.796249509,"data":"-------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":158.796253162,"data":"cls.predictions.bias                       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":158.796256523,"data":"cls.seq_relationship.bias                  | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":158.796260011,"data":"cls.seq_relationship.weight                | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":158.796263463,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":158.796271926,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":158.796275116,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":158.796286262,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":158.796288715,"data":"\n"}
+,{"stream_name":"stderr","time":158.796290811,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":158.79629299,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":247.432564512,"data":"chunkybert: 8000 texts in 91s\n"}
+,{"stream_name":"stderr","time":247.721253499,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 2752.31it/s]\n"}
+,{"stream_name":"stderr","time":247.726411346,"data":"[transformers] \u001b[1mBertModel LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":247.726434774,"data":"Key                                        | Status     |  | \n"}
+,{"stream_name":"stderr","time":247.726438762,"data":"-------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":247.726441745,"data":"cls.predictions.bias                       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":247.726444743,"data":"cls.seq_relationship.bias                  | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":247.726447932,"data":"cls.seq_relationship.weight                | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":247.726450863,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":247.726453692,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":247.726456503,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":247.72645933,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":247.726462265,"data":"\n"}
+,{"stream_name":"stderr","time":247.726465021,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":247.726468644,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":335.169985636,"data":"no_classifier: 8000 texts in 88s\n"}
+,{"stream_name":"stderr","time":335.475865919,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 2883.59it/s]\n"}
+,{"stream_name":"stderr","time":335.481150618,"data":"[transformers] \u001b[1mBertModel LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":335.481170309,"data":"Key                                        | Status     |  | \n"}
+,{"stream_name":"stderr","time":335.481174094,"data":"-------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":335.481177475,"data":"cls.predictions.bias                       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":335.481180564,"data":"cls.seq_relationship.bias                  | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":335.481183526,"data":"cls.seq_relationship.weight                | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":335.481186391,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":335.481189621,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":335.481192569,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":335.481204668,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":335.481207691,"data":"\n"}
+,{"stream_name":"stderr","time":335.481220799,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":335.481224685,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":366.124868022,"data":"baly_random: 8000 texts in 31s\n"}
+,{"stream_name":"stderr","time":366.518358645,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 2702.24it/s]\n"}
+,{"stream_name":"stderr","time":366.523716308,"data":"[transformers] \u001b[1mBertModel LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":366.523733182,"data":"Key                                        | Status     |  | \n"}
+,{"stream_name":"stderr","time":366.523738358,"data":"-------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":366.523742791,"data":"cls.predictions.bias                       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":366.523747186,"data":"cls.seq_relationship.bias                  | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":366.523751445,"data":"cls.seq_relationship.weight                | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":366.523755874,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":366.523763682,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":366.523766717,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":366.523769567,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":366.523772543,"data":"\n"}
+,{"stream_name":"stderr","time":366.523775386,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":366.523778385,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":397.764147714,"data":"baly_media: 8000 texts in 32s\n"}
+,{"stream_name":"stderr","time":398.200347131,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 2741.88it/s]\n"}
+,{"stream_name":"stderr","time":398.205470563,"data":"[transformers] \u001b[1mBertModel LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":398.205493054,"data":"Key                                        | Status     |  | \n"}
+,{"stream_name":"stderr","time":398.205498196,"data":"-------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":398.205501712,"data":"cls.predictions.bias                       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":398.205504797,"data":"cls.seq_relationship.bias                  | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":398.205507797,"data":"cls.seq_relationship.weight                | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":398.205510714,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":398.205513564,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":398.205516487,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":398.205519346,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":398.20553093,"data":"\n"}
+,{"stream_name":"stderr","time":398.205533368,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":398.205535551,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":429.186629187,"data":"baly_aa: 8000 texts in 31s\n"}
+,{"stream_name":"stderr","time":429.623769367,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 2773.80it/s]\n"}
+,{"stream_name":"stderr","time":429.629015397,"data":"[transformers] \u001b[1mBertModel LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":429.629037611,"data":"Key                                        | Status     |  | \n"}
+,{"stream_name":"stderr","time":429.629043529,"data":"-------------------------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":429.629048491,"data":"cls.predictions.bias                       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":429.629053119,"data":"cls.seq_relationship.bias                  | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":429.629057661,"data":"cls.seq_relationship.weight                | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":429.629062378,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":429.629067088,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":429.629071681,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":429.629076477,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":429.629081114,"data":"\n"}
+,{"stream_name":"stderr","time":429.629085498,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":429.629090037,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":460.245517838,"data":"baly_outlet: 8000 texts in 31s\n"}
+,{"stream_name":"stdout","time":460.355012609,"data":"ALL DONE\n"}
+,{"stream_name":"stderr","time":463.589324527,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":463.589350946,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":463.838830156,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":463.838855298,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":464.569643644,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":465.610857383,"data":"[NbConvertApp] Writing 314772 bytes to __results__.html\n"}
+]

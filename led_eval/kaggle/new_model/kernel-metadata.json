@@ -1,0 +1,16 @@
+{
+  "id": "harshitlalwani/led-first-token-eval",
+  "title": "led-first-token-eval",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "",
+  "dataset_sources": ["harshitlalwani/neutral-eval-assets"],
+  "competition_sources": [],
+  "kernel_sources": ["harshitlalwani/chunkybert-full-train", "harshitlalwani/chunkybert-best-variant", "harshitlalwani/baly-bert-main"],
+  "model_sources": []
+}

@@ -1,0 +1,22 @@
+{
+  "id": "harshitlalwani/politics-baly-media",
+  "title": "politics-baly-media",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "machine_shape": "",
+  "dataset_sources": [
+    "harshitlalwani/baly-article-bias",
+    "harshitlalwani/stories-10k-eval",
+    "harshitlalwani/neutral-eval-assets"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "harshitlalwani/led-first-token-eval"
+  ],
+  "model_sources": []
+}

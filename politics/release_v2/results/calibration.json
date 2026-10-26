@@ -1,0 +1,11 @@
+{
+  "temperature": {
+    "seed42": 3.571055032674181,
+    "seed43": 3.743046063867499,
+    "seed44": 3.4723053041487186,
+    "seed45": 3.661602750873748,
+    "ensemble": 3.079259392760518
+  },
+  "ensemble_rule": "mean over seeds of softmax(logits / T)",
+  "fit_on": "Article-Bias-Prediction random-split validation set (6,996 articles), NLL"
+}

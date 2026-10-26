@@ -1,0 +1,113 @@
+summaries : 10000 items -> run_outlet_style_title.jsonl
+37551 already scored, 1999 to go; spent so far $1.1412
+  500/1999  33.9/s  spent $1.1546
+  1000/1999  36.8/s  spent $1.1681
+  1500/1999  38.5/s  spent $1.1815
+scored 1999, failed 0, stopped_on_budget=False; total spent $1.1951 over 43499 requests
+rewrites short: 20000 items -> rewrites_short.jsonl
+0 already scored, 20000 to go; spent so far $1.1951
+  500/20000  34.1/s  spent $1.2062
+  1000/20000  35.4/s  spent $1.2177
+  1500/20000  36.6/s  spent $1.2291
+  2000/20000  25.1/s  spent $1.2407
+  2500/20000  14.3/s  spent $1.2519
+  fail short:208614:left:rewrite: TypeSafeAPITimeoutError: Request timed out (timeout=10.0).
+  3000/20000  11.3/s  spent $1.2633
+  3500/20000  10.4/s  spent $1.2747
+  4000/20000  10.1/s  spent $1.2859
+  4500/20000  10.4/s  spent $1.2974
+  5000/20000  10.8/s  spent $1.3088
+  5500/20000  11.1/s  spent $1.3201
+  6000/20000  11.3/s  spent $1.3315
+  6500/20000  11.3/s  spent $1.3430
+  7000/20000  11.4/s  spent $1.3545
+  7500/20000  11.6/s  spent $1.3662
+  8000/20000  11.9/s  spent $1.3778
+  8500/20000  12.4/s  spent $1.3890
+  9000/20000  12.9/s  spent $1.3999
+  9500/20000  13.3/s  spent $1.4108
+  10000/20000  13.8/s  spent $1.4217
+summaries : 10000 items -> run_outlet_style_title.jsonl
+39550 already scored, 0 to go; spent so far $1.4231
+scored 0, failed 0, stopped_on_budget=False; total spent $1.4231 over 53564 requests
+rewrites short: 20000 items -> rewrites_short.jsonl
+10064 already scored, 9936 to go; spent so far $1.4231
+  500/9936  8.8/s  spent $1.4344
+  1000/9936  5.8/s  spent $1.4460
+  fail short:119834:right:rewrite: TypeSafeAPITimeoutError: Request timed out (timeout=10.0).
+  fail short:121028:right:rewrite: TypeSafeAPITimeoutError: Request timed out (timeout=10.0).
+  fail short:119912:right:rewrite: TypeSafeAPITimeoutError: Request timed out (timeout=10.0).
+  fail short:122231:right:rewrite: TypeSafeAPITimeoutError: Request timed out (timeout=10.0).
+  fail short:141897:right:rewrite: TypeSafeAPITimeoutError: Request timed out (timeout=10.0).
+  1500/9936  5.2/s  spent $1.4573
+  2000/9936  6.1/s  spent $1.4686
+  2500/9936  7.2/s  spent $1.4799
+  3000/9936  8.2/s  spent $1.4913
+  3500/9936  9.2/s  spent $1.5026
+  4000/9936  9.9/s  spent $1.5139
+  4500/9936  10.7/s  spent $1.5254
+  5000/9936  11.4/s  spent $1.5368
+  5500/9936  12.0/s  spent $1.5481
+  6000/9936  12.7/s  spent $1.5597
+  6500/9936  13.4/s  spent $1.5711
+  7000/9936  14.0/s  spent $1.5826
+  7500/9936  14.6/s  spent $1.5940
+  8000/9936  15.1/s  spent $1.6056
+  8500/9936  15.6/s  spent $1.6167
+  9000/9936  16.1/s  spent $1.6276
+  9500/9936  16.5/s  spent $1.6385
+scored 9931, failed 5, stopped_on_budget=False; total spent $1.6479 over 63500 requests
+rewrites long10k: 19922 items -> rewrites_long10k.jsonl
+0 already scored, 19922 to go; spent so far $1.6479
+  500/19922  13.3/s  spent $1.6654
+  1000/19922  14.5/s  spent $1.6831
+  1500/19922  15.5/s  spent $1.7008
+  2000/19922  15.7/s  spent $1.7192
+  2500/19922  15.8/s  spent $1.7367
+  3000/19922  15.1/s  spent $1.7539
+  3500/19922  15.0/s  spent $1.7717
+  4000/19922  15.4/s  spent $1.7902
+  4500/19922  15.7/s  spent $1.8079
+  5000/19922  15.9/s  spent $1.8256
+  5500/19922  15.3/s  spent $1.8437
+  6000/19922  15.0/s  spent $1.8609
+  6500/19922  14.7/s  spent $1.8791
+  7000/19922  14.3/s  spent $1.8965
+  7500/19922  14.1/s  spent $1.9145
+  8000/19922  13.9/s  spent $1.9313
+  8500/19922  13.1/s  spent $1.9490
+  9000/19922  12.9/s  spent $1.9665
+  9500/19922  12.7/s  spent $1.9840
+  10000/19922  12.4/s  spent $2.0014
+  10500/19922  12.5/s  spent $2.0179
+  11000/19922  12.7/s  spent $2.0349
+  11500/19922  12.9/s  spent $2.0526
+  12000/19922  12.9/s  spent $2.0702
+  12500/19922  12.9/s  spent $2.0881
+  13000/19922  13.1/s  spent $2.1051
+  13500/19922  13.2/s  spent $2.1227
+  14000/19922  13.3/s  spent $2.1404
+  14500/19922  13.4/s  spent $2.1576
+  15000/19922  13.5/s  spent $2.1745
+  15500/19922  13.6/s  spent $2.1922
+  16000/19922  13.7/s  spent $2.2094
+  16500/19922  13.8/s  spent $2.2277
+  17000/19922  14.0/s  spent $2.2449
+  17500/19922  14.0/s  spent $2.2617
+  18000/19922  14.2/s  spent $2.2783
+  18500/19922  14.3/s  spent $2.2958
+  19000/19922  14.4/s  spent $2.3127
+  19500/19922  14.5/s  spent $2.3304
+scored 19922, failed 0, stopped_on_budget=False; total spent $2.3448 over 83422 requests
+led : 4000 items -> led_outputs.jsonl
+0 already scored, 4000 to go; spent so far $2.3448
+  500/4000  25.5/s  spent $2.3571
+  1000/4000  26.0/s  spent $2.3683
+  1500/4000  27.6/s  spent $2.3789
+  2000/4000  29.6/s  spent $2.3885
+  2500/4000  29.9/s  spent $2.4009
+  3000/4000  30.3/s  spent $2.4121
+  3500/4000  31.1/s  spent $2.4226
+  4000/4000  32.1/s  spent $2.4322
+scored 4000, failed 0, stopped_on_budget=False; total spent $2.4322 over 87422 requests
+JEV NEUTRAL DONE

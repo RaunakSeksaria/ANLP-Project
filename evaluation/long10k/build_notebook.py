@@ -1,19 +1,36 @@
-"""Builds evaluation/long10k_eval.ipynb (analysis only; scores come from evaluation/long10k/score.py)."""
+"""Builds evaluation/<dataset>_eval.ipynb (analysis only; scores come from evaluation/long10k/score.py).
+
+    python evaluation/long10k/build_notebook.py long10k
+    python evaluation/long10k/build_notebook.py short
+"""
+import sys
 import nbformat as nbf
 from pathlib import Path
+
+DATASET = sys.argv[1] if len(sys.argv) > 1 else "long10k"
+INTRO = {
+    "long10k": """# Evaluation of the long Nemotron rewrite set (`long_10k`)
+
+**Data.** Raunak's single-article framing-removal set, "full1024" release (HF
+`RaunakSeksaria/anlp-project-datasets`, `data/long/`). 9,961 events sampled from BigNewsAlign; each
+has one **left** and one **right** article (≤ 1,024 LED tokens, median 421 words), and each article
+has a **Nemotron-3-Ultra rewrite** that removes framing (prompt `n2`). That is 19,922 originals and
+19,922 rewrites. There are no centre articles in this set.""",
+    "short": """# Evaluation of the short Nemotron rewrite set (`{left,right}_neutral_dedup`)
+
+**Data.** Raunak's single-article framing-removal set (`origin/data`, `left_neutral_dedup.jsonl` and
+`right_neutral_dedup.jsonl`): 10,000 left and 10,000 right articles of at most ~275 words, from
+BigNewsAlign, each with a **Nemotron-3-Ultra rewrite** that removes framing (prompt `n2`). These
+rewrites are the **training targets of the team's LED neutralisers**. That is 20,000 originals and
+20,000 rewrites. There are no centre articles in this set.""",
+}[DATASET]
 
 nb = nbf.v4.new_notebook()
 c = []
 md = lambda s: c.append(nbf.v4.new_markdown_cell(s))
-co = lambda s: c.append(nbf.v4.new_code_cell(s))
+co = lambda s: c.append(nbf.v4.new_code_cell(s.replace("{DATASET}", DATASET)))
 
-md("""# Evaluation of the long reframing set (`long_10k`)
-
-**Data.** Raunak's single-article framing-removal set, "full1024" release (HF
-`RaunakSeksaria/anlp-project-datasets`, `data/long/`). 9,961 events sampled from BigNewsAlign; each
-has one **left** and one **right** article (≤ 1,024 LED tokens), and each article has a
-**Nemotron-3-Ultra rewrite** that removes framing (prompt `n2`). That is 19,922 originals and
-19,922 rewrites. There are no centre articles in this set.
+md(INTRO + """
 
 **What is measured** (the instruments in `eval_metrics.md`, all validated earlier on this branch):
 - **Ideology classifiers**: ChunkyBERT, its "No Classifier" variant, and Baly's BERT trained on the
@@ -27,9 +44,9 @@ has one **left** and one **right** article (≤ 1,024 LED tokens), and each arti
    outlet and side? Each rewrite is compared with its own original, which cancels each
    classifier's fixed bias.
 
-All texts are scored body-only, like-for-like with the rewrites. The 139 originals (0.7%) whose
+All texts are scored body-only, like-for-like with the rewrites. Originals whose
 title also appears in Baly's corpus, the classifiers' training data, are excluded together with
-their rewrites.""")
+their rewrites (the count is printed below).""")
 
 co("""import json
 import numpy as np, pandas as pd
@@ -38,7 +55,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 ROOT = Path("/root/ANLP/ANLP-Project")
-H = ROOT / "evaluation/long10k"
+H = ROOT / "evaluation/{DATASET}"
 CLASSES = ["Left", "Centre", "Right"]
 IDEO = ["chunkybert", "no_classifier", "baly_random", "baly_media", "baly_aa"]
 NAMES = {"chunkybert": "ChunkyBERT (5 ep)", "no_classifier": "No Classifier variant (1 ep)",
@@ -211,12 +228,12 @@ md("""## Notes
   the outlet rather than the ideology. A rewrite that removes house style will lower P(own side)
   even if its slant is unchanged. Read section 2 together with section 3: if the outlet becomes
   unrecognisable, the ideology shift is at least partly the same effect.
-- **Contamination:** the 139 originals whose titles appear in the classifiers' training corpus are
+- **Contamination:** originals whose titles appear in the classifiers' training corpus are
   excluded together with their rewrites.
 - Per-text scores: `evaluation/long10k/scores/` (ideology `p` = [Left, Centre, Right]; outlet = top-5).""")
 
 nb.cells = c
 nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
                "language_info": {"name": "python"}}
-nbf.write(nb, Path(__file__).resolve().parents[1] / "long10k_eval.ipynb")
+nbf.write(nb, Path(__file__).resolve().parents[1] / f"{DATASET}_eval.ipynb")
 print("written")

@@ -1,0 +1,57 @@
+[{"stream_name":"stdout","time":35.141725946,"data":"articles=/kaggle/input/datasets/harshitlalwani/baly-article-bias/baly_articles.csv splits=/kaggle/input/datasets/harshitlalwani/baly-article-bias/splits stories=/kaggle/input/datasets/harshitlalwani/stories-10k-eval/stories_10k_eval.jsonl\n"}
+,{"stream_name":"stdout","time":39.077377677,"data":"[politics_media] train=26590, valid=2356, test=1300\n"}
+,{"stream_name":"stderr","time":39.681802842,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":62.746626717,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 14595.71it/s]\n"}
+,{"stream_name":"stderr","time":62.777410599,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":62.777438462,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":62.777444741,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":62.777449708,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":62.777454343,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":62.777458686,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":62.77746351,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":62.777468141,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":62.777492201,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":62.777497441,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":62.777504941,"data":"\n"}
+,{"stream_name":"stderr","time":62.777510102,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":62.777514806,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":62.777519989,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":66.132705464,"data":"  [politics_media] ep1 step 0 loss 1.1853\n"}
+,{"stream_name":"stdout","time":208.892564319,"data":"  [politics_media] ep1 step 400 loss 0.8345\n"}
+,{"stream_name":"stdout","time":355.609769287,"data":"  [politics_media] ep1 step 800 loss 0.6342\n"}
+,{"stream_name":"stdout","time":502.617443078,"data":"  [politics_media] ep1 step 1200 loss 0.5282\n"}
+,{"stream_name":"stdout","time":649.143070265,"data":"  [politics_media] ep1 step 1600 loss 0.4685\n"}
+,{"stream_name":"stdout","time":684.419123993,"data":"[politics_media] epoch 1: {\"epoch\": 1, \"train_loss\": 0.4625716938869187, \"minutes\": 10.352458973725637, \"val_macro_f1\": 29.535367000582642, \"val_acc\": 28.947368421052634, \"val_mae\": 1.197792869269949}\n"}
+,{"stream_name":"stdout","time":685.328025493,"data":"  [politics_media] ep2 step 0 loss 0.0820\n"}
+,{"stream_name":"stdout","time":831.729482644,"data":"  [politics_media] ep2 step 400 loss 0.2172\n"}
+,{"stream_name":"stdout","time":977.761247691,"data":"  [politics_media] ep2 step 800 loss 0.2116\n"}
+,{"stream_name":"stdout","time":1123.793217174,"data":"  [politics_media] ep2 step 1200 loss 0.2130\n"}
+,{"stream_name":"stdout","time":1270.239528785,"data":"  [politics_media] ep2 step 1600 loss 0.2128\n"}
+,{"stream_name":"stdout","time":1305.456959051,"data":"[politics_media] epoch 2: {\"epoch\": 2, \"train_loss\": 0.21329799445097197, \"minutes\": 10.341601932048798, \"val_macro_f1\": 29.889011868623445, \"val_acc\": 31.19694397283531, \"val_mae\": 1.1099320882852293}\n"}
+,{"stream_name":"stdout","time":1306.394727912,"data":"  [politics_media] ep3 step 0 loss 0.1172\n"}
+,{"stream_name":"stdout","time":1452.031613138,"data":"  [politics_media] ep3 step 400 loss 0.1191\n"}
+,{"stream_name":"stdout","time":1597.668141918,"data":"  [politics_media] ep3 step 800 loss 0.1248\n"}
+,{"stream_name":"stdout","time":1743.226657039,"data":"  [politics_media] ep3 step 1200 loss 0.1306\n"}
+,{"stream_name":"stdout","time":1888.884249071,"data":"  [politics_media] ep3 step 1600 loss 0.1338\n"}
+,{"stream_name":"stdout","time":1923.962079734,"data":"[politics_media] epoch 3: {\"epoch\": 3, \"train_loss\": 0.13318897211738154, \"minutes\": 10.298874652385711, \"val_macro_f1\": 32.80913381189733, \"val_acc\": 33.78607809847199, \"val_mae\": 1.0776740237691003}\n"}
+,{"stream_name":"stdout","time":1924.511653049,"data":"  [politics_media] ep4 step 0 loss 0.0031\n"}
+,{"stream_name":"stdout","time":2069.725093852,"data":"  [politics_media] ep4 step 400 loss 0.0881\n"}
+,{"stream_name":"stdout","time":2214.760626526,"data":"  [politics_media] ep4 step 800 loss 0.0879\n"}
+,{"stream_name":"stdout","time":2359.867321719,"data":"  [politics_media] ep4 step 1200 loss 0.0810\n"}
+,{"stream_name":"stdout","time":2504.724633166,"data":"  [politics_media] ep4 step 1600 loss 0.0843\n"}
+,{"stream_name":"stdout","time":2539.750514544,"data":"[politics_media] epoch 4: {\"epoch\": 4, \"train_loss\": 0.0827783131470781, \"minutes\": 10.260140415032705, \"val_macro_f1\": 31.41058637947804, \"val_acc\": 33.064516129032256, \"val_mae\": 1.0793718166383701}\n"}
+,{"stream_name":"stdout","time":2540.109202948,"data":"  [politics_media] ep5 step 0 loss 0.0015\n"}
+,{"stream_name":"stdout","time":2684.829641651,"data":"  [politics_media] ep5 step 400 loss 0.0483\n"}
+,{"stream_name":"stdout","time":2829.635153338,"data":"  [politics_media] ep5 step 800 loss 0.0501\n"}
+,{"stream_name":"stdout","time":2973.908776476,"data":"  [politics_media] ep5 step 1200 loss 0.0478\n"}
+,{"stream_name":"stdout","time":3118.136822153,"data":"  [politics_media] ep5 step 1600 loss 0.0505\n"}
+,{"stream_name":"stdout","time":3152.973847825,"data":"[politics_media] epoch 5: {\"epoch\": 5, \"train_loss\": 0.05051953973206293, \"minutes\": 10.220370662212371, \"val_macro_f1\": 31.831356677402994, \"val_acc\": 34.08319185059423, \"val_mae\": 1.0594227504244482}\n"}
+,{"stream_name":"stdout","time":3152.97391199,"data":"[politics_media] early stop after epoch 5\n"}
+,{"stream_name":"stdout","time":3282.857280373,"data":"RESULT {\"model\": \"politics_media\", \"encoder\": \"launch/POLITICS\", \"split\": \"media\", \"best_val_macro_f1\": 32.80913381189733, \"epochs_run\": 5, \"test_macro_f1\": 53.08339684802049, \"test_acc\": 55.07692307692308, \"test_mae\": 0.5415384615384615, \"stories_macro_f1\": 63.21098174557612, \"stories_acc\": 64.06666666666668, \"stories_mae\": 0.4044, \"neutral_pred_share_LCR\": [0.2505, 0.5046, 0.2449], \"neutral_mean_p_LCR\": [0.2694999873638153, 0.4846000075340271, 0.2460000067949295], \"led_outputs_scored\": {\"led_first_token\": 2000, \"led_lambda0\": 2000, \"led_lambda035\": 2000}}\n"}
+,{"stream_name":"stderr","time":3290.179980037,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3290.180011492,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3290.460806482,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3290.460832481,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3291.312596702,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3292.423084366,"data":"[NbConvertApp] Writing 335072 bytes to __results__.html\n"}
+]

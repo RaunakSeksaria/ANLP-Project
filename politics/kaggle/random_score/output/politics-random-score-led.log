@@ -1,0 +1,27 @@
+[{"stream_name":"stdout","time":27.72304273,"data":"articles=/kaggle/input/datasets/harshitlalwani/baly-article-bias/baly_articles.csv splits=/kaggle/input/datasets/harshitlalwani/baly-article-bias/splits stories=/kaggle/input/datasets/harshitlalwani/stories-10k-eval/stories_10k_eval.jsonl\n"}
+,{"stream_name":"stdout","time":32.14466102,"data":"[politics_random] train=27978, valid=6996, test=1300\n"}
+,{"stream_name":"stderr","time":32.27357864,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":38.943794177,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 12702.00it/s]\n"}
+,{"stream_name":"stderr","time":38.967295287,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":38.967322155,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":38.967328106,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":38.967332891,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":38.967336962,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":38.967340822,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":38.96734461,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":38.967348439,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":38.967352312,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":38.967356097,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":38.967361985,"data":"\n"}
+,{"stream_name":"stderr","time":38.967371278,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":38.967374268,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":38.967377087,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":82.731298166,"data":"[politics_random] loaded politics_random.pt; val macro-F1 90.85\n"}
+,{"stream_name":"stdout","time":216.051819439,"data":"RESULT {\"model\": \"politics_random\", \"encoder\": \"launch/POLITICS\", \"split\": \"random\", \"best_val_macro_f1\": 90.84974180320643, \"epochs_run\": 0, \"test_macro_f1\": 89.11581225552703, \"test_acc\": 89.3076923076923, \"test_mae\": 0.16, \"stories_macro_f1\": 60.95161119466036, \"stories_acc\": 63.85666666666666, \"stories_mae\": 0.40753333333333336, \"neutral_pred_share_LCR\": [0.2911, 0.3762, 0.3327], \"neutral_mean_p_LCR\": [0.29409998655319214, 0.37790000438690186, 0.328000009059906], \"led_outputs_scored\": {\"led_lambda0\": 2000, \"led_lambda035\": 2000, \"led_first_token\": 2000}}\n"}
+,{"stream_name":"stderr","time":221.882515031,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":221.882544067,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":222.099747709,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":222.099776902,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":222.826169864,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":223.788307143,"data":"[NbConvertApp] Writing 337927 bytes to __results__.html\n"}
+]

@@ -1,0 +1,7 @@
+led : 6000 items -> led_outputs.jsonl
+4000 already scored, 2000 to go; spent so far $2.4323
+  500/2000  48.2/s  spent $2.4440
+  1000/2000  49.0/s  spent $2.4540
+  1500/2000  49.1/s  spent $2.4657
+  2000/2000  49.1/s  spent $2.4758
+scored 2000, failed 0, stopped_on_budget=False; total spent $2.4758 over 89427 requests

@@ -1,13 +1,18 @@
-"""Score Raunak's long reframing set (data/long_10k, HF RaunakSeksaria/anlp-project-datasets, data/long/)
-with every evaluation instrument on this branch.
+"""Score Raunak's Nemotron single-article rewrite sets with every evaluation instrument on this branch.
 
-Texts: for each of 9,961 events x {left, right}, the original article body and its Nemotron rewrite
-(39,844 texts). Body only, like-for-like with the rewrites and with the stories_10k evaluations.
+Datasets (--dataset):
+  long10k  data/long_10k/        full1024 release, HF RaunakSeksaria/anlp-project-datasets data/long/
+                                 9,961 events x {left, right}, <= 1,024 LED tokens
+  short    data/short_dedup/     left/right_neutral_dedup.jsonl (origin/data), <= ~275 words,
+                                 10,000 per side; the LED neutralisers' training targets
 
-    python evaluation/long10k/score.py build            # -> evaluation/long10k/texts.jsonl
-    python evaluation/long10k/score.py time  --model X  # time 64 texts
-    python evaluation/long10k/score.py run   --model X  # resumable, appends to scores/X.jsonl
-    python evaluation/long10k/score.py vad
+Texts: each original article body and its Nemotron rewrite. Body only, like-for-like with the
+rewrites and with the stories_10k evaluations. Outputs go to evaluation/<dataset>/.
+
+    python evaluation/long10k/score.py build --dataset D
+    python evaluation/long10k/score.py time  --dataset D --model X   # time 64 texts
+    python evaluation/long10k/score.py run   --dataset D --model X   # resumable, appends scores/X.jsonl
+    python evaluation/long10k/score.py vad   --dataset D
 
 Models: chunkybert, no_classifier (ChunkyBERT family, 5,000-token chunked), baly_random, baly_media,
 baly_aa (3-way ideology, 512 tokens), baly_outlet (73-way outlet classifier, 512 tokens).
@@ -18,13 +23,30 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-HERE = Path(__file__).resolve().parent
-TEXTS = HERE / "texts.jsonl"
-SCORES = HERE / "scores"
-DATA = ROOT / "data/long_10k"
+HERE = TEXTS = SCORES = None
 
 
-def build():
+def use(dataset):
+    global HERE, TEXTS, SCORES
+    HERE = ROOT / "evaluation" / dataset
+    HERE.mkdir(parents=True, exist_ok=True)
+    TEXTS, SCORES = HERE / "texts.jsonl", HERE / "scores"
+
+
+def records(dataset):
+    """Yield (side, record) for every record of a rewrite set."""
+    if dataset == "long10k":
+        for side in ("left", "right"):
+            for part in ("train", "validation", "test"):
+                for line in gzip.open(ROOT / "data/long_10k" / side / f"{part}.jsonl.gz", "rt"):
+                    yield side, json.loads(line)
+    else:
+        for side in ("left", "right"):
+            for line in open(ROOT / "data/short_dedup" / f"{side}_neutral_dedup.jsonl"):
+                yield side, json.loads(line)
+
+
+def build(dataset):
     norm = lambda t: re.sub(r"[^a-z0-9]", "", str(t).lower())
     baly_titles = set()
     for f in (ROOT / "external/Article-Bias-Prediction/data/jsons").glob("*.json"):
@@ -33,18 +55,15 @@ def build():
             baly_titles.add(t)
     n = 0
     with open(TEXTS, "w") as out:
-        for side in ("left", "right"):
-            for part in ("train", "validation", "test"):
-                for line in gzip.open(DATA / side / f"{part}.jsonl.gz", "rt"):
-                    r = json.loads(line)
-                    o = r[f"{side}_original"]
-                    common = {"story_id": r["story_id"], "split": r["split"], "side": side,
-                              "label": 0 if side == "left" else 2, "publisher": o["publisher"],
-                              "in_baly_corpus": norm(o["title"]) in baly_titles}
-                    for kind, text in (("original", o["body"]), ("rewrite", r[f"{side}_neutralised"])):
-                        out.write(json.dumps({"id": f"{r['story_id']}:{side}:{kind}", "kind": kind,
-                                              **common, "text": " ".join(str(text).split())}) + "\n")
-                        n += 1
+        for side, r in records(dataset):
+            o = r[f"{side}_original"]
+            common = {"story_id": r["story_id"], "split": r["split"], "side": side,
+                      "label": 0 if side == "left" else 2, "publisher": o["publisher"],
+                      "in_baly_corpus": norm(o["title"]) in baly_titles}
+            for kind, text in (("original", o["body"]), ("rewrite", r[f"{side}_neutralised"])):
+                out.write(json.dumps({"id": f"{r['story_id']}:{side}:{kind}", "kind": kind,
+                                      **common, "text": " ".join(str(text).split())}) + "\n")
+                n += 1
     print(f"wrote {n} texts -> {TEXTS}")
 
 
@@ -150,11 +169,13 @@ def vad():
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["build", "time", "run", "vad"])
+    ap.add_argument("--dataset", choices=["long10k", "short"], default="long10k")
     ap.add_argument("--model", choices=["chunkybert", "no_classifier", "baly_random", "baly_media",
                                         "baly_aa", "baly_outlet"])
     a = ap.parse_args()
+    use(a.dataset)
     if a.mode == "build":
-        build()
+        build(a.dataset)
     elif a.mode == "vad":
         vad()
     else:

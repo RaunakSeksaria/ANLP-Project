@@ -1,0 +1,4 @@
+{"id": "primera:1000156", "rouge1": 0.2806, "rouge2": 0.2042, "rougeL": 0.209}
+{"id": "primera:1000302", "rouge1": 0.2222, "rouge2": 0.0664, "rougeL": 0.1564}
+{"id": "primera_multinews:1000156", "rouge1": 0.5501, "rouge2": 0.3607, "rougeL": 0.2517}
+{"id": "primera_multinews:1000302", "rouge1": 0.5, "rouge2": 0.195, "rougeL": 0.2687}

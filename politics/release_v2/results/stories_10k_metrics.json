@@ -1,0 +1,62 @@
+{
+  "labelled": {
+    "macro_f1": 60.697,
+    "acc": 64.173,
+    "mae": 0.4086,
+    "nll": 0.9345,
+    "ece": 0.1985,
+    "per_class": {
+      "Left": {
+        "precision": 68.74,
+        "recall": 81.37,
+        "f1": 74.52,
+        "support": 10000
+      },
+      "Centre": {
+        "precision": 58.73,
+        "recall": 25.64,
+        "f1": 35.7,
+        "support": 10000
+      },
+      "Right": {
+        "precision": 61.98,
+        "recall": 85.51,
+        "f1": 71.87,
+        "support": 10000
+      }
+    },
+    "confusion": [
+      [
+        8137,
+        1065,
+        798
+      ],
+      [
+        2988,
+        2564,
+        4448
+      ],
+      [
+        712,
+        737,
+        8551
+      ]
+    ]
+  },
+  "labelled_per_seed_macro_f1": {
+    "seed42": 61.677,
+    "seed43": 60.68,
+    "seed44": 61.077,
+    "seed45": 58.59
+  },
+  "neutral_pred_share_LCR": [
+    0.2647,
+    0.2065,
+    0.5288
+  ],
+  "neutral_mean_p_LCR": [
+    0.275,
+    0.2574,
+    0.4676
+  ]
+}

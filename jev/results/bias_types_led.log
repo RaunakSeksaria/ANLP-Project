@@ -1,0 +1,15 @@
+6000 texts; spent before $2.4758; this run may spend up to $0.40
+0 already scored, 6000 to go; spent so far $2.4758
+  500/6000  43.3/s  spent $2.5067
+  1000/6000  44.1/s  spent $2.5376
+  1500/6000  44.6/s  spent $2.5686
+  2000/6000  45.1/s  spent $2.5995
+  2500/6000  45.3/s  spent $2.6299
+  3000/6000  45.4/s  spent $2.6597
+  3500/6000  45.3/s  spent $2.6914
+  4000/6000  45.2/s  spent $2.7218
+  4500/6000  45.2/s  spent $2.7511
+  5000/6000  45.2/s  spent $2.7828
+  5500/6000  45.2/s  spent $2.8131
+  6000/6000  45.1/s  spent $2.8424
+scored 6000, failed 0, stopped_on_budget=False; total spent $2.8424 over 95427 requests
