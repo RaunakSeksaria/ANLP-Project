@@ -116,7 +116,7 @@ for all 40,000 texts. The four text types are indistinguishable:
 Zero-shot classification with TypeSafe's Jev model: one typed Choice question per article returns
 probabilities for Left, Centre and Right. Four prompt designs were compared on 450 dev articles,
 and "what kind of outlet most likely published this", with title + body, won. The labels are
-outlet-level, so that framing matches how they were made.
+almost a function of the outlet (Baly: 99.9% of labels match the outlet's usual label; stories_10k: 100%), so that framing matches what the labels encode.
 
 | Model (29,550 labelled articles) | Accuracy | Macro-F1 | Recall L / C / R |
 |---|---|---|---|
