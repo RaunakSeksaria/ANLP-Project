@@ -1,0 +1,16 @@
+[
+  {"name": "think_on_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2", "note": "current production setting"},
+  {"name": "think_off_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "", "prompt_version": "n2", "note": "thinking off; speed test"},
+  {"name": "think_on_t0.0", "temperature": 0.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2", "note": "temperature sweep"},
+  {"name": "think_on_t1.0_rep", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 43, "thinking": "HIGH", "prompt_version": "n2", "note": "replicate of think_on_t1.0 (seed is ignored by the API): noise floor"},
+  {"name": "think_on_t0.3", "temperature": 0.3, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2", "note": "temperature sweep"},
+  {"name": "think_on_t1.3", "temperature": 1.3, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2", "note": "temperature sweep"},
+  {"name": "think_on_t0.6", "temperature": 0.6, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2", "note": "temperature sweep"},
+  {"name": "think_on_t1.0_p0.8", "temperature": 1.0, "top_p": 0.8, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2", "note": "top_p sweep at t=1.0"},
+  {"name": "think_on_t1.0_p1.0", "temperature": 1.0, "top_p": 1.0, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2", "note": "top_p sweep at t=1.0 (no nucleus truncation)"},
+  {"name": "para_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "para", "note": "paraphrase CONTROL: rewords but keeps the framing; calibrates the classifier"},
+  {"name": "n3_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n3", "note": "n2 + fixes: no 'The article notes...', no expanding abbreviations"},
+  {"name": "n2light_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2_light", "note": "aggression ladder: word-level edits only, structure kept"},
+  {"name": "n2heavy_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2_heavy", "note": "aggression ladder: rebuild as wire copy"},
+  {"name": "n2min_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2_min", "note": "one-paragraph prompt without the AllSides taxonomy"}
+]
