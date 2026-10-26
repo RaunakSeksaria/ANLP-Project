@@ -63,9 +63,16 @@ _CONTESTED = {"attribute": CONTESTED_ATTRIBUTE, "range": CONTESTED_RANGE}
 _STYLE_VERSION = {"attribute": "v3", "range": "v4-range"}
 
 
+def _neutralise_version(cfg):
+    v = getattr(cfg, "neutralise_prompt", NEUTRALISE_VERSION) or NEUTRALISE_VERSION
+    if v not in NEUTRALISE_PROMPTS:
+        raise ValueError(f"neutralise_prompt must be one of {sorted(NEUTRALISE_PROMPTS)}, got {v!r}")
+    return v
+
+
 def system_prompt(cfg):
     if getattr(cfg, "task", "fuse") == "neutralise":
-        return NEUTRALISE_SYSTEM
+        return NEUTRALISE_PROMPTS[_neutralise_version(cfg)]
     style = (getattr(cfg, "conflict_style", "attribute") or "attribute").lower()
     if style not in _STYLES:
         raise ValueError(f"conflict_style must be one of {sorted(_STYLES)}, got {style!r}")
@@ -79,7 +86,7 @@ NEUTRALISE_VERSION = "n2"  # n2: headline facts kept, identifying descriptors ke
 def prompt_version(cfg):
     """Recorded in every output record; task and style are part of the identity."""
     if getattr(cfg, "task", "fuse") == "neutralise":
-        return NEUTRALISE_VERSION
+        return _neutralise_version(cfg)
     style = (getattr(cfg, "conflict_style", "attribute") or "attribute").lower()
     return _STYLE_VERSION.get(style, PROMPT_VERSION)
 
@@ -431,6 +438,114 @@ NEUTRALISE_SCHEMA = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Prompt family (generation-setting experiments). Each variant is n2 with ONE
+# change, so a difference in the outputs can be pinned on that change. n2
+# itself is untouched and stays the default.
+# ---------------------------------------------------------------------------
+
+def _n2_with(old, new):
+    assert NEUTRALISE_SYSTEM.count(old) == 1, old
+    return NEUTRALISE_SYSTEM.replace(old, new)
+
+
+_FORM = "\n\nFORM\n"
+assert NEUTRALISE_SYSTEM.count(_FORM) == 1
+
+# n3: fixes for the two defects measured on n2. "The article notes/argues ..."
+# (13% of left outputs) is rule 8 misfiring -- with no named person to attribute
+# a judgement to, the model attributes it to the article, so the opinion
+# survives under a new label. And titles/abbreviations get expanded ("Sen." ->
+# "Senator", "R-Texas" -> "Republican"), which adds words the article lacks.
+_RULE8 = ("8.  OPINION PRESENTED AS FACT -- judgement in the reporter's voice must be "
+          "attributed to a named person, or cut.")
+NEUTRALISE_N3 = _n2_with(
+    _RULE8,
+    _RULE8 + " The article, the outlet, the reporter, \"the report\" and \"observers\" are not "
+    "people: never write \"The article notes\", \"The article argued\", \"The piece "
+    "described\" or \"According to the report\". If the only source of a judgement is "
+    "the writer, cut the judgement and keep any fact inside it."
+).replace(
+    "- Copy numbers, names, titles and dates exactly as the article gives them.",
+    "- Copy numbers, names, titles and dates exactly as the article gives them. Keep "
+    "abbreviations as written: do not expand \"Sen.\" to \"Senator\", \"R-Texas\" to "
+    "\"Republican of Texas\", or a surname to a full name.")
+
+# Aggression ladder: n2 plus an EDIT STRENGTH section placed just before FORM.
+NEUTRALISE_LIGHT = NEUTRALISE_SYSTEM.replace(_FORM, """
+
+EDIT STRENGTH: LIGHT
+Change words and phrases only: loaded and sensational wording, intensifiers, \
+scare quotes, subjective adjectives, editorialising attribution verbs, and \
+opinion stated in the reporter's voice. Keep the article's sentence order, \
+paragraph structure and emphasis as they are: do not move, merge, split or \
+rebalance sentences, and do not reorder the opening. This overrides items 2, 5 \
+and 12 above. A sentence with no loaded wording is copied unchanged.""" + _FORM)
+
+NEUTRALISE_HEAVY = NEUTRALISE_SYSTEM.replace(_FORM, """
+
+EDIT STRENGTH: THOROUGH
+Do not stop at word swaps. Rebuild the article as wire copy: open with the core \
+event stated plainly; order the remaining facts by news importance, not by the \
+order the article chose; where the article reports more than one side, give \
+each the same treatment and the same register; and move every statement of \
+motive, significance or likely consequence into attributed speech, or cut it. \
+Every sentence should read as something a wire service would print. The hard \
+rule and KEEP EVERY FACT still apply in full.""" + _FORM)
+
+# Minimal: the same task in one paragraph, without the AllSides taxonomy.
+# Tests whether the long rule list earns its tokens.
+NEUTRALISE_MIN = """\
+You are a copy editor. Rewrite the news article you are given so that it reports \
+the same events neutrally, as a wire service would: remove loaded, evaluative \
+and sensational wording, opinion in the writer's voice, and slanted emphasis. \
+Keep every fact, name, number, date and quotation (quotations character for \
+character). Add nothing the article does not say -- no dates, titles, background \
+or context from your own knowledge. Keep it about as long as the input. Write \
+continuous prose: no headline, no preamble, and do not mention the article or \
+that it was rewritten."""
+
+# Paraphrase control: same LLM, same constraints, but told to KEEP the framing.
+# The classifier drop original -> paraphrase is the "new wording" effect; the
+# extra drop original -> neutral rewrite is what neutralisation itself buys.
+NEUTRALISE_PARA = """\
+You are a copy editor. You are given ONE news article. Reword it so that it says \
+the same things in different words while keeping its point of view exactly.
+
+This is a control condition for an experiment: the rewording must KEEP the \
+article's framing. Keep its slant, its emphasis, the order of its material, its \
+tone, its opinions stated in the writer's voice, and what it chooses to \
+elaborate. Replace a loaded word with an equally loaded one ("slammed" -> \
+"blasted"), never with a neutral one. Do not soften, balance, hedge or \
+attribute anything the article states in its own voice.
+
+Change the wording of nearly every sentence: different vocabulary and sentence \
+structure, the same meaning and the same slant.
+
+ADD NOTHING
+Everything in your rewording must come from the article in front of you: no \
+date, title, location, number, background or context it does not give.
+
+KEEP EVERY FACT
+Every event, actor, figure, date, place and quotation must survive, including \
+the facts in the headline. Copy numbers, names and dates exactly. Copy direct \
+quotations character for character.
+
+FORM
+Continuous prose. No headline, no byline, no dateline, no bullets, no preamble. \
+Do not mention the article, the outlet, or that you are rewording anything. \
+Begin with the first sentence of the account itself."""
+
+NEUTRALISE_PROMPTS = {
+    "n2": NEUTRALISE_SYSTEM,
+    "n3": NEUTRALISE_N3,
+    "n2_light": NEUTRALISE_LIGHT,
+    "n2_heavy": NEUTRALISE_HEAVY,
+    "n2_min": NEUTRALISE_MIN,
+    "para": NEUTRALISE_PARA,
+}
+
+
 def build_neutralise_prompt(cluster, cfg):
     """One article in. Returns (prompt_text, target_word_count).
 
@@ -440,14 +555,22 @@ def build_neutralise_prompt(cluster, cfg):
     a = cluster["articles"][0]
     target = len(a["body"].split())
     title = (a.get("title") or "").strip()
+    if _neutralise_version(cfg) == "para":
+        head, task, removed = ("Reword the following article, keeping its framing.",
+                               "Reword it. Keep every fact and the article's slant",
+                               "one short sentence per significant rewording")
+    else:
+        head, task, removed = ("Rewrite the following article with its framing removed.",
+                               "Rewrite it. Keep every fact",
+                               "one short sentence per bias edit you made")
     return (
-        "Rewrite the following article with its framing removed.\n\n"
+        f"{head}\n\n"
         "=== ARTICLE ===\n"
         + (f"Headline: {title}\n" if title else "")
         + a["body"].strip()
         + "\n\n=== TASK ===\n"
-        f"Rewrite it. Keep every fact, add nothing that is not above, and aim "
+        f"{task}, add nothing that is not above, and aim "
         f"for roughly {target} words.\n\n"
         "Return JSON with two keys: `neutral` (the rewritten article) and "
-        "`removed` (one short sentence per bias edit you made)."
+        f"`removed` ({removed})."
     ), target

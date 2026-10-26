@@ -67,6 +67,9 @@ class GenConfig:
     #                Downstream sees a single source, so the target must be
     #                reachable from that source alone.
     task: str = "fuse"
+    # Which single-article prompt to use (neutralize/prompt.py NEUTRALISE_PROMPTS).
+    # n2 is the production prompt; the others are the prompt-family experiments.
+    neutralise_prompt: str = "n2"
 
     # --- input field names --------------------------------------------------
     # A different key layout is a config change, not a code change.
@@ -113,6 +116,7 @@ class GenConfig:
             "reveal_publisher": self.reveal_publisher,
             "conflict_style": self.conflict_style,
             "task": self.task,
+            "neutralise_prompt": self.neutralise_prompt,
         }
 
     def to_dict(self):
