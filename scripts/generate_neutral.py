@@ -58,7 +58,8 @@ def parse_args(argv=None):
     p.add_argument("--model", default=os.environ.get("GEMINI_MODEL") or d.model)
     p.add_argument("--temperature", type=float, default=d.temperature)
     p.add_argument("--top-p", type=float, default=d.top_p)
-    p.add_argument("--top-k", type=int, default=d.top_k)
+    p.add_argument("--top-k", type=int, default=None,
+                   help="unset by default; for --provider nvidia it is only sent when given")
     p.add_argument("--seed", type=int, default=d.seed)
     p.add_argument("--max-output-tokens", type=int, default=d.max_output_tokens)
     p.add_argument("--thinking-budget", type=int, default=d.thinking_budget,
@@ -100,7 +101,8 @@ def parse_args(argv=None):
 def build_config(args):
     cfg = GenConfig(
         model=args.model, temperature=args.temperature, top_p=args.top_p,
-        top_k=args.top_k, seed=args.seed,
+        top_k=args.top_k if args.top_k is not None or args.provider == "nvidia" else GenConfig.top_k,
+        seed=args.seed,
         max_output_tokens=args.max_output_tokens,
         thinking_budget=args.thinking_budget,
         thinking_level=args.thinking_level,
@@ -251,6 +253,9 @@ class Runner:
             "n_sources": len(cluster["articles"]),
             "model": self.cfg.model,
             "params": {**self.cfg.params(), "prompt_version": prompt_version(self.cfg)},
+            # what was actually sent, where the client can say (params is the config)
+            "sent": (self.client.decoding_params() if hasattr(self.client, "decoding_params")
+                     else None),
             "attempts": {**(attempts or {}), "api_calls": api_calls},
             "metrics": metrics or {},
             "metrics_history": history or [],

@@ -121,20 +121,36 @@ class NvidiaClient:
         self.calls = 0
         self._session = requests.Session()
 
+    def decoding_params(self):
+        """Exactly the decoding settings put on the wire, recorded in every output.
+
+        seed and top_k used to be recorded from the config but never sent, so
+        older records claim seed 42 / top_k 1 for runs that used neither. top_k
+        is sent only when explicitly set: the config's Gemini default of 1 would
+        make Nemotron greedy.
+        """
+        d = {"temperature": self.cfg.temperature, "top_p": self.cfg.top_p,
+             "max_tokens": self.cfg.max_output_tokens,
+             # Nemotron takes thinking through the chat template, not a flag;
+             # it is on/off only -- thinking_level's LOW/MEDIUM/HIGH all mean on.
+             "enable_thinking": bool(self.cfg.thinking_level or self.cfg.thinking_budget)}
+        if self.cfg.seed is not None:
+            d["seed"] = self.cfg.seed
+        if self.cfg.top_k is not None:
+            d["top_k"] = self.cfg.top_k
+        return d
+
     def _body(self, prompt):
-        return {
+        d = self.decoding_params()
+        body = {
             "model": self.cfg.model,
             "messages": [{"role": "system", "content": system_prompt(self.cfg)},
                          {"role": "user", "content": prompt}],
-            "temperature": self.cfg.temperature,
-            "top_p": self.cfg.top_p,
-            "max_tokens": self.cfg.max_output_tokens,
             "stream": False,
-            # Nemotron takes thinking through the chat template, not a flag.
-            "chat_template_kwargs": {
-                "enable_thinking": bool(self.cfg.thinking_level
-                                        or self.cfg.thinking_budget)},
+            "chat_template_kwargs": {"enable_thinking": d.pop("enable_thinking")},
         }
+        body.update(d)
+        return body
 
     def _backoff(self, attempt):
         return min(self.cfg.backoff_base ** (attempt + 1),
