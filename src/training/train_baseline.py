@@ -26,6 +26,7 @@ from src.data.baseline_dataset import (
     create_baseline_dataloaders,
 )
 from src.models.led_baseline import forward_led_baseline, load_led_baseline
+from src.training.decoding import decoding_settings
 from src.training.overfit_baseline import (
     autocast_context,
     decode_reference,
@@ -119,6 +120,7 @@ class TrainingConfig:
     max_input_length: int = 256
     max_target_length: int = 256
     generation_max_new_tokens: int = 160
+    decoding_strategy: str = "greedy"
     seed: int = 42
     num_workers: int = 0
     device: str = "auto"
@@ -133,10 +135,10 @@ class TrainingConfig:
 
     @property
     def generation_settings(self) -> dict[str, int | bool]:
-        return {
-            **GENERATION_DEFAULTS,
-            "max_new_tokens": self.generation_max_new_tokens,
-        }
+        return decoding_settings(
+            {**GENERATION_DEFAULTS, "max_new_tokens": self.generation_max_new_tokens},
+            self.decoding_strategy,
+        )
 
 
 @dataclass(frozen=True)
@@ -189,6 +191,7 @@ class EarlyStoppingState:
 
 
 def validate_training_config(config: TrainingConfig) -> None:
+    decoding_settings(GENERATION_DEFAULTS, config.decoding_strategy)
     positive_integers = {
         "train_batch_size": config.train_batch_size,
         "eval_batch_size": config.eval_batch_size,
@@ -577,6 +580,8 @@ def save_checkpoint(
         },
         "precision": config.precision,
         "seed": config.seed,
+        "decoding_strategy": config.decoding_strategy,
+        "generation_settings": config.generation_settings,
     }
     atomic_write_json(checkpoint_dir / "training_state.json", metadata)
     state = {

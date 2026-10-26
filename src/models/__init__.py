@@ -6,7 +6,7 @@ from .led_baseline import (
     validate_forward_output,
 )
 from .led_triplet import LEDTripletModel, JointForwardOutput, load_led_triplet
-from .pooling import align_pooling_mask, masked_mean_pool
+from .pooling import align_pooling_mask, first_token_pool, masked_mean_pool
 
 __all__ = [
     "forward_led_baseline",
@@ -16,5 +16,6 @@ __all__ = [
     "JointForwardOutput",
     "load_led_triplet",
     "align_pooling_mask",
+    "first_token_pool",
     "masked_mean_pool",
 ]

@@ -16,7 +16,7 @@
 set -eo pipefail
 PROJECT_ROOT=/home2/manas.agrawal/anlp/ANLP-Project
 DATA_DIR=${ANLP_DATA_DIR:-${PROJECT_ROOT}/dataset/side_neutral/prepared}
-ANLP_OUTPUT_ROOT=${ANLP_OUTPUT_ROOT:-/scratch/${USER}/anlp_outputs}
+ANLP_OUTPUT_ROOT=${PROJECT_ROOT}/outputs
 ANLP_RUN_ID=${SLURM_JOB_ID:-manual-$(date +%Y%m%d-%H%M%S-%N)}
 RUN_OUTPUT_DIR="${ANLP_OUTPUT_ROOT}/side_neutral_lambda01_attraction_${ANLP_RUN_ID}"
 

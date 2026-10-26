@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import errno
+import os
 import sys
 from pathlib import Path
 from typing import Sequence
@@ -37,11 +38,13 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--max-input-length", type=int, default=512)
     parser.add_argument("--max-target-length", type=int, default=512)
     parser.add_argument("--generation-max-new-tokens", type=int, default=512)
+    parser.add_argument("--decoding-strategy", choices=("greedy", "beam"), default="greedy")
     parser.add_argument("--triplet-lambda", type=float, default=0.1)
     parser.add_argument("--triplet-margin", type=float, default=0.2)
     parser.add_argument("--triplet-objective", choices=("standard", "attraction"), default="standard")
     parser.add_argument("--positive-distance-threshold", type=float, default=0.5)
     parser.add_argument("--positive-beta", type=float, default=0.3)
+    parser.add_argument("--pooling", choices=("masked_mean", "first_token"), default="masked_mean")
     parser.add_argument("--attention-window", type=int, default=512)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--num-workers", type=int, default=0)
@@ -49,6 +52,8 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--precision", choices=("fp32",), default="fp32")
     parser.add_argument("--overwrite-output-dir", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--startup-check", action="store_true", help="Run one distributed forward/backward and exit without an optimizer update")
+    parser.add_argument("--smoke-one-update", action="store_true", help="Run one distributed accumulation group and exit without saving")
     parser.add_argument("--wandb-project", default="anlp-project")
     parser.add_argument("--wandb-entity", default="manasagrawal206-iiit-hyderabad")
     parser.add_argument("--wandb-run-name")
@@ -75,11 +80,14 @@ def config_from_args(args: argparse.Namespace) -> JointTrainingConfig:
         max_input_length=args.max_input_length,
         max_target_length=args.max_target_length,
         generation_max_new_tokens=args.generation_max_new_tokens,
+        decoding_strategy=args.decoding_strategy,
         triplet_lambda=args.triplet_lambda,
         triplet_margin=args.triplet_margin,
         triplet_objective=args.triplet_objective,
         positive_distance_threshold=args.positive_distance_threshold,
         positive_beta=args.positive_beta,
+        pooling=args.pooling,
+        world_size=int(os.environ.get("WORLD_SIZE", "1")),
         attention_window=args.attention_window,
         seed=args.seed,
         num_workers=args.num_workers,
@@ -87,6 +95,8 @@ def config_from_args(args: argparse.Namespace) -> JointTrainingConfig:
         precision=args.precision,
         overwrite_output_dir=args.overwrite_output_dir,
         dry_run=args.dry_run,
+        startup_check=args.startup_check,
+        smoke_one_update=args.smoke_one_update,
         wandb_enabled=not args.disable_wandb,
         wandb_project=args.wandb_project,
         wandb_entity=args.wandb_entity,

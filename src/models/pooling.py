@@ -45,3 +45,22 @@ def masked_mean_pool(
     if not bool(torch.isfinite(normalized).all()):
         raise FloatingPointError("masked-mean pooling produced non-finite vectors")
     return normalized, raw
+
+
+def first_token_pool(
+    hidden_states: torch.Tensor,
+    attention_mask: torch.Tensor,
+    global_attention_mask: torch.Tensor,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Return the existing globally attended first token as an article vector."""
+    mask = align_pooling_mask(hidden_states, attention_mask)
+    global_mask = align_pooling_mask(hidden_states, global_attention_mask)
+    if hidden_states.shape[1] == 0 or not bool(mask[:, 0].bool().all()):
+        raise ValueError("first token must be non-padding for every article")
+    if not bool(global_mask[:, 0].bool().all()):
+        raise ValueError("first token must have global attention for every article")
+    raw = hidden_states[:, 0, :].float()
+    normalized = F.normalize(raw, p=2, dim=-1, eps=1e-12)
+    if not bool(torch.isfinite(normalized).all()):
+        raise FloatingPointError("first-token pooling produced non-finite vectors")
+    return normalized, raw

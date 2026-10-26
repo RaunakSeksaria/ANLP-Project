@@ -23,11 +23,6 @@ from huggingface_hub import HfApi
 from huggingface_hub.utils import validate_repo_id
 
 
-# Local credential supplied by the user. Do not commit or share this file.
-# Set HF_TOKEN to override this token without editing the script.
-DEFAULT_HF_TOKEN = "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"
-
-
 # Explicit inference-only file list: exclude optimizer state, datasets, logs,
 # and local training metadata. These checkpoints have unsharded safetensors.
 MODEL_FILES = (
@@ -71,7 +66,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("Dry run complete; nothing uploaded.")
         return 0
 
-    token = os.environ.get("HF_TOKEN", DEFAULT_HF_TOKEN).strip()
+    token = os.environ.get("HF_TOKEN", "").strip()
     if not token:
         parser.error("Set HF_TOKEN to a Hugging Face token with write access before uploading")
     api = HfApi(token=token)

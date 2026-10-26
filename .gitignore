@@ -228,6 +228,8 @@ outputs/overfit_baseline/model.safetensors
 outputs/baseline/best
 outputs/baseline/last
 outputs/baseline_main/
+outputs/side_neutral_*/
+embedding_data_first_token/
 .embedding_hf_cache/
 =======
 __pycache__/

@@ -125,9 +125,10 @@ def make_triplets(records, token_ids, seed):
             and canonical(row["input_text"]) != canonical(anchor["input_text"])
             and token_ids[row["input_article_id"]] != token_ids[anchor["input_article_id"]]
         }
-        if not candidates:
-            raise ValueError(f"No valid opposite-side positive for {anchor['input_article_id']}")
-        positive = rng.choice([candidates[k] for k in sorted(candidates)])
+        # An unmatched article still has a generation target. Use itself as an
+        # explicit placeholder so the trainer masks this triplet rather than
+        # inventing a cross-event positive or dropping generation supervision.
+        positive = rng.choice([candidates[k] for k in sorted(candidates)]) if candidates else anchor
         pool = pools[anchor["split"], anchor["input_ideology"]]
         start = rng.randrange(len(pool))
         negative = None
@@ -146,6 +147,7 @@ def make_triplets(records, token_ids, seed):
         triplet = {
             "triplet_id": anchor["input_article_id"] + ":anchor",
             "split": anchor["split"],
+            "positive_status": "matched_event" if candidates else "masked_no_positive",
             **{key: anchor[key] for key in ("target_article_id", "target_title", "target_text")},
         }
         for prefix, row in (("anchor", anchor), ("positive", positive), ("negative", negative)):
@@ -194,13 +196,21 @@ def validate_prepared(data_dir):
                                     ("title", "input_title"), ("text", "input_text")):
                     if t[f"{role}_{suffix}"] != row[key]:
                         raise ValueError(f"{role} metadata mismatch")
-            if a["event_id"] != p["event_id"] or not set(a["event_ids"]) & set(p["event_ids"]):
-                raise ValueError("Positive must share an actual original event with anchor")
-            if a["input_ideology"] == p["input_ideology"] or a["input_ideology"] != n["input_ideology"]:
-                raise ValueError("Invalid positive or negative ideology")
+            if t.get("positive_status") == "matched_event":
+                if a["event_id"] != p["event_id"] or not set(a["event_ids"]) & set(p["event_ids"]):
+                    raise ValueError("Positive must share an actual original event with anchor")
+                if a["input_ideology"] == p["input_ideology"]:
+                    raise ValueError("Matched positive must have opposite ideology")
+            elif t.get("positive_status") == "masked_no_positive":
+                if a["input_article_id"] != p["input_article_id"]:
+                    raise ValueError("Masked positive must be the anchor placeholder")
+            else:
+                raise ValueError("Unknown positive status")
+            if a["input_ideology"] != n["input_ideology"]:
+                raise ValueError("Negative must have anchor ideology")
             if a["event_id"] == n["event_id"]:
                 raise ValueError("Negative belongs to anchor's connected event group")
-            if len({canonical(x["input_text"]) for x in (a, p, n)}) != 3:
+            if t["positive_status"] == "matched_event" and len({canonical(x["input_text"]) for x in (a, p, n)}) != 3:
                 raise ValueError("Triplet contains duplicate bodies")
             if any(t[k] != a[k] for k in ("target_article_id", "target_title", "target_text")):
                 raise ValueError("Triplet target differs from anchor-specific baseline target")
@@ -209,6 +219,7 @@ def validate_prepared(data_dir):
             "baseline_records": len(baselines), "triplet_records": len(triplets),
             "left": sum(r["input_ideology"] == "left" for r in baselines),
             "right": sum(r["input_ideology"] == "right" for r in baselines),
+            "masked_no_positive": sum(t["positive_status"] == "masked_no_positive" for t in triplets),
             "event_groups": len({r["event_id"] for r in baselines}),
         }
     for i, a in enumerate(SPLITS):
@@ -220,10 +231,10 @@ def validate_prepared(data_dir):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--left", type=Path, default=ROOT / "left_neutral_dedup.jsonl")
-    parser.add_argument("--right", type=Path, default=ROOT / "right_neutral_dedup.jsonl")
+    parser.add_argument("--left", type=Path, default=ROOT / "dataset/side_neutral/left_neutral_dedup.jsonl")
+    parser.add_argument("--right", type=Path, default=ROOT / "dataset/side_neutral/right_neutral_dedup.jsonl")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "dataset/side_neutral")
-    parser.add_argument("--tokenizer", default=str(ROOT / "outputs/joint_mean_lambda01/best"))
+    parser.add_argument("--tokenizer", default="allenai/led-base-16384")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
     from transformers import AutoTokenizer

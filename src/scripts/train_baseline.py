@@ -36,6 +36,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--max-input-length", type=int, default=256)
     parser.add_argument("--max-target-length", type=int, default=256)
     parser.add_argument("--generation-max-new-tokens", type=int, default=160)
+    parser.add_argument("--decoding-strategy", choices=("greedy", "beam"), default="greedy")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--num-workers", type=int, default=0)
     parser.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
@@ -64,6 +65,7 @@ def config_from_args(args: argparse.Namespace) -> TrainingConfig:
         max_input_length=args.max_input_length,
         max_target_length=args.max_target_length,
         generation_max_new_tokens=args.generation_max_new_tokens,
+        decoding_strategy=args.decoding_strategy,
         seed=args.seed,
         num_workers=args.num_workers,
         device=args.device,

@@ -27,6 +27,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--max-input-length", type=int, default=512)
     parser.add_argument("--max-target-length", type=int, default=512)
     parser.add_argument("--generation-max-new-tokens", type=int, default=512)
+    parser.add_argument("--decoding-strategy", choices=("greedy", "beam"), default="greedy")
     parser.add_argument("--attention-window", type=int, default=512)
     parser.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     parser.add_argument("--overwrite-output-dir", action="store_true")
@@ -45,6 +46,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             max_input_length=args.max_input_length,
             max_target_length=args.max_target_length,
             generation_max_new_tokens=args.generation_max_new_tokens,
+            decoding_strategy=args.decoding_strategy,
             attention_window=args.attention_window,
             device_name=args.device,
             overwrite_output_dir=args.overwrite_output_dir,

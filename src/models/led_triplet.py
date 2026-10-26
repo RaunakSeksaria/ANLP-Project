@@ -11,7 +11,7 @@ from torch import nn
 from torch.nn import functional as F
 from transformers import LEDConfig, LEDForConditionalGeneration
 
-from src.models.pooling import masked_mean_pool
+from src.models.pooling import first_token_pool, masked_mean_pool
 
 
 @dataclass
@@ -80,9 +80,13 @@ def masked_positive_attraction_loss(
 class LEDTripletModel(nn.Module):
     """Wrap one LED instance without adding a projection or a second encoder."""
 
-    def __init__(self, led: LEDForConditionalGeneration) -> None:
+    def __init__(self, led: LEDForConditionalGeneration, pooling: str = "masked_mean") -> None:
         super().__init__()
+        if pooling not in {"masked_mean", "first_token"}:
+            raise ValueError(f"unknown pooling method: {pooling}")
         self.led = led
+        self.pooling = pooling
+        self.led.config.anlp_pooling = pooling
 
     @property
     def config(self) -> LEDConfig:
@@ -90,6 +94,22 @@ class LEDTripletModel(nn.Module):
 
     def save_pretrained(self, path: str | Path) -> None:
         self.led.save_pretrained(path, safe_serialization=True)
+
+    def _pool(
+        self,
+        hidden_states: torch.Tensor,
+        attention_mask: torch.Tensor,
+        global_attention_mask: torch.Tensor,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        if self.pooling == "first_token":
+            normalized, raw = first_token_pool(
+                hidden_states, attention_mask, global_attention_mask
+            )
+        else:
+            normalized, raw = masked_mean_pool(hidden_states, attention_mask)
+        if normalized.shape != (hidden_states.shape[0], self.config.d_model):
+            raise ValueError("pooled article vector has incorrect shape")
+        return normalized, raw
 
     def _encode(
         self,
@@ -103,12 +123,7 @@ class LEDTripletModel(nn.Module):
             global_attention_mask=global_attention_mask,
             return_dict=True,
         )
-        normalized, raw = masked_mean_pool(encoded.last_hidden_state, attention_mask)
-        if normalized.shape[-1] != self.config.d_model:
-            raise ValueError(
-                f"pooled width {normalized.shape[-1]} != model d_model {self.config.d_model}"
-            )
-        return normalized, raw
+        return self._pool(encoded.last_hidden_state, attention_mask, global_attention_mask)
 
     def forward(
         self,
@@ -179,13 +194,11 @@ class LEDTripletModel(nn.Module):
         if any(value is None for value in required):
             raise ValueError("positive and negative tensors are required when triplet loss is active")
 
-        anchor_z, anchor_raw = masked_mean_pool(
-            generation.encoder_last_hidden_state, anchor_attention_mask
+        anchor_z, anchor_raw = self._pool(
+            generation.encoder_last_hidden_state,
+            anchor_attention_mask,
+            anchor_global_attention_mask,
         )
-        if anchor_z.shape[-1] != self.config.d_model:
-            raise ValueError(
-                f"pooled width {anchor_z.shape[-1]} != model d_model {self.config.d_model}"
-            )
         positive_z, positive_raw = self._encode(
             positive_input_ids,  # type: ignore[arg-type]
             positive_attention_mask,  # type: ignore[arg-type]
@@ -247,11 +260,13 @@ def load_led_triplet(
     model_name_or_path: str | Path,
     *,
     attention_window: int = 512,
+    pooling: str | None = None,
 ) -> LEDTripletModel:
     """Configure the required attention window before constructing one LED model."""
     config = LEDConfig.from_pretrained(str(model_name_or_path))
     config.attention_window = [attention_window] * config.encoder_layers
+    selected_pooling = pooling or getattr(config, "anlp_pooling", "masked_mean")
     led = LEDForConditionalGeneration.from_pretrained(
         str(model_name_or_path), config=config, use_safetensors=True
     )
-    return LEDTripletModel(led)
+    return LEDTripletModel(led, pooling=selected_pooling)

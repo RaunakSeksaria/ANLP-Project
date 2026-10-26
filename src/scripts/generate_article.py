@@ -19,6 +19,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.models.led_triplet import load_led_triplet  # noqa: E402
+from src.training.decoding import decoding_settings  # noqa: E402
 from src.training.overfit_baseline import generate_with_cache  # noqa: E402
 from src.training.train_joint import resolve_device  # noqa: E402
 
@@ -44,6 +45,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--output", type=Path, help="Optional JSON output path")
     parser.add_argument("--max-input-length", type=int, default=512)
     parser.add_argument("--max-new-tokens", type=int, default=512)
+    parser.add_argument("--decoding-strategy", choices=("greedy", "beam"), default="greedy")
     parser.add_argument("--attention-window", type=int, default=512)
     parser.add_argument("--device", choices=("auto", "cpu", "cuda"), default="auto")
     return parser.parse_args(argv)
@@ -68,6 +70,7 @@ def generate_one(
     max_input_length: int,
     max_new_tokens: int,
     attention_window: int,
+    decoding_strategy: str = "greedy",
 ) -> dict[str, Any]:
     if not (checkpoint / "model.safetensors").is_file():
         raise FileNotFoundError(f"checkpoint model not found: {checkpoint}")
@@ -99,12 +102,12 @@ def generate_one(
 
     model = load_led_triplet(checkpoint, attention_window=attention_window).to(device)
     model.eval()
-    settings: dict[str, int | bool] = {
+    settings = decoding_settings({
         "num_beams": 1,
         "do_sample": False,
         "max_new_tokens": max_new_tokens,
         "early_stopping": False,
-    }
+    }, decoding_strategy)
     with torch.inference_mode():
         generated = generate_with_cache(model.led, batch, device, "fp32", settings)
     generated_text = tokenizer.decode(generated[0], skip_special_tokens=True)
@@ -114,6 +117,7 @@ def generate_one(
         "checkpoint_epoch": metadata.get("epoch"),
         "input_tokens": int(input_ids.shape[1]),
         "generated_text": generated_text,
+        "decoding_strategy": decoding_strategy,
     }
     del model
     gc.collect()
@@ -141,13 +145,14 @@ def main(argv: Sequence[str] | None = None) -> int:
         "title": args.title.strip(),
         "article": article,
         "device": str(device),
-        "generation_settings": {
+        "generation_settings": decoding_settings({
             "max_input_length": args.max_input_length,
             "max_new_tokens": args.max_new_tokens,
             "attention_window": args.attention_window,
             "num_beams": 1,
             "do_sample": False,
-        },
+            "early_stopping": False,
+        }, args.decoding_strategy),
         "outputs": [
             generate_one(
                 checkpoint,
@@ -157,6 +162,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                 args.max_input_length,
                 args.max_new_tokens,
                 args.attention_window,
+                args.decoding_strategy,
             )
             for checkpoint in checkpoints
         ],

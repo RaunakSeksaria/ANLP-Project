@@ -1,4 +1,4 @@
-"""Single-device joint neutral generation and ideology-triplet training."""
+"""Joint neutral generation and ideology-triplet training."""
 
 from __future__ import annotations
 
@@ -33,6 +33,7 @@ from src.data.triplet_dataset import (
     create_triplet_dataloaders,
 )
 from src.models.led_baseline import forward_led_baseline
+from src.training.decoding import decoding_settings
 from src.models.led_triplet import (
     LEDTripletModel, load_led_triplet, masked_positive_attraction_loss,
     masked_triplet_margin_loss,
@@ -82,11 +83,14 @@ class JointTrainingConfig:
     max_input_length: int = 512
     max_target_length: int = 512
     generation_max_new_tokens: int = 512
+    decoding_strategy: str = "greedy"
     triplet_lambda: float = 0.1
     triplet_margin: float = 0.2
     triplet_objective: str = "standard"
     positive_distance_threshold: float = 0.5
     positive_beta: float = 0.3
+    pooling: str = "masked_mean"
+    world_size: int = 1
     attention_window: int = 512
     seed: int = 42
     num_workers: int = 0
@@ -95,6 +99,8 @@ class JointTrainingConfig:
     gradient_checkpointing: bool = True
     overwrite_output_dir: bool = False
     dry_run: bool = False
+    startup_check: bool = False
+    smoke_one_update: bool = False
     wandb_enabled: bool = True
     wandb_project: str = "anlp-project"
     wandb_entity: str = "manasagrawal206-iiit-hyderabad"
@@ -103,11 +109,14 @@ class JointTrainingConfig:
 
     @property
     def effective_anchor_batch_size(self) -> int:
-        return self.train_batch_size * self.gradient_accumulation_steps
+        return self.train_batch_size * self.gradient_accumulation_steps * self.world_size
 
     @property
     def generation_settings(self) -> dict[str, int | bool]:
-        return {**GENERATION_SETTINGS, "max_new_tokens": self.generation_max_new_tokens}
+        return decoding_settings(
+            {**GENERATION_SETTINGS, "max_new_tokens": self.generation_max_new_tokens},
+            self.decoding_strategy,
+        )
 
 
 @dataclass(frozen=True)
@@ -244,6 +253,7 @@ class BaselineSubsetView(Dataset[Any]):
 
 
 def validate_joint_config(config: JointTrainingConfig) -> None:
+    decoding_settings(GENERATION_SETTINGS, config.decoding_strategy)
     positive = {
         "train_batch_size": config.train_batch_size,
         "eval_batch_size": config.eval_batch_size,
@@ -264,6 +274,18 @@ def validate_joint_config(config: JointTrainingConfig) -> None:
         raise ValueError("triplet lambda must be nonnegative and margin must be positive")
     if config.triplet_objective not in {"standard", "attraction"}:
         raise ValueError("triplet objective must be standard or attraction")
+    if config.pooling not in {"masked_mean", "first_token"}:
+        raise ValueError("pooling must be masked_mean or first_token")
+    if config.world_size not in {1, 2}:
+        raise ValueError("joint training supports one process or two GPU processes")
+    if config.world_size == 2 and config.train_batch_size != 1:
+        raise ValueError("two-GPU training currently requires per-GPU microbatch size 1")
+    if config.startup_check and config.smoke_one_update:
+        raise ValueError("choose only one bounded training check")
+    if (config.startup_check or config.smoke_one_update) and (
+        config.world_size != 2 or config.wandb_enabled
+    ):
+        raise ValueError("bounded checks require two GPU processes and --disable-wandb")
     if not math.isfinite(config.positive_distance_threshold) or config.positive_distance_threshold < 0:
         raise ValueError("positive distance threshold must be finite and nonnegative")
     if not math.isfinite(config.positive_beta) or config.positive_beta < 0:
@@ -287,7 +309,8 @@ def validate_joint_config(config: JointTrainingConfig) -> None:
 def calculate_joint_steps(train_examples: int, config: JointTrainingConfig) -> JointStepCounts:
     if train_examples <= 0:
         raise ValueError("training data is empty")
-    microbatches = math.ceil(train_examples / config.train_batch_size)
+    per_rank_examples = math.ceil(train_examples / config.world_size)
+    microbatches = math.ceil(per_rank_examples / config.train_batch_size)
     steps = math.ceil(microbatches / config.gradient_accumulation_steps)
     maximum = steps * config.max_epochs
     return JointStepCounts(
@@ -975,7 +998,9 @@ def save_joint_checkpoint(
         "best_validation_generation_loss": early.best_loss,
         "best_epoch": early.best_epoch,
         "patience_counter": early.non_improving,
-        "pooling": "float32_masked_mean_l2_normalized",
+        "pooling": config.pooling,
+        "world_size": config.world_size,
+        "effective_anchor_batch_size": config.effective_anchor_batch_size,
         "triplet_lambda": config.triplet_lambda,
         "triplet_margin": config.triplet_margin,
         "triplet_objective": config.triplet_objective,
@@ -985,6 +1010,7 @@ def save_joint_checkpoint(
         "max_target_length": config.max_target_length,
         "attention_window": config.attention_window,
         "generation_settings": config.generation_settings,
+        "decoding_strategy": config.decoding_strategy,
         "validation_generation_subset_size": VALIDATION_GENERATION_SUBSET_SIZE,
         "validation_generation_subset_seed": VALIDATION_GENERATION_SUBSET_SEED,
         "precision": config.precision,
@@ -1219,7 +1245,7 @@ def build_reproducibility_report(
             "output_dir": str(config.output_dir.resolve()),
             "effective_anchor_batch_size": config.effective_anchor_batch_size,
             "generation_settings": config.generation_settings,
-            "pooling": "float32_masked_mean_l2_normalized",
+            "pooling": config.pooling,
         },
         "resolved_paths": {
             split: {
@@ -1337,6 +1363,10 @@ def run_joint_training(config: JointTrainingConfig) -> dict[str, Any]:
     validate_joint_config(config)
     if config.dry_run:
         return run_joint_dry_run(config)
+    if config.world_size == 2:
+        from src.training.train_joint_ddp import run_joint_training_ddp
+
+        return run_joint_training_ddp(config)
     device = resolve_device(config.device)
     prepare_output_directory(config.output_dir, config.overwrite_output_dir)
     seed_everything(config.seed)
@@ -1367,7 +1397,9 @@ def run_joint_training(config: JointTrainingConfig) -> dict[str, Any]:
         )
     wandb_run = initialize_wandb(config, report)
 
-    model = load_led_triplet(config.model_name, attention_window=config.attention_window)
+    model = load_led_triplet(
+        config.model_name, attention_window=config.attention_window, pooling=config.pooling
+    )
     model.to(device)
     model.led.gradient_checkpointing_enable()
     model.config.use_cache = False
@@ -1748,6 +1780,7 @@ def evaluate_joint_checkpoint(
     max_input_length: int = 512,
     max_target_length: int = 512,
     generation_max_new_tokens: int = 512,
+    decoding_strategy: str = "greedy",
     attention_window: int = 512,
     device_name: str = "auto",
     overwrite_output_dir: bool = False,
@@ -1796,7 +1829,10 @@ def evaluate_joint_checkpoint(
     expected = [attention_window] * model.config.encoder_layers
     if list(model.config.attention_window) != expected:
         raise ValueError("checkpoint attention-window configuration was not preserved")
-    settings = {**GENERATION_SETTINGS, "max_new_tokens": generation_max_new_tokens}
+    settings = decoding_settings(
+        {**GENERATION_SETTINGS, "max_new_tokens": generation_max_new_tokens},
+        decoding_strategy,
+    )
     result = evaluate_generation(
         model,
         dataset,
@@ -1814,6 +1850,7 @@ def evaluate_joint_checkpoint(
             "checkpoint": str(checkpoint.resolve()),
             "split": split,
             "generation_settings": settings,
+            "decoding_strategy": decoding_strategy,
         }
     )
     write_jsonl(output_dir / f"{split}_predictions.jsonl", result.predictions)

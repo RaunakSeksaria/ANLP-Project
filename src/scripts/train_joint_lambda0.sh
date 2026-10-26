@@ -29,10 +29,8 @@ if [ ! -f "${PROJECT_ROOT}/src/scripts/train_joint.py" ]; then
 fi
 cd "${PROJECT_ROOT}"
 
-# Checkpoints include large optimizer states; keep them off the home quota.
-# Scratch belongs to the allocated compute node. Copy/upload selected models
-# from that node before its scratch storage is cleaned.
-ANLP_OUTPUT_ROOT=${ANLP_OUTPUT_ROOT:-/scratch/${USER}/anlp_outputs}
+# Save checkpoints on the shared project filesystem, not node-local scratch.
+ANLP_OUTPUT_ROOT=${PROJECT_ROOT}/outputs
 ANLP_RUN_ID=${SLURM_JOB_ID:-manual-$(date +%Y%m%d-%H%M%S-%N)}
 RUN_OUTPUT_DIR="${ANLP_OUTPUT_ROOT}/side_neutral_lambda0_${ANLP_RUN_ID}"
 echo "Default run artifacts: $(hostname):${RUN_OUTPUT_DIR}"
