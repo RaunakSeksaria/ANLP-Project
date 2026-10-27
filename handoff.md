@@ -32,6 +32,7 @@ scorers on Raunak's new training data. The user asked for:
 - **`data/own_test.jsonl` is the same set:** the same 2,000 test articles, with the human centre
   article as `target_text`. `qa_eval/qa_eval.py` uses it, so one held-out set feeds every
   evaluation.
+- **Update 2026-10-27:** QA eval was run on Kaggle on 1–2 Oct; see `qa_eval/README.md`. Text below is as written at handoff time.
 - **`qa_eval/qa_eval.py`** (untracked) was written in an earlier chat for the *old*
   `Manas206/led-neutral-*` models. It has never been run beyond a local smoke test of the gen/nli
   stages, so there are no old QA numbers.

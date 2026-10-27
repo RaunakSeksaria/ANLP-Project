@@ -1,0 +1,27 @@
+{
+  "id": "harshitlalwani/led-long-gen",
+  "id_no": 136761627,
+  "title": "led-long-gen",
+  "code_file": "led-long-gen.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "harshitlalwani/chunkybert-political-bias",
+    "harshitlalwani/led-long-data",
+    "harshitlalwani/politics-alls-weights"
+  ],
+  "kernel_sources": [
+    "harshitlalwani/chunkybert-best-variant"
+  ],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "machine_shape": "NvidiaTeslaT4"
+}

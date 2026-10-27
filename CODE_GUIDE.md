@@ -408,7 +408,7 @@ request per text.
     once.
   - `generate.py` runs the LED models: input `title </s> body`, 512 tokens, greedy decoding. Output is
     appended per batch, so a rerun resumes.
-- **`qa_eval/qa_eval.py`** (in progress), measuring whether rewrites keep the content. Three stages:
+- **`qa_eval/qa_eval.py`** (run on Kaggle 1–2 Oct; results in `qa_eval/README.md`), measuring whether rewrites keep the content. Three stages:
   1. `gen`: generate rewrites.
   2. `nli`: does each reference fact still follow from the rewrite, according to an entailment model?
   3. `qe`: QuestEval, which asks questions of one text and answers them from the other.

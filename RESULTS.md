@@ -1,6 +1,6 @@
 # Results — all evaluation work to date
 
-Every measured number from this branch in one place, as of 2026-10-13. Background and method:
+Every measured number from this branch in one place, as of 2026-10-27 (QA eval and POLITICS v2 added). Background and method:
 `EVALUATION_WALKTHROUGH.md`. Full logs: `replication/REPLICATION.md`, `baly/REPLICATION.md`.
 Single seed throughout unless stated. Labels: 0 = Left, 1 = Centre, 2 = Right (outlet-level).
 
@@ -9,7 +9,7 @@ Single seed throughout unless stated. Labels: 0 = Left, 1 = Centre, 2 = Right (o
 2. `stories_10k`: the 30,000 labelled source articles
 3. `stories_10k`: the 10,000 neutral summaries
 4. Nemotron single-article rewrites (short and long sets)
-5. LED neutraliser outputs
+5. LED neutraliser outputs (classifiers, Jev, QA content preservation)
 6. Bias types and VAD
 7. Status: what is done, partial, or pending
 8. Appendix: confusion matrices
@@ -82,6 +82,13 @@ paper's Table 3 (that replication is pending); it is POLITICS used as a classifi
 | BERT (ours) | random | 82.2 | 81.9 | 0.30 |
 | **POLITICS** | media | **52.0** | **53.4** | **0.55** |
 | BERT (ours) | media | 37.1 | 42.1 | 0.82 |
+
+**POLITICS v2** (`politics/release_v2/`, Kaggle `harshitlalwani/politics-ideology-classifier`): random split
+only, 512-token sliding windows (overlap 64) in training and inference, 10 epochs / patience 4, 4 seeds,
+temperature-calibrated. Test (1,300): macro-F1 **91.86 ± 0.49** per seed, **93.09** for the 4-seed ensemble
+(accuracy 93.15, MAE 0.106, recall L / C / R 92.3 / 97.0 / 91.8). On `stories_10k` (30,000 labelled) the ensemble
+scores 60.7 macro-F1 / 64.2% accuracy, recall 81.4 / 25.6 / 85.5: no better than v1 there. Full tables:
+`politics/release_v2/README.md`.
 
 ⚠️ POLITICS was pretrained on 3.6M articles from the same 11 outlets as `stories_10k`, including
 Breitbart, AP and CNN, which are in Baly's media-split test set. Its "unseen outlet" score is not
@@ -209,6 +216,24 @@ and out; none truncated or cut off.
 On this measure the LED outputs are indistinguishable from their Nemotron training targets, and
 λ0 vs λ0.35 makes no difference. Fine-tuned classifiers have not been run on the LED outputs yet.
 
+**QA content preservation** (`qa_eval/README.md`; Kaggle, 1–2 Oct). QuestEval precision = questions from the
+rewrite answered on the source (faithfulness), recall = the reverse (coverage). Test set: Raunak's
+`side_neutral_full` test split (1,775 articles), not the `stories_10k` panel above.
+
+| Set | System | QuestEval | Precision | Recall |
+|---|---|---|---|---|
+| Test split, 1,775 | Nemotron target | 0.670 | 0.704 | 0.636 |
+| | LED λ0 | 0.674 | 0.710 | 0.638 |
+| | LED λ0.35 | 0.673 | 0.709 | 0.637 |
+| long1k sample, 300 (1,024-token input) | Nemotron target | 0.620 | 0.656 | 0.585 |
+| | LED λ0 | 0.624 | 0.654 | 0.594 |
+| | LED λ0.35 | 0.623 | 0.653 | 0.592 |
+
+DiverseSumm NLI coverage (6,559 reference answers, 245 stories; covered = P(entail) > 0.5 for some chunk):
+original article 83.5%, λ0 62.5%, λ0.35 62.1%. Of the answers the original supports, the rewrite keeps
+70.8% (λ0) / 70.1% (λ0.35). The LED models preserve content as well as their Nemotron target; λ0 vs λ0.35
+makes no difference; about 30% of supported facts are lost in rewriting.
+
 ---
 
 ## 6. Bias types and VAD
@@ -248,6 +273,8 @@ Word-level affect barely separates anything.
 | Classifiers on LED outputs | Not started |
 | Jev on all neutral texts §3–5 | Done |
 | Publisher-leakage (outlet classifier on rewrites) | Not started (part of the paused queue) |
+| QA content preservation (QuestEval, DiverseSumm NLI) on LED λ0 / λ0.35 §5 | Done (human centre article not scored) |
+| POLITICS v2 (4 seeds, sliding windows, calibrated) §1.5 | Done, on Kaggle |
 | Jev spend | $2.43 total (cap $2.60) |
 
 ---

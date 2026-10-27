@@ -49,7 +49,7 @@ settings), no Twitter-bio or Wikipedia media-level models.
 - [ ] F3 POLITICS Table 3 replication (ideology tasks, 1 seed): Congress Speech + Hyperpartisan.
       Hyperpartisan by-article data downloaded (Zenodo 5776081); need media→ideology mapping decision
 - [ ] F4 Jev: re-score short/long-set originals body-only for an exact paired comparison (~$1.25; spend at $2.84)
-- [ ] F5 QA / QuestEval content-preservation eval (`qa_eval/qa_eval.py`, never run, untested)
+- [x] F5 QA / QuestEval content-preservation eval: ran on Kaggle 1–2 Oct; results and code in `qa_eval/` (README). Open: score the human centre article as a reference
 - [ ] F6 Baly AA with 2-3 more seeds (~3.5 h Kaggle each); Baly triplet pre-training (D7)
 - [ ] F7 Seeds for the LED comparison (first-token vs λ0 vs λ0.35 differences are within single-seed noise)
 

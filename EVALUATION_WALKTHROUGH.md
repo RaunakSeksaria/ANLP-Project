@@ -534,7 +534,7 @@ right articles from 1,000 events that the rewriters never saw during training.
 | `baly/` | Rebuilt Baly models; `REPLICATION.md` is the full log |
 | `evaluation/` | Notebooks applying each model to the team's data; `scores/` holds per-article probabilities; `vad/` |
 | `jev/` | Jev ideology (`jev_eval.ipynb`) and bias types (`bias_types.ipynb`) |
-| `led_eval/`, `qa_eval/` | Rewriter evaluation, in progress: inputs prepared, no results |
+| `led_eval/`, `qa_eval/` | Rewriter evaluation. `qa_eval/`: QuestEval + DiverseSumm NLI coverage on LED λ0 / λ0.35, done (see `qa_eval/README.md`) |
 | `CONTEXT.md` | All results in one place |
 | `CLAUDE.md` | How to run things and where data and model weights live |
 | `data/`, `models/`, `external/` | Not in git: datasets, trained weights, other projects' code (`CLAUDE.md` explains how to get them) |
