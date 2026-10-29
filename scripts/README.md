@@ -68,6 +68,7 @@ because that failure actually happened here.
 | `export_bna.py` | Writes the per-split JSONL for `data/prepared_bna/` and regenerates its README with live numbers. |
 | `build_release_jsonl.py` | Joins inputs + generated articles + splits into one root-level file for handoff. |
 | `audit_summaries.py` | Quality audit of generated text: structural defects, copy-tasks, template collapse, stance coverage. |
+| `make_hard_subset.py` | Scores every original (and generated target) with the POLITICS v2 ensemble and keeps the articles most confidently on their own side → `hard-test/`. Scoring runs on Kaggle (`kaggle_hard_subset/`) or Ada (`ada_hard_subset.sh`); `select` runs on CPU in seconds. |
 | `check_consistency.py` | Re-runs a random sample and compares against a previous run. `--similarity module:func` takes your own scorer. |
 | `ada_sync.sh` | rsync the repo to the cluster. |
 
