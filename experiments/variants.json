@@ -12,5 +12,10 @@
   {"name": "n3_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n3", "note": "n2 + fixes: no 'The article notes...', no expanding abbreviations"},
   {"name": "n2light_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2_light", "note": "aggression ladder: word-level edits only, structure kept"},
   {"name": "n2heavy_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2_heavy", "note": "aggression ladder: rebuild as wire copy"},
-  {"name": "n2min_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2_min", "note": "one-paragraph prompt without the AllSides taxonomy"}
+  {"name": "n2min_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n2_min", "note": "one-paragraph prompt without the AllSides taxonomy"},
+  {"name": "n3lex_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n3_lex", "note": "n3 + AllSides word lists (spin, said-substitutes, sensational, subjective, polarising terms) as a watch list"},
+  {"name": "n3fs_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n3_fs", "note": "n3 + 7 worked before/after pairs built from AllSides' marked-up excerpts (few-shot)"},
+  {"name": "n3k2_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n3_k2", "note": "n3 + 2 whole-article examples (1 left, 1 right; full1024 train n2 rewrites) as prior user/assistant turns"},
+  {"name": "n3k4_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n3_k4", "note": "n3 + 4 whole-article examples (2 left, 2 right; full1024 train n2 rewrites) as prior user/assistant turns"},
+  {"name": "n3neusk4_t1.0", "temperature": 1.0, "top_p": 0.95, "top_k": null, "seed": 42, "thinking": "HIGH", "prompt_version": "n3_neus_k4", "note": "n3 + 4 human-written examples (NeuS excerpts with their AllSides roundups; 2 left, 2 right) as prior user/assistant turns"}
 ]

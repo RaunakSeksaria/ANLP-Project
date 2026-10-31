@@ -17,7 +17,7 @@ import requests
 from .client import (
     FatalAPIError, RateGate, Reply, TransientExhausted, _fatal_transport, _short,
 )
-from .prompt import SYSTEM, system_prompt
+from .prompt import SYSTEM, few_shot_messages, system_prompt
 
 URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 
@@ -145,6 +145,7 @@ class NvidiaClient:
         body = {
             "model": self.cfg.model,
             "messages": [{"role": "system", "content": system_prompt(self.cfg)},
+                         *few_shot_messages(self.cfg),
                          {"role": "user", "content": prompt}],
             "stream": False,
             "chat_template_kwargs": {"enable_thinking": d.pop("enable_thinking")},

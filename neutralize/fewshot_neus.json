@@ -1,0 +1,58 @@
+[
+ {
+  "neus_id": 4532,
+  "stance": "left",
+  "source": "NeuS raw_crawled/all_crawled_combined_filtered_RoundupLeftCenterRight.jsonl",
+  "issue": "Trump Orders Navy to Destroy Any Iranian Gunboats Harassing US Ships",
+  "date": "2020-04-22T07:45:00-07:00",
+  "publisher": "New York Times (News)",
+  "title": "Trump Says He Told Navy to ‘Shoot Down’ Iranian Boats",
+  "body": "President Trump said on Wednesday that he has told the Navy to shoot down and destroy any Iranian fast boats that harass American naval ships, in what would be a sharp escalation of the risky maneuvers performed by the two adversaries in the Persian Gulf and the Arabian Sea. The president’s abrupt statement, which he announced on Twitter, came a full week after the Pentagon accused Iran of sending 11 fast boats to conduct “dangerous and harassing approaches” to six American warships in the Persian Gulf. The Iranian vessels, according...",
+  "neutral": "President Trump says he has ordered the U.S. Navy to destroy any Iranian gunboats that harass American ships at sea. The move comes a week after the Pentagon accused Iran of sending 11 fast boats to conduct \"dangerous and harassing approaches\" to six American warships in the Persian Gulf.",
+  "removed": [],
+  "target_words": 49,
+  "note": "neutral = the human AllSides roundup for this story, chosen because this excerpt alone supports it (content-word support >= 0.8, no added entity/number/date)"
+ },
+ {
+  "neus_id": 5206,
+  "stance": "right",
+  "source": "NeuS raw_crawled/all_crawled_combined_filtered_RoundupLeftCenterRight.jsonl",
+  "issue": "Supreme Court to Hear Key Cases on Trump Immigration Policies",
+  "date": "2020-10-19T08:30:00-07:00",
+  "publisher": "Washington Times",
+  "title": "Supreme Court to hear Trump immigration cases on border wall, asylum",
+  "body": "The Supreme Court announced Monday it will take up two key cases involving President Trump’s get-tough immigration policy, granting hearings on his border wall construction project and his crackdown on bogus asylum claims. The asylum policy, officially known as the Migrant Protection Protocols and more commonly called the “Remain in Mexico” policy, makes people who show up at the border from Central America and further afield return to Mexico to wait while their cases proceed in the U.S. That eliminated the incentive to make bogus asylum claims, because it denied...",
+  "neutral": "The Supreme Court announced Monday that it will hear two key cases related to President Trump's immigration policies. One case involves the \"Remain in Mexico\" asylum policy, and the other deals with border wall construction on the U.S.-Mexico border.",
+  "removed": [],
+  "target_words": 39,
+  "note": "neutral = the human AllSides roundup for this story, chosen because this excerpt alone supports it (content-word support >= 0.8, no added entity/number/date)"
+ },
+ {
+  "neus_id": 3746,
+  "stance": "left",
+  "source": "NeuS raw_crawled/all_crawled_combined_filtered_RoundupLeftCenterRight.jsonl",
+  "issue": "Federal Judge Finds Trump's Order to Oil Drilling in Open Arctic Waters Unlawful",
+  "date": "2019-03-31T09:15:00-07:00",
+  "publisher": "New York Times (News)",
+  "title": "Trump’s Order to Open Arctic Waters to Oil Drilling Was Unlawful, Federal Judge Finds",
+  "body": "In a major legal blow to President Trump’s push to expand offshore oil and gas development, a federal judge ruled that an executive order by Mr. Trump that lifted an Obama-era ban on oil and gas drilling in the Arctic Ocean and parts of the North Atlantic coast was unlawful. The decision, by Judge Sharon L. Gleason of the United States District Court for the District of Alaska, concluded late Friday that President Barack Obama’s 2015 and 2016 withdrawal from drilling of about 120 million acres of Arctic Ocean...",
+  "neutral": "Federal Judge Sharon L. Gleason ruled late Friday that an executive order by President Trump that lifted an Obama-era ban on gas and oil drilling in the Arctic Ocean and parts of the North Atlantic coast was unlawful. The decision concluded that President Obama's withdrawal from drilling in 2015 and 2016 would remain in full effect.",
+  "removed": [],
+  "target_words": 56,
+  "note": "neutral = the human AllSides roundup for this story, chosen because this excerpt alone supports it (content-word support >= 0.8, no added entity/number/date)"
+ },
+ {
+  "neus_id": 4300,
+  "stance": "right",
+  "source": "NeuS raw_crawled/all_crawled_combined_filtered_RoundupLeftCenterRight.jsonl",
+  "issue": "Joe Biden Dismisses Possible Impeachment Trial Witness Swap",
+  "date": "2020-01-23T07:30:00-08:00",
+  "publisher": "Fox News (Online News)",
+  "title": "Biden says he won’t be part of witness deal some Democrats reportedly eyeing",
+  "body": "Joe Biden, the 2020 Democratic presidential frontrunner, said Wednesday he wants \"no part\" of a witness swap reportedly being discussed by some members of his own party. Under the hypothetical deal, Democrats would reportedly offer up Biden or his son Hunter Biden to testify at President Trump's Senate impeachment trial in return for testimony from a Republican figure, such as ex-national security adviser John Bolton. The Washington Post quoted the former vice president admitting that it was \"not an irrational question\" but said Trump's trial was a \"constitutional issue.\" He...",
+  "neutral": "Former Vice President Joe Biden says he won't agree to appear as a witness in President Trump's impeachment trial as part of a witness swap. The deal would reportedly offer up Joe Biden or his son Hunter to testify in return for testimony from a Republican figure such as ex-national security advisor John Bolton.",
+  "removed": [],
+  "target_words": 54,
+  "note": "neutral = the human AllSides roundup for this story, chosen because this excerpt alone supports it (content-word support >= 0.8, no added entity/number/date)"
+ }
+]

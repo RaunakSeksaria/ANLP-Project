@@ -12,7 +12,9 @@ Photo bias has no analogue at all for text output and is noted as such rather
 than silently dropped, so the list stays auditable against the source.
 """
 
+import json
 import random
+from pathlib import Path
 
 PROMPT_VERSION = "v3"  # v3: source labels and source-format asides banned from the summary
 
@@ -536,14 +538,156 @@ Continuous prose. No headline, no byline, no dateline, no bullets, no preamble. 
 Do not mention the article, the outlet, or that you are rewording anything. \
 Begin with the first sentence of the account itself."""
 
+# AllSides "How to Spot Types of Media Bias" (allsides.com/media-bias/how-to-spot-types-of-media-bias),
+# used two ways on top of n3, both placed just before FORM.
+# n3_lex: the page's word lists, as signals to check rather than a ban list.
+_ALLSIDES_LEX = """
+
+WATCH LIST
+AllSides' examples of each bias type. These words are signals to check, not a \
+ban list: in the writer's own voice, replace or cut them unless they state a \
+literal fact ("in critical condition", "a significant difference" in a study, \
+"a landmark" as a building). Inside a direct quotation, keep them.
+- Spin: emerge, serious, refuse, crucial, high-stakes, tirade, landmark, "latest \
+in a string of", major, "turn up the heat", critical, decrying, offend, "stern \
+talks", offensive, "facing calls to", meaningful, "even though", monumental, \
+significant.
+- Implying bad behaviour without evidence: finally, surfaced, acknowledged, \
+emerged, "refusing to say", conceded, dodged, admission, "came to light", \
+"admit to".
+- Dramatic substitutes for "said": mocked, raged, bragged, fumed, "lashed out", \
+incensed, scoffed, erupted, rant, boasted, gloated.
+- Sensationalism: shocking, remarkable, chaotic, scathing, explosive, fiery, \
+desperate, rip, blast, rebuke, slam, onslaught, showdown, "breaking".
+- Subjective judgement in the writer's voice: good/better/best, bad/worse/worst, \
+"is considered to be", seemingly, apparently, "it's likely that", "may mean \
+that", "would seem", suggests, possibly, dangerous, extreme.
+- Subjective qualifying adjectives: "disturbing rise", "serious accusations", \
+"troubling trend", "sinister warning", "extreme law", "baseless claim", \
+"debunked theory", "critical bill", "offensive statement", "harsh rebuke", \
+"extremist group", "far-right"/"far-left" as a label. Report the allegation, \
+claim or law itself and let the reader judge it.
+- Polarising terms, where each side has its own word: pro-choice/anti-choice, \
+pro-abortion/anti-abortion, gun rights/gun control, riot/protest, illegal \
+immigrants/migrants, illegal alien/asylum-seeking migrants, voting \
+rights/voting security, sex reassignment surgery/gender-affirming care. In the \
+writer's voice, describe what happened rather than adopting either side's \
+term; if a term is the official name of a law, group or policy, keep it."""
+
+# n3_fs: worked before -> after pairs built from the excerpts AllSides marks up
+# on that page (the page shows them as screenshots; the "after" text is ours).
+_ALLSIDES_SHOTS = """
+
+WORKED EXAMPLES
+Short excerpts that AllSides uses to illustrate media bias, each with an \
+acceptable neutral rewrite. They show the edits at sentence scale; apply the \
+same edits across the whole article. They are not about your article: never \
+carry a name, fact or phrase from them into your rewrite.
+
+Example 1 (dramatic substitute for "said")
+Before: President Donald Trump gloated over mass layoffs at multiple news \
+outlets on Saturday, tweeting that "many others will follow" and attributing \
+the loss to "Fake News."
+After: President Donald Trump tweeted on Saturday about mass layoffs at \
+multiple news outlets, writing that "many others will follow" and attributing \
+the loss to "Fake News."
+
+Example 2 (spin verbs)
+Before: Headline: Biden slams SCOTUS presidential immunity ruling, ignores \
+questions about dropping out. Biden's address lasted four minutes and forty \
+seconds before he bolted and dodged questions from reporters.
+After: Biden criticized the SCOTUS presidential immunity ruling in an address \
+that lasted four minutes and forty seconds. He left without answering \
+reporters' questions, including questions about dropping out.
+
+Example 3 (subjective qualifying adjectives, mudslinging)
+Before: Headline: Rep. Madison Cawthorn Issues Sinister Warning To Anyone \
+Opposing Him. The extremist Republican ranted about liberals trying to make \
+people "sexless," then threatened people who "stand in the way."
+After: Rep. Madison Cawthorn, a Republican, said liberals were trying to make \
+people "sexless" and issued a warning to anyone opposing him, referring to \
+people who "stand in the way."
+
+Example 4 (mind reading)
+Before: Donald Trump's hatred of looking foolish and Democrats' conviction \
+that they have a winning hand is leaving the President with no way out of the \
+stalemate over his border wall.
+After: President Donald Trump and Democrats remain in a stalemate over his \
+border wall.
+
+Example 5 (opinion presented as fact)
+Before: Twitter banned or suspended several high-profile journalists Thursday \
+evening, a move that further reveals the seemingly arbitrary decision-making \
+of Elon Musk, a self-avowed "free speech absolutist."
+After: Twitter banned or suspended several high-profile journalists Thursday \
+evening. Elon Musk has described himself as a "free speech absolutist."
+
+Example 6 (slant and placement: lead with the event, keep the facts)
+Before: Vice President Harris mourned the Palestinians who were killed in a \
+successful Israeli hostage rescue operation this weekend during an address \
+delivered Saturday. The Israeli operation retrieved four hostages who were \
+taken into Gaza by Hamas on Oct. 7. Harris, speaking before the Michigan \
+Democratic Party, celebrated their retrieval but spent more time lamenting \
+the deaths of Palestinians killed in the operation, many of whom Israel has \
+described as terrorists.
+After: An Israeli operation this weekend retrieved four hostages who were \
+taken into Gaza by Hamas on Oct. 7. In an address to the Michigan Democratic \
+Party on Saturday, Vice President Harris welcomed their retrieval and spoke at \
+greater length about the Palestinians killed in the operation, many of whom \
+Israel has described as terrorists.
+
+Example 7 (sensational headline words, editorialising attribution)
+Before: Headline: Trump claims he ordered 'obliteration' of Iran if he's \
+assassinated in chilling warning: 'I've left instructions'
+After: Trump said he has ordered the "obliteration" of Iran if he is \
+assassinated. "I've left instructions," he said.\""""
+
+assert NEUTRALISE_N3.count(_FORM) == 1
+NEUTRALISE_N3_LEX = NEUTRALISE_N3.replace(_FORM, _ALLSIDES_LEX + _FORM)
+NEUTRALISE_N3_FS = NEUTRALISE_N3.replace(_FORM, _ALLSIDES_SHOTS + _FORM)
+
 NEUTRALISE_PROMPTS = {
     "n2": NEUTRALISE_SYSTEM,
     "n3": NEUTRALISE_N3,
+    "n3_lex": NEUTRALISE_N3_LEX,
+    "n3_fs": NEUTRALISE_N3_FS,
     "n2_light": NEUTRALISE_LIGHT,
     "n2_heavy": NEUTRALISE_HEAVY,
     "n2_min": NEUTRALISE_MIN,
     "para": NEUTRALISE_PARA,
+    # Whole-article few-shot: the n3 system prompt unchanged, plus the first k
+    # pairs of fewshot_full1024.json sent as earlier user/assistant turns.
+    "n3_k2": NEUTRALISE_N3,
+    "n3_k4": NEUTRALISE_N3,
+    # Human-written few-shot: 4 NeuS excerpts, each with its AllSides roundup as
+    # the target (see fewshot_neus.json for why those roundups qualify).
+    "n3_neus_k4": NEUTRALISE_N3,
 }
+FEW_SHOT = {"n3_k2": ("fewshot_full1024.json", 2), "n3_k4": ("fewshot_full1024.json", 4),
+            "n3_neus_k4": ("fewshot_neus.json", 4)}
+
+
+def few_shot_messages(cfg):
+    """The example turns that go between the system prompt and the article.
+
+    Examples come from fewshot_full1024.json (train-split n2 rewrites) or
+    fewshot_neus.json (human AllSides roundups), and are shown exactly as a real
+    request and a real reply: the same user prompt build_neutralise_prompt makes,
+    and the JSON the model is asked to return. An example's target_words, when
+    set, replaces the input length in its prompt (a roundup is shorter than its
+    excerpt). Only the NVIDIA client sends them.
+    """
+    if getattr(cfg, "task", "fuse") != "neutralise":
+        return []
+    if _neutralise_version(cfg) not in FEW_SHOT:
+        return []
+    name, k = FEW_SHOT[_neutralise_version(cfg)]
+    msgs = []
+    for ex in json.loads(Path(__file__).with_name(name).read_text(encoding="utf-8"))[:k]:
+        user, _ = build_neutralise_prompt({"articles": [ex], "_target_words": ex.get("target_words")}, cfg)
+        reply = json.dumps({"neutral": ex["neutral"], "removed": ex["removed"]}, ensure_ascii=False)
+        msgs += [{"role": "user", "content": user}, {"role": "assistant", "content": reply}]
+    return msgs
 
 
 def build_neutralise_prompt(cluster, cfg):
@@ -553,7 +697,7 @@ def build_neutralise_prompt(cluster, cfg):
     article's own length, since this is a rewrite rather than a compression.
     """
     a = cluster["articles"][0]
-    target = len(a["body"].split())
+    target = cluster.get("_target_words") or len(a["body"].split())
     title = (a.get("title") or "").strip()
     if _neutralise_version(cfg) == "para":
         head, task, removed = ("Reword the following article, keeping its framing.",
