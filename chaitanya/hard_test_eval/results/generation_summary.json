@@ -1,0 +1,75 @@
+{
+  "articles": 1187,
+  "release": {
+    "dedup": 711,
+    "full1024": 476
+  },
+  "max_input_tokens": 510,
+  "source": "hard-test, data branch @ 69ebfdf",
+  "models": {
+    "baseline_lambda0": {
+      "repo": "RaunakSeksaria/anlp-neutral-led",
+      "subfolder": "side-neutral-full/lambda0",
+      "weights_sha256": "0bb305e2cd806dc02fef0deca58b4beffe3a3ef5d68ba626968565ae8317d213",
+      "rows": 1187,
+      "eos_rate": 0.9974726200505476,
+      "mean_output_words": 184.44566133108677
+    },
+    "ideology_standard_m04": {
+      "repo": "tchaitanya0109/anlp-neutral-led-ideology-first-token",
+      "subfolder": "standard-margin04-lambda035",
+      "weights_sha256": "dafa0cd6e0545151cc6267772c36cab9f32c64ca59d415fd4629e31ab41fc3b5",
+      "rows": 1187,
+      "eos_rate": 1.0,
+      "mean_output_words": 185.22746419545072
+    },
+    "ideology_attraction_m02": {
+      "repo": "tchaitanya0109/anlp-neutral-led-ideology-first-token",
+      "subfolder": "attraction-margin02-lambda035",
+      "weights_sha256": "6cc12bafd30ffb567d286307b3eb754136ae6fb4502e9bdeadbb359a477e97c3",
+      "rows": 1187,
+      "eos_rate": 1.0,
+      "mean_output_words": 180.43555181128897
+    },
+    "ideology_attraction_m05": {
+      "repo": "tchaitanya0109/anlp-neutral-led-ideology-first-token",
+      "subfolder": "attraction-margin05-lambda035",
+      "weights_sha256": "6a6bfecfcb52bed6c430915a1f6e723e952ebb7e760098753797d8bc713888a0",
+      "rows": 1187,
+      "eos_rate": 0.9991575400168492,
+      "mean_output_words": 184.90732940185342
+    },
+    "publisher_standard_m02": {
+      "repo": "tchaitanya0109/anlp-neutral-led-publisher-first-token",
+      "subfolder": "standard-lambda035",
+      "weights_sha256": "3096659727f7f28624c7ab8cee1c0f8dd00f0e084c759024988eb38212be6684",
+      "rows": 1187,
+      "eos_rate": 1.0,
+      "mean_output_words": 180.8525695029486
+    },
+    "publisher_attraction_m02": {
+      "repo": "tchaitanya0109/anlp-neutral-led-publisher-first-token",
+      "subfolder": "attraction-lambda035",
+      "weights_sha256": "7f5e497b3721db264d97696df5a3765a488942679a350a631752e20b08f5ea36",
+      "rows": 1187,
+      "eos_rate": 0.9991575400168492,
+      "mean_output_words": 180.6798652064027
+    },
+    "ideology_attraction_m03_b05_t03": {
+      "repo": "tchaitanya0109/anlp-neutral-led-ideology-first-token",
+      "subfolder": "attraction-margin03-beta05-tau03-lambda035",
+      "weights_sha256": "9fbf71460364639b7ea1d802844be901b0a607f2a8acfe24575442baa3a14220",
+      "rows": 1187,
+      "eos_rate": 0.9949452401010952,
+      "mean_output_words": 183.13479359730414
+    },
+    "ideology_attraction_m03_b06_t05": {
+      "repo": "tchaitanya0109/anlp-neutral-led-ideology-first-token",
+      "subfolder": "attraction-margin03-beta06-tau05-lambda035",
+      "weights_sha256": "752fd3ba64d47ac673f2b655b73eb805f6366adf07b26271e0592055733e3809",
+      "rows": 1187,
+      "eos_rate": 0.995787700084246,
+      "mean_output_words": 182.68744734625105
+    }
+  }
+}
