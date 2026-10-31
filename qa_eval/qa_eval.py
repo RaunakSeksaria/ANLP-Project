@@ -24,7 +24,8 @@ from pathlib import Path
 
 REPO = os.environ.get("LED_REPO", "RaunakSeksaria/anlp-neutral-led")   # local copy for smoke tests
 MODELS = {"lambda0": "side-neutral-full/lambda0",
-          "lambda035": "side-neutral-full/lambda035"}
+          "lambda035": "side-neutral-full/lambda035",
+          "first_token": "side-neutral-full/first_token_pooling"}
 NLI_MODEL = "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli"
 GEN = dict(num_beams=1, do_sample=False, max_new_tokens=512)
 MAX_IN = 512
@@ -51,7 +52,7 @@ OWN_FILE = "led_test.jsonl"     # --own-file: led_long1k.jsonl for the long1k se
 
 
 def load_inputs(limit):
-    ds = json.load(open(find("diverse_summ.json")))
+    ds = json.load(open(find("diverse_summ.json"))) if "diversesumm" in SETS else []
     own = [json.loads(l) for l in open(find(OWN_FILE))]
     if limit:
         ds, own = ds[:max(1, limit // 10)], own[:limit]

@@ -1,0 +1,344 @@
+{
+  "all": {
+    "original": {
+      "n": 19783,
+      "acc_own_side": 85.3,
+      "acc_left_vs_right": 92.5,
+      "recall_left": 83.9,
+      "recall_right": 86.8,
+      "pred_LCR": [
+        44.3,
+        9.4,
+        46.3
+      ],
+      "left_articles_pred_LCR": [
+        83.9,
+        10.0,
+        6.2
+      ],
+      "right_articles_pred_LCR": [
+        4.3,
+        8.9,
+        86.8
+      ],
+      "mean_P_LCR": [
+        0.433,
+        0.121,
+        0.446
+      ],
+      "mean_P_own": 0.814
+    },
+    "nemotron": {
+      "n": 19783,
+      "acc_own_side": 63.4,
+      "acc_left_vs_right": 75.5,
+      "recall_left": 54.2,
+      "recall_right": 72.7,
+      "pred_LCR": [
+        32.2,
+        19.3,
+        48.5
+      ],
+      "left_articles_pred_LCR": [
+        54.2,
+        21.3,
+        24.5
+      ],
+      "right_articles_pred_LCR": [
+        10.0,
+        17.3,
+        72.7
+      ],
+      "mean_P_LCR": [
+        0.317,
+        0.239,
+        0.444
+      ],
+      "mean_P_own": 0.582
+    },
+    "paired": {
+      "moved_to_centre": 15.7,
+      "moved_to_other_side": 11.7,
+      "P_own_drop_mean": 0.233,
+      "P_centre_gain_mean": 0.118
+    },
+    "by_split_acc_own_side": {
+      "train": [
+        85.5,
+        63.5
+      ],
+      "validation": [
+        84.6,
+        64.1
+      ],
+      "test": [
+        84.1,
+        62.0
+      ]
+    },
+    "by_publisher": {
+      "breitbart": [
+        0.878,
+        0.707,
+        2996
+      ],
+      "cnn": [
+        0.934,
+        0.555,
+        1602
+      ],
+      "dailykos": [
+        0.867,
+        0.499,
+        1333
+      ],
+      "fox": [
+        0.789,
+        0.711,
+        4088
+      ],
+      "hpo": [
+        0.669,
+        0.413,
+        2734
+      ],
+      "nyt": [
+        0.878,
+        0.613,
+        1789
+      ],
+      "wat": [
+        0.815,
+        0.515,
+        2762
+      ],
+      "wpo": [
+        0.786,
+        0.515,
+        2479
+      ]
+    }
+  },
+  "test": {
+    "original": {
+      "n": 2005,
+      "acc_own_side": 84.1,
+      "acc_left_vs_right": 92.7,
+      "recall_left": 81.6,
+      "recall_right": 86.6,
+      "pred_LCR": [
+        42.5,
+        11.0,
+        46.4
+      ],
+      "left_articles_pred_LCR": [
+        81.6,
+        11.9,
+        6.5
+      ],
+      "right_articles_pred_LCR": [
+        3.3,
+        10.1,
+        86.6
+      ],
+      "mean_P_LCR": [
+        0.422,
+        0.13,
+        0.448
+      ],
+      "mean_P_own": 0.805
+    },
+    "nemotron": {
+      "n": 2005,
+      "acc_own_side": 62.0,
+      "acc_left_vs_right": 73.9,
+      "recall_left": 52.4,
+      "recall_right": 71.6,
+      "pred_LCR": [
+        31.6,
+        19.6,
+        48.9
+      ],
+      "left_articles_pred_LCR": [
+        52.4,
+        21.3,
+        26.3
+      ],
+      "right_articles_pred_LCR": [
+        10.6,
+        17.8,
+        71.6
+      ],
+      "mean_P_LCR": [
+        0.312,
+        0.237,
+        0.45
+      ],
+      "mean_P_own": 0.576
+    },
+    "paired": {
+      "moved_to_centre": 14.7,
+      "moved_to_other_side": 12.7,
+      "P_own_drop_mean": 0.229,
+      "P_centre_gain_mean": 0.107
+    }
+  },
+  "led_set": {
+    "Original": {
+      "n": 1864,
+      "acc_own_side": 84.2,
+      "acc_left_vs_right": 93.1,
+      "recall_left": 81.8,
+      "recall_right": 86.6,
+      "pred_LCR": [
+        42.1,
+        11.1,
+        46.8
+      ],
+      "left_articles_pred_LCR": [
+        81.8,
+        11.8,
+        6.4
+      ],
+      "right_articles_pred_LCR": [
+        3.1,
+        10.3,
+        86.6
+      ],
+      "mean_P_LCR": [
+        0.418,
+        0.131,
+        0.451
+      ],
+      "mean_P_own": 0.806
+    },
+    "Nemotron rewrite": {
+      "n": 1864,
+      "acc_own_side": 62.1,
+      "acc_left_vs_right": 74.2,
+      "recall_left": 52.6,
+      "recall_right": 71.5,
+      "pred_LCR": [
+        31.4,
+        19.6,
+        49.0
+      ],
+      "left_articles_pred_LCR": [
+        52.6,
+        21.3,
+        26.1
+      ],
+      "right_articles_pred_LCR": [
+        10.5,
+        18.0,
+        71.5
+      ],
+      "mean_P_LCR": [
+        0.312,
+        0.237,
+        0.45
+      ],
+      "mean_P_own": 0.577,
+      "moved_to_centre": 14.7,
+      "moved_to_other_side": 12.7,
+      "P_own_drop_mean": 0.229,
+      "P_centre_gain_mean": 0.107
+    },
+    "LED lambda0": {
+      "n": 1864,
+      "acc_own_side": 63.1,
+      "acc_left_vs_right": 79.7,
+      "recall_left": 58.0,
+      "recall_right": 68.1,
+      "pred_LCR": [
+        32.3,
+        24.2,
+        43.4
+      ],
+      "left_articles_pred_LCR": [
+        58.0,
+        23.7,
+        18.3
+      ],
+      "right_articles_pred_LCR": [
+        7.1,
+        24.8,
+        68.1
+      ],
+      "mean_P_LCR": [
+        0.322,
+        0.265,
+        0.413
+      ],
+      "mean_P_own": 0.592,
+      "moved_to_centre": 18.6,
+      "moved_to_other_side": 7.0,
+      "P_own_drop_mean": 0.214,
+      "P_centre_gain_mean": 0.134
+    },
+    "LED lambda035": {
+      "n": 1864,
+      "acc_own_side": 63.1,
+      "acc_left_vs_right": 78.6,
+      "recall_left": 56.5,
+      "recall_right": 69.7,
+      "pred_LCR": [
+        32.1,
+        23.5,
+        44.4
+      ],
+      "left_articles_pred_LCR": [
+        56.5,
+        24.9,
+        18.6
+      ],
+      "right_articles_pred_LCR": [
+        8.2,
+        22.1,
+        69.7
+      ],
+      "mean_P_LCR": [
+        0.32,
+        0.266,
+        0.414
+      ],
+      "mean_P_own": 0.586,
+      "moved_to_centre": 18.1,
+      "moved_to_other_side": 7.7,
+      "P_own_drop_mean": 0.221,
+      "P_centre_gain_mean": 0.135
+    },
+    "LED first_token": {
+      "n": 1864,
+      "acc_own_side": 64.7,
+      "acc_left_vs_right": 79.8,
+      "recall_left": 57.4,
+      "recall_right": 71.9,
+      "pred_LCR": [
+        31.9,
+        22.8,
+        45.3
+      ],
+      "left_articles_pred_LCR": [
+        57.4,
+        24.5,
+        18.2
+      ],
+      "right_articles_pred_LCR": [
+        6.9,
+        21.2,
+        71.9
+      ],
+      "mean_P_LCR": [
+        0.315,
+        0.258,
+        0.428
+      ],
+      "mean_P_own": 0.595,
+      "moved_to_centre": 17.3,
+      "moved_to_other_side": 7.0,
+      "P_own_drop_mean": 0.211,
+      "P_centre_gain_mean": 0.127
+    }
+  }
+}

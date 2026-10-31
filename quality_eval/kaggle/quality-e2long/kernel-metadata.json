@@ -1,0 +1,17 @@
+{
+  "id": "harshitlalwani/quality-e2long",
+  "title": "quality-e2long",
+  "code_file": "quality-e2long.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": ["gpu"],
+  "dataset_sources": ["harshitlalwani/e2long-eval", "harshitlalwani/politics-ideology-classifier"],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

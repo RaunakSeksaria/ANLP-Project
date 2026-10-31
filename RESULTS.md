@@ -4,7 +4,10 @@ Every measured number from this branch in one place, as of 2026-10-27 (QA eval a
 `EVALUATION_WALKTHROUGH.md`. Full logs: `replication/REPLICATION.md`, `baly/REPLICATION.md`.
 Single seed throughout unless stated. Labels: 0 = Left, 1 = Centre, 2 = Right (outlet-level).
 
+**Default evaluation set (from 2026-10-30): E2 long** — see §0. Earlier sections use older sets.
+
 **Contents**
+0. E2 long: POLITICS v2, fluency, hallucination (default set)
 1. Replications (do the instruments work on their own papers' data?)
 2. `stories_10k`: the 30,000 labelled source articles
 3. `stories_10k`: the 10,000 neutral summaries
@@ -13,6 +16,34 @@ Single seed throughout unless stated. Labels: 0 = Left, 1 = Centre, 2 = Right (o
 6. Bias types and VAD
 7. Status: what is done, partial, or pending
 8. Appendix: confusion matrices
+
+---
+
+## 0. E2 long: the default evaluation set
+
+Raunak's full1024 single-article release (HF `reframing_{left,right}_long`): one left or right article and its
+Nemotron rewrite. Details, metric definitions and per-article files: `quality_eval/README.md`.
+
+**POLITICS v2** (calibrated 4-seed ensemble), all 19,783 articles (articles also in Baly's corpus excluded):
+originals 85.3% classified as their own side (recall L 83.9 / R 86.8), Nemotron rewrites 63.4% (L 54.2 / R 72.7);
+15.7% of rewrites move to Centre, 11.7% to the other side (mostly left → Right).
+
+**Test split, 1,864 articles not in LED training data**, LED models at 1,024-token input:
+
+| Text | POLITICS own side % | Moved to Centre | Repeated 3-grams % | Texts > 10% repeated | CoLA acceptable % | GPT-2-L ppl | LT errors / 100 w | MiniCheck unsupported sentences % | New named entities % |
+|---|---|---|---|---|---|---|---|---|---|
+| Original | 84.2 | — | 1.9 | 2.3% | 96.5 | 12.4 | 0.22 | — | — |
+| Nemotron rewrite | 62.1 | 14.7% | 1.5 | 0.3% | 97.7 | 11.4 | 0.17 | 4.3 | 2.1 |
+| LED λ0 | 63.1 | 18.6% | 11.0 | 40.1% | 96.6 | 9.6 | 0.24 | 7.7 | 0.9 |
+| LED λ0.35 | 63.1 | 18.1% | 12.4 | 46.2% | 96.4 | 9.2 | 0.25 | 8.1 | 0.9 |
+| LED first-token | 64.7 | 17.3% | 8.9 | 33.2% | 96.5 | 10.2 | 0.23 | 7.0 | 0.9 |
+
+- The LED rewrites reach the Nemotron target's neutrality on POLITICS, but **a third to a half of them loop**
+  (repeated phrases). Low perplexity here reflects the repetition, not fluency.
+- **Their extra hallucination comes from the loops:** non-looping LED rewrites have 4.5% unsupported sentences,
+  like Nemotron (4.2%); looping ones ~9.5%. Next step: rerun decoding with `no_repeat_ngram_size` /
+  `repetition_penalty`.
+- λ0 vs λ0.35 vs first-token: no meaningful difference on any metric.
 
 ---
 

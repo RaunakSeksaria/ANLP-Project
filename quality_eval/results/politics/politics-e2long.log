@@ -1,0 +1,142 @@
+[{"stream_name":"stderr","time":39.263625782,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":39.266401507,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":60.771205258,"data":"19922 texts, 29026 windows\n"}
+,{"stream_name":"stdout","time":61.284586039,"data":"19922 texts, 30138 windows\n"}
+,{"stream_name":"stderr","time":68.515996232,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 9692.30it/s]\n"}
+,{"stream_name":"stderr","time":68.518326632,"data":"\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 13399.25it/s]\n"}
+,{"stream_name":"stderr","time":68.544819825,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":68.544838547,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":68.544859516,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":68.544863355,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.544891443,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.544896128,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.544899943,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.544908367,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.54491225,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":68.544916349,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":68.544920417,"data":"\n"}
+,{"stream_name":"stderr","time":68.544923971,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":68.544927648,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":68.544931917,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":68.546090937,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":68.54610841,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":68.546112679,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":68.54612086,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.546123409,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.546125684,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.546128055,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.546130364,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":68.54613272,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":68.546134972,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":68.546138469,"data":"\n"}
+,{"stream_name":"stderr","time":68.546151768,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":68.546155685,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":68.546171964,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":221.024903926,"data":"scored with seed42\n"}
+,{"stream_name":"stderr","time":221.365976217,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 9407.70it/s]\n"}
+,{"stream_name":"stderr","time":221.377619403,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":221.377638403,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":221.377643732,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":221.377648273,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":221.377652898,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":221.377657315,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":221.377661707,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":221.377666022,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":221.377670563,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":221.37767494,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":221.37767943,"data":"\n"}
+,{"stream_name":"stderr","time":221.377683943,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":221.377688397,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":221.377693178,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":257.614771712,"data":"scored with seed42\n"}
+,{"stream_name":"stderr","time":257.96757568,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 8892.55it/s]\n"}
+,{"stream_name":"stderr","time":257.979929916,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":257.979951391,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":257.979956857,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":257.979961521,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":257.979966083,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":257.979970635,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":257.979975233,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":257.979979675,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":257.97998417,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":257.979988801,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":257.979993275,"data":"\n"}
+,{"stream_name":"stderr","time":257.979997636,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":257.980002037,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":257.980018858,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":367.508965777,"data":"scored with seed43\n"}
+,{"stream_name":"stderr","time":367.843548376,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 10360.46it/s]\n"}
+,{"stream_name":"stderr","time":367.855997707,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":367.856016636,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":367.856022089,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":367.856027382,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":367.856031985,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":367.856036359,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":367.856040799,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":367.856045449,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":367.856049894,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":367.856054249,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":367.856058734,"data":"\n"}
+,{"stream_name":"stderr","time":367.856075919,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":367.856081959,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":367.856086924,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":438.871430153,"data":"scored with seed43\n"}
+,{"stream_name":"stderr","time":439.215776273,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 10153.83it/s]\n"}
+,{"stream_name":"stderr","time":439.22846202,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":439.228484798,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":439.228490815,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":439.228505133,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":439.228510371,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":439.228515323,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":439.228519603,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":439.228523733,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":439.22852791,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":439.228532316,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":439.228536453,"data":"\n"}
+,{"stream_name":"stderr","time":439.22854399,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":439.228547679,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":439.228573175,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":514.174125215,"data":"scored with seed44\n"}
+,{"stream_name":"stderr","time":514.541370285,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 6776.99it/s]\n"}
+,{"stream_name":"stderr","time":514.550123865,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":514.550143724,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":514.550149214,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":514.550153931,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":514.55015837,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":514.550163089,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":514.550167647,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":514.550172324,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":514.550176788,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":514.550181297,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":514.550185786,"data":"\n"}
+,{"stream_name":"stderr","time":514.550190024,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":514.550194313,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":514.550199283,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":620.80326015,"data":"scored with seed44\n"}
+,{"stream_name":"stderr","time":621.204722671,"data":"\rLoading weights:   0%|          | 0/197 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 197/197 [00:00\u003c00:00, 9376.10it/s]\n"}
+,{"stream_name":"stderr","time":621.217560689,"data":"[transformers] \u001b[1mRobertaModel LOAD REPORT\u001b[0m from: launch/POLITICS\n"}
+,{"stream_name":"stderr","time":621.217584776,"data":"Key                       | Status     | \n"}
+,{"stream_name":"stderr","time":621.217590251,"data":"--------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":621.217595213,"data":"lm_head.dense.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":621.217599846,"data":"lm_head.layer_norm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":621.217604534,"data":"lm_head.layer_norm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":621.217609168,"data":"lm_head.dense.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":621.217613831,"data":"lm_head.bias              | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":621.217618286,"data":"pooler.dense.bias         | MISSING    | \n"}
+,{"stream_name":"stderr","time":621.217622892,"data":"pooler.dense.weight       | MISSING    | \n"}
+,{"stream_name":"stderr","time":621.217627559,"data":"\n"}
+,{"stream_name":"stderr","time":621.217632095,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":621.217636832,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":621.21764187,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":662.578623144,"data":"scored with seed45\n"}
+,{"stream_name":"stdout","time":663.058480761,"data":"wrote /kaggle/working/part1.csv\n"}
+,{"stream_name":"stdout","time":801.337602117,"data":"scored with seed45\n"}
+,{"stream_name":"stdout","time":801.822599774,"data":"wrote /kaggle/working/part0.csv\n"}
+,{"stream_name":"stdout","time":803.080821173,"data":"done: 39844 texts\n"}
+,{"stream_name":"stderr","time":805.146997727,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":805.147048131,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":805.412896738,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":805.412936069,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":806.188941216,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":807.210631223,"data":"[NbConvertApp] Writing 282620 bytes to __results__.html\n"}
+]

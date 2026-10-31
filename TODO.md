@@ -56,3 +56,4 @@ settings), no Twitter-bio or Wikipedia media-level models.
 ## Carried over (not started)
 - [ ] Publisher-leakage classifier (`eval_metrics.md` item 2)
 - [ ] Commit the work (everything is currently untracked on branch `harshit`)
+- [ ] LED decoding: rerun E2-long generation with `no_repeat_ngram_size=3` / `repetition_penalty` (33-46% of LED rewrites loop; `quality_eval/README.md`), then re-score with a faster MiniCheck variant
