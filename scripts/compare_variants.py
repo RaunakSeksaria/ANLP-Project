@@ -85,10 +85,14 @@ def record_metrics(src, out_text):
     }
 
 
-class Politics:
-    """politics_media.pt with outlet masking and sliding windows; results cached on disk."""
+DEFAULT_CLF = ROOT / "data/classifiers/politics-ideology-classifier/politics_media.pt"
 
-    def __init__(self, cache_path):
+
+class Politics:
+    """A POLITICS checkpoint (politics_media.pt by default) with outlet masking and sliding
+    windows; results cached on disk, one cache file per checkpoint."""
+
+    def __init__(self, cache_path, ckpt=DEFAULT_CLF):
         import torch, torch.nn as nn
         from transformers import AutoModel, AutoTokenizer
         self.torch = torch
@@ -107,8 +111,7 @@ class Politics:
 
         self.tok = AutoTokenizer.from_pretrained(enc_name)
         self.model = Clf()
-        state = torch.load(ROOT / "data/classifiers/politics-ideology-classifier/politics_media.pt",
-                           map_location="cpu", weights_only=True)
+        state = torch.load(ckpt, map_location="cpu", weights_only=True)
         self.model.load_state_dict(state, strict=False)
         self.model.eval()
         self.cache_path = cache_path
@@ -134,6 +137,38 @@ class Politics:
 
     def save(self):
         json.dump(self.cache, open(self.cache_path, "w"))
+
+
+class PoliticsEnsemble(Politics):
+    """A POLITICS release folder (Harshit's v2): calibrated ensemble of every seed*_best.pt in it, run
+    through the folder's own politics_classifier.py (mean window logits, at most 8 windows, mean over
+    seeds of softmax(logits / T_ensemble)). Outlet names are masked, as for the single checkpoint."""
+
+    def __init__(self, cache_path, folder):
+        import importlib.util
+        import torch
+        spec = importlib.util.spec_from_file_location("politics_classifier", folder / "politics_classifier.py")
+        pc = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(pc)
+        self.pc, self.torch = pc, torch
+        weights = sorted(folder.glob("seed*_best.pt"))
+        if not weights:
+            raise SystemExit(f"no seed*_best.pt in {folder}")
+        self.models, temps = pc.load(weights, folder / "calibration.json")
+        self.temp = temps["ensemble"] if len(weights) > 1 else temps[weights[0].name.split("_")[0]]
+        self.tok = pc.tokenizer()
+        self.device = next(self.models[0].parameters()).device
+        self.cache_path = cache_path
+        self.cache = json.load(open(cache_path)) if cache_path.exists() else {}
+
+    def probs(self, text):
+        key = hashlib.md5(text.encode()).hexdigest()
+        if key not in self.cache:
+            wins = self.pc.to_windows(self.tok, [OUTLET_RE.sub("<mask>", text)])
+            P = [self.pc.softmax(self.pc.article_logits(m, wins, self.tok.pad_token_id, self.device), self.temp)
+                 for m in self.models]
+            self.cache[key] = np.mean(P, axis=0)[0].tolist()
+        return self.cache[key]
 
 
 def boot_ci(diffs, n=2000, seed=0):
@@ -170,6 +205,10 @@ def main():
     ap.add_argument("variants", nargs="+")
     ap.add_argument("--ref", default=None, help="reference variant for paired differences (default: first)")
     ap.add_argument("--no-classifier", action="store_true")
+    ap.add_argument("--classifier", type=Path, default=DEFAULT_CLF,
+                    help="POLITICS checkpoint (default: politics_media.pt), or a release folder such as "
+                         "data/classifiers/politics-ideology-classifier/v2 for its calibrated seed ensemble; "
+                         "a non-default one gets its own cache and report folder suffix")
     ap.add_argument("--review", type=int, default=20, help="events in the side-by-side review file")
     args = ap.parse_args()
     ref = args.ref or args.variants[0]
@@ -177,9 +216,14 @@ def main():
     src = {st: {json.loads(l)["story_id"]: json.loads(l) for l in open(ROOT / f"experiments/eval500/{st}.jsonl")}
            for st in SIDES}
     outs = {v: load_variant(v) for v in args.variants}
-    report = ROOT / "runs/experiments/report" / "__".join(args.variants)
+    default_clf = args.classifier.resolve() == DEFAULT_CLF.resolve()
+    tag = "" if default_clf else "." + args.classifier.stem
+    report = ROOT / "runs/experiments/report" / ("__".join(args.variants) + tag)
     report.mkdir(parents=True, exist_ok=True)
-    clf = None if args.no_classifier else Politics(ROOT / "runs/experiments/report/politics_cache.json")
+    cache = ROOT / f"runs/experiments/report/politics_cache{tag}.json"
+    clf = (None if args.no_classifier
+           else PoliticsEnsemble(cache, args.classifier) if args.classifier.is_dir()
+           else Politics(cache, args.classifier))
 
     per = defaultdict(dict)          # (variant, story_id) -> metrics
     common = {}
